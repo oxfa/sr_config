@@ -1,0 +1,93 @@
+name: Generate Configuraion File
+
+# Controls when the workflow will run
+on:
+  schedule:
+    - cron: '0 23 * * *'
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  build_cfg:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash
+    env:
+      GOOGLE_DOT_IPV4: tls://8.8.4.4
+      GOOGLE_DOT_IPV6: tls://2001:4860:4860::8888
+      GOOGLE_DOH_IPV4: https://8.8.8.8/dns-query # not available for now
+      GOOGLE_DOH_IPV6: https://[2001:4860:4860::8888]/dns-query
+      CLOUDFLARE_DOT_IPV4: tls://1.1.1.1
+      CLOUDFLARE_DOT_IPV6: tls://2606:4700:4700::1001
+      CLOUDFLARE_DOH_IPV4: https://1.1.1.1/dns-query
+      CLOUDFLARE_DOH_IPV6: https://[2606:4700:4700::1001]/dns-query
+
+      GFW_RAW_URL: https://raw.githubusercontent.com/Loyalsoldier/v2ray-rules-dat/release/gfw.txt
+      DIRECT_RAW_URL: https://raw.githubusercontent.com/Loyalsoldier/v2ray-rules-dat/release/direct-list.txt
+      REJECT_RAW_URL: https://raw.githubusercontent.com/Loyalsoldier/v2ray-rules-dat/release/reject-list.txt
+
+    steps:
+      - name: Checkout the "master" branch of this repo
+        uses: actions/checkout@v3
+      - name: Set variables
+        run: |
+          echo "RELEASE_NAME=Updated on $(date +%Y%m%d%H%M)" >> $GITHUB_ENV
+          echo "TAG_NAME=$(date +%Y%m%d%H%M)" >> $GITHUB_ENV
+      - name: Get Text Files
+        run: |
+          wget ${{ env.GFW_RAW_URL }} -P ./.tmp/
+          wget ${{ env.DIRECT_RAW_URL }} -P ./.tmp/
+          wget ${{ env.REJECT_RAW_URL }} -P ./.tmp/
+          xargs -n 1 cp ./.tmp/gfw.txt <<< "./configuration/release/module/sr_google_dot_ipv4.sgmodule  ./configuration/release/module/sr_google_dot_ipv6.sgmodule ./configuration/release/module/sr_google_doh_ipv4.sgmodule ./configuration/release/module/sr_google_doh_ipv6.sgmodule  ./configuration/release/module/sr_cloudflare_dot_ipv4.sgmodule  ./configuration/release/module/sr_cloudflare_dot_ipv6.sgmodule  ./configuration/release/module/sr_cloudflare_doh_ipv4.sgmodule  ./configuration/release/module/sr_cloudflare_doh_ipv6.sgmodule"
+      - name: Format text file
+        run: |
+          chmod +x script/format_text.py
+          script/format_text.py ./.tmp/direct-list.txt DIRECT
+          script/format_text.py ./.tmp/reject-list.txt REJECT
+          script/format_text.py ./configuration/release/module/sr_google_dot_ipv4.sgmodule DOMAIN_DNS ${{ env.GOOGLE_DOT_IPV4 }}
+          script/format_text.py ./configuration/release/module/sr_google_dot_ipv6.sgmodule DOMAIN_DNS ${{ env.GOOGLE_DOT_IPV6 }}
+          script/format_text.py ./configuration/release/module/sr_google_doh_ipv4.sgmodule DOMAIN_DNS ${{ env.GOOGLE_DOH_IPV4 }}
+          script/format_text.py ./configuration/release/module/sr_google_doh_ipv6.sgmodule DOMAIN_DNS ${{ env.GOOGLE_DOH_IPV6 }}
+          script/format_text.py ./configuration/release/module/sr_cloudflare_dot_ipv4.sgmodule DOMAIN_DNS ${{ env.CLOUDFLARE_DOT_IPV4 }}
+          script/format_text.py ./configuration/release/module/sr_cloudflare_dot_ipv6.sgmodule DOMAIN_DNS ${{ env.CLOUDFLARE_DOT_IPV6 }}
+          script/format_text.py ./configuration/release/module/sr_cloudflare_doh_ipv4.sgmodule DOMAIN_DNS ${{ env.CLOUDFLARE_DOH_IPV4 }}
+          script/format_text.py ./configuration/release/module/sr_cloudflare_doh_ipv6.sgmodule DOMAIN_DNS ${{ env.CLOUDFLARE_DOH_IPV6 }}
+      - name: Merge file content
+        run: |
+          cat ./configuration/customized_list/sr_base.conf > ./configuration/release/sr_ark.conf
+          cat ./.tmp/reject-list.txt >> ./configuration/release/sr_ark.conf
+          cat ./configuration/customized_list/customized_reject_list.txt >> ./configuration/release/sr_ark.conf
+          cat ./configuration/customized_list/customized_proxy_list.txt >> ./configuration/release/sr_ark.conf
+          cat ./.tmp/direct-list.txt >> ./configuration/release/sr_ark.conf
+          cat ./configuration/customized_list/customized_direct_list.txt >> ./configuration/release/sr_ark.conf
+          cat ./configuration/customized_list/customized_geoip_rules.txt >> ./configuration/release/sr_ark.conf
+
+      # - name: Release and upload assets
+      #   uses: softprops/action-gh-release@v1
+      #   with:
+      #     name: ${{ env.RELEASE_NAME }}
+      #     tag_name: ${{ env.TAG_NAME }}
+      #     draft: false
+      #     prerelease: false
+      #     files: |
+      #       ./configuration/release/sr_ark.conf
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Commit files
+        run: |
+          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git commit -m "Updated on $(date +%Y%m%d%H%M)" -a
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}
+
+      - name: Clean temp directory
+        run: rm -rf *
+        working-directory: ./.tmp/
