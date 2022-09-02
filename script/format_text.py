@@ -31,7 +31,7 @@ try:
         final_text = fd.read()
         dns_server = sys.argv[3]
         dns_info = " = server:" + dns_server
-        preface_info = "#!name=" + Path(fd.name).stem + "\n[Host]\n"
+        preface_info = "#!name=" + Path(fd.name).stem + "\n\n[Host]\n"
         replaced_info = "\g<1>" + dns_info + '\n' + "*.\g<1>" + dns_info
         final_text = re.sub(r"^(.+)$", replaced_info, final_text, sys.maxsize, re.MULTILINE)
         final_text = re.sub(r"^", preface_info, final_text)
