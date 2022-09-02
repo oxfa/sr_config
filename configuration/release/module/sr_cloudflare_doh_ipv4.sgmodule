@@ -1,4 +1,5 @@
 #!name=sr_cloudflare_doh_ipv4
+
 [Host]
 000webhost.com = server:https://1.1.1.1/dns-query
 *.000webhost.com = server:https://1.1.1.1/dns-query
