@@ -10,7 +10,7 @@ op_type = sys.argv[2]
 try:
     final_text = ""
     fd = open(fileName, 'r+')
-    if op_type == "DIRECT" or op_type == "REJECT":
+    if op_type == "DIRECT" or op_type == "REJECT-DROP":
         lines = fd.readlines()
         pattern = re.compile(r'^(full:|regexp:)?(.*)$')
         for line in lines:
