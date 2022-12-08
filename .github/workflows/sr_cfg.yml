@@ -46,7 +46,7 @@ jobs:
         run: |
           chmod +x script/format_text.py
           script/format_text.py ./.tmp/direct-list.txt DIRECT
-          script/format_text.py ./.tmp/reject-list.txt REJECT
+          script/format_text.py ./.tmp/reject-list.txt REJECT-DROP
           script/format_text.py ./configuration/release/module/sr_google_dot_ipv4.sgmodule DOMAIN_DNS ${{ env.GOOGLE_DOT_IPV4 }}
           script/format_text.py ./configuration/release/module/sr_google_dot_ipv6.sgmodule DOMAIN_DNS ${{ env.GOOGLE_DOT_IPV6 }}
           script/format_text.py ./configuration/release/module/sr_google_doh_ipv4.sgmodule DOMAIN_DNS ${{ env.GOOGLE_DOH_IPV4 }}
