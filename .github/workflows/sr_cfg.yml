@@ -65,10 +65,8 @@ jobs:
           cat ./.tmp/direct-list.txt >> ./configuration/release/sr_ark.conf
           cat ./configuration/customized_list/customized_direct_list.txt >> ./configuration/release/sr_ark.conf
           cat ./configuration/customized_list/customized_geoip_rules.txt >> ./configuration/release/sr_ark.conf
-
-        - name: Clean temp directory
-          run: rm -rf .tmp
-
+      - name: Clean temp directory
+        run: rm -rf .tmp
       # - name: Release and upload assets
       #   uses: softprops/action-gh-release@v1
       #   with:
