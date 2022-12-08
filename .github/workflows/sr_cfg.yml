@@ -36,8 +36,9 @@ jobs:
         run: |
           echo "RELEASE_NAME=Updated on $(date +%Y%m%d%H%M)" >> $GITHUB_ENV
           echo "TAG_NAME=$(date +%Y%m%d%H%M)" >> $GITHUB_ENV
-      - name: Get Text Files
+      - name: Create Temporaray Folder && Get Text Files
         run: |
+          mkdir .tmp
           wget ${{ env.GFW_RAW_URL }} -P ./.tmp/
           wget ${{ env.DIRECT_RAW_URL }} -P ./.tmp/
           wget ${{ env.REJECT_RAW_URL }} -P ./.tmp/
@@ -65,6 +66,9 @@ jobs:
           cat ./configuration/customized_list/customized_direct_list.txt >> ./configuration/release/sr_ark.conf
           cat ./configuration/customized_list/customized_geoip_rules.txt >> ./configuration/release/sr_ark.conf
 
+        - name: Clean temp directory
+          run: rm -rf .tmp
+
       # - name: Release and upload assets
       #   uses: softprops/action-gh-release@v1
       #   with:
@@ -87,7 +91,3 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           branch: ${{ github.ref }}
-
-      - name: Clean temp directory
-        run: rm -rf *
-        working-directory: ./.tmp/
