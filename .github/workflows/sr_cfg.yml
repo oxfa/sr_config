@@ -69,9 +69,6 @@ jobs:
                                                > /dev/null
           cat ./.tmp/raw_warp_list.txt   | tee ./configuration/release/module/rule/proxy_warp.sgmodule \
                                                > /dev/null
-          cat ./.tmp/raw_direct_list.txt | tee ./configuration/release/module/dns/direct_dns_system.sgmodule \
-                                               ./configuration/release/module/dns/direct_dns_alidns.sgmodule \
-                                               > /dev/null
       - name: Create modules
         run: |
           python3 script/create_rule_module.py ./.tmp/raw_direct_list.txt TEXT RULE DIRECT
