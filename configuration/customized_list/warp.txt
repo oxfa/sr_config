@@ -1,0 +1,15 @@
+# ADD
+domain:openai.com:@openai
+domain:chatgpt.com:@openai
+domain:stripe.network:@openai
+domain:revenuecat.com:@openai
+domain:oaistatic.com:@openai
+domain:wolframcloud.com:@openai
+domain:wolframcdn.com:@openai
+domain:ocsp.rootca1.amazontrust.com:@openai
+full:openaiapi-site.azureedge.net:@openai
+full:chat.openai.com.cdn.cloudflare.net:@openai
+full:production-openaicom-storage.azureedge.net:@openai
+full:openaicomproductionae4b.blob.core.windows.net:@openai
+full:openaicom-api-bdcpf8c6d2e9atf6.z01.azurefd.net:@openai
+# REMOVE

@@ -1,0 +1,111 @@
+name: Generate Configuraion File
+
+# Controls when the workflow will run
+on:
+  schedule:
+    - cron: '0 23 * * *'
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  build_cfg:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash
+    env:
+      GDOT_IPV4: tls://8.8.4.4
+      GDOT_IPV6: tls://2001:4860:4860::8888
+      GDOH_IPV4: https://8.8.8.8/dns-query
+      GDOH_IPV6: https://[2001:4860:4860::8888]/dns-query
+      CDOT_IPV4: tls://1.0.0.1
+      CDOH_IPV4: https://1.1.1.1/dns-query
+      CDOT_IPV6: tls://2606:4700:4700::1001
+      CDOH_IPV6: https://[2606:4700:4700::1001]/dns-query
+      ADOT_IPV4: tls://223.5.5.5
+      ADNS_IPV4: 223.5.5.5
+
+      RAW_PROXY_LIST_URL: https://raw.githubusercontent.com/Loyalsoldier/v2ray-rules-dat/release/gfw.txt
+      RAW_BLOCK_LIST_URL: https://raw.githubusercontent.com/Loyalsoldier/v2ray-rules-dat/release/reject-list.txt
+      RAW_ICLOUD_LIST_URL: https://raw.githubusercontent.com/Loyalsoldier/domain-list-custom/release/icloud.txt
+      RAW_DIRECT_LIST_URL: https://raw.githubusercontent.com/Loyalsoldier/v2ray-rules-dat/release/direct-list.txt
+      RAW_PRIVATE_LIST_URL: https://raw.githubusercontent.com/Loyalsoldier/domain-list-custom/release/private.txt
+
+      RULESET_OPENAI_URL: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/OpenAI/OpenAI.list
+    steps:
+      - name: Checkout the "master" branch of this repo
+        uses: actions/checkout@v4
+      - name: Set variables
+        run: |
+          echo "RELEASE_NAME=Updated on $(date +%Y%m%d%H%M)" >> $GITHUB_ENV
+          echo "TAG_NAME=$(date +%Y%m%d%H%M)" >> $GITHUB_ENV
+      - name: Download lists and Customize lists
+        run: |
+          mkdir .tmp
+          wget ${{ env.RULESET_OPENAI_URL }} -O ./.tmp/openai_ruleset.txt
+          wget ${{ env.RAW_PROXY_LIST_URL }} -O ./.tmp/raw_proxy_list.txt
+          wget ${{ env.RAW_BLOCK_LIST_URL }} -O ./.tmp/raw_block_list.txt
+          wget ${{ env.RAW_DIRECT_LIST_URL }} -O ./.tmp/raw_direct_list.txt
+          wget ${{ env.RAW_ICLOUD_LIST_URL }} -O ./.tmp/raw_icloud_list.txt
+          wget ${{ env.RAW_PRIVATE_LIST_URL }} -O ./.tmp/raw_private_list.txt
+          python3 script/ruleset2list.py ./.tmp/openai_ruleset.txt @openai
+          cat ./.tmp/openai_ruleset.txt > ./.tmp/raw_warp_list.txt
+          cat ./.tmp/raw_icloud_list.txt ./.tmp/raw_private_list.txt >> ./.tmp/raw_direct_list.txt
+
+          python3 script/ruleset2list.py ./.tmp/raw_warp_list.txt
+          python3 script/format_raw_list.py ./.tmp/raw_proxy_list.txt
+          python3 script/customize_list.py ./.tmp/raw_warp_list.txt ./configuration/customized_list/warp.txt
+          python3 script/remove_domain.py ./.tmp/raw_proxy_list.txt ./.tmp/raw_warp_list.txt
+          python3 script/remove_domain.py ./.tmp/raw_proxy_list.txt ./configuration/customized_list/direct.txt
+          python3 script/customize_list.py ./.tmp/raw_proxy_list.txt ./configuration/customized_list/proxy.txt
+          python3 script/customize_list.py ./.tmp/raw_block_list.txt ./configuration/customized_list/block.txt
+          python3 script/customize_list.py ./.tmp/raw_direct_list.txt ./configuration/customized_list/direct.txt
+          cat ./.tmp/raw_proxy_list.txt  | tee ./configuration/release/module/rule/proxy_remote_dns.sgmodule \
+                                               > /dev/null
+          cat ./.tmp/raw_block_list.txt  | tee ./configuration/release/module/rule/block_reject.sgmodule \
+                                               ./configuration/release/module/rule/block_reject_drop.sgmodule \
+                                               > /dev/null
+          cat ./.tmp/raw_warp_list.txt   | tee ./configuration/release/module/rule/proxy_warp.sgmodule \
+                                               > /dev/null
+          cat ./.tmp/raw_direct_list.txt | tee ./configuration/release/module/dns/direct_dns_system.sgmodule \
+                                               ./configuration/release/module/dns/direct_dns_alidns.sgmodule \
+                                               > /dev/null
+      - name: Create modules
+        run: |
+          python3 script/create_rule_module.py ./.tmp/raw_direct_list.txt TEXT RULE DIRECT
+          python3 script/create_rule_module.py ./configuration/release/module/rule/block_reject.sgmodule MODULE RULE REJECT
+          python3 script/create_rule_module.py ./configuration/release/module/rule/block_reject_drop.sgmodule MODULE RULE REJECT-DROP
+          python3 script/create_rule_module.py ./configuration/release/module/rule/proxy_warp.sgmodule MODULE RULE PROXY-WARP force-remote-dns
+          python3 script/create_rule_module.py ./configuration/release/module/rule/proxy_remote_dns.sgmodule MODULE RULE PROXY-FALLBACK force-remote-dns
+          python3 script/list2clash_ruleset.py ./.tmp/raw_warp_list.txt ./configuration/release/rule-set/openai.yaml -t @openai
+      - name: Merge file content
+        run: |
+          cat ./configuration/customized_list/sr_base.conf > ./configuration/release/sr_ark.conf
+          cat ./.tmp/raw_direct_list.txt >> ./configuration/release/sr_ark.conf
+          cat ./configuration/customized_list/geoip_rule.txt >> ./configuration/release/sr_ark.conf
+      - name: Clean temp directory
+        run: rm -rf .tmp
+      # - name: Release and upload assets
+      #   uses: softprops/action-gh-release@v1
+      #   with:
+      #     name: ${{ env.RELEASE_NAME }}
+      #     tag_name: ${{ env.TAG_NAME }}
+      #     draft: false
+      #     prerelease: false
+      #     files: |
+      #       ./configuration/release/sr_ark.conf
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Commit files
+        run: |
+          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git commit -m "Updated on $(date +%Y%m%d%H%M)" -a
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}
