@@ -16,6 +16,8 @@ payload:
   - DOMAIN-KEYWORD,chatgpt
   - IP-CIDR,45.32.32.0/19
   - IP-CIDR,45.76.48.0/21
+  - IP-CIDR,104.238.148.0/22
+  - IP-CIDR,149.28.16.0/20
   - IP-CIDR,207.148.96.0/20
   - DOMAIN-SUFFIX,openai.com
   - DOMAIN-SUFFIX,chatgpt.com

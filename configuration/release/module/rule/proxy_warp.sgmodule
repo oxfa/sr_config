@@ -18,8 +18,8 @@ DOMAIN-KEYWORD,openai,PROXY-WARP,force-remote-dns
 DOMAIN-KEYWORD,chatgpt,PROXY-WARP,force-remote-dns
 IP-CIDR,45.32.32.0/19,PROXY-WARP,force-remote-dns,no-resolve
 IP-CIDR,45.76.48.0/21,PROXY-WARP,force-remote-dns,no-resolve
-IP-CIDR,104.238.148.0/22@openai,PROXY-WARP,force-remote-dns,no-resolve
-IP-CIDR,149.28.16.0/20@openai,PROXY-WARP,force-remote-dns,no-resolve
+IP-CIDR,104.238.148.0/22,PROXY-WARP,force-remote-dns,no-resolve
+IP-CIDR,149.28.16.0/20,PROXY-WARP,force-remote-dns,no-resolve
 IP-CIDR,207.148.96.0/20,PROXY-WARP,force-remote-dns,no-resolve
 DOMAIN-SUFFIX,openai.com,PROXY-WARP,force-remote-dns
 DOMAIN-SUFFIX,chatgpt.com,PROXY-WARP,force-remote-dns
