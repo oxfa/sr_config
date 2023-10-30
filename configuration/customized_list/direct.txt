@@ -7,6 +7,7 @@ ip-cidr:47.91.16.0/20
 ip-cidr:101.32.104.0/21
 ip-cidr:43.156.192.0/18
 ip-cidr:101.32.118.0/23
+domain:168.192.in-addr.arpa
 full:fpinit.itunes.apple.com
 full:sandbox.itunes.apple.com
 full:entitlements.itunes.apple.com
