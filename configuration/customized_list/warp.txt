@@ -1,11 +1,14 @@
 # ADD
+keyword:chatgpt:@openai
+ip-cidr:45.32.32.0/19:@openai
 domain:openai.com:@openai
 domain:chatgpt.com:@openai
-domain:stripe.network:@openai
-domain:revenuecat.com:@openai
 domain:oaistatic.com:@openai
-domain:wolframcloud.com:@openai
+domain:livekit.cloud:@openai
 domain:wolframcdn.com:@openai
+domain:revenuecat.com:@openai
+domain:stripe.network:@openai
+domain:wolframcloud.com:@openai
 domain:ocsp.rootca1.amazontrust.com:@openai
 full:openaiapi-site.azureedge.net:@openai
 full:chat.openai.com.cdn.cloudflare.net:@openai
