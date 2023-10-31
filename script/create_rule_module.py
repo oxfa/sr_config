@@ -63,6 +63,7 @@ def format_host(fd, op_type):
         dns_server = sys.argv[5]
         dns_info = " = server:" + dns_server
         lines = fd.read().splitlines()
+        num = 0
         for line in lines:
             exp_type, expression, _ = split_line(line)
             if exp_type == "full":
@@ -80,7 +81,8 @@ def format_host(fd, op_type):
                 for i in lines:
                     buf += i
                 sys.exit(
-                    f"Invalid exp_type2: '{exp_type}', exp: {expression}, line: {line}, dns: {dns_server}, buf: {buf}, ")
+                    f"Invalid exp_type2: '{exp_type}', num: {num}, exp: {expression}, line: {line}, dns: {dns_server}, buf: {buf}, ")
+            num += 1
     else:
         pass
     return formated_text
