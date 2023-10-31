@@ -4,6 +4,14 @@ from pathlib import Path
 import re
 import sys
 
+import re
+
+
+def is_valid_domain(domain):
+    pattern = re.compile(
+        r'(?:[a-zA-Z0-9](?:[a-zA-Z0-9\-]{0,61}[a-zA-Z0-9])?\.)+[a-zA-Z]{2,63}')
+    return bool(pattern.fullmatch(domain))
+
 
 def format_rule(fd, op_type):
     match op_type:
@@ -72,9 +80,22 @@ def format_host(fd, op_type):
         text = fd.read()
         dns_server = sys.argv[5]
         dns_info = " = server:" + dns_server
-        replaced_info = "\g<1>" + dns_info + '\n' + "*.\g<1>" + dns_info
-        formated_text = re.sub(r"^(.+)$", replaced_info,
-                               text, sys.maxsize, re.MULTILINE)
+        lines = text.splitlines()
+        for line in lines:
+            domain = ""
+            if line.startswith("full:"):
+                domain = line.split(":")[1]
+                if is_valid_domain(domain):
+                    formated_text += f"{domain}{dns_info}\n"
+            elif line.startswith("domain:"):
+                domain = line.split(":")[1]
+                if is_valid_domain(domain):
+                    formated_text += f"*.{domain}{dns_info}\n"
+            else:
+                domain = line
+                if is_valid_domain(domain):
+                    formated_text += f"{domain}{dns_info}\n"
+                    formated_text += f"*.{domain}{dns_info}\n"
     else:
         pass
     return formated_text
