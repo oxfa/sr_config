@@ -42,7 +42,7 @@ def format_rule(fd, op_type):
         }.get(exp_type, None)
 
         if prefix is None:
-            sys.exit("Unknown expression type")
+            sys.exit("Unknown expression type" + exp_type)
 
         op_text_full = op_type
         if exp_type == "ip-cidr":
