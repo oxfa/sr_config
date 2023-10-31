@@ -17,7 +17,7 @@ def process_file_in_place(file_path, tag=None):
     with open(file_path, "r") as f_in:
         lines = f_in.readlines()
         new_lines = []
-        for line in f_in:
+        for line in lines:
             line = line.strip()
             if line.startswith("#"):
                 continue
