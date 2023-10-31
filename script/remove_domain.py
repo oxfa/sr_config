@@ -2,23 +2,16 @@ import sys
 
 
 def split_line(line):
-    first_colon_index = line.find(":")
-    last_colon_index = line.rfind(":")
-
-    if first_colon_index == -1:
-        return line.strip(), "", ""
-
-    if first_colon_index == last_colon_index:
-        A = line[:first_colon_index].strip()
-        B = line[first_colon_index+1:].strip()
-        C = ""
-        return A, B, C
-
-    A = line[:first_colon_index].strip()
-    B = line[first_colon_index+1:last_colon_index].strip()
-    C = line[last_colon_index+1:].strip()
-
-    return A, B, C
+    segments = line.split(":")
+    if len(segments) == 1:
+        return "", segments[0].strip(), ""
+    elif len(segments) == 2:
+        if segments[1].strip().startswith('@'):
+            return "", segments[0].strip(), segments[1].strip()
+        else:
+            return segments[0].strip(), segments[1].strip(), ""
+    else:
+        return segments[0].strip(), segments[1].strip(), segments[2].strip()
 
 
 def remove_domains(a_path, b_path):

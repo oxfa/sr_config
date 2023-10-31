@@ -4,8 +4,6 @@ from pathlib import Path
 import re
 import sys
 
-import re
-
 
 def is_valid_domain(domain):
     pattern = re.compile(
@@ -13,64 +11,46 @@ def is_valid_domain(domain):
     return bool(pattern.fullmatch(domain))
 
 
+def split_line(line):
+    segments = line.split(":")
+    if len(segments) == 1:
+        return "", segments[0].strip(), ""
+    elif len(segments) == 2:
+        return segments[0].strip(), segments[1].strip(), ""
+    else:
+        return segments[0].strip(), segments[1].strip(), segments[2].strip()
+
+
 def format_rule(fd, op_type):
-    match op_type:
-        case "DIRECT":
-            op_text = op_type
-        case "REJECT":
-            op_text = op_type
-        case "REJECT-DROP":
-            op_text = op_type
-        case "PROXY-FALLBACK" | "PROXY-WARP":
-            extra_arg = sys.argv[5]
-            if extra_arg == "force-remote-dns":
-                op_text = op_type + "," + extra_arg
-            else:  # TODO
-                pass
-        case _:
-            pass
-    formated_text = ""
+    formatted_text = ""
     lines = fd.readlines()
+
     for line in lines:
-        line = line.strip()
-        if not line:
+        exp_type, expression, _ = split_line(line.strip())
+        if not exp_type:
             continue
-        op_text_full = op_text
-        first_colon_index = line.find(":")
-        last_colon_index = line.rfind(":")
-        # URL-REGEX DOMAIN DOMAIN-SUFFIX
-        if first_colon_index != -1:
-            url_type = line[:first_colon_index]
-            if url_type == "full":
-                prefix = "DOMAIN"
-            elif url_type == "domain":
-                prefix = "DOMAIN-SUFFIX"
-            elif url_type == "regexp":
-                prefix = "URL-REGEX"
-            elif url_type == "ip-cidr":
-                prefix = "IP-CIDR"
-                op_text_full += ",no-resolve"
-            elif url_type == "keyword":
-                prefix = "DOMAIN-KEYWORD"
-            elif url_type == "#":
-                continue
-            else:
-                buf = ""
-                for li in lines:
-                    buf += li
-                error_msg = "Error: No such url_type!" + buf
-                sys.exit(error_msg)
-            expression = line[first_colon_index +
-                              1:last_colon_index] if last_colon_index > first_colon_index else line[first_colon_index + 1:]
-        else:
-            if line.startswith('#'):
-                continue
-            prefix = "DOMAIN-SUFFIX"
-            expression = line
-        line_text = prefix + ',' + \
-            expression + ',' + op_text_full + '\n'
-        formated_text += line_text
-    return formated_text
+
+        if exp_type == "#":
+            continue
+
+        prefix = {
+            "full": "DOMAIN",
+            "domain": "DOMAIN-SUFFIX",
+            "regexp": "URL-REGEX",
+            "ip-cidr": "IP-CIDR",
+            "keyword": "DOMAIN-KEYWORD",
+        }.get(exp_type, None)
+
+        if prefix is None:
+            sys.exit("Unknown expression type")
+
+        op_text_full = op_type
+        if exp_type == "ip-cidr":
+            op_text_full += ",no-resolve"
+
+        formatted_text += f"{prefix},{expression},{op_text_full}\n"
+
+    return formatted_text
 
 
 def format_host(fd, op_type):
@@ -78,28 +58,41 @@ def format_host(fd, op_type):
     if op_type == "DOMAIN-HOST":
         pass
     elif op_type == "DOMAIN-DNS":
-        text = fd.read()
+        if len(sys.argv) < 6:
+            sys.exit("Missing DNS server info in sys.argv[5]")
         dns_server = sys.argv[5]
         dns_info = " = server:" + dns_server
-        lines = text.splitlines()
+        lines = fd.read().splitlines()
         for line in lines:
-            domain = ""
-            if line.startswith("full:"):
-                domain = line.split(":")[1]
-                if is_valid_domain(domain):
-                    formated_text += f"{domain}{dns_info}\n"
-            elif line.startswith("domain:"):
-                domain = line.split(":")[1]
-                if is_valid_domain(domain):
-                    formated_text += f"*.{domain}{dns_info}\n"
+            exp_type, expression, _ = split_line(line)
+            if exp_type == "full":
+                if is_valid_domain(expression):
+                    formated_text += f"{expression}{dns_info}\n"
+            elif exp_type == "domain":
+                if is_valid_domain(expression):
+                    formated_text += f"*.{expression}{dns_info}\n"
+            elif exp_type == "domain&full":
+                if is_valid_domain(expression):
+                    formated_text += f"{expression}{dns_info}\n"
+                    formated_text += f"*.{expression}{dns_info}\n"
             else:
-                domain = line
-                if is_valid_domain(domain):
-                    formated_text += f"{domain}{dns_info}\n"
-                    formated_text += f"*.{domain}{dns_info}\n"
+                sys.exit(f"Invalid exp_type: {exp_type}")
     else:
         pass
     return formated_text
+
+
+def format_module(fd, sec_type, op_type):
+    preface_info = f"#!name={Path(fd.name).stem}\n\n[{sec_type}]\n"
+
+    if sec_type == "RULE":
+        formatted_text = format_rule(fd, op_type)
+    elif sec_type == "HOST":
+        formatted_text = format_host(fd, op_type)
+    else:
+        return ""
+
+    return preface_info + formatted_text
 
 
 def format_text(fd, sec_type, op_type):
@@ -109,42 +102,22 @@ def format_text(fd, sec_type, op_type):
         return format_host(fd, op_type)
     else:
         pass
-    pass
-
-
-def format_module(fd, sec_type, op_type):
-    preface_info = "#!name=" + Path(fd.name).stem
-    if sec_type == "RULE":
-        preface_info += "\n\n[Rule]\n"
-        formated_text = format_rule(fd, op_type)
-    elif sec_type == "HOST":
-        preface_info += "\n\n[Host]\n"
-        formated_text = format_host(fd, op_type)
-    else:
-        pass
-    return preface_info + formated_text
 
 
 if __name__ == "__main__":
-    # File Name
     file_name = sys.argv[1]
-    # Target name: TEXT or MODULE
     tgt_type = sys.argv[2]
-    # Section Type: RULE or HOST
     sec_type = sys.argv[3]
-    # Opreation Type:
     op_type = sys.argv[4]
 
-    try:
-        fd = open(file_name, 'r+')
+    with open(file_name, 'r+') as fd:
         if tgt_type == "TEXT":
             final_text = format_text(fd, sec_type, op_type)
         elif tgt_type == "MODULE":
             final_text = format_module(fd, sec_type, op_type)
         else:
-            pass
+            sys.exit("Unknown target type")
+
         fd.seek(0)
         fd.write(final_text)
-
-    finally:
-        fd.close()
+        fd.truncate()

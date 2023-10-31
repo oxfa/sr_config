@@ -2,14 +2,16 @@ import argparse
 
 
 def split_line(line):
-    first_colon_index = line.find(":")
-    last_colon_index = line.rfind(":")
-    if first_colon_index == -1:
-        return "", line.strip(), ""
-    elif first_colon_index == last_colon_index:
-        return line[:first_colon_index].strip(), line[first_colon_index + 1:].strip(), ""
+    segments = line.split(":")
+    if len(segments) == 1:
+        return "", segments[0].strip(), ""
+    elif len(segments) == 2:
+        if segments[1].strip().startswith('@'):
+            return "", segments[0].strip(), segments[1].strip()
+        else:
+            return segments[0].strip(), segments[1].strip(), ""
     else:
-        return line[:first_colon_index].strip(), line[first_colon_index + 1:last_colon_index].strip(), line[last_colon_index + 1:].strip()
+        return segments[0].strip(), segments[1].strip(), segments[2].strip()
 
 
 def join_line(A, B, C):

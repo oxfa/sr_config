@@ -1,5 +1,0 @@
-#!name=domain_dns_adot
-
-[Host]
-*.icloud.com = server:tls://223.5.5.5
-*.icloud-content.com = server:tls://223.5.5.5
