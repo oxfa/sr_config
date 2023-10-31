@@ -49,7 +49,7 @@ def process_file(file_a_path, file_b_path, tag_arg=None):
                 current_section = 'remove'
             else:
                 exp_type, expression, line_tag = split_line(line)
-                if line_tag and line_tag != tag_arg:
+                if tag_arg and line_tag != tag_arg:
                     continue
                 if current_section == 'add':
                     if all(split_line(x.strip())[1] != expression for x in content_a):
