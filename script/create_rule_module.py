@@ -42,7 +42,10 @@ def format_rule(fd, op_type):
         }.get(exp_type, None)
 
         if prefix is None:
-            sys.exit(f"Invalid exp_type: {line}")
+            buf = ""
+            for i in lines:
+                buf += i
+            sys.exit(f"Invalid exp_type: {buf}")
 
         op_text_full = op_type
         if exp_type == "ip-cidr":
