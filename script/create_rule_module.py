@@ -74,6 +74,7 @@ def format_rule(fd, op_type):
 
 
 def format_host(fd, op_type):
+    formated_text = ""
     if op_type == "DOMAIN-HOST":
         pass
     elif op_type == "DOMAIN-DNS":
