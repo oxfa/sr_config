@@ -41,11 +41,8 @@ def format_rule(fd, op_type):
             "keyword": "DOMAIN-KEYWORD",
         }.get(exp_type, None)
 
-        buf = ""
-        for li in lines:
-            buf += li
         if prefix is None:
-            sys.exit(f"Invalid exp_type: {buf}")
+            sys.exit(f"Invalid exp_type: {exp_type}")
 
         op_text_full = op_type
         if exp_type == "ip-cidr":
