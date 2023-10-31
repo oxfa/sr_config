@@ -1,5 +1,6 @@
 #!name=domain_dns_gdot
 
 [HOST]
-nic.eu.org = server:sdfasd
-*.64clouds.com = server:sdfasd
+nic.eu.org = server:tls://8.8.4.4
+64clouds.com = server:tls://8.8.4.4
+*.64clouds.com = server:tls://8.8.4.4
