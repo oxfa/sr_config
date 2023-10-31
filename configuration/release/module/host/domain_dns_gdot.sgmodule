@@ -1,0 +1,5 @@
+#!name=domain_dns_gdot
+
+[Host]
+full:nic.eu.org:@gdot = server:tls://8.8.4.4
+*.full:nic.eu.org:@gdot = server:tls://8.8.4.4
