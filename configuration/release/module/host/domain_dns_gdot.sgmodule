@@ -2,6 +2,3 @@
 
 [Host]
 nic.eu.org = server:tls://8.8.4.4
-nic.eu.org = server:tls://8.8.4.4
- = server:tls://8.8.4.4
-full:nic.eu.org:@gdot
