@@ -1,6 +1,6 @@
 #!name=block_reject
 
-[Rule]
+[RULE]
 DOMAIN-SUFFIX,0-000.store,REJECT
 DOMAIN-SUFFIX,0.code.cotsta.ru,REJECT
 DOMAIN-SUFFIX,0.nextyourcontent.com,REJECT
@@ -37589,7 +37589,6 @@ DOMAIN-SUFFIX,mm-cgnews.com,REJECT
 DOMAIN-SUFFIX,mm-syringe.com,REJECT
 DOMAIN-SUFFIX,mm.actionlink.jp,REJECT
 DOMAIN-SUFFIX,mm.jbzj.com,REJECT
-DOMAIN-SUFFIX,mm.n3w1d0ma1n,REJECT
 DOMAIN-SUFFIX,mm.nwell.net,REJECT
 DOMAIN-SUFFIX,mm.paizi.net,REJECT
 DOMAIN-SUFFIX,mm7.net,REJECT
@@ -43404,7 +43403,6 @@ DOMAIN-SUFFIX,pgitpwovdh.xyz,REJECT
 DOMAIN-SUFFIX,pgjcbz.xyz,REJECT
 DOMAIN-SUFFIX,pgjlctmswgnwf.com,REJECT
 DOMAIN-SUFFIX,pgl.example.com,REJECT
-DOMAIN-SUFFIX,pgl.example0101,REJECT
 DOMAIN-SUFFIX,pgl7.cn,REJECT
 DOMAIN-SUFFIX,pglstatp-toutiao.com,REJECT
 DOMAIN-SUFFIX,pgmcdn.com,REJECT
@@ -48896,7 +48894,6 @@ DOMAIN-SUFFIX,rqytqq.com,REJECT
 DOMAIN-SUFFIX,rr.pochengweiyuan.com,REJECT
 DOMAIN-SUFFIX,rreauksofthecom.xyz,REJECT
 DOMAIN-SUFFIX,rrentlysearchi.info,REJECT
-DOMAIN-SUFFIX,rrf.fat1domain1,REJECT
 DOMAIN-SUFFIX,rrfolvppqeg.com,REJECT
 DOMAIN-SUFFIX,rriedstronugos.xyz,REJECT
 DOMAIN-SUFFIX,rrimpl.com,REJECT
@@ -64101,7 +64098,6 @@ DOMAIN-SUFFIX,xmxupz.xyz,REJECT
 DOMAIN-SUFFIX,xmzurh.xyz,REJECT
 DOMAIN-SUFFIX,xn--2qu96gouvko1a.com,REJECT
 DOMAIN-SUFFIX,xn--2qux23confgml.club,REJECT
-DOMAIN-SUFFIX,xn--2ss830adjbqy7h.xn--fiqs8s,REJECT
 DOMAIN-SUFFIX,xn--521-x72fh66s.cn,REJECT
 DOMAIN-SUFFIX,xn--gov-x68dy61b.shop,REJECT
 DOMAIN-SUFFIX,xn--jvrp4x1zyfta.net,REJECT
@@ -64110,7 +64106,6 @@ DOMAIN-SUFFIX,xn--oogle-wmc.com,REJECT
 DOMAIN-SUFFIX,xn--wxtr9fwyxk9c.club,REJECT
 DOMAIN-SUFFIX,xn--xhq9mt12cf5v.shop,REJECT
 DOMAIN-SUFFIX,xn--xhq9mt12cf5v.top,REJECT
-DOMAIN-SUFFIX,xn--xhq9mt12cf5v.xn--io0a7i,REJECT
 DOMAIN-SUFFIX,xn--zw0autp42d.cn,REJECT
 DOMAIN-SUFFIX,xne1ocient87zxz.360doc.cn,REJECT
 DOMAIN-SUFFIX,xni.ink,REJECT
