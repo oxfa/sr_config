@@ -102,7 +102,6 @@ def format_host(fd, op_type):
             else:
                 sys.exit(
                     f"Invalid exp_type2: '{exp_type}', exp: {expression}, line: {line}, dns: {dns_server}")
-            num += 1
     else:
         pass
     return formated_text
