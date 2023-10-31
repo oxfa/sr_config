@@ -24,6 +24,9 @@ def process_file_in_place(file_path, tag=None):
     with open(file_path, "w") as f_out:
         for line in lines:
             line = line.strip()
+            # 跳过以#开始的行
+            if line.startswith("#"):
+                continue
             if line.startswith(("domain:", "full:", "regexp:", "ip-cidr:", "keyword:")):
                 f_out.write(f"{line}{':' + tag if tag else ''}\n")
             else:
