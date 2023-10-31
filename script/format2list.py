@@ -15,7 +15,7 @@ def process_file_in_place(file_path, tag=None):
 
     if any(line.startswith(tuple(prefixes)) for line in lines):
         # 调用 ruleset2list.py 进行转换
-        subprocess_args = ["python", "ruleset2list.py", file_path]
+        subprocess_args = ["python3", "script/ruleset2list.py", file_path]
         if tag:
             subprocess_args.extend(["-t", tag])
         subprocess.run(subprocess_args)
