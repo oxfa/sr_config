@@ -55,7 +55,7 @@ jobs:
 
       - name: Process Warp List
         run: |
-          python3 script/format2list.py ./.tmp/raw_warp_list.txt @openai
+          python3 script/format2list.py ./.tmp/raw_warp_list.txt -t @openai
           python3 script/customize_list.py ./.tmp/raw_warp_list.txt ./configuration/customized_list/warp.txt
           cat ./.tmp/raw_warp_list.txt | tee ./configuration/release/module/rule/proxy_warp.sgmodule \
                                              > /dev/null
