@@ -62,7 +62,7 @@ def format_host(fd, op_type):
             sys.exit("Missing DNS server info in sys.argv[5]")
         dns_server = sys.argv[5]
         dns_info = " = server:" + dns_server
-        lines = fd.read().splitlines()
+        lines = fd.readlines()
         num = 0
         for line in lines:
             exp_type, expression, _ = split_line(line)
