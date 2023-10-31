@@ -26,11 +26,11 @@ def format_rule(fd, op_type):
     lines = fd.readlines()
 
     for line in lines:
-        exp_type, expression, _ = split_line(line.strip())
-        if not exp_type:
+        if line.startswith("#"):
             continue
 
-        if exp_type == "#":
+        exp_type, expression, _ = split_line(line.strip())
+        if not exp_type:
             continue
 
         prefix = {
