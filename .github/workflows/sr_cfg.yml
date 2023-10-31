@@ -41,7 +41,7 @@ jobs:
         run: |
           echo "RELEASE_NAME=Updated on $(date +%Y%m%d%H%M)" >> $GITHUB_ENV
           echo "TAG_NAME=$(date +%Y%m%d%H%M)" >> $GITHUB_ENV
-      - name: Download lists and Customize lists
+      - name: Download Lists And Copy Lists
         run: |
           mkdir .tmp
           wget ${{ env.RULESET_OPENAI_URL }} -O ./.tmp/openai_ruleset.txt
@@ -50,35 +50,56 @@ jobs:
           wget ${{ env.RAW_DIRECT_LIST_URL }} -O ./.tmp/raw_direct_list.txt
           wget ${{ env.RAW_ICLOUD_LIST_URL }} -O ./.tmp/raw_icloud_list.txt
           wget ${{ env.RAW_PRIVATE_LIST_URL }} -O ./.tmp/raw_private_list.txt
-          python3 script/ruleset2list.py ./.tmp/openai_ruleset.txt @openai
           cat ./.tmp/openai_ruleset.txt > ./.tmp/raw_warp_list.txt
           cat ./.tmp/raw_icloud_list.txt ./.tmp/raw_private_list.txt >> ./.tmp/raw_direct_list.txt
 
-          python3 script/ruleset2list.py ./.tmp/raw_warp_list.txt
-          python3 script/format_raw_list.py ./.tmp/raw_proxy_list.txt
-          python3 script/customize_list.py ./.tmp/raw_warp_list.txt ./configuration/customized_list/warp.txt
-          python3 script/remove_domain.py ./.tmp/raw_proxy_list.txt ./.tmp/raw_warp_list.txt
-          python3 script/remove_domain.py ./.tmp/raw_proxy_list.txt ./configuration/customized_list/direct.txt
-          python3 script/customize_list.py ./.tmp/raw_proxy_list.txt ./configuration/customized_list/proxy.txt
-          python3 script/customize_list.py ./.tmp/raw_block_list.txt ./configuration/customized_list/block.txt
-          python3 script/customize_list.py ./.tmp/raw_direct_list.txt ./configuration/customized_list/direct.txt
-          cat ./.tmp/raw_proxy_list.txt  | tee ./configuration/release/module/rule/proxy_remote_dns.sgmodule \
-                                               > /dev/null
-          cat ./.tmp/raw_block_list.txt  | tee ./configuration/release/module/rule/block_reject.sgmodule \
-                                               ./configuration/release/module/rule/block_reject_drop.sgmodule \
-                                               > /dev/null
-          cat ./.tmp/raw_warp_list.txt   | tee ./configuration/release/module/rule/proxy_warp.sgmodule \
-                                               > /dev/null
-      - name: Create modules
+      - name: Process Warp List
         run: |
-          python3 script/create_rule_module.py ./.tmp/raw_direct_list.txt TEXT RULE DIRECT
+          python3 script/format2list.py ./.tmp/raw_warp_list.txt @openai
+          python3 script/customize_list.py ./.tmp/raw_warp_list.txt ./configuration/customized_list/warp.txt
+          cat ./.tmp/raw_warp_list.txt | tee ./configuration/release/module/rule/proxy_warp.sgmodule \
+                                             > /dev/null
+
+      - name: Process Direct List
+        run: |
+          python3 script/customize_list.py ./.tmp/raw_direct_list.txt ./configuration/customized_list/direct.txt
+
+      - name: Process Proxy List
+        run: |
+          python3 script/format2list.py ./.tmp/raw_proxy_list.txt
+          python3 script/remove_domain.py ./.tmp/raw_proxy_list.txt ./.tmp/raw_warp_list.txt
+          python3 script/remove_domain.py ./.tmp/raw_proxy_list.txt ./.tmp/raw_direct_list.txt
+          python3 script/customize_list.py ./.tmp/raw_proxy_list.txt ./configuration/customized_list/proxy.txt
+          cat ./.tmp/raw_proxy_list.txt | tee ./configuration/release/module/rule/proxy_remote_dns.sgmodule \
+                                              > /dev/null
+      - name: Process Block List
+        run: |
+          python3 script/customize_list.py ./.tmp/raw_block_list.txt ./configuration/customized_list/block.txt
+          cat ./.tmp/raw_block_list.txt | tee ./configuration/release/module/rule/block_reject.sgmodule \
+                                              ./configuration/release/module/rule/block_reject_drop.sgmodule \
+                                              > /dev/null
+
+      - name: Process Domain-DNS List
+        run: |
+          python3 script/customize_list.py ./configuration/release/module/host/domain_dns_adot.sgmodule  ./configuration/customized_list/domain_dns.txt -t @adot
+          python3 script/customize_list.py ./configuration/release/module/host/domain_dns_gdot.sgmodule  ./configuration/customized_list/domain_dns.txt -t @gdot
+
+      - name: Generate Modules
+        run: |
           python3 script/create_rule_module.py ./configuration/release/module/rule/block_reject.sgmodule MODULE RULE REJECT
           python3 script/create_rule_module.py ./configuration/release/module/rule/block_reject_drop.sgmodule MODULE RULE REJECT-DROP
           python3 script/create_rule_module.py ./configuration/release/module/rule/proxy_warp.sgmodule MODULE RULE PROXY-WARP force-remote-dns
           python3 script/create_rule_module.py ./configuration/release/module/rule/proxy_remote_dns.sgmodule MODULE RULE PROXY-FALLBACK force-remote-dns
-          python3 script/list2clash_ruleset.py ./.tmp/raw_warp_list.txt ./configuration/release/rule-set/openai.yaml -t @openai
-      - name: Merge file content
+          python3 script/create_rule_module.py ./configuration/release/module/host/domain_dns_adot.sgmodule MODULE HOST DOMAIN-DNS ${{ env.ADOT_IPV4 }}
+          python3 script/create_rule_module.py ./configuration/release/module/host/domain_dns_gdot.sgmodule MODULE HOST DOMAIN-DNS ${{ env.GDOT_IPV4 }}
+
+      - name: Generate Clash RuleSet
         run: |
+          python3 script/list2clash_ruleset.py ./.tmp/raw_warp_list.txt ./configuration/release/rule-set/openai.yaml -t @openai
+
+      - name: Generate main cfg
+        run: |
+          python3 script/create_rule_module.py ./.tmp/raw_direct_list.txt TEXT RULE DIRECT
           cat ./configuration/customized_list/sr_base.conf > ./configuration/release/sr_ark.conf
           cat ./.tmp/raw_direct_list.txt >> ./configuration/release/sr_ark.conf
           cat ./configuration/customized_list/geoip_rule.txt >> ./configuration/release/sr_ark.conf
