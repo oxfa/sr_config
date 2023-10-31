@@ -1,9 +1,12 @@
 #!name=domain_dns_adot
 
 [Host]
-domain:apple.com:@adot = server:tls://223.5.5.5
-*.domain:apple.com:@adot = server:tls://223.5.5.5
-domain:icloud.com:@adot = server:tls://223.5.5.5
-*.domain:icloud.com:@adot = server:tls://223.5.5.5
-domain:icloud-content.com:@adot = server:tls://223.5.5.5
+*.apple.com = server:tls://223.5.5.5
+*.icloud.com = server:tls://223.5.5.5
+*.icloud-content.com = server:tls://223.5.5.5
+*.icloud.com = server:tls://223.5.5.5
+*.icloud-content.com = server:tls://223.5.5.5
+icloud-content.com:@adot = server:tls://223.5.5.5
 *.domain:icloud-content.com:@adot = server:tls://223.5.5.5
+domain:icloud.com:@adot
+domain:icloud-content.com:@adot
