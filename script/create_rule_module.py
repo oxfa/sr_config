@@ -47,7 +47,8 @@ def format_rule(fd, op_type):
             elif url_type == "#":
                 continue
             else:
-                sys.exit("Error: No such url_type!")
+                error_msg = "Error: No such url_type!" + line
+                sys.exit(error_msg)
             expression = line[first_colon_index +
                               1:last_colon_index] if last_colon_index > first_colon_index else line[first_colon_index + 1:]
         else:
