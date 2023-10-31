@@ -23,15 +23,15 @@ def split_line(line):
     else:
         exp_type = line[:first_colon_index].strip()
         expression = line[first_colon_index + 1:last_colon_index].strip()
-        tag = line[last_colon_index + 1:].strip()
-        return exp_type, expression, tag
+        line_tag = line[last_colon_index + 1:].strip()
+        return exp_type, expression, line_tag
 
 
-def join_line(exp_type, expression, tag):
-    return ":".join(filter(bool, [exp_type, expression, tag]))
+def join_line(exp_type, expression, line_tag):
+    return ":".join(filter(bool, [exp_type, expression, line_tag]))
 
 
-def process_file(file_a_path, file_b_path, tag=None):
+def process_file(file_a_path, file_b_path, tag_arg=None):
     with open(file_a_path, 'r') as file_a:
         content_a = file_a.read().splitlines()
     add_lines = []
@@ -48,12 +48,13 @@ def process_file(file_a_path, file_b_path, tag=None):
             elif line == "# REMOVE":
                 current_section = 'remove'
             else:
-                exp_type, expression, tag = split_line(line)
-                if tag and tag != tag:
+                exp_type, expression, line_tag = split_line(line)
+                if line_tag and line_tag != tag_arg:
                     continue
                 if current_section == 'add':
                     if all(split_line(x.strip())[1] != expression for x in content_a):
-                        add_lines.append(join_line(exp_type, expression, tag))
+                        add_lines.append(
+                            join_line(exp_type, expression, line_tag))
                 elif current_section == 'remove':
                     remove_lines.add(expression)
 

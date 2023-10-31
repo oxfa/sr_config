@@ -2,7 +2,7 @@ import re
 import argparse
 
 
-def process_file_in_place(file_path, tag=None):
+def process_file_in_place(file_path, tag_arg=None):
     domain_pattern = re.compile(
         r'^(?!-)[a-zA-Z0-9-]+(?<!-)(?:\.(?!-)[a-zA-Z0-9-]+(?<!-))*\.[a-zA-Z]{2,63}$')
 
@@ -33,8 +33,8 @@ def process_file_in_place(file_path, tag=None):
                 print(f"Invalid line: {line}")
                 continue
 
-            if tag:
-                line = f"{line}:{tag}"
+            if tag_arg:
+                line = f"{line}:{tag_arg}"
             new_lines.append(line + '\n')
 
     with open(file_path, "w") as f_out:

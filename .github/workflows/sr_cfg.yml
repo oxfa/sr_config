@@ -85,8 +85,8 @@ jobs:
 
       - name: Process Domain-DNS List
         run: |
-          python3 script/customize_list.py ./configuration/release/module/host/domain_dns_adot.sgmodule  ./configuration/customized_list/domain_dns.txt -t @adot
-          python3 script/customize_list.py ./configuration/release/module/host/domain_dns_gdot.sgmodule  ./configuration/customized_list/domain_dns.txt -t @gdot
+          python3 script/customize_list.py ./configuration/release/module/host/domain_dns_adot.sgmodule ./configuration/customized_list/domain_dns.txt -t @adot
+          python3 script/customize_list.py ./configuration/release/module/host/domain_dns_gdot.sgmodule ./configuration/customized_list/domain_dns.txt -t @gdot
 
       - name: Generate Modules
         run: |

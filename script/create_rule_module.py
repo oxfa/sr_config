@@ -33,8 +33,8 @@ def split_line(line):
     else:
         exp_type = line[:first_colon_index].strip()
         expression = line[first_colon_index + 1:last_colon_index].strip()
-        tag = line[last_colon_index + 1:].strip()
-        return exp_type, expression, tag
+        line_tag = line[last_colon_index + 1:].strip()
+        return exp_type, expression, line_tag
 
 
 def format_rule(fd, op_type):
