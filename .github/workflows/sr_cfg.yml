@@ -64,6 +64,7 @@ jobs:
 
       - name: Process Direct List
         run: |
+          python3 script/format2list.py ./.tmp/raw_direct_list.txt
           python3 script/customize_list.py ./.tmp/raw_direct_list.txt ./configuration/customized_list/direct.txt
 
       - name: Process Proxy List
@@ -76,6 +77,7 @@ jobs:
                                               > /dev/null
       - name: Process Block List
         run: |
+          python3 script/format2list.py ./.tmp/raw_block_list.txt
           python3 script/customize_list.py ./.tmp/raw_block_list.txt ./configuration/customized_list/block.txt
           cat ./.tmp/raw_block_list.txt | tee ./configuration/release/module/rule/block_reject.sgmodule \
                                               ./configuration/release/module/rule/block_reject_drop.sgmodule \
