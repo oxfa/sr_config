@@ -1,37 +1,44 @@
 import re
 import argparse
-import subprocess  # 用于调用外部脚本
 
 
 def process_file_in_place(file_path, tag=None):
     domain_pattern = re.compile(
         r'^(?!-)[a-zA-Z0-9-]+(?<!-)(?:\.(?!-)[a-zA-Z0-9-]+(?<!-))*\.[a-zA-Z]{2,63}$')
 
-    prefixes = ["DOMAIN,", "DOMAIN-SUFFIX,",
-                "URL-REGEX,", "IP-CIDR,", "DOMAIN-KEYWORD,"]
+    replace_dict = {
+        "DOMAIN,": "full:",
+        "DOMAIN-SUFFIX,": "domain:",
+        "URL-REGEX,": "regexp:",
+        "IP-CIDR,": "ip-cidr:",
+        "DOMAIN-KEYWORD,": "keyword:"
+    }
 
     with open(file_path, "r") as f_in:
         lines = f_in.readlines()
-
-    if any(line.startswith(tuple(prefixes)) for line in lines):
-        # 调用 ruleset2list.py 进行转换
-        subprocess_args = ["python3", "script/ruleset2list.py", file_path]
-        if tag:
-            subprocess_args.extend(["-t", tag])
-        subprocess.run(subprocess_args)
-        return
-
-    with open(file_path, "w") as f_out:
-        for line in lines:
+        new_lines = []
+        for line in f_in:
             line = line.strip()
-            # 跳过以#开始的行
             if line.startswith("#"):
                 continue
+
             if line.startswith(("domain:", "full:", "regexp:", "ip-cidr:", "keyword:")):
-                f_out.write(f"{line}{':' + tag if tag else ''}\n")
+                pass
+            elif line.startswith(tuple(tuple(replace_dict.keys()))):
+                for key, value in replace_dict.items():
+                    line = line.replace(key, value)
+            elif domain_pattern.match(line):
+                line = f"domain:{line}"
             else:
-                if domain_pattern.match(line):
-                    f_out.write(f"domain:{line}{':' + tag if tag else ''}\n")
+                print(f"Invalid line: {line}")
+                continue
+
+            if tag:
+                line = f"{line}:{tag}"
+            new_lines.append(line + '\n')
+
+    with open(file_path, "w") as f_out:
+        f_out.writelines(new_lines)
 
 
 if __name__ == "__main__":
