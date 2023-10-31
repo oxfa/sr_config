@@ -52,10 +52,10 @@ def process_file(file_a_path, file_b_path, tag=None):
                 if tag and tag != tag:
                     continue
                 if current_section == 'add':
-                    if all(split_line(x.strip())[1] != B for x in content_a):
+                    if all(split_line(x.strip())[1] != expression for x in content_a):
                         add_lines.append(join_line(exp_type, expression, tag))
                 elif current_section == 'remove':
-                    remove_lines.add(B)
+                    remove_lines.add(expression)
 
     content_a = [line for line in content_a if split_line(line.strip())[
         1] not in remove_lines]
