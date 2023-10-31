@@ -1,8 +1,4 @@
 #!name=domain_dns_gdot
 
 [HOST]
-apple.com = server:tls://8.8.4.4
-*.apple.com = server:tls://8.8.4.4
-*.icloud.com = server:tls://8.8.4.4
-*.icloud-content.com = server:tls://8.8.4.4
 nic.eu.org = server:tls://8.8.4.4
