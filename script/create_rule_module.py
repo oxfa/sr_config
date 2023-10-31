@@ -12,13 +12,29 @@ def is_valid_domain(domain):
 
 
 def split_line(line):
-    segments = line.split(":")
-    if len(segments) == 1:
-        return "", segments[0].strip(), ""
-    elif len(segments) == 2:
-        return segments[0].strip(), segments[1].strip(), ""
+    first_colon_index = line.find(":")
+    last_colon_index = line.rfind(":")
+
+    # No colon present
+    if first_colon_index == -1:
+        return "", line.strip(), ""
+
+    # Single colon
+    elif first_colon_index == last_colon_index:
+        exp_type = line[:first_colon_index].strip()
+        expression = line[first_colon_index + 1:].strip()
+
+        if expression.startswith("@"):
+            return "", exp_type, expression
+        else:
+            return exp_type, expression, ""
+
+    # Multiple colons
     else:
-        return segments[0].strip(), segments[1].strip(), segments[2].strip()
+        exp_type = line[:first_colon_index].strip()
+        expression = line[first_colon_index + 1:last_colon_index].strip()
+        tag = line[last_colon_index + 1:].strip()
+        return exp_type, expression, tag
 
 
 def format_rule(fd, op_type):
@@ -26,6 +42,9 @@ def format_rule(fd, op_type):
     lines = fd.readlines()
 
     for line in lines:
+        line = line.strip()
+        if line == "":
+            continue
         if line.startswith("#"):
             continue
 
@@ -63,8 +82,12 @@ def format_host(fd, op_type):
         dns_server = sys.argv[5]
         dns_info = " = server:" + dns_server
         lines = fd.readlines()
-        num = 0
         for line in lines:
+            line = line.strip()
+            if line == "":
+                continue
+            if line.startswith("#"):
+                continue
             exp_type, expression, _ = split_line(line)
             if exp_type == "full":
                 if is_valid_domain(expression):
@@ -77,11 +100,8 @@ def format_host(fd, op_type):
                     formated_text += f"{expression}{dns_info}\n"
                     formated_text += f"*.{expression}{dns_info}\n"
             else:
-                buf = ""
-                for i in lines:
-                    buf += i
                 sys.exit(
-                    f"Invalid exp_type2: '{exp_type}', num: {num}, exp: {expression}, line: {line}, dns: {dns_server}, buf: {buf}, ")
+                    f"Invalid exp_type2: '{exp_type}', exp: {expression}, line: {line}, dns: {dns_server}")
             num += 1
     else:
         pass
