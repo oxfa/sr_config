@@ -50,6 +50,8 @@ jobs:
           wget ${{ env.RAW_DIRECT_LIST_URL }} -O ./.tmp/raw_direct_list.txt
           wget ${{ env.RAW_ICLOUD_LIST_URL }} -O ./.tmp/raw_icloud_list.txt
           wget ${{ env.RAW_PRIVATE_LIST_URL }} -O ./.tmp/raw_private_list.txt
+          echo "" > ./configuration/release/module/host/domain_dns_adot.sgmodule
+          echo "" > ./configuration/release/module/host/domain_dns_gdot.sgmodule
           cat ./.tmp/openai_ruleset.txt > ./.tmp/raw_warp_list.txt
           cat ./.tmp/raw_icloud_list.txt ./.tmp/raw_private_list.txt >> ./.tmp/raw_direct_list.txt
 
