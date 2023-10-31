@@ -1,4 +1,3 @@
-import sys
 import argparse
 
 
@@ -6,23 +5,22 @@ def split_line(line):
     first_colon_index = line.find(":")
     last_colon_index = line.rfind(":")
     if first_colon_index == -1:
-        return line, "", ""
-    if first_colon_index == last_colon_index:
-        A = line[:first_colon_index]
-        B = line[first_colon_index + 1:]
-        C = ""
-        return A, B, C
-    A = line[:first_colon_index]
-    B = line[first_colon_index + 1:last_colon_index]
-    C = line[last_colon_index + 1:]
-    return A, B, C
+        return "", line.strip(), ""
+    elif first_colon_index == last_colon_index:
+        return line[:first_colon_index].strip(), line[first_colon_index + 1:].strip(), ""
+    else:
+        return line[:first_colon_index].strip(), line[first_colon_index + 1:last_colon_index].strip(), line[last_colon_index + 1:].strip()
 
 
 def join_line(A, B, C):
-    if C:
+    if A and B and C:
         return f"{A}:{B}:{C}\n"
-    else:
+    elif A and B:
         return f"{A}:{B}\n"
+    elif B and C:
+        return f"{B}:{C}\n"
+    else:
+        return f"{B}\n"
 
 
 def process_file(file_a_path, file_b_path, tag=None):
@@ -52,8 +50,8 @@ def process_file(file_a_path, file_b_path, tag=None):
                 elif current_section == 'remove':
                     remove_lines.append(B)
 
-    content_a = [line for line in content_a if split_line(
-        line.strip())[1] not in remove_lines]
+    content_a = [line for line in content_a if split_line(line.strip())[
+        1] not in remove_lines]
     content_a.extend(add_lines)
 
     with open(file_a_path, 'w') as file_a:
