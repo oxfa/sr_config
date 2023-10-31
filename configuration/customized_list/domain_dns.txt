@@ -1,7 +1,7 @@
 # ADD
 domain&full:apple.com:@adot
-domain:icloud.com:@adot
-domain:icloud-content.com:@adot
+domain&full:icloud.com:@adot
+domain&full:icloud-content.com:@adot
 full:nic.eu.org:@gdot
-domain:64clouds.com@gdot
+domain&full:64clouds.com:@gdot
 # REMOVE
