@@ -45,7 +45,7 @@ def format_rule(fd, op_type):
             buf = ""
             for i in lines:
                 buf += i
-            sys.exit(f"Invalid exp_type: {buf}")
+            sys.exit(f"Invalid exp_type1: {buf}")
 
         op_text_full = op_type
         if exp_type == "ip-cidr":
@@ -79,7 +79,10 @@ def format_host(fd, op_type):
                     formated_text += f"{expression}{dns_info}\n"
                     formated_text += f"*.{expression}{dns_info}\n"
             else:
-                sys.exit(f"Invalid exp_type: {exp_type}")
+                buf = ""
+                for i in lines:
+                    buf += i
+                sys.exit(f"Invalid exp_type2: {buf}")
     else:
         pass
     return formated_text
