@@ -1,0 +1,4 @@
+#!name=block_reject_dict
+
+[RULE]
+DOMAIN,analytics-api.smzdm.com,REJECT-DICT

@@ -7387,7 +7387,6 @@ DOMAIN-SUFFIX,analytics-active.net,REJECT
 DOMAIN-SUFFIX,analytics-api.a-f.io,REJECT
 DOMAIN-SUFFIX,analytics-api.liveapp.com,REJECT
 DOMAIN-SUFFIX,analytics-api.samsunghealthcn.com,REJECT
-DOMAIN-SUFFIX,analytics-api.smzdm.com,REJECT
 DOMAIN-SUFFIX,analytics-api.statvoo.com,REJECT
 DOMAIN-SUFFIX,analytics-beacon.p.uliza.jp,REJECT
 DOMAIN-SUFFIX,analytics-cdiscount.com,REJECT
