@@ -65955,5 +65955,6 @@ DOMAIN-SUFFIX,zzyy20.top,REJECT
 DOMAIN-SUFFIX,zzzhuoxiaqu.online,REJECT
 DOMAIN-SUFFIX,zzznews.ru,REJECT
 DOMAIN,waapdg.jd.com,REJECT
+DOMAIN-SUFFIX,jddebug.com,REJECT
 DOMAIN,httpdns.bilivideo.com,REJECT
 DOMAIN,https.0.66.168.192.in-addr.arpa,REJECT
