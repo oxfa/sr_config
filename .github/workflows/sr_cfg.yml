@@ -50,10 +50,13 @@ jobs:
           wget ${{ env.RAW_DIRECT_LIST_URL }} -O ./.tmp/raw_direct_list.txt
           wget ${{ env.RAW_ICLOUD_LIST_URL }} -O ./.tmp/raw_icloud_list.txt
           wget ${{ env.RAW_PRIVATE_LIST_URL }} -O ./.tmp/raw_private_list.txt
-          echo "" > ./configuration/release/module/host/domain_dns_adot.sgmodule
-          echo "" > ./configuration/release/module/host/domain_dns_gdot.sgmodule
           cat ./.tmp/openai_ruleset.txt > ./.tmp/raw_warp_list.txt
           cat ./.tmp/raw_icloud_list.txt ./.tmp/raw_private_list.txt >> ./.tmp/raw_direct_list.txt
+
+          echo "" > ./configuration/release/module/host/domain_dns_adot.sgmodule
+          echo "" > ./configuration/release/module/host/domain_dns_gdot.sgmodule
+          echo "" > ./configuration/release/module/rule/block_reject_dict.sgmodule
+          echo "" > ./configuration/release/module/rule/block_reject_array.sgmodule
 
       - name: Process Warp List
         run: |
@@ -78,7 +81,12 @@ jobs:
       - name: Process Block List
         run: |
           python3 script/format2list.py ./.tmp/raw_block_list.txt
-          python3 script/customize_list.py ./.tmp/raw_block_list.txt ./configuration/customized_list/block.txt
+          python3 script/remove_domain.py ./.tmp/raw_block_list.txt ./configuration/customized_list/block_reject_dict.txt
+          python3 script/remove_domain.py ./.tmp/raw_block_list.txt ./configuration/customized_list/block_reject_array.txt
+          python3 script/customize_list.py ./.tmp/raw_block_list.txt ./configuration/customized_list/block_default.txt
+          python3 script/customize_list.py ./configuration/release/module/rule/block_reject_dict.sgmodule ./configuration/customized_list/block_reject_dict.txt
+          python3 script/customize_list.py ./configuration/release/module/rule/block_reject_array.sgmodule ./configuration/customized_list/block_reject_array.txt
+
           cat ./.tmp/raw_block_list.txt | tee ./configuration/release/module/rule/block_reject.sgmodule \
                                               ./configuration/release/module/rule/block_reject_drop.sgmodule \
                                               > /dev/null
@@ -92,6 +100,8 @@ jobs:
         run: |
           python3 script/create_rule_module.py ./configuration/release/module/rule/block_reject.sgmodule MODULE RULE REJECT
           python3 script/create_rule_module.py ./configuration/release/module/rule/block_reject_drop.sgmodule MODULE RULE REJECT-DROP
+          python3 script/create_rule_module.py ./configuration/release/module/rule/block_reject_dict.sgmodule MODULE RULE REJECT-DICT
+          python3 script/create_rule_module.py ./configuration/release/module/rule/block_reject_array.sgmodule MODULE RULE REJECT-ARRAY
           python3 script/create_rule_module.py ./configuration/release/module/rule/proxy_warp.sgmodule MODULE RULE PROXY-WARP force-remote-dns
           python3 script/create_rule_module.py ./configuration/release/module/rule/proxy_remote_dns.sgmodule MODULE RULE PROXY-FALLBACK force-remote-dns
           python3 script/create_rule_module.py ./configuration/release/module/host/domain_dns_adot.sgmodule MODULE HOST DOMAIN-DNS ${{ env.ADOT_IPV4 }}
