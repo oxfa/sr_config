@@ -8,6 +8,7 @@ domain:wolframcdn.com:@openai
 domain:revenuecat.com:@openai
 domain:stripe.network:@openai
 domain:wolframcloud.com:@openai
+domain:oaic.report-url.com:@openai
 domain:ocsp.rootca1.amazontrust.com:@openai
 full:openaiapi-site.azureedge.net:@openai
 full:chat.openai.com.cdn.cloudflare.net:@openai
