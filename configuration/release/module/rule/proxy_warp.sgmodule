@@ -24,6 +24,7 @@ DOMAIN-SUFFIX,wolframcdn.com,PROXY-WARP
 DOMAIN-SUFFIX,revenuecat.com,PROXY-WARP
 DOMAIN-SUFFIX,stripe.network,PROXY-WARP
 DOMAIN-SUFFIX,wolframcloud.com,PROXY-WARP
+DOMAIN-SUFFIX,oaic.report-url.com,PROXY-WARP
 DOMAIN-SUFFIX,ocsp.rootca1.amazontrust.com,PROXY-WARP
 DOMAIN,openaiapi-site.azureedge.net,PROXY-WARP
 DOMAIN,chat.openai.com.cdn.cloudflare.net,PROXY-WARP

@@ -22,6 +22,7 @@ payload:
   - DOMAIN-SUFFIX,revenuecat.com
   - DOMAIN-SUFFIX,stripe.network
   - DOMAIN-SUFFIX,wolframcloud.com
+  - DOMAIN-SUFFIX,oaic.report-url.com
   - DOMAIN-SUFFIX,ocsp.rootca1.amazontrust.com
   - DOMAIN,openaiapi-site.azureedge.net
   - DOMAIN,chat.openai.com.cdn.cloudflare.net
