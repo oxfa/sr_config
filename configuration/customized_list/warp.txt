@@ -3,6 +3,7 @@ keyword:chatgpt:@openai
 domain:openai.com:@openai
 domain:chatgpt.com:@openai
 domain:oaistatic.com:@openai
+domain:oaiusercontent.com:@openai
 domain:livekit.cloud:@openai
 domain:wolframcdn.com:@openai
 domain:revenuecat.com:@openai
