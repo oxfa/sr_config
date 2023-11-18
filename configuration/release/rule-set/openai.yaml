@@ -18,14 +18,16 @@ payload:
   - DOMAIN-SUFFIX,chatgpt.com
   - DOMAIN-SUFFIX,oaistatic.com
   - DOMAIN-SUFFIX,oaiusercontent.com
-  - DOMAIN-SUFFIX,livekit.cloud
-  - DOMAIN-SUFFIX,wolframcdn.com
   - DOMAIN-SUFFIX,revenuecat.com
   - DOMAIN-SUFFIX,stripe.network
+  - DOMAIN-SUFFIX,intercomassets.com
+  - DOMAIN-SUFFIX,livekit.cloud
+  - DOMAIN-SUFFIX,wolframcdn.com
   - DOMAIN-SUFFIX,wolframcloud.com
-  - DOMAIN-SUFFIX,ocsp.rootca1.amazontrust.com
   - DOMAIN,oaic.report-url.com
   - DOMAIN,openaiapi-site.azureedge.net
+  - DOMAIN,ocsp.r2m01.amazontrust.com
+  - DOMAIN,ocsp.rootca1.amazontrust.com
   - DOMAIN,chat.openai.com.cdn.cloudflare.net
   - DOMAIN,production-openaicom-storage.azureedge.net
   - DOMAIN,openaicomproductionae4b.blob.core.windows.net
