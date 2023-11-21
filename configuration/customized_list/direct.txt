@@ -1,6 +1,12 @@
 # ADD
 domain:apple.cn
 domain:168.192.in-addr.arpa
+full:fpinit.itunes.apple.com
+full:sandbox.itunes.apple.com
+full:entitlements.itunes.apple.com
+full:buy.itunes.apple.com
+full:speedysub.itunes.apple.com
+full:p36-buy.itunes.apple.com
 ip-cidr:47.74.0.0/19
 ip-cidr:47.91.0.0/20
 ip-cidr:47.74.32.0/19
