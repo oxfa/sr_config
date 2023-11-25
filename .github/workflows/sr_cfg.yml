@@ -27,32 +27,40 @@ jobs:
       ADOT_IPV4: tls://223.5.5.5
       ADNS_IPV4: 223.5.5.5
 
-      RAW_PROXY_LIST_URL: https://raw.githubusercontent.com/Loyalsoldier/v2ray-rules-dat/release/gfw.txt
-      RAW_BLOCK_LIST_URL: https://raw.githubusercontent.com/Loyalsoldier/v2ray-rules-dat/release/reject-list.txt
-      RAW_ICLOUD_LIST_URL: https://raw.githubusercontent.com/Loyalsoldier/domain-list-custom/release/icloud.txt
-      RAW_DIRECT_LIST_URL: https://raw.githubusercontent.com/Loyalsoldier/v2ray-rules-dat/release/direct-list.txt
-      RAW_PRIVATE_LIST_URL: https://raw.githubusercontent.com/Loyalsoldier/domain-list-custom/release/private.txt
+      RAW_PROXY_LIST_URL:     https://raw.githubusercontent.com/Loyalsoldier/v2ray-rules-dat/release/gfw.txt
+      # RAW_BLOCK_LIST_URL:  https://raw.githubusercontent.com/Loyalsoldier/v2ray-rules-dat/release/reject-list.txt
+      #PETERLOWE_REJECT_URL:   https://pgl.yoyo.org/adservers/serverlist.php?hostformat=hosts&showintro=1&mimetype=plaintext
+      ADGUARD_DNS_REJECT_URL: https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt
+      #DANPOLLOCK_REJECT_URL:  https://someonewhocares.org/hosts/hosts
+      RAW_ICLOUD_LIST_URL:    https://raw.githubusercontent.com/Loyalsoldier/domain-list-custom/release/icloud.txt
+      RAW_DIRECT_LIST_URL:    https://raw.githubusercontent.com/Loyalsoldier/v2ray-rules-dat/release/direct-list.txt
+      RAW_PRIVATE_LIST_URL:   https://raw.githubusercontent.com/Loyalsoldier/domain-list-custom/release/private.txt
 
       RULESET_OPENAI_URL: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/OpenAI/OpenAI.list
     steps:
       - name: Checkout the "master" branch of this repo
         uses: actions/checkout@v4
+
       - name: Set variables
         run: |
           echo "RELEASE_NAME=Updated on $(date +%Y%m%d%H%M)" >> $GITHUB_ENV
           echo "TAG_NAME=$(date +%Y%m%d%H%M)" >> $GITHUB_ENV
+
       - name: Download Lists And Copy Lists
         run: |
           mkdir .tmp
           wget ${{ env.RULESET_OPENAI_URL }} -O ./.tmp/openai_ruleset.txt
           wget ${{ env.RAW_PROXY_LIST_URL }} -O ./.tmp/raw_proxy_list.txt
-          wget ${{ env.RAW_BLOCK_LIST_URL }} -O ./.tmp/raw_block_list.txt
+          wget ${{ env.ADGUARD_DNS_REJECT_URL }} -O ./.tmp/adguard_dns_list.txt
           wget ${{ env.RAW_DIRECT_LIST_URL }} -O ./.tmp/raw_direct_list.txt
           wget ${{ env.RAW_ICLOUD_LIST_URL }} -O ./.tmp/raw_icloud_list.txt
           wget ${{ env.RAW_PRIVATE_LIST_URL }} -O ./.tmp/raw_private_list.txt
+
+      - name: Pre-process Lists
+        run: |
           cat ./.tmp/openai_ruleset.txt > ./.tmp/raw_warp_list.txt
           cat ./.tmp/raw_icloud_list.txt ./.tmp/raw_private_list.txt >> ./.tmp/raw_direct_list.txt
-
+          cat ./.tmp/adguard_dns_list.txt | perl -ne '/^\|\|([-_0-9a-zA-Z]+(\.[-_0-9a-zA-Z]+){1,64})\^$/ && print "$1\n"' | perl -ne 'print if not /^[0-9]{1,3}(\.[0-9]{1,3}){3}$/' >> ./.tmp/raw_block_list.txt
           echo "" > ./configuration/release/module/host/domain_dns_adot.sgmodule
           echo "" > ./configuration/release/module/host/domain_dns_gdot.sgmodule
           echo "" > ./configuration/release/module/rule/block_reject_dict.sgmodule
