@@ -1,6 +1,7 @@
 #!name=proxy_warp
 
 [RULE]
+DOMAIN,chatgpt.livekit.cloud,PROXY-WARP
 DOMAIN,static.cloudflareinsights.com,PROXY-WARP
 DOMAIN-SUFFIX,ai.com,PROXY-WARP
 DOMAIN-SUFFIX,algolia.net,PROXY-WARP
