@@ -1,7 +1,7 @@
 #!name=proxy_warp
 
 [RULE]
-DOMAIN,chatgpt.livekit.cloud,PROXY-WARP
+DOMAIN,browser-intake-datadoghq.com,PROXY-WARP
 DOMAIN,static.cloudflareinsights.com,PROXY-WARP
 DOMAIN-SUFFIX,ai.com,PROXY-WARP
 DOMAIN-SUFFIX,algolia.net,PROXY-WARP
@@ -9,9 +9,11 @@ DOMAIN-SUFFIX,api.statsig.com,PROXY-WARP
 DOMAIN-SUFFIX,auth0.com,PROXY-WARP
 DOMAIN-SUFFIX,cdn.cloudflare.net,PROXY-WARP
 DOMAIN-SUFFIX,challenges.cloudflare.com,PROXY-WARP
+DOMAIN-SUFFIX,chatgpt.livekit.cloud,PROXY-WARP
 DOMAIN-SUFFIX,client-api.arkoselabs.com,PROXY-WARP
 DOMAIN-SUFFIX,events.statsigapi.net,PROXY-WARP
 DOMAIN-SUFFIX,featuregates.org,PROXY-WARP
+DOMAIN-SUFFIX,host.livekit.cloud,PROXY-WARP
 DOMAIN-SUFFIX,identrust.com,PROXY-WARP
 DOMAIN-SUFFIX,intercom.io,PROXY-WARP
 DOMAIN-SUFFIX,intercomcdn.com,PROXY-WARP
@@ -23,7 +25,10 @@ DOMAIN-SUFFIX,poe.com,PROXY-WARP
 DOMAIN-SUFFIX,segment.io,PROXY-WARP
 DOMAIN-SUFFIX,sentry.io,PROXY-WARP
 DOMAIN-SUFFIX,stripe.com,PROXY-WARP
+DOMAIN-SUFFIX,turn.livekit.cloud,PROXY-WARP
 DOMAIN-KEYWORD,openai,PROXY-WARP
+IP-CIDR,24.199.123.28/32,no-resolve,PROXY-WARP,no-resolve
+IP-CIDR,64.23.132.171/32,no-resolve,PROXY-WARP,no-resolve
 DOMAIN-KEYWORD,chatgpt,PROXY-WARP
 DOMAIN-SUFFIX,openai.com,PROXY-WARP
 DOMAIN-SUFFIX,chatgpt.com,PROXY-WARP
