@@ -7,6 +7,11 @@ full:entitlements.itunes.apple.com
 full:buy.itunes.apple.com
 full:speedysub.itunes.apple.com
 full:p36-buy.itunes.apple.com
+ip-cidr:17.0.0.0/8
+ip-cidr:2620:149:a44::/48
+ip-cidr:2403:300:a42::/48
+ip-cidr:2403:300:a51::/48
+ip-cidr:2a01:b740:a42::/48
 ip-cidr:47.74.0.0/19
 ip-cidr:47.91.0.0/20
 ip-cidr:47.74.32.0/19
