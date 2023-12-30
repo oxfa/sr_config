@@ -1,5 +1,7 @@
 import argparse
 
+# TODO when prefix is ip-cidr and the content is ipv6 address, the argorithm below will fail to split colon symbol.
+
 
 def split_line(line):
     first_colon_index = line.find(":")
