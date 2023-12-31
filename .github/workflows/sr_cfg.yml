@@ -37,6 +37,7 @@ jobs:
       RAW_PRIVATE_LIST_URL:   https://raw.githubusercontent.com/Loyalsoldier/domain-list-custom/release/private.txt
 
       RULESET_OPENAI_URL: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/OpenAI/OpenAI.list
+      RULESET_REDDIT_URL: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Reddit/Reddit.list
     steps:
       - name: Checkout the "master" branch of this repo
         uses: actions/checkout@v4
@@ -50,6 +51,7 @@ jobs:
         run: |
           mkdir .tmp
           wget ${{ env.RULESET_OPENAI_URL }} -O ./.tmp/openai_ruleset.txt
+          wget ${{ env.RULESET_REDDIT_URL }} -O ./.tmp/reddit_ruleset.txt
           wget ${{ env.RAW_PROXY_LIST_URL }} -O ./.tmp/raw_proxy_list.txt
           wget ${{ env.ADGUARD_DNS_REJECT_URL }} -O ./.tmp/adguard_dns_list.txt
           wget ${{ env.RAW_DIRECT_LIST_URL }} -O ./.tmp/raw_direct_list.txt
@@ -58,7 +60,8 @@ jobs:
 
       - name: Pre-process Lists
         run: |
-          cat ./.tmp/openai_ruleset.txt > ./.tmp/raw_warp_list.txt
+          cat ./.tmp/reddit_ruleset.txt > ./.tmp/raw_warp_list.txt
+          cat ./.tmp/openai_ruleset.txt >> ./.tmp/raw_warp_list.txt
           cat ./.tmp/raw_icloud_list.txt ./.tmp/raw_private_list.txt >> ./.tmp/raw_direct_list.txt
           cat ./.tmp/adguard_dns_list.txt | perl -ne '/^\|\|([-_0-9a-zA-Z]+(\.[-_0-9a-zA-Z]+){1,64})\^$/ && print "$1\n"' | perl -ne 'print if not /^[0-9]{1,3}(\.[0-9]{1,3}){3}$/' >> ./.tmp/raw_block_list.txt
           echo "" > ./configuration/release/module/host/domain_dns_adot.sgmodule
