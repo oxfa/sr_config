@@ -1,6 +1,14 @@
 #!name=proxy_warp
 
 [RULE]
+DOMAIN-SUFFIX,redd.it,PROXY-WARP
+DOMAIN-SUFFIX,reddit.com,PROXY-WARP
+DOMAIN-SUFFIX,redditmail.com,PROXY-WARP
+DOMAIN-SUFFIX,redditmedia.com,PROXY-WARP
+DOMAIN-SUFFIX,redditstatic.com,PROXY-WARP
+DOMAIN-SUFFIX,reddituploads.com,PROXY-WARP
+DOMAIN-SUFFIX,reddituploads.com.cdn-cf.behance.net,PROXY-WARP
+DOMAIN-SUFFIX,reddituploads.com.cdn-cf.dropbox.com,PROXY-WARP
 DOMAIN,browser-intake-datadoghq.com,PROXY-WARP
 DOMAIN,static.cloudflareinsights.com,PROXY-WARP
 DOMAIN-SUFFIX,ai.com,PROXY-WARP
