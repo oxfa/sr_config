@@ -11,6 +11,7 @@ def process_file_in_place(file_path, tag_arg=None):
         "DOMAIN-SUFFIX,": "domain:",
         "URL-REGEX,": "regexp:",
         "IP-CIDR,": "ip-cidr:",
+        "IP-ASN,": "ip-asn:",
         "DOMAIN-KEYWORD,": "keyword:"
     }
 
@@ -22,7 +23,7 @@ def process_file_in_place(file_path, tag_arg=None):
             if line.startswith("#"):
                 continue
 
-            if line.startswith(("domain:", "full:", "regexp:", "ip-cidr:", "keyword:")):
+            if line.startswith(("domain:", "full:", "regexp:", "ip-cidr:", "ip-asn:", "keyword:")):
                 pass
             elif line.startswith(tuple(tuple(replace_dict.keys()))):
                 for key, value in replace_dict.items():

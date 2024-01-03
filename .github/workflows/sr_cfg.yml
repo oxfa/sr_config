@@ -71,12 +71,12 @@ jobs:
         run: |
           python3 script/format2list.py ./.tmp/openai_ruleset.txt -t @openai
           python3 script/customize_list.py ./.tmp/openai_ruleset.txt ./configuration/customized_list/warp.txt -t @openai
-          sort -o ./.tmp/openai_ruleset.txt ./.tmp/openai_ruleset.txt
+          python3 script/sortlist.py ./.tmp/openai_ruleset.txt
 
       - name: Process Reddit List
         run: |
           python3 script/format2list.py ./.tmp/reddit_ruleset.txt
-          sort -o ./.tmp/reddit_ruleset.txt ./.tmp/reddit_ruleset.txt
+          python3 script/sortlist.py ./.tmp/reddit_ruleset.txt
 
       - name: Process Warp List
         run: |

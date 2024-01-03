@@ -57,6 +57,7 @@ def format_rule(fd, op_type):
             "domain": "DOMAIN-SUFFIX",
             "regexp": "URL-REGEX",
             "ip-cidr": "IP-CIDR",
+            "ip-asn": "IP-ASN",
             "keyword": "DOMAIN-KEYWORD",
         }.get(exp_type, None)
 
@@ -64,7 +65,7 @@ def format_rule(fd, op_type):
             sys.exit(f"Invalid exp_type1: {exp_type}, line text: {line}")
 
         op_text_full = op_type
-        if exp_type == "ip-cidr":
+        if exp_type == "ip-cidr" or exp_type == "ip-asn":
             op_text_full += ",no-resolve"
 
         formatted_text += f"{prefix},{expression},{op_text_full}\n"
