@@ -31,13 +31,13 @@ jobs:
       # RAW_BLOCK_LIST_URL:  https://raw.githubusercontent.com/Loyalsoldier/v2ray-rules-dat/release/reject-list.txt
       #PETERLOWE_REJECT_URL:   https://pgl.yoyo.org/adservers/serverlist.php?hostformat=hosts&showintro=1&mimetype=plaintext
       ADGUARD_DNS_REJECT_URL: https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt
-      #DANPOLLOCK_REJECT_URL:  https://someonewhocares.org/hosts/hosts
+      # DANPOLLOCK_REJECT_URL:  https://someonewhocares.org/hosts/hosts
       RAW_ICLOUD_LIST_URL:    https://raw.githubusercontent.com/Loyalsoldier/domain-list-custom/release/icloud.txt
       RAW_DIRECT_LIST_URL:    https://raw.githubusercontent.com/Loyalsoldier/v2ray-rules-dat/release/direct-list.txt
       RAW_PRIVATE_LIST_URL:   https://raw.githubusercontent.com/Loyalsoldier/domain-list-custom/release/private.txt
 
-      RULESET_OPENAI_URL: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/OpenAI/OpenAI.list
-      RULESET_REDDIT_URL: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Reddit/Reddit.list
+      RULESET_OPENAI_URL:     https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/OpenAI/OpenAI.list
+      RULESET_REDDIT_URL:     https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Reddit/Reddit.list
     steps:
       - name: Checkout the "master" branch of this repo
         uses: actions/checkout@v4
@@ -70,11 +70,13 @@ jobs:
       - name: Process Openai List
         run: |
           python3 script/format2list.py ./.tmp/openai_ruleset.txt -t @openai
-          python3 script/customize_list.py ./.tmp/openai_ruleset.txt ./configuration/customized_list/warp.txt
+          python3 script/customize_list.py ./.tmp/openai_ruleset.txt ./configuration/customized_list/warp.txt -t @openai
+          sort -o ./.tmp/openai_ruleset.txt ./.tmp/openai_ruleset.txt
 
       - name: Process Reddit List
         run: |
           python3 script/format2list.py ./.tmp/reddit_ruleset.txt
+          sort -o ./.tmp/reddit_ruleset.txt ./.tmp/reddit_ruleset.txt
 
       - name: Process Warp List
         run: |
@@ -135,6 +137,7 @@ jobs:
           cat ./configuration/customized_list/sr_base.conf > ./configuration/release/sr_ark.conf
           cat ./.tmp/raw_direct_list.txt >> ./configuration/release/sr_ark.conf
           cat ./configuration/customized_list/geoip_rule.txt >> ./configuration/release/sr_ark.conf
+
       - name: Clean temp directory
         run: rm -rf .tmp
       # - name: Release and upload assets
