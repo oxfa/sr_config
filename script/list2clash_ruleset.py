@@ -26,7 +26,6 @@ def process_line(line, tag_filter=None):
         "domain": "DOMAIN-SUFFIX,",
         "regexp": "URL-REGEX,",
         "ip-cidr": "IP-CIDR,",
-        "ip-asn": "IP-ASN,",
         "keyword": "DOMAIN-KEYWORD,"
     }
 
