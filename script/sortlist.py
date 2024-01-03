@@ -14,11 +14,13 @@ def sort_lines_by_key_values(file_path, key_value_pairs):
     except IOError as e:
         raise Exception(f"Error reading file: {e}")
 
-    # 使用键的顺序进行排序
+    # 为不在列表中的键指定一个默认索引
+    default_index = len(key_value_pairs)
+
     sorted_lines = sorted(
         lines,
         key=lambda line: list(key_value_pairs.keys()).index(
-            line.split(':')[0].strip())
+            line.split(':')[0].strip()) if line.split(':')[0].strip() in key_value_pairs else default_index
     )
 
     return sorted_lines

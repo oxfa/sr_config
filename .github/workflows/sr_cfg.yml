@@ -97,6 +97,7 @@ jobs:
           python3 script/remove_domain.py ./.tmp/raw_proxy_list.txt ./.tmp/raw_warp_list.txt
           python3 script/remove_domain.py ./.tmp/raw_proxy_list.txt ./.tmp/raw_direct_list.txt
           python3 script/customize_list.py ./.tmp/raw_proxy_list.txt ./configuration/customized_list/proxy.txt
+          python3 script/sortlist.py ./.tmp/raw_proxy_list.txt
           cat ./.tmp/raw_proxy_list.txt | tee ./configuration/release/module/rule/proxy_remote_dns.sgmodule \
                                               > /dev/null
       - name: Process Block List
@@ -130,6 +131,7 @@ jobs:
       - name: Generate Clash RuleSet
         run: |
           python3 script/list2clash_ruleset.py ./.tmp/raw_warp_list.txt ./configuration/release/rule-set/openai.yaml -t @openai
+          python3 script/list2clash_ruleset.py ./.tmp/raw_proxy_list.txt ./configuration/release/rule-set/proxy.yaml
 
       - name: Generate main cfg
         run: |
