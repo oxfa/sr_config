@@ -25,11 +25,11 @@ def process_file_in_place(file_path, tag_arg=None):
 
             if line.startswith(("domain:", "full:", "regexp:", "keyword:")):
                 pass
-            elif line.startswith(("ip-cidr:", "ip-asn:")):
-                line = line.rstrip(",no-resolve")
             elif line.startswith(tuple(tuple(replace_dict.keys()))):
                 for key, value in replace_dict.items():
                     line = line.replace(key, value)
+                if line.startswith(("ip-cidr:", "ip-asn:")):
+                    line = line.rstrip(",no-resolve")
             elif domain_pattern.match(line):
                 line = f"domain:{line}"
             else:
