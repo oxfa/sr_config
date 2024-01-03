@@ -9,8 +9,8 @@ DOMAIN-SUFFIX,redditstatic.com,PROXY-WARP
 DOMAIN-SUFFIX,reddituploads.com,PROXY-WARP
 DOMAIN-SUFFIX,reddituploads.com.cdn-cf.behance.net,PROXY-WARP
 DOMAIN-SUFFIX,reddituploads.com.cdn-cf.dropbox.com,PROXY-WARP
-DOMAIN,browser-intake-datadoghq.com,PROXY-WARP
-DOMAIN,static.cloudflareinsights.com,PROXY-WARP
+DOMAIN-KEYWORD,openai,PROXY-WARP
+DOMAIN-KEYWORD,chatgpt,PROXY-WARP
 DOMAIN-SUFFIX,ai.com,PROXY-WARP
 DOMAIN-SUFFIX,algolia.net,PROXY-WARP
 DOMAIN-SUFFIX,api.statsig.com,PROXY-WARP
@@ -34,12 +34,6 @@ DOMAIN-SUFFIX,segment.io,PROXY-WARP
 DOMAIN-SUFFIX,sentry.io,PROXY-WARP
 DOMAIN-SUFFIX,stripe.com,PROXY-WARP
 DOMAIN-SUFFIX,turn.livekit.cloud,PROXY-WARP
-DOMAIN-KEYWORD,openai,PROXY-WARP
-IP-CIDR,24.199.123.28/32,no-resolve,PROXY-WARP,no-resolve
-IP-CIDR,64.23.132.171/32,no-resolve,PROXY-WARP,no-resolve
-IP-ASN,14061,no-resolve,PROXY-WARP,no-resolve
-IP-ASN,20473,no-resolve,PROXY-WARP,no-resolve
-DOMAIN-KEYWORD,chatgpt,PROXY-WARP
 DOMAIN-SUFFIX,openai.com,PROXY-WARP
 DOMAIN-SUFFIX,chatgpt.com,PROXY-WARP
 DOMAIN-SUFFIX,revenuecat.com,PROXY-WARP
@@ -48,6 +42,8 @@ DOMAIN-SUFFIX,intercomassets.com,PROXY-WARP
 DOMAIN-SUFFIX,livekit.cloud,PROXY-WARP
 DOMAIN-SUFFIX,wolframcdn.com,PROXY-WARP
 DOMAIN-SUFFIX,wolframcloud.com,PROXY-WARP
+DOMAIN,browser-intake-datadoghq.com,PROXY-WARP
+DOMAIN,static.cloudflareinsights.com,PROXY-WARP
 DOMAIN,oaic.report-url.com,PROXY-WARP
 DOMAIN,openaiapi-site.azureedge.net,PROXY-WARP
 DOMAIN,ocsp.r2m01.amazontrust.com,PROXY-WARP
@@ -55,4 +51,7 @@ DOMAIN,ocsp.rootca1.amazontrust.com,PROXY-WARP
 DOMAIN,chat.openai.com.cdn.cloudflare.net,PROXY-WARP
 DOMAIN,production-openaicom-storage.azureedge.net,PROXY-WARP
 DOMAIN,openaicomproductionae4b.blob.core.windows.net,PROXY-WARP
-DOMAIN,openaicom-api-bdcpf8c6d2e9atf6.z01.azurefd.net,PROXY-WARP
+DOMAIN,openaicom-api-bdcpf8c6d2e9atf6.z01.azurefd.net:@openaiip-asn:14061,no-resolve,PROXY-WARP
+IP-ASN,20473,no-resolve,PROXY-WARP,no-resolve
+IP-CIDR,24.199.123.28/32,no-resolve,PROXY-WARP,no-resolve
+IP-CIDR,64.23.132.171/32,no-resolve,PROXY-WARP,no-resolve
