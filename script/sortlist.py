@@ -6,6 +6,11 @@ def sort_lines_by_key_values(file_path, key_value_pairs):
     try:
         with open(file_path, 'r') as file:
             lines = file.readlines()
+
+        # 确保每行都以换行符结束
+        lines = [line if line.endswith(
+            '\n') else line + '\n' for line in lines]
+
     except IOError as e:
         raise Exception(f"Error reading file: {e}")
 
