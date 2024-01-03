@@ -89,6 +89,7 @@ jobs:
         run: |
           python3 script/format2list.py ./.tmp/raw_direct_list.txt
           python3 script/customize_list.py ./.tmp/raw_direct_list.txt ./configuration/customized_list/direct.txt
+          python3 script/sortlist.py ./.tmp/raw_direct_list.txt
 
       - name: Process Proxy List
         run: |
@@ -106,7 +107,6 @@ jobs:
           python3 script/customize_list.py ./.tmp/raw_block_list.txt ./configuration/customized_list/block_default.txt
           python3 script/customize_list.py ./configuration/release/module/rule/block_reject_dict.sgmodule ./configuration/customized_list/block_reject_dict.txt
           python3 script/customize_list.py ./configuration/release/module/rule/block_reject_array.sgmodule ./configuration/customized_list/block_reject_array.txt
-
           cat ./.tmp/raw_block_list.txt | tee ./configuration/release/module/rule/block_reject.sgmodule \
                                               ./configuration/release/module/rule/block_reject_drop.sgmodule \
                                               > /dev/null
