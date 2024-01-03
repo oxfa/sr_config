@@ -4,18 +4,17 @@ import os
 
 def sort_lines_by_key_values(file_path, key_value_pairs):
     try:
-        # 读取文件
         with open(file_path, 'r') as file:
             lines = file.readlines()
     except IOError as e:
         raise Exception(f"Error reading file: {e}")
 
-    # 反转键值对，以便根据值查找键
-    value_to_key = {v: k for k, v in key_value_pairs.items()}
-
-    # 根据键值对中的键进行排序
-    sorted_lines = sorted(lines, key=lambda line: list(
-        key_value_pairs.keys()).index(value_to_key.get(line.split()[0], "")))
+    # 使用键的顺序进行排序
+    sorted_lines = sorted(
+        lines,
+        key=lambda line: list(key_value_pairs.keys()).index(
+            line.split(':')[0].strip())
+    )
 
     return sorted_lines
 
