@@ -38,12 +38,12 @@ def main():
 
     # 定义键值对
     key_value_pairs = {
-        "full": "DOMAIN",
+        "keyword": "DOMAIN-KEYWORD",
         "domain": "DOMAIN-SUFFIX",
+        "full": "DOMAIN",
         "regexp": "URL-REGEX",
-        "ip-cidr": "IP-CIDR",
         "ip-asn": "IP-ASN",
-        "keyword": "DOMAIN-KEYWORD"
+        "ip-cidr": "IP-CIDR"
     }
 
     # 对文件中的行进行排序
