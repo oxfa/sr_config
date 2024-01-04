@@ -1,7 +1,10 @@
 #!name=domain_dns_gdot
 
 [HOST]
-nic.eu.org = server:tls://8.8.4.4
+eu.org = server:tls://8.8.4.4
+*.eu.org = server:tls://8.8.4.4
+ghproxy.com = server:tls://8.8.4.4
+*.ghproxy.com = server:tls://8.8.4.4
 64clouds.com = server:tls://8.8.4.4
 *.64clouds.com = server:tls://8.8.4.4
 bandwagonhost.net = server:tls://8.8.4.4
