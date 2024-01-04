@@ -47,10 +47,10 @@ def main():
         return
 
     key_value_pairs = {
+        "keyword": "DOMAIN-KEYWORD",
         "domain": "DOMAIN-SUFFIX",
         "full": "DOMAIN",
         "regexp": "URL-REGEX",
-        "keyword": "DOMAIN-KEYWORD",
         "ip-asn": "IP-ASN",
         "ip-cidr": "IP-CIDR"
     }
