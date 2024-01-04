@@ -5,7 +5,8 @@ domain&full:icloud.cn:@adot
 domain&full:icloud.com:@adot
 domain&full:icloud-content.com:@adot
 domain&full:akadns.net:@adot
-full:nic.eu.org:@gdot
+domain&full:eu.org:@gdot
+domain&full:ghproxy.com:@gdot
 domain&full:64clouds.com:@gdot
 domain&full:bandwagonhost.net:@gdot
 # REMOVE
