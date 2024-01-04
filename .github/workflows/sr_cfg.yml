@@ -67,21 +67,17 @@ jobs:
           echo "" > ./configuration/release/module/rule/block_reject_dict.sgmodule
           echo "" > ./configuration/release/module/rule/block_reject_array.sgmodule
 
-      - name: Process Openai List
+      - name: Pre-Process Warp List
         run: |
-          python3 script/format2list.py ./.tmp/openai_ruleset.txt -t @openai
-          python3 script/customize_list.py ./.tmp/openai_ruleset.txt ./configuration/customized_list/warp.txt -t @openai
-          python3 script/sortlist.py ./.tmp/openai_ruleset.txt
-
-      - name: Process Reddit List
-        run: |
+          python3 script/format2list.py ./.tmp/openai_ruleset.txt
           python3 script/format2list.py ./.tmp/reddit_ruleset.txt
-          python3 script/sortlist.py ./.tmp/reddit_ruleset.txt
+          cat ./.tmp/reddit_ruleset.txt > ./.tmp/raw_warp_list.txt
+          cat ./.tmp/openai_ruleset.txt >> ./.tmp/raw_warp_list.txt
 
       - name: Process Warp List
         run: |
-          cat ./.tmp/reddit_ruleset.txt > ./.tmp/raw_warp_list.txt
-          cat ./.tmp/openai_ruleset.txt >> ./.tmp/raw_warp_list.txt
+          python3 script/customize_list.py ./.tmp/raw_warp_list.txt ./configuration/customized_list/warp.txt
+          python3 script/sortlist.py ./.tmp/raw_warp_list.txt
           cat ./.tmp/raw_warp_list.txt | tee ./configuration/release/module/rule/proxy_warp.sgmodule \
                                              > /dev/null
 
@@ -130,7 +126,7 @@ jobs:
 
       - name: Generate Clash RuleSet
         run: |
-          python3 script/list2clash_ruleset.py ./.tmp/raw_warp_list.txt ./configuration/release/rule-set/openai.yaml -t @openai
+          python3 script/list2clash_ruleset.py ./.tmp/raw_warp_list.txt ./configuration/release/rule-set/warp.yaml
           python3 script/list2clash_ruleset.py ./.tmp/raw_proxy_list.txt ./configuration/release/rule-set/proxy.yaml
 
       - name: Generate main cfg
