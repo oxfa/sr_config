@@ -1,6 +1,8 @@
 #!name=proxy_warp
 
 [RULE]
+DOMAIN-KEYWORD,openai,PROXY-WARP
+DOMAIN-KEYWORD,chatgpt,PROXY-WARP
 DOMAIN-SUFFIX,redd.it,PROXY-WARP
 DOMAIN-SUFFIX,reddit.com,PROXY-WARP
 DOMAIN-SUFFIX,redditmail.com,PROXY-WARP
@@ -9,8 +11,6 @@ DOMAIN-SUFFIX,redditstatic.com,PROXY-WARP
 DOMAIN-SUFFIX,reddituploads.com,PROXY-WARP
 DOMAIN-SUFFIX,reddituploads.com.cdn-cf.behance.net,PROXY-WARP
 DOMAIN-SUFFIX,reddituploads.com.cdn-cf.dropbox.com,PROXY-WARP
-DOMAIN-KEYWORD,openai,PROXY-WARP
-DOMAIN-KEYWORD,chatgpt,PROXY-WARP
 DOMAIN-SUFFIX,ai.com,PROXY-WARP
 DOMAIN-SUFFIX,algolia.net,PROXY-WARP
 DOMAIN-SUFFIX,api.statsig.com,PROXY-WARP
@@ -52,6 +52,7 @@ DOMAIN,chat.openai.com.cdn.cloudflare.net,PROXY-WARP
 DOMAIN,production-openaicom-storage.azureedge.net,PROXY-WARP
 DOMAIN,openaicomproductionae4b.blob.core.windows.net,PROXY-WARP
 DOMAIN,openaicom-api-bdcpf8c6d2e9atf6.z01.azurefd.net,PROXY-WARP
+DOMAIN,nic.eu.org,PROXY-WARP
 IP-ASN,14061,PROXY-WARP,no-resolve
 IP-ASN,20473,PROXY-WARP,no-resolve
 IP-CIDR,24.199.123.28/32,PROXY-WARP,no-resolve
