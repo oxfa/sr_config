@@ -60,12 +60,14 @@ jobs:
 
       - name: Pre-process Lists
         run: |
-          cat ./.tmp/raw_icloud_list.txt ./.tmp/raw_private_list.txt >> ./.tmp/raw_direct_list.txt
-          cat ./.tmp/adguard_dns_list.txt | perl -ne '/^\|\|([-_0-9a-zA-Z]+(\.[-_0-9a-zA-Z]+){1,64})\^$/ && print "$1\n"' | perl -ne 'print if not /^[0-9]{1,3}(\.[0-9]{1,3}){3}$/' >> ./.tmp/raw_block_list.txt
           echo "" > ./configuration/release/module/host/domain_dns_adot.sgmodule
           echo "" > ./configuration/release/module/host/domain_dns_gdot.sgmodule
           echo "" > ./configuration/release/module/rule/block_reject_dict.sgmodule
           echo "" > ./configuration/release/module/rule/block_reject_array.sgmodule
+          cat ./.tmp/raw_icloud_list.txt ./.tmp/raw_private_list.txt >> ./.tmp/raw_direct_list.txt
+          cat ./.tmp/adguard_dns_list.txt | perl -ne '/^\|\|([-_0-9a-zA-Z]+(\.[-_0-9a-zA-Z]+){1,64})\^$/ && print "$1\n"' | perl -ne 'print if not /^[0-9]{1,3}(\.[0-9]{1,3}){3}$/' | \
+              tee ./.tmp/raw_block_list.txt \
+                  > /dev/null
 
       - name: Pre-Process Warp List
         run: |
@@ -96,12 +98,14 @@ jobs:
           python3 script/sortlist.py ./.tmp/raw_proxy_list.txt
           cat ./.tmp/raw_proxy_list.txt | tee ./configuration/release/module/rule/proxy_remote_dns.sgmodule \
                                               > /dev/null
+
       - name: Process Block List
         run: |
           python3 script/format2list.py ./.tmp/raw_block_list.txt
+          python3 script/customize_list.py ./.tmp/raw_block_list.txt ./configuration/customized_list/block_default.txt
+          cat ./.tmp/raw_block_list.txt > ./.tmp/raw_block_list_clash.txt
           python3 script/remove_domain.py ./.tmp/raw_block_list.txt ./configuration/customized_list/block_reject_dict.txt
           python3 script/remove_domain.py ./.tmp/raw_block_list.txt ./configuration/customized_list/block_reject_array.txt
-          python3 script/customize_list.py ./.tmp/raw_block_list.txt ./configuration/customized_list/block_default.txt
           python3 script/customize_list.py ./configuration/release/module/rule/block_reject_dict.sgmodule ./configuration/customized_list/block_reject_dict.txt
           python3 script/customize_list.py ./configuration/release/module/rule/block_reject_array.sgmodule ./configuration/customized_list/block_reject_array.txt
           cat ./.tmp/raw_block_list.txt | tee ./configuration/release/module/rule/block_reject.sgmodule \
@@ -128,6 +132,7 @@ jobs:
         run: |
           python3 script/list2clash_ruleset.py ./.tmp/raw_warp_list.txt ./configuration/release/rule-set/warp.yaml
           python3 script/list2clash_ruleset.py ./.tmp/raw_proxy_list.txt ./configuration/release/rule-set/proxy.yaml
+          python3 script/list2clash_ruleset.py ./.tmp/raw_block_list_clash.txt ./configuration/release/rule-set/block.yaml
 
       - name: Generate main cfg
         run: |
