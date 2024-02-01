@@ -42,6 +42,10 @@ payload:
   - DOMAIN-SUFFIX,livekit.cloud
   - DOMAIN-SUFFIX,wolframcdn.com
   - DOMAIN-SUFFIX,wolframcloud.com
+  - DOMAIN-SUFFIX,sapphire.azureedge.net
+  - DOMAIN-SUFFIX,sapphire.bingviz.com
+  - DOMAIN-SUFFIX,www.bingapis.com
+  - DOMAIN-SUFFIX,sydney.bing.com
   - DOMAIN,api.msn.com
   - DOMAIN,assets.msn.com
   - DOMAIN,copilot.microsoft.com

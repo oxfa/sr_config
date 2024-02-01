@@ -44,6 +44,10 @@ DOMAIN-SUFFIX,intercomassets.com,PROXY-WARP
 DOMAIN-SUFFIX,livekit.cloud,PROXY-WARP
 DOMAIN-SUFFIX,wolframcdn.com,PROXY-WARP
 DOMAIN-SUFFIX,wolframcloud.com,PROXY-WARP
+DOMAIN-SUFFIX,sapphire.azureedge.net,PROXY-WARP
+DOMAIN-SUFFIX,sapphire.bingviz.com,PROXY-WARP
+DOMAIN-SUFFIX,www.bingapis.com,PROXY-WARP
+DOMAIN-SUFFIX,sydney.bing.com,PROXY-WARP
 DOMAIN,api.msn.com,PROXY-WARP
 DOMAIN,assets.msn.com,PROXY-WARP
 DOMAIN,copilot.microsoft.com,PROXY-WARP
