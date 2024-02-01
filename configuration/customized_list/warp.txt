@@ -10,10 +10,6 @@ domain:intercomassets.com:@openai
 domain:livekit.cloud:@openai
 domain:wolframcdn.com:@openai
 domain:wolframcloud.com:@openai
-domain:sapphire.azureedge.net:@copilot
-domain:sapphire.bingviz.com:@copilot
-domain:www.bingapis.com:@copilot
-domain:sydney.bing.com:@copilot
 full:oaic.report-url.com:@openai
 full:openaiapi-site.azureedge.net:@openai
 full:ocsp.r2m01.amazontrust.com:@openai
@@ -22,5 +18,9 @@ full:chat.openai.com.cdn.cloudflare.net:@openai
 full:production-openaicom-storage.azureedge.net:@openai
 full:openaicomproductionae4b.blob.core.windows.net:@openai
 full:openaicom-api-bdcpf8c6d2e9atf6.z01.azurefd.net:@openai
+full:sapphire.azureedge.net:@copilot
+full:sapphire.bingviz.com:@copilot
+full:www.bingapis.com:@copilot
+full:sydney.bing.com:@copilot
 full:nic.eu.org
 # REMOVE
