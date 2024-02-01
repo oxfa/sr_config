@@ -11,6 +11,8 @@ DOMAIN-SUFFIX,redditstatic.com,PROXY-WARP
 DOMAIN-SUFFIX,reddituploads.com,PROXY-WARP
 DOMAIN-SUFFIX,reddituploads.com.cdn-cf.behance.net,PROXY-WARP
 DOMAIN-SUFFIX,reddituploads.com.cdn-cf.dropbox.com,PROXY-WARP
+DOMAIN-SUFFIX,api.microsoftapp.net,PROXY-WARP
+DOMAIN-SUFFIX,bing-shopping.microsoft-falcon.io,PROXY-WARP
 DOMAIN-SUFFIX,ai.com,PROXY-WARP
 DOMAIN-SUFFIX,algolia.net,PROXY-WARP
 DOMAIN-SUFFIX,api.statsig.com,PROXY-WARP
@@ -42,6 +44,18 @@ DOMAIN-SUFFIX,intercomassets.com,PROXY-WARP
 DOMAIN-SUFFIX,livekit.cloud,PROXY-WARP
 DOMAIN-SUFFIX,wolframcdn.com,PROXY-WARP
 DOMAIN-SUFFIX,wolframcloud.com,PROXY-WARP
+DOMAIN,api.msn.com,PROXY-WARP
+DOMAIN,assets.msn.com,PROXY-WARP
+DOMAIN,copilot.microsoft.com,PROXY-WARP
+DOMAIN,gateway.bingviz.microsoft.net,PROXY-WARP
+DOMAIN,gateway.bingviz.microsoftapp.net,PROXY-WARP
+DOMAIN,in.appcenter.ms,PROXY-WARP
+DOMAIN,location.microsoft.com,PROXY-WARP
+DOMAIN,odc.officeapps.live.com,PROXY-WARP
+DOMAIN,r.bing.com,PROXY-WARP
+DOMAIN,self.events.data.microsoft.com,PROXY-WARP
+DOMAIN,services.bingapis.com,PROXY-WARP
+DOMAIN,www.bing.com,PROXY-WARP
 DOMAIN,browser-intake-datadoghq.com,PROXY-WARP
 DOMAIN,static.cloudflareinsights.com,PROXY-WARP
 DOMAIN,oaic.report-url.com,PROXY-WARP
