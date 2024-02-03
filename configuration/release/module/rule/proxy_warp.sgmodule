@@ -74,5 +74,6 @@ DOMAIN,login.microsoftonline.com,PROXY-WARP
 DOMAIN,substrate.office.com,PROXY-WARP
 DOMAIN,nic.eu.org,PROXY-WARP
 IP-ASN,20473,PROXY-WARP,no-resolve
+IP-ASN,31898,PROXY-WARP,no-resolve
 IP-CIDR,24.199.123.28/32,PROXY-WARP,no-resolve
 IP-CIDR,64.23.132.171/32,PROXY-WARP,no-resolve
