@@ -68,4 +68,6 @@ payload:
   - DOMAIN,openaicom-api-bdcpf8c6d2e9atf6.z01.azurefd.net
   - DOMAIN,sapphire.azureedge.net
   - DOMAIN,sapphire.bingviz.com
+  - DOMAIN,login.microsoftonline.com
+  - DOMAIN,substrate.office.com
   - DOMAIN,nic.eu.org
