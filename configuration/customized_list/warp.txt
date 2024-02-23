@@ -12,6 +12,7 @@ domain:wolframcdn.com:@openai
 domain:wolframcloud.com:@openai
 domain:bing.com:@copilot
 domain:bingapis.com:@copilot
+domain:bandwagonhost.com
 full:oaic.report-url.com:@openai
 full:openaiapi-site.azureedge.net:@openai
 full:ocsp.r2m01.amazontrust.com:@openai
