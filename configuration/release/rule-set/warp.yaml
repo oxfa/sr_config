@@ -44,6 +44,7 @@ payload:
   - DOMAIN-SUFFIX,wolframcloud.com
   - DOMAIN-SUFFIX,bing.com
   - DOMAIN-SUFFIX,bingapis.com
+  - DOMAIN-SUFFIX,bandwagonhost.com
   - DOMAIN,api.msn.com
   - DOMAIN,assets.msn.com
   - DOMAIN,copilot.microsoft.com

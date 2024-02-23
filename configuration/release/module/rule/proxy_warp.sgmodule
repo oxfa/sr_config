@@ -46,6 +46,7 @@ DOMAIN-SUFFIX,wolframcdn.com,PROXY-WARP
 DOMAIN-SUFFIX,wolframcloud.com,PROXY-WARP
 DOMAIN-SUFFIX,bing.com,PROXY-WARP
 DOMAIN-SUFFIX,bingapis.com,PROXY-WARP
+DOMAIN-SUFFIX,bandwagonhost.com,PROXY-WARP
 DOMAIN,api.msn.com,PROXY-WARP
 DOMAIN,assets.msn.com,PROXY-WARP
 DOMAIN,copilot.microsoft.com,PROXY-WARP
