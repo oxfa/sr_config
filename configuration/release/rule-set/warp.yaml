@@ -1,4 +1,5 @@
 payload:
+  - DOMAIN-KEYWORD,openaicom-api
   - DOMAIN-KEYWORD,openai
   - DOMAIN-KEYWORD,chatgpt
   - DOMAIN-SUFFIX,redd.it
@@ -9,8 +10,33 @@ payload:
   - DOMAIN-SUFFIX,reddituploads.com
   - DOMAIN-SUFFIX,reddituploads.com.cdn-cf.behance.net
   - DOMAIN-SUFFIX,reddituploads.com.cdn-cf.dropbox.com
+  - DOMAIN-SUFFIX,algolia.net
   - DOMAIN-SUFFIX,api.microsoftapp.net
+  - DOMAIN-SUFFIX,auth0.com
   - DOMAIN-SUFFIX,bing-shopping.microsoft-falcon.io
+  - DOMAIN-SUFFIX,cdn.cloudflare.net
+  - DOMAIN-SUFFIX,challenges.cloudflare.com
+  - DOMAIN-SUFFIX,chatgpt.livekit.cloud
+  - DOMAIN-SUFFIX,client-api.arkoselabs.com
+  - DOMAIN-SUFFIX,edgeservices.bing.com
+  - DOMAIN-SUFFIX,events.statsigapi.net
+  - DOMAIN-SUFFIX,featuregates.org
+  - DOMAIN-SUFFIX,host.livekit.cloud
+  - DOMAIN-SUFFIX,identrust.com
+  - DOMAIN-SUFFIX,intercom.io
+  - DOMAIN-SUFFIX,intercomcdn.com
+  - DOMAIN-SUFFIX,launchdarkly.com
+  - DOMAIN-SUFFIX,oaistatic.com
+  - DOMAIN-SUFFIX,oaiusercontent.com
+  - DOMAIN-SUFFIX,observeit.net
+  - DOMAIN-SUFFIX,openai.com
+  - DOMAIN-SUFFIX,openaiapi-site.azureedge.net
+  - DOMAIN-SUFFIX,openaicom.imgix.net
+  - DOMAIN-SUFFIX,poe.com
+  - DOMAIN-SUFFIX,segment.io
+  - DOMAIN-SUFFIX,sentry.io
+  - DOMAIN-SUFFIX,stripe.com
+  - DOMAIN-SUFFIX,turn.livekit.cloud
   - DOMAIN-SUFFIX,ai.com
   - DOMAIN-SUFFIX,algolia.net
   - DOMAIN-SUFFIX,api.statsig.com
@@ -34,7 +60,6 @@ payload:
   - DOMAIN-SUFFIX,sentry.io
   - DOMAIN-SUFFIX,stripe.com
   - DOMAIN-SUFFIX,turn.livekit.cloud
-  - DOMAIN-SUFFIX,openai.com
   - DOMAIN-SUFFIX,chatgpt.com
   - DOMAIN-SUFFIX,revenuecat.com
   - DOMAIN-SUFFIX,stripe.network
@@ -46,26 +71,29 @@ payload:
   - DOMAIN-SUFFIX,bingapis.com
   - DOMAIN-SUFFIX,bandwagonhost.com
   - DOMAIN,api.msn.com
+  - DOMAIN,api.statsig.com
   - DOMAIN,assets.msn.com
+  - DOMAIN,browser-intake-datadoghq.com
   - DOMAIN,copilot.microsoft.com
   - DOMAIN,gateway.bingviz.microsoft.net
   - DOMAIN,gateway.bingviz.microsoftapp.net
   - DOMAIN,in.appcenter.ms
   - DOMAIN,location.microsoft.com
   - DOMAIN,odc.officeapps.live.com
+  - DOMAIN,openai-api.arkoselabs.com
+  - DOMAIN,openaicomproductionae4b.blob.core.windows.net
+  - DOMAIN,production-openaicom-storage.azureedge.net
   - DOMAIN,r.bing.com
   - DOMAIN,self.events.data.microsoft.com
   - DOMAIN,services.bingapis.com
+  - DOMAIN,static.cloudflareinsights.com
   - DOMAIN,www.bing.com
   - DOMAIN,browser-intake-datadoghq.com
   - DOMAIN,static.cloudflareinsights.com
   - DOMAIN,oaic.report-url.com
-  - DOMAIN,openaiapi-site.azureedge.net
   - DOMAIN,ocsp.r2m01.amazontrust.com
   - DOMAIN,ocsp.rootca1.amazontrust.com
   - DOMAIN,chat.openai.com.cdn.cloudflare.net
-  - DOMAIN,production-openaicom-storage.azureedge.net
-  - DOMAIN,openaicomproductionae4b.blob.core.windows.net
   - DOMAIN,openaicom-api-bdcpf8c6d2e9atf6.z01.azurefd.net
   - DOMAIN,sapphire.azureedge.net
   - DOMAIN,sapphire.bingviz.com
