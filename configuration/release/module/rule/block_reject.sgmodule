@@ -211,7 +211,6 @@ DOMAIN-SUFFIX,allprofitsurvey.top,REJECT
 DOMAIN-SUFFIX,bloxplay.com,REJECT
 DOMAIN-SUFFIX,berangkasilmu.com,REJECT
 DOMAIN-SUFFIX,zusepe.xyz,REJECT
-DOMAIN-SUFFIX,cdn.applixir.com,REJECT
 DOMAIN-SUFFIX,selfishmourninhabitants.com,REJECT
 DOMAIN-SUFFIX,monsy.com,REJECT
 DOMAIN-SUFFIX,fireworkadservices1.com,REJECT
@@ -37295,6 +37294,7 @@ DOMAIN-SUFFIX,apex-ad.com,REJECT
 DOMAIN-SUFFIX,apexcdn.com,REJECT
 DOMAIN-SUFFIX,aphookkensidah.pro,REJECT
 DOMAIN-SUFFIX,apmebf.com,REJECT
+DOMAIN-SUFFIX,applixir.com,REJECT
 DOMAIN-SUFFIX,appnext.com,REJECT
 DOMAIN-SUFFIX,apprupt.com,REJECT
 DOMAIN-SUFFIX,apptap.com,REJECT
@@ -46662,6 +46662,7 @@ DOMAIN-SUFFIX,analyticsehnwe.servicebus.windows.net,REJECT
 DOMAIN-SUFFIX,analyticssec.overwolf.com,REJECT
 DOMAIN-SUFFIX,ao-freegeoip.herokuapp.com,REJECT
 DOMAIN-SUFFIX,api-analytics-prd.pelcro.com,REJECT
+DOMAIN-SUFFIX,api.country.is,REJECT
 DOMAIN-SUFFIX,api.wipmania.com,REJECT
 DOMAIN-SUFFIX,app.adjust.com,REJECT
 DOMAIN-SUFFIX,apple.www.letv.com,REJECT
@@ -51261,6 +51262,7 @@ DOMAIN-SUFFIX,analytics.smhi.se,REJECT
 DOMAIN-SUFFIX,analytics.sunet.se,REJECT
 DOMAIN-SUFFIX,analytics.svenskdam.se,REJECT
 DOMAIN-SUFFIX,analytics.svt.se,REJECT
+DOMAIN-SUFFIX,analytics.teknikveckan.se,REJECT
 DOMAIN-SUFFIX,analytics.undeco.se,REJECT
 DOMAIN-SUFFIX,analytics.vackertvader.se,REJECT
 DOMAIN-SUFFIX,analytics-smhise.smhi.se,REJECT
@@ -51495,6 +51497,7 @@ DOMAIN-SUFFIX,petrk.com,REJECT
 DOMAIN-SUFFIX,pixel-profile-cloud.eniro.com,REJECT
 DOMAIN-SUFFIX,platform-api.sharethis.com,REJECT
 DOMAIN-SUFFIX,plus.sharedcount.com,REJECT
+DOMAIN-SUFFIX,pm.azerioncircle.com,REJECT
 DOMAIN-SUFFIX,popitunder.com,REJECT
 DOMAIN-SUFFIX,portalhc.com,REJECT
 DOMAIN-SUFFIX,proxyas.com,REJECT
@@ -57298,6 +57301,19 @@ DOMAIN-SUFFIX,zhihucloud.xyz,REJECT
 DOMAIN-SUFFIX,zjrtxt.xyz,REJECT
 DOMAIN-SUFFIX,znhlxvb.xyz,REJECT
 DOMAIN-SUFFIX,zojyob.icu,REJECT
+DOMAIN-SUFFIX,hendehy.com,REJECT
+DOMAIN-SUFFIX,unifdlat.top,REJECT
+DOMAIN-SUFFIX,ariqye.xyz,REJECT
+DOMAIN-SUFFIX,fbfrbt.xyz,REJECT
+DOMAIN-SUFFIX,dzfzak.cn,REJECT
+DOMAIN-SUFFIX,dryden.cn,REJECT
+DOMAIN-SUFFIX,btfzbak.xyz,REJECT
+DOMAIN-SUFFIX,pa4ye.cyou,REJECT
+DOMAIN-SUFFIX,lulgef.icu,REJECT
+DOMAIN-SUFFIX,fhtfnb.xyz,REJECT
+DOMAIN-SUFFIX,drummers.cn,REJECT
+DOMAIN-SUFFIX,zailgrae.com,REJECT
+DOMAIN-SUFFIX,uljoifw.cn,REJECT
 DOMAIN-SUFFIX,zopuqv.icu,REJECT
 DOMAIN-SUFFIX,zsjpi.cn,REJECT
 DOMAIN-SUFFIX,zttuvj.xyz,REJECT
