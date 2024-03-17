@@ -6152,6 +6152,9 @@ payload:
   - DOMAIN-SUFFIX,zzcloud.me
   - DOMAIN-SUFFIX,zzux.com
   - DOMAIN-SUFFIX,github.dev
+  - DOMAIN-SUFFIX,vscode-cdn.net
+  - DOMAIN-SUFFIX,vscode-unpkg.net
+  - DOMAIN-SUFFIX,visualstudio.com
   - DOMAIN-SUFFIX,heygen.com
   - DOMAIN-SUFFIX,metacubex.one
   - DOMAIN-SUFFIX,zlibrary-global.se
