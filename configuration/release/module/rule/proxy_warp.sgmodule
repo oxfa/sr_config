@@ -44,7 +44,7 @@ DOMAIN-SUFFIX,algolia.net,PROXY-WARP
 DOMAIN-SUFFIX,api.statsig.com,PROXY-WARP
 DOMAIN-SUFFIX,auth0.com,PROXY-WARP
 DOMAIN-SUFFIX,cdn.cloudflare.net,PROXY-WARP
-DOMAIN-SUFFIX,challenges.cloudflare.com,PROXY-WARP
+DOMAIN-SUFFIX,chatgpt.com,PROXY-WARP
 DOMAIN-SUFFIX,chatgpt.livekit.cloud,PROXY-WARP
 DOMAIN-SUFFIX,client-api.arkoselabs.com,PROXY-WARP
 DOMAIN-SUFFIX,events.statsigapi.net,PROXY-WARP
@@ -62,7 +62,6 @@ DOMAIN-SUFFIX,segment.io,PROXY-WARP
 DOMAIN-SUFFIX,sentry.io,PROXY-WARP
 DOMAIN-SUFFIX,stripe.com,PROXY-WARP
 DOMAIN-SUFFIX,turn.livekit.cloud,PROXY-WARP
-DOMAIN-SUFFIX,chatgpt.com,PROXY-WARP
 DOMAIN-SUFFIX,revenuecat.com,PROXY-WARP
 DOMAIN-SUFFIX,stripe.network,PROXY-WARP
 DOMAIN-SUFFIX,intercomassets.com,PROXY-WARP
