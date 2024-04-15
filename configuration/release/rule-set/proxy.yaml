@@ -636,7 +636,6 @@ payload:
   - DOMAIN-SUFFIX,blogimg.jp
   - DOMAIN-SUFFIX,bloglines.com
   - DOMAIN-SUFFIX,bloglovin.com
-  - DOMAIN-SUFFIX,blogs.icerocket.com
   - DOMAIN-SUFFIX,blogs.libraryinformationtechnology.com
   - DOMAIN-SUFFIX,blogs.tampabay.com
   - DOMAIN-SUFFIX,blogs.yahoo.co.jp
@@ -2737,6 +2736,7 @@ payload:
   - DOMAIN-SUFFIX,ibvpn.com
   - DOMAIN-SUFFIX,icams.com
   - DOMAIN-SUFFIX,ice.audionow.com
+  - DOMAIN-SUFFIX,icedrive.net
   - DOMAIN-SUFFIX,icij.org
   - DOMAIN-SUFFIX,icl-fi.org
   - DOMAIN-SUFFIX,icoco.com
@@ -4366,6 +4366,7 @@ payload:
   - DOMAIN-SUFFIX,roodo.com
   - DOMAIN-SUFFIX,rosechina.net
   - DOMAIN-SUFFIX,rotten.com
+  - DOMAIN-SUFFIX,rou.video
   - DOMAIN-SUFFIX,rsdlmonitor.com
   - DOMAIN-SUFFIX,rsf-chinese.org
   - DOMAIN-SUFFIX,rsf.org
