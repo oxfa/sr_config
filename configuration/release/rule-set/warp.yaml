@@ -315,6 +315,7 @@ payload:
   - DOMAIN-SUFFIX,bing.com
   - DOMAIN-SUFFIX,bingapis.com
   - DOMAIN-SUFFIX,bandwagonhost.com
+  - DOMAIN-SUFFIX,recaptcha.net
   - DOMAIN,api.msn.com
   - DOMAIN,api.statsig.com
   - DOMAIN,assets.msn.com

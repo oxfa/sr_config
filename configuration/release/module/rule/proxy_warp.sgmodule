@@ -317,6 +317,7 @@ DOMAIN-SUFFIX,wolframcloud.com,PROXY-WARP
 DOMAIN-SUFFIX,bing.com,PROXY-WARP
 DOMAIN-SUFFIX,bingapis.com,PROXY-WARP
 DOMAIN-SUFFIX,bandwagonhost.com,PROXY-WARP
+DOMAIN-SUFFIX,recaptcha.net,PROXY-WARP
 DOMAIN,api.msn.com,PROXY-WARP
 DOMAIN,api.statsig.com,PROXY-WARP
 DOMAIN,assets.msn.com,PROXY-WARP
