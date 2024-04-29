@@ -263,8 +263,8 @@ DOMAIN-SUFFIX,algolia.net,PROXY-WARP
 DOMAIN-SUFFIX,api.microsoftapp.net,PROXY-WARP
 DOMAIN-SUFFIX,auth0.com,PROXY-WARP
 DOMAIN-SUFFIX,bing-shopping.microsoft-falcon.io,PROXY-WARP
-DOMAIN-SUFFIX,cdn.cloudflare.net,PROXY-WARP
 DOMAIN-SUFFIX,challenges.cloudflare.com,PROXY-WARP
+DOMAIN-SUFFIX,chatgpt.com,PROXY-WARP
 DOMAIN-SUFFIX,chatgpt.livekit.cloud,PROXY-WARP
 DOMAIN-SUFFIX,client-api.arkoselabs.com,PROXY-WARP
 DOMAIN-SUFFIX,edgeservices.bing.com,PROXY-WARP
@@ -281,7 +281,6 @@ DOMAIN-SUFFIX,observeit.net,PROXY-WARP
 DOMAIN-SUFFIX,openai.com,PROXY-WARP
 DOMAIN-SUFFIX,openaiapi-site.azureedge.net,PROXY-WARP
 DOMAIN-SUFFIX,openaicom.imgix.net,PROXY-WARP
-DOMAIN-SUFFIX,poe.com,PROXY-WARP
 DOMAIN-SUFFIX,segment.io,PROXY-WARP
 DOMAIN-SUFFIX,sentry.io,PROXY-WARP
 DOMAIN-SUFFIX,stripe.com,PROXY-WARP
@@ -303,7 +302,6 @@ DOMAIN-SUFFIX,launchdarkly.com,PROXY-WARP
 DOMAIN-SUFFIX,oaistatic.com,PROXY-WARP
 DOMAIN-SUFFIX,oaiusercontent.com,PROXY-WARP
 DOMAIN-SUFFIX,observeit.net,PROXY-WARP
-DOMAIN-SUFFIX,poe.com,PROXY-WARP
 DOMAIN-SUFFIX,segment.io,PROXY-WARP
 DOMAIN-SUFFIX,sentry.io,PROXY-WARP
 DOMAIN-SUFFIX,stripe.com,PROXY-WARP
@@ -322,6 +320,7 @@ DOMAIN,api.msn.com,PROXY-WARP
 DOMAIN,api.statsig.com,PROXY-WARP
 DOMAIN,assets.msn.com,PROXY-WARP
 DOMAIN,browser-intake-datadoghq.com,PROXY-WARP
+DOMAIN,chat.openai.com.cdn.cloudflare.net,PROXY-WARP
 DOMAIN,copilot.microsoft.com,PROXY-WARP
 DOMAIN,gateway.bingviz.microsoft.net,PROXY-WARP
 DOMAIN,gateway.bingviz.microsoftapp.net,PROXY-WARP
@@ -335,13 +334,13 @@ DOMAIN,r.bing.com,PROXY-WARP
 DOMAIN,self.events.data.microsoft.com,PROXY-WARP
 DOMAIN,services.bingapis.com,PROXY-WARP
 DOMAIN,static.cloudflareinsights.com,PROXY-WARP
+DOMAIN,sydney.bing.com,PROXY-WARP
 DOMAIN,www.bing.com,PROXY-WARP
 DOMAIN,browser-intake-datadoghq.com,PROXY-WARP
 DOMAIN,static.cloudflareinsights.com,PROXY-WARP
 DOMAIN,oaic.report-url.com,PROXY-WARP
 DOMAIN,ocsp.r2m01.amazontrust.com,PROXY-WARP
 DOMAIN,ocsp.rootca1.amazontrust.com,PROXY-WARP
-DOMAIN,chat.openai.com.cdn.cloudflare.net,PROXY-WARP
 DOMAIN,openaicom-api-bdcpf8c6d2e9atf6.z01.azurefd.net,PROXY-WARP
 DOMAIN,sapphire.azureedge.net,PROXY-WARP
 DOMAIN,sapphire.bingviz.com,PROXY-WARP
