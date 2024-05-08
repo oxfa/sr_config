@@ -1,6 +1,20 @@
 #!name=block_reject
 
 [RULE]
+DOMAIN-SUFFIX,fnlojkpbe.com,REJECT
+DOMAIN-SUFFIX,rxvej.com,REJECT
+DOMAIN-SUFFIX,gdecording.info,REJECT
+DOMAIN-SUFFIX,rswhowishedto.info,REJECT
+DOMAIN-SUFFIX,moetconfisk.top,REJECT
+DOMAIN-SUFFIX,swapsprediet.top,REJECT
+DOMAIN-SUFFIX,vocablyheir.top,REJECT
+DOMAIN-SUFFIX,mfbarfvjk.com,REJECT
+DOMAIN-SUFFIX,hcbjuiira.com,REJECT
+DOMAIN-SUFFIX,nosuhplhkvvza.com,REJECT
+DOMAIN-SUFFIX,ffqvjpkwe.com,REJECT
+DOMAIN-SUFFIX,huapydce.xyz,REJECT
+DOMAIN-SUFFIX,aseluosldtabi.com,REJECT
+DOMAIN-SUFFIX,poshyouthfulton.com,REJECT
 DOMAIN-SUFFIX,getadjacent.com,REJECT
 DOMAIN-SUFFIX,pjagilteei.com,REJECT
 DOMAIN-SUFFIX,tjtmjjigtdoah.com,REJECT
@@ -900,6 +914,7 @@ DOMAIN-SUFFIX,stripe.rs-1028-a.com,REJECT
 DOMAIN-SUFFIX,hub.fghtem.com,REJECT
 DOMAIN-SUFFIX,adrunnr.com,REJECT
 DOMAIN-SUFFIX,samsungtvads.com,REJECT
+DOMAIN-SUFFIX,dre81lzpy0s7q.cloudfront.net,REJECT
 DOMAIN-SUFFIX,d1nug4fmv8zva9.cloudfront.net,REJECT
 DOMAIN-SUFFIX,d2g6dhcga4weul.cloudfront.net,REJECT
 DOMAIN-SUFFIX,d2ier523in7agz.cloudfront.net,REJECT
@@ -7858,6 +7873,7 @@ DOMAIN-SUFFIX,chainwalladsy.com,REJECT
 DOMAIN-SUFFIX,chaiphuy.com,REJECT
 DOMAIN-SUFFIX,chaiptefee.com,REJECT
 DOMAIN-SUFFIX,chaiptut.xyz,REJECT
+DOMAIN-SUFFIX,chaipungie.xyz,REJECT
 DOMAIN-SUFFIX,chairgaubsy.com,REJECT
 DOMAIN-SUFFIX,chairmansmile.com,REJECT
 DOMAIN-SUFFIX,chairwaydenew.site,REJECT
@@ -9164,6 +9180,7 @@ DOMAIN-SUFFIX,corsakpeize.com,REJECT
 DOMAIN-SUFFIX,corvetwoorari.com,REJECT
 DOMAIN-SUFFIX,corvinapaella.life,REJECT
 DOMAIN-SUFFIX,corymbszinzar.com,REJECT
+DOMAIN-SUFFIX,cosiequiapo.com,REJECT
 DOMAIN-SUFFIX,cosmatitacker.top,REJECT
 DOMAIN-SUFFIX,cosmeticlevy.com,REJECT
 DOMAIN-SUFFIX,cosmeticsgenerosity.com,REJECT
@@ -15477,6 +15494,7 @@ DOMAIN-SUFFIX,glouftarussa.xyz,REJECT
 DOMAIN-SUFFIX,gloufteglouw.com,REJECT
 DOMAIN-SUFFIX,gloumsee.net,REJECT
 DOMAIN-SUFFIX,gloumsie.net,REJECT
+DOMAIN-SUFFIX,glounugeepse.xyz,REJECT
 DOMAIN-SUFFIX,glouseer.net,REJECT
 DOMAIN-SUFFIX,gloussowu.xyz,REJECT
 DOMAIN-SUFFIX,gloustoa.net,REJECT
@@ -22269,6 +22287,7 @@ DOMAIN-SUFFIX,mbundabarony.top,REJECT
 DOMAIN-SUFFIX,mbvfawgcsnukb.com,REJECT
 DOMAIN-SUFFIX,mbvlmx.com,REJECT
 DOMAIN-SUFFIX,mbvlmz.com,REJECT
+DOMAIN-SUFFIX,mbvndisplay.site,REJECT
 DOMAIN-SUFFIX,mbvsm.com,REJECT
 DOMAIN-SUFFIX,mbxudcghfy.com,REJECT
 DOMAIN-SUFFIX,mc7clurd09pla4nrtat7ion.com,REJECT
@@ -25946,6 +25965,7 @@ DOMAIN-SUFFIX,overcrummythrift.com,REJECT
 DOMAIN-SUFFIX,overdates.com,REJECT
 DOMAIN-SUFFIX,overdonealthough.com,REJECT
 DOMAIN-SUFFIX,overduerebukeloyal.com,REJECT
+DOMAIN-SUFFIX,overduerole.com,REJECT
 DOMAIN-SUFFIX,overestimateoption.com,REJECT
 DOMAIN-SUFFIX,overestimateyearly.com,REJECT
 DOMAIN-SUFFIX,overgalladean.com,REJECT
@@ -28492,6 +28512,7 @@ DOMAIN-SUFFIX,pueber.com,REJECT
 DOMAIN-SUFFIX,puerq.com,REJECT
 DOMAIN-SUFFIX,puerty.com,REJECT
 DOMAIN-SUFFIX,puffexies.com,REJECT
+DOMAIN-SUFFIX,puffingtiffs.com,REJECT
 DOMAIN-SUFFIX,pugdisguise.com,REJECT
 DOMAIN-SUFFIX,pugehjjxdr.xyz,REJECT
 DOMAIN-SUFFIX,pughoomo.xyz,REJECT
@@ -31745,6 +31766,7 @@ DOMAIN-SUFFIX,sharegods.com,REJECT
 DOMAIN-SUFFIX,shareitpp.com,REJECT
 DOMAIN-SUFFIX,shareresults.com,REJECT
 DOMAIN-SUFFIX,sharesceral.uno,REJECT
+DOMAIN-SUFFIX,shareusads.com,REJECT
 DOMAIN-SUFFIX,shareweeknews.com,REJECT
 DOMAIN-SUFFIX,sharieta.com,REJECT
 DOMAIN-SUFFIX,sharion.xyz,REJECT
@@ -41492,6 +41514,7 @@ DOMAIN-SUFFIX,googleadsserving.cn,REJECT
 DOMAIN-SUFFIX,googlevads-cn.com,REJECT
 DOMAIN-SUFFIX,02777e.site,REJECT
 DOMAIN-SUFFIX,05751c.site,REJECT
+DOMAIN-SUFFIX,07e197.site,REJECT
 DOMAIN-SUFFIX,295c.site,REJECT
 DOMAIN-SUFFIX,2aeabdd4-3280-4f03-bc92-1890494f28be.xyz,REJECT
 DOMAIN-SUFFIX,3a2e.site,REJECT
@@ -51581,6 +51604,7 @@ DOMAIN-SUFFIX,za.zalo.me,REJECT
 DOMAIN-SUFFIX,xad.dnoticias.pt,REJECT
 DOMAIN-SUFFIX,adclient-uol.lp.uol.com.br,REJECT
 DOMAIN-SUFFIX,adv.r7.com,REJECT
+DOMAIN-SUFFIX,assets.etus.digital,REJECT
 DOMAIN-SUFFIX,lyappreciat.info,REJECT
 DOMAIN-SUFFIX,adzonestatic.com,REJECT
 DOMAIN-SUFFIX,adzep.com.br,REJECT
@@ -56203,8 +56227,10 @@ DOMAIN-SUFFIX,log.baocaobang.vn,REJECT
 DOMAIN-SUFFIX,log.baodatviet.vn,REJECT
 DOMAIN-SUFFIX,log.baodauthau.vn,REJECT
 DOMAIN-SUFFIX,log.baogialai.com.vn,REJECT
+DOMAIN-SUFFIX,log.baolaocai.vn,REJECT
 DOMAIN-SUFFIX,log.baonghean.vn,REJECT
 DOMAIN-SUFFIX,log.baophapluat.vn,REJECT
+DOMAIN-SUFFIX,log.baovanhoa.vn,REJECT
 DOMAIN-SUFFIX,log.beecost.com,REJECT
 DOMAIN-SUFFIX,log.beecost.vn,REJECT
 DOMAIN-SUFFIX,log.bizlive.vn,REJECT
@@ -61469,6 +61495,16 @@ DOMAIN-SUFFIX,zpplsii.xyz,REJECT
 DOMAIN-SUFFIX,zsjpi.cn,REJECT
 DOMAIN-SUFFIX,zttuvj.xyz,REJECT
 DOMAIN-SUFFIX,ztxjutz.xyz,REJECT
+DOMAIN-SUFFIX,eoucxzw.icu,REJECT
+DOMAIN-SUFFIX,fzasx.cn,REJECT
+DOMAIN-SUFFIX,pajtll.xyz,REJECT
+DOMAIN-SUFFIX,wismog.xyz,REJECT
+DOMAIN-SUFFIX,bydebd.xyz,REJECT
+DOMAIN-SUFFIX,lweriol.top,REJECT
+DOMAIN-SUFFIX,nrbqgf.cn,REJECT
+DOMAIN-SUFFIX,qmgria.cn,REJECT
+DOMAIN-SUFFIX,robudpw.cn,REJECT
+DOMAIN-SUFFIX,qmbdta.cn,REJECT
 DOMAIN-SUFFIX,zuvbzl.xyz,REJECT
 DOMAIN-SUFFIX,zwdtvx.xyz,REJECT
 DOMAIN-SUFFIX,zwxxcb.icu,REJECT
