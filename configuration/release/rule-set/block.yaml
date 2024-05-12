@@ -43898,6 +43898,7 @@ payload:
   - DOMAIN-SUFFIX,ib.snssdk.com
   - DOMAIN-SUFFIX,xlog.snssdk.com
   - DOMAIN-SUFFIX,log.snssdk.com
+  - DOMAIN-SUFFIX,logger.torimochi-ad.net
   - DOMAIN-SUFFIX,mainting-minues.xyz
   - DOMAIN-SUFFIX,europe-west1-sonorous-dragon-276210.cloudfunctions.net
   - DOMAIN-SUFFIX,antillephone.com
@@ -50244,6 +50245,7 @@ payload:
   - DOMAIN-SUFFIX,cache2.delvenetworks.com
   - DOMAIN-SUFFIX,cahf4eed.mooo.com
   - DOMAIN-SUFFIX,calltrack.co
+  - DOMAIN-SUFFIX,calvera-telemetry.polaris.me
   - DOMAIN-SUFFIX,camel.headfarming.com
   - DOMAIN-SUFFIX,capture-api.ap3prod.com
   - DOMAIN-SUFFIX,capture.condenastdigital.com
@@ -54134,7 +54136,6 @@ payload:
   - DOMAIN-SUFFIX,blogparts.gcolle.net
   - DOMAIN-SUFFIX,eisys-bcs.jp
   - DOMAIN-SUFFIX,congrab.com
-  - DOMAIN-SUFFIX,torimochi-ad.net
   - DOMAIN-SUFFIX,affiliates.expaus.in
   - DOMAIN-SUFFIX,dep.tc
   - DOMAIN-SUFFIX,r-ad.linkshare.jp
@@ -56063,8 +56064,10 @@ payload:
   - DOMAIN-SUFFIX,ads.baotainguyenmoitruong.vn
   - DOMAIN-SUFFIX,ads.bkitsoftware.com
   - DOMAIN-SUFFIX,ads.businessstyle.vn
+  - DOMAIN-SUFFIX,ads.cadovn.biz
   - DOMAIN-SUFFIX,ads.careerbuilder.vn
   - DOMAIN-SUFFIX,ads.carmudi.vn
+  - DOMAIN-SUFFIX,ads.cdvn.vip
   - DOMAIN-SUFFIX,ads.chanhtuoi.com
   - DOMAIN-SUFFIX,ads.cungcau.vn
   - DOMAIN-SUFFIX,ads.fpt.vn
@@ -56822,6 +56825,7 @@ payload:
   - DOMAIN-SUFFIX,chamsockhachhangnanghanmuctindungmsb.com
   - DOMAIN-SUFFIX,chamsocthekhachang-truc-tuyen.com
   - DOMAIN-SUFFIX,chamsocthekhachhang-thang4.com.vn
+  - DOMAIN-SUFFIX,chamsocthekhachhang-thang4.online
   - DOMAIN-SUFFIX,chanle79.me
   - DOMAIN-SUFFIX,chanlemmo.com
   - DOMAIN-SUFFIX,chanlemomo.cc
@@ -56987,6 +56991,7 @@ payload:
   - DOMAIN-SUFFIX,dhlexpress-vietnam.com.vn
   - DOMAIN-SUFFIX,dhlvietnam-express.vn
   - DOMAIN-SUFFIX,dich-vu-dien-mayxanh.com
+  - DOMAIN-SUFFIX,dich-vu-kh-vip-vpbank.com
   - DOMAIN-SUFFIX,dich-vu-kvip-vpbank.com
   - DOMAIN-SUFFIX,dich-vu-online-vpbank.com
   - DOMAIN-SUFFIX,dich-vu-the-ai-vpbank.com
@@ -57412,9 +57417,11 @@ payload:
   - DOMAIN-SUFFIX,haitacshopgame.com
   - DOMAIN-SUFFIX,halovay.com
   - DOMAIN-SUFFIX,hamoney.xyz
+  - DOMAIN-SUFFIX,han-muc-khcn-uu-tien-vna1.com
   - DOMAIN-SUFFIX,handico.vaytienmat-nhanh24h.com
   - DOMAIN-SUFFIX,hangairsoft.com
   - DOMAIN-SUFFIX,hanghaiqt.com
+  - DOMAIN-SUFFIX,hanmucvn.com
   - DOMAIN-SUFFIX,hbpnnz.cyou
   - DOMAIN-SUFFIX,hdbankcareer.com
   - DOMAIN-SUFFIX,hdbankfinancc.digital
@@ -57642,6 +57649,7 @@ payload:
   - DOMAIN-SUFFIX,khachhangvib-canhan.com
   - DOMAIN-SUFFIX,khangdz215.tk
   - DOMAIN-SUFFIX,khcn-han-muc-tin-dung-ca-nhan.com
+  - DOMAIN-SUFFIX,khcn-my-diamon-han-muc-uu-tien.com
   - DOMAIN-SUFFIX,khcn-tindung-vp.com
   - DOMAIN-SUFFIX,khcn-uu-tien-3fv-vib.com
   - DOMAIN-SUFFIX,khoanhkhacgiadinhdoantucuoinam.weebly.com
@@ -57697,6 +57705,7 @@ payload:
   - DOMAIN-SUFFIX,kstorybank.top
   - DOMAIN-SUFFIX,ktien.vn
   - DOMAIN-SUFFIX,kuyhaa-me.pw
+  - DOMAIN-SUFFIX,l-fb.co
   - DOMAIN-SUFFIX,la533.com
   - DOMAIN-SUFFIX,la7168.com
   - DOMAIN-SUFFIX,la9435.com
@@ -58171,6 +58180,7 @@ payload:
   - DOMAIN-SUFFIX,nanghanmucthe-thetindung.com
   - DOMAIN-SUFFIX,nanghanmucthetindung247.com
   - DOMAIN-SUFFIX,nanghanmucthevib.com
+  - DOMAIN-SUFFIX,nanghanmucvisa-vn.com
   - DOMAIN-SUFFIX,nap-the.vn
   - DOMAIN-SUFFIX,napallgame.com
   - DOMAIN-SUFFIX,napasvidientu247.com
@@ -58758,7 +58768,6 @@ payload:
   - DOMAIN-SUFFIX,shek66.com
   - DOMAIN-SUFFIX,shilla.skrfgrl.cn
   - DOMAIN-SUFFIX,shinhan.chamsoccanhankhachhangthe-tructuyen.online
-  - DOMAIN-SUFFIX,shinhan.chamsocthekhachhang-thang4.online
   - DOMAIN-SUFFIX,shinhan.ho-tro-tin-dung-ca-nhan.com
   - DOMAIN-SUFFIX,shinhan0.com
   - DOMAIN-SUFFIX,shinhanapp.org
@@ -59392,8 +59401,10 @@ payload:
   - DOMAIN-SUFFIX,taixiumomo.net
   - DOMAIN-SUFFIX,takk6.com
   - DOMAIN-SUFFIX,tammenaa.com
+  - DOMAIN-SUFFIX,tang-han-muc-the-visa-vn.com
   - DOMAIN-SUFFIX,tangcuongbanlinh.com
   - DOMAIN-SUFFIX,tangcuongsinhluc.site
+  - DOMAIN-SUFFIX,tanghanmuc-vn.com
   - DOMAIN-SUFFIX,tanglike.biz
   - DOMAIN-SUFFIX,tanglikefree.online
   - DOMAIN-SUFFIX,tangnickmienphi.com
@@ -59625,6 +59636,7 @@ payload:
   - DOMAIN-SUFFIX,tingiovang777.com
   - DOMAIN-SUFFIX,tingiovangvn.com
   - DOMAIN-SUFFIX,tinhay24h.pro
+  - DOMAIN-SUFFIX,tinhothomnay.com
   - DOMAIN-SUFFIX,tinhotnew.com
   - DOMAIN-SUFFIX,tinlequa365.com
   - DOMAIN-SUFFIX,tinlocvang123.com
@@ -60035,6 +60047,7 @@ payload:
   - DOMAIN-SUFFIX,viashopee.com
   - DOMAIN-SUFFIX,viaviet03.mobie.in
   - DOMAIN-SUFFIX,vib-bank.com
+  - DOMAIN-SUFFIX,vib-mydiamon-khcn-uutien-vnc1.com
   - DOMAIN-SUFFIX,vib-tindung-khcn.com
   - DOMAIN-SUFFIX,vib-tindung.click
   - DOMAIN-SUFFIX,vib-tindung.online
@@ -60043,11 +60056,9 @@ payload:
   - DOMAIN-SUFFIX,vib.chamsockhachang-tructuyen.online
   - DOMAIN-SUFFIX,vib.chamsockhachhang-tructuyen-the-visa.com
   - DOMAIN-SUFFIX,vib.chamsocthekhachang-tructuyen.com.vn
-  - DOMAIN-SUFFIX,vib.hanmucvn.com
   - DOMAIN-SUFFIX,vib.khach-hang-the-tructuyen.com
   - DOMAIN-SUFFIX,vib.khach-hang-the-tructuyen.online
   - DOMAIN-SUFFIX,vib.mobi
-  - DOMAIN-SUFFIX,vib.tanghanmuc-vn.com
   - DOMAIN-SUFFIX,vib.truc-tuyen-cham-socthekhachhang.com
   - DOMAIN-SUFFIX,vib.tructuyen-chamsockhachang-the.com
   - DOMAIN-SUFFIX,vib.tuvan-chamsockhachhang.com
@@ -60084,6 +60095,7 @@ payload:
   - DOMAIN-SUFFIX,vieclamonlinetainha.com.vn
   - DOMAIN-SUFFIX,vieclamshopee.com
   - DOMAIN-SUFFIX,vieetcombank.com
+  - DOMAIN-SUFFIX,vieetcombiank.com
   - DOMAIN-SUFFIX,vieitcombank.com
   - DOMAIN-SUFFIX,vieittcombank.com
   - DOMAIN-SUFFIX,viet-credit.com
@@ -60274,6 +60286,7 @@ payload:
   - DOMAIN-SUFFIX,vipshopee.com
   - DOMAIN-SUFFIX,viptikivn.club
   - DOMAIN-SUFFIX,virtuallaughing.com
+  - DOMAIN-SUFFIX,visa-mb.com
   - DOMAIN-SUFFIX,visa-vpbank-uu-tien.com
   - DOMAIN-SUFFIX,vitienonline88.com
   - DOMAIN-SUFFIX,vitindungpgbank.com
@@ -60514,7 +60527,6 @@ payload:
   - DOMAIN-SUFFIX,vpb-hanmuc.online
   - DOMAIN-SUFFIX,vpb-nanghanmuc.com
   - DOMAIN-SUFFIX,vpb-nanghanmuc.online
-  - DOMAIN-SUFFIX,vpb.tang-han-muc-the-visa-vn.com
   - DOMAIN-SUFFIX,vpb.tanghanmucvisa-vn.com
   - DOMAIN-SUFFIX,vpbank-vaytien.com
   - DOMAIN-SUFFIX,vpbank.appvest.vn
@@ -60621,6 +60633,7 @@ payload:
   - DOMAIN-SUFFIX,wvietcombank.com
   - DOMAIN-SUFFIX,wviietcombank.com
   - DOMAIN-SUFFIX,wvvietcombank.com
+  - DOMAIN-SUFFIX,wvwfacebook.com
   - DOMAIN-SUFFIX,wvwiietcoombank.com
   - DOMAIN-SUFFIX,wwgfyvvdtmeq.pw
   - DOMAIN-SUFFIX,www-fb.com
@@ -61578,6 +61591,15 @@ payload:
   - DOMAIN-SUFFIX,igidskio.top
   - DOMAIN-SUFFIX,adlhxwb.xyz
   - DOMAIN-SUFFIX,zrdga.cn
+  - DOMAIN-SUFFIX,lmvotk.cn
+  - DOMAIN-SUFFIX,cwgucvm.icu
+  - DOMAIN-SUFFIX,forrzp.xyz
+  - DOMAIN-SUFFIX,arkkcu.xyz
+  - DOMAIN-SUFFIX,jgidskia.top
+  - DOMAIN-SUFFIX,fhvzrr.xyz
+  - DOMAIN-SUFFIX,mnpzrgz.xyz
+  - DOMAIN-SUFFIX,pwuxnr.cn
+  - DOMAIN-SUFFIX,lizijing12.top
   - DOMAIN-SUFFIX,zuvbzl.xyz
   - DOMAIN-SUFFIX,zwdtvx.xyz
   - DOMAIN-SUFFIX,zwxxcb.icu

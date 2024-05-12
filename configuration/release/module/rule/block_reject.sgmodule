@@ -43900,6 +43900,7 @@ DOMAIN-SUFFIX,log-hl.snssdk.com,REJECT
 DOMAIN-SUFFIX,ib.snssdk.com,REJECT
 DOMAIN-SUFFIX,xlog.snssdk.com,REJECT
 DOMAIN-SUFFIX,log.snssdk.com,REJECT
+DOMAIN-SUFFIX,logger.torimochi-ad.net,REJECT
 DOMAIN-SUFFIX,mainting-minues.xyz,REJECT
 DOMAIN-SUFFIX,europe-west1-sonorous-dragon-276210.cloudfunctions.net,REJECT
 DOMAIN-SUFFIX,antillephone.com,REJECT
@@ -50245,6 +50246,7 @@ DOMAIN-SUFFIX,c3metrics.medifast1.com,REJECT
 DOMAIN-SUFFIX,cache2.delvenetworks.com,REJECT
 DOMAIN-SUFFIX,cahf4eed.mooo.com,REJECT
 DOMAIN-SUFFIX,calltrack.co,REJECT
+DOMAIN-SUFFIX,calvera-telemetry.polaris.me,REJECT
 DOMAIN-SUFFIX,camel.headfarming.com,REJECT
 DOMAIN-SUFFIX,capture-api.ap3prod.com,REJECT
 DOMAIN-SUFFIX,capture.condenastdigital.com,REJECT
@@ -54135,7 +54137,6 @@ DOMAIN-SUFFIX,ads-lite.net,REJECT
 DOMAIN-SUFFIX,blogparts.gcolle.net,REJECT
 DOMAIN-SUFFIX,eisys-bcs.jp,REJECT
 DOMAIN-SUFFIX,congrab.com,REJECT
-DOMAIN-SUFFIX,torimochi-ad.net,REJECT
 DOMAIN-SUFFIX,affiliates.expaus.in,REJECT
 DOMAIN-SUFFIX,dep.tc,REJECT
 DOMAIN-SUFFIX,r-ad.linkshare.jp,REJECT
@@ -56064,8 +56065,10 @@ DOMAIN-SUFFIX,ads.baohaiduong.vn,REJECT
 DOMAIN-SUFFIX,ads.baotainguyenmoitruong.vn,REJECT
 DOMAIN-SUFFIX,ads.bkitsoftware.com,REJECT
 DOMAIN-SUFFIX,ads.businessstyle.vn,REJECT
+DOMAIN-SUFFIX,ads.cadovn.biz,REJECT
 DOMAIN-SUFFIX,ads.careerbuilder.vn,REJECT
 DOMAIN-SUFFIX,ads.carmudi.vn,REJECT
+DOMAIN-SUFFIX,ads.cdvn.vip,REJECT
 DOMAIN-SUFFIX,ads.chanhtuoi.com,REJECT
 DOMAIN-SUFFIX,ads.cungcau.vn,REJECT
 DOMAIN-SUFFIX,ads.fpt.vn,REJECT
@@ -56823,6 +56826,7 @@ DOMAIN-SUFFIX,chamsockhachang.com,REJECT
 DOMAIN-SUFFIX,chamsockhachhangnanghanmuctindungmsb.com,REJECT
 DOMAIN-SUFFIX,chamsocthekhachang-truc-tuyen.com,REJECT
 DOMAIN-SUFFIX,chamsocthekhachhang-thang4.com.vn,REJECT
+DOMAIN-SUFFIX,chamsocthekhachhang-thang4.online,REJECT
 DOMAIN-SUFFIX,chanle79.me,REJECT
 DOMAIN-SUFFIX,chanlemmo.com,REJECT
 DOMAIN-SUFFIX,chanlemomo.cc,REJECT
@@ -56988,6 +56992,7 @@ DOMAIN-SUFFIX,dhl-vietnam.vn,REJECT
 DOMAIN-SUFFIX,dhlexpress-vietnam.com.vn,REJECT
 DOMAIN-SUFFIX,dhlvietnam-express.vn,REJECT
 DOMAIN-SUFFIX,dich-vu-dien-mayxanh.com,REJECT
+DOMAIN-SUFFIX,dich-vu-kh-vip-vpbank.com,REJECT
 DOMAIN-SUFFIX,dich-vu-kvip-vpbank.com,REJECT
 DOMAIN-SUFFIX,dich-vu-online-vpbank.com,REJECT
 DOMAIN-SUFFIX,dich-vu-the-ai-vpbank.com,REJECT
@@ -57413,9 +57418,11 @@ DOMAIN-SUFFIX,hacktaikhoanfacebook.com,REJECT
 DOMAIN-SUFFIX,haitacshopgame.com,REJECT
 DOMAIN-SUFFIX,halovay.com,REJECT
 DOMAIN-SUFFIX,hamoney.xyz,REJECT
+DOMAIN-SUFFIX,han-muc-khcn-uu-tien-vna1.com,REJECT
 DOMAIN-SUFFIX,handico.vaytienmat-nhanh24h.com,REJECT
 DOMAIN-SUFFIX,hangairsoft.com,REJECT
 DOMAIN-SUFFIX,hanghaiqt.com,REJECT
+DOMAIN-SUFFIX,hanmucvn.com,REJECT
 DOMAIN-SUFFIX,hbpnnz.cyou,REJECT
 DOMAIN-SUFFIX,hdbankcareer.com,REJECT
 DOMAIN-SUFFIX,hdbankfinancc.digital,REJECT
@@ -57643,6 +57650,7 @@ DOMAIN-SUFFIX,khach-hang-ca-nhan-vip5.com,REJECT
 DOMAIN-SUFFIX,khachhangvib-canhan.com,REJECT
 DOMAIN-SUFFIX,khangdz215.tk,REJECT
 DOMAIN-SUFFIX,khcn-han-muc-tin-dung-ca-nhan.com,REJECT
+DOMAIN-SUFFIX,khcn-my-diamon-han-muc-uu-tien.com,REJECT
 DOMAIN-SUFFIX,khcn-tindung-vp.com,REJECT
 DOMAIN-SUFFIX,khcn-uu-tien-3fv-vib.com,REJECT
 DOMAIN-SUFFIX,khoanhkhacgiadinhdoantucuoinam.weebly.com,REJECT
@@ -57698,6 +57706,7 @@ DOMAIN-SUFFIX,ksdp997.com,REJECT
 DOMAIN-SUFFIX,kstorybank.top,REJECT
 DOMAIN-SUFFIX,ktien.vn,REJECT
 DOMAIN-SUFFIX,kuyhaa-me.pw,REJECT
+DOMAIN-SUFFIX,l-fb.co,REJECT
 DOMAIN-SUFFIX,la533.com,REJECT
 DOMAIN-SUFFIX,la7168.com,REJECT
 DOMAIN-SUFFIX,la9435.com,REJECT
@@ -58172,6 +58181,7 @@ DOMAIN-SUFFIX,nanghanmuc-vpb.online,REJECT
 DOMAIN-SUFFIX,nanghanmucthe-thetindung.com,REJECT
 DOMAIN-SUFFIX,nanghanmucthetindung247.com,REJECT
 DOMAIN-SUFFIX,nanghanmucthevib.com,REJECT
+DOMAIN-SUFFIX,nanghanmucvisa-vn.com,REJECT
 DOMAIN-SUFFIX,nap-the.vn,REJECT
 DOMAIN-SUFFIX,napallgame.com,REJECT
 DOMAIN-SUFFIX,napasvidientu247.com,REJECT
@@ -58759,7 +58769,6 @@ DOMAIN-SUFFIX,shbkhuyenmai.com,REJECT
 DOMAIN-SUFFIX,shek66.com,REJECT
 DOMAIN-SUFFIX,shilla.skrfgrl.cn,REJECT
 DOMAIN-SUFFIX,shinhan.chamsoccanhankhachhangthe-tructuyen.online,REJECT
-DOMAIN-SUFFIX,shinhan.chamsocthekhachhang-thang4.online,REJECT
 DOMAIN-SUFFIX,shinhan.ho-tro-tin-dung-ca-nhan.com,REJECT
 DOMAIN-SUFFIX,shinhan0.com,REJECT
 DOMAIN-SUFFIX,shinhanapp.org,REJECT
@@ -59393,8 +59402,10 @@ DOMAIN-SUFFIX,taixiumomo.me,REJECT
 DOMAIN-SUFFIX,taixiumomo.net,REJECT
 DOMAIN-SUFFIX,takk6.com,REJECT
 DOMAIN-SUFFIX,tammenaa.com,REJECT
+DOMAIN-SUFFIX,tang-han-muc-the-visa-vn.com,REJECT
 DOMAIN-SUFFIX,tangcuongbanlinh.com,REJECT
 DOMAIN-SUFFIX,tangcuongsinhluc.site,REJECT
+DOMAIN-SUFFIX,tanghanmuc-vn.com,REJECT
 DOMAIN-SUFFIX,tanglike.biz,REJECT
 DOMAIN-SUFFIX,tanglikefree.online,REJECT
 DOMAIN-SUFFIX,tangnickmienphi.com,REJECT
@@ -59626,6 +59637,7 @@ DOMAIN-SUFFIX,tingiaitrian.com,REJECT
 DOMAIN-SUFFIX,tingiovang777.com,REJECT
 DOMAIN-SUFFIX,tingiovangvn.com,REJECT
 DOMAIN-SUFFIX,tinhay24h.pro,REJECT
+DOMAIN-SUFFIX,tinhothomnay.com,REJECT
 DOMAIN-SUFFIX,tinhotnew.com,REJECT
 DOMAIN-SUFFIX,tinlequa365.com,REJECT
 DOMAIN-SUFFIX,tinlocvang123.com,REJECT
@@ -60036,6 +60048,7 @@ DOMAIN-SUFFIX,vi.liveen.vn,REJECT
 DOMAIN-SUFFIX,viashopee.com,REJECT
 DOMAIN-SUFFIX,viaviet03.mobie.in,REJECT
 DOMAIN-SUFFIX,vib-bank.com,REJECT
+DOMAIN-SUFFIX,vib-mydiamon-khcn-uutien-vnc1.com,REJECT
 DOMAIN-SUFFIX,vib-tindung-khcn.com,REJECT
 DOMAIN-SUFFIX,vib-tindung.click,REJECT
 DOMAIN-SUFFIX,vib-tindung.online,REJECT
@@ -60044,11 +60057,9 @@ DOMAIN-SUFFIX,vib.chamsockhachang-tructuyen-the.online,REJECT
 DOMAIN-SUFFIX,vib.chamsockhachang-tructuyen.online,REJECT
 DOMAIN-SUFFIX,vib.chamsockhachhang-tructuyen-the-visa.com,REJECT
 DOMAIN-SUFFIX,vib.chamsocthekhachang-tructuyen.com.vn,REJECT
-DOMAIN-SUFFIX,vib.hanmucvn.com,REJECT
 DOMAIN-SUFFIX,vib.khach-hang-the-tructuyen.com,REJECT
 DOMAIN-SUFFIX,vib.khach-hang-the-tructuyen.online,REJECT
 DOMAIN-SUFFIX,vib.mobi,REJECT
-DOMAIN-SUFFIX,vib.tanghanmuc-vn.com,REJECT
 DOMAIN-SUFFIX,vib.truc-tuyen-cham-socthekhachhang.com,REJECT
 DOMAIN-SUFFIX,vib.tructuyen-chamsockhachang-the.com,REJECT
 DOMAIN-SUFFIX,vib.tuvan-chamsockhachhang.com,REJECT
@@ -60085,6 +60096,7 @@ DOMAIN-SUFFIX,vieclamonlineluongcao.com,REJECT
 DOMAIN-SUFFIX,vieclamonlinetainha.com.vn,REJECT
 DOMAIN-SUFFIX,vieclamshopee.com,REJECT
 DOMAIN-SUFFIX,vieetcombank.com,REJECT
+DOMAIN-SUFFIX,vieetcombiank.com,REJECT
 DOMAIN-SUFFIX,vieitcombank.com,REJECT
 DOMAIN-SUFFIX,vieittcombank.com,REJECT
 DOMAIN-SUFFIX,viet-credit.com,REJECT
@@ -60275,6 +60287,7 @@ DOMAIN-SUFFIX,vipshopee.cc,REJECT
 DOMAIN-SUFFIX,vipshopee.com,REJECT
 DOMAIN-SUFFIX,viptikivn.club,REJECT
 DOMAIN-SUFFIX,virtuallaughing.com,REJECT
+DOMAIN-SUFFIX,visa-mb.com,REJECT
 DOMAIN-SUFFIX,visa-vpbank-uu-tien.com,REJECT
 DOMAIN-SUFFIX,vitienonline88.com,REJECT
 DOMAIN-SUFFIX,vitindungpgbank.com,REJECT
@@ -60515,7 +60528,6 @@ DOMAIN-SUFFIX,vpb-hanmuc.com,REJECT
 DOMAIN-SUFFIX,vpb-hanmuc.online,REJECT
 DOMAIN-SUFFIX,vpb-nanghanmuc.com,REJECT
 DOMAIN-SUFFIX,vpb-nanghanmuc.online,REJECT
-DOMAIN-SUFFIX,vpb.tang-han-muc-the-visa-vn.com,REJECT
 DOMAIN-SUFFIX,vpb.tanghanmucvisa-vn.com,REJECT
 DOMAIN-SUFFIX,vpbank-vaytien.com,REJECT
 DOMAIN-SUFFIX,vpbank.appvest.vn,REJECT
@@ -60622,6 +60634,7 @@ DOMAIN-SUFFIX,wutienitme247.info,REJECT
 DOMAIN-SUFFIX,wvietcombank.com,REJECT
 DOMAIN-SUFFIX,wviietcombank.com,REJECT
 DOMAIN-SUFFIX,wvvietcombank.com,REJECT
+DOMAIN-SUFFIX,wvwfacebook.com,REJECT
 DOMAIN-SUFFIX,wvwiietcoombank.com,REJECT
 DOMAIN-SUFFIX,wwgfyvvdtmeq.pw,REJECT
 DOMAIN-SUFFIX,www-fb.com,REJECT
@@ -61579,6 +61592,15 @@ DOMAIN-SUFFIX,feptbh.xyz,REJECT
 DOMAIN-SUFFIX,igidskio.top,REJECT
 DOMAIN-SUFFIX,adlhxwb.xyz,REJECT
 DOMAIN-SUFFIX,zrdga.cn,REJECT
+DOMAIN-SUFFIX,lmvotk.cn,REJECT
+DOMAIN-SUFFIX,cwgucvm.icu,REJECT
+DOMAIN-SUFFIX,forrzp.xyz,REJECT
+DOMAIN-SUFFIX,arkkcu.xyz,REJECT
+DOMAIN-SUFFIX,jgidskia.top,REJECT
+DOMAIN-SUFFIX,fhvzrr.xyz,REJECT
+DOMAIN-SUFFIX,mnpzrgz.xyz,REJECT
+DOMAIN-SUFFIX,pwuxnr.cn,REJECT
+DOMAIN-SUFFIX,lizijing12.top,REJECT
 DOMAIN-SUFFIX,zuvbzl.xyz,REJECT
 DOMAIN-SUFFIX,zwdtvx.xyz,REJECT
 DOMAIN-SUFFIX,zwxxcb.icu,REJECT
