@@ -1438,14 +1438,14 @@ DOMAIN-SUFFIX,ap.delfi.ee,REJECT
 DOMAIN-SUFFIX,ado.delfi.ee,REJECT
 DOMAIN-SUFFIX,es.ylilauta.org,REJECT
 DOMAIN-SUFFIX,sab.fast.ge,REJECT
+DOMAIN-SUFFIX,ban.bhol.co.il,REJECT
+DOMAIN-SUFFIX,ext.bhol.co.il,REJECT
+DOMAIN-SUFFIX,st1.bhol.co.il,REJECT
 DOMAIN-SUFFIX,head-clickfusion.com,REJECT
 DOMAIN-SUFFIX,headerbidding.services,REJECT
 DOMAIN-SUFFIX,3myad.com,REJECT
 DOMAIN-SUFFIX,cdn.234doo.com,REJECT
 DOMAIN-SUFFIX,a.b.napiszar.com,REJECT
-DOMAIN-SUFFIX,ban.bhol.co.il,REJECT
-DOMAIN-SUFFIX,ext.bhol.co.il,REJECT
-DOMAIN-SUFFIX,st1.bhol.co.il,REJECT
 DOMAIN-SUFFIX,planner.tiscali.it,REJECT
 DOMAIN-SUFFIX,reklammen.spellchecker.lu,REJECT
 DOMAIN-SUFFIX,bn.gogo.mn,REJECT
@@ -40281,6 +40281,7 @@ DOMAIN-SUFFIX,zimpolo.com,REJECT
 DOMAIN-SUFFIX,zincdatawipe.com,REJECT
 DOMAIN-SUFFIX,zincypalmy.top,REJECT
 DOMAIN-SUFFIX,zinipx.xyz,REJECT
+DOMAIN-SUFFIX,zinovu.com,REJECT
 DOMAIN-SUFFIX,zinrora.pw,REJECT
 DOMAIN-SUFFIX,zipakrar.com,REJECT
 DOMAIN-SUFFIX,zipheeda.xyz,REJECT
@@ -41947,6 +41948,7 @@ DOMAIN-SUFFIX,977878.xyz,REJECT
 DOMAIN-SUFFIX,97b448.xyz,REJECT
 DOMAIN-SUFFIX,a49ebd.xyz,REJECT
 DOMAIN-SUFFIX,a67d12.xyz,REJECT
+DOMAIN-SUFFIX,b0eb63.xyz,REJECT
 DOMAIN-SUFFIX,b211.xyz,REJECT
 DOMAIN-SUFFIX,b59c.xyz,REJECT
 DOMAIN-SUFFIX,b714b1e8-4b7d-4ce9-a248-48fd5472aa0b.online,REJECT
@@ -41956,6 +41958,7 @@ DOMAIN-SUFFIX,bcbe.site,REJECT
 DOMAIN-SUFFIX,ca3d.site,REJECT
 DOMAIN-SUFFIX,ca9246.xyz,REJECT
 DOMAIN-SUFFIX,caa2c4.xyz,REJECT
+DOMAIN-SUFFIX,ce357c.xyz,REJECT
 DOMAIN-SUFFIX,d84bc26d.site,REJECT
 DOMAIN-SUFFIX,d8b0a5.xyz,REJECT
 DOMAIN-SUFFIX,d980ed.xyz,REJECT
@@ -41967,6 +41970,7 @@ DOMAIN-SUFFIX,f090.site,REJECT
 DOMAIN-SUFFIX,f2f8.xyz,REJECT
 DOMAIN-SUFFIX,f6176563.site,REJECT
 DOMAIN-SUFFIX,fadeb9a7-2417-4a51-8d99-0421a5622cbe.xyz,REJECT
+DOMAIN-SUFFIX,fbfec2.xyz,REJECT
 DOMAIN-SUFFIX,ad.lgappstv.com,REJECT
 DOMAIN-SUFFIX,ad.nettvservices.com,REJECT
 DOMAIN-SUFFIX,ads.samsung.com,REJECT
@@ -44285,6 +44289,7 @@ DOMAIN-SUFFIX,log-hl.snssdk.com,REJECT
 DOMAIN-SUFFIX,ib.snssdk.com,REJECT
 DOMAIN-SUFFIX,xlog.snssdk.com,REJECT
 DOMAIN-SUFFIX,log.snssdk.com,REJECT
+DOMAIN-SUFFIX,hzstats.com,REJECT
 DOMAIN-SUFFIX,plausible.scimago.es,REJECT
 DOMAIN-SUFFIX,analytics.qushad.com,REJECT
 DOMAIN-SUFFIX,orangeclickmedia.com,REJECT
@@ -47743,6 +47748,9 @@ DOMAIN-SUFFIX,webtrekk.net,REJECT
 DOMAIN-SUFFIX,wizaly.com,REJECT
 DOMAIN-SUFFIX,d1udjti6mtxz9q.cloudfront.net,REJECT
 DOMAIN-SUFFIX,tagman.britishairways.com,REJECT
+DOMAIN-SUFFIX,doppler-beacon.cbsivideo.com,REJECT
+DOMAIN-SUFFIX,lake.studydrive.net,REJECT
+DOMAIN-SUFFIX,ce.x-opt.io,REJECT
 DOMAIN-SUFFIX,analytics.global.sky.com,REJECT
 DOMAIN-SUFFIX,analytics.cosmonova.net,REJECT
 DOMAIN-SUFFIX,pr-bh.ybp.yahoo.com,REJECT
@@ -50786,7 +50794,6 @@ DOMAIN-SUFFIX,dfanalytics.dealerfire.com,REJECT
 DOMAIN-SUFFIX,diagnose.igstatic.com,REJECT
 DOMAIN-SUFFIX,dig.ultimedia.com,REJECT
 DOMAIN-SUFFIX,dl.episerver.net,REJECT
-DOMAIN-SUFFIX,doppler-beacon.cbsivideo.com,REJECT
 DOMAIN-SUFFIX,doppler-client-events.cbsivideo.com,REJECT
 DOMAIN-SUFFIX,doppler-config.cbsivideo.com,REJECT
 DOMAIN-SUFFIX,doppler-reporting.cbsivideo.com,REJECT
@@ -51928,6 +51935,7 @@ DOMAIN-SUFFIX,rmgdapfnccsharpprd.azurewebsites.net,REJECT
 DOMAIN-SUFFIX,stat.24liveplus.com,REJECT
 DOMAIN-SUFFIX,statistics.rbi-nl.com,REJECT
 DOMAIN-SUFFIX,tags.hilabel.nl,REJECT
+DOMAIN-SUFFIX,tr.mediafin.be,REJECT
 DOMAIN-SUFFIX,trkr.shoppingminds.net,REJECT
 DOMAIN-SUFFIX,dnt-userreport.com,REJECT
 DOMAIN-SUFFIX,tags.op-palvelut.fi,REJECT
@@ -61535,6 +61543,14 @@ DOMAIN-SUFFIX,fpelfyeesuoivy.com,REJECT
 DOMAIN-SUFFIX,nlvwdlnhfnnw.com,REJECT
 DOMAIN-SUFFIX,auisaoa.top,REJECT
 DOMAIN-SUFFIX,bing001.shop,REJECT
+DOMAIN-SUFFIX,uskecsx.icu,REJECT
+DOMAIN-SUFFIX,zhangqifeng12.top,REJECT
+DOMAIN-SUFFIX,wsyliee.top,REJECT
+DOMAIN-SUFFIX,abucki.xyz,REJECT
+DOMAIN-SUFFIX,jinzige.cn,REJECT
+DOMAIN-SUFFIX,15huhu.cn,REJECT
+DOMAIN-SUFFIX,nkdgnsfsk.com,REJECT
+DOMAIN-SUFFIX,sdjbvskjvds.com,REJECT
 DOMAIN-SUFFIX,0322cfmtl.cc,REJECT
 DOMAIN-SUFFIX,07dy.cc,REJECT
 DOMAIN-SUFFIX,0940088.com,REJECT
