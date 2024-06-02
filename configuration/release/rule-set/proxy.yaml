@@ -627,7 +627,6 @@ payload:
   - DOMAIN-SUFFIX,blog.workflow.is
   - DOMAIN-SUFFIX,blog.xuite.net
   - DOMAIN-SUFFIX,blog.youthwant.com.tw
-  - DOMAIN-SUFFIX,blog.youxu.info
   - DOMAIN-SUFFIX,blogblog.com
   - DOMAIN-SUFFIX,blogcatalog.com
   - DOMAIN-SUFFIX,blogcity.me
@@ -4068,6 +4067,7 @@ payload:
   - DOMAIN-SUFFIX,piposay.com
   - DOMAIN-SUFFIX,piraattilahti.org
   - DOMAIN-SUFFIX,piring.com
+  - DOMAIN-SUFFIX,pixeldrain.com
   - DOMAIN-SUFFIX,pixelqi.com
   - DOMAIN-SUFFIX,pixiv.net
   - DOMAIN-SUFFIX,pixnet.net
@@ -6025,7 +6025,6 @@ payload:
   - DOMAIN-SUFFIX,yingsuoss.com
   - DOMAIN-SUFFIX,yinlei.org
   - DOMAIN-SUFFIX,yipub.com
-  - DOMAIN-SUFFIX,yiyechat.com
   - DOMAIN-SUFFIX,yizhihongxing.com
   - DOMAIN-SUFFIX,yobit.net
   - DOMAIN-SUFFIX,yobt.com
@@ -6073,13 +6072,13 @@ payload:
   - DOMAIN-SUFFIX,yuanzhengtang.org
   - DOMAIN-SUFFIX,yulghun.com
   - DOMAIN-SUFFIX,yunchao.net
-  - DOMAIN-SUFFIX,yuntipub.com
   - DOMAIN-SUFFIX,yuvutu.com
   - DOMAIN-SUFFIX,yvesgeleyn.com
   - DOMAIN-SUFFIX,ywpw.com
   - DOMAIN-SUFFIX,yx51.net
   - DOMAIN-SUFFIX,yyii.org
   - DOMAIN-SUFFIX,yyjlymb.xyz
+  - DOMAIN-SUFFIX,yysub.net
   - DOMAIN-SUFFIX,yzzk.com
   - DOMAIN-SUFFIX,z-lib.org
   - DOMAIN-SUFFIX,zacebook.com
