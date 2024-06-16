@@ -1,6 +1,27 @@
 #!name=block_reject
 
 [RULE]
+DOMAIN-SUFFIX,sbxgipbks.com,REJECT
+DOMAIN-SUFFIX,zoovagoo.com,REJECT
+DOMAIN-SUFFIX,ivtqo.com,REJECT
+DOMAIN-SUFFIX,mzwdiyfp.com,REJECT
+DOMAIN-SUFFIX,happeningflutter.com,REJECT
+DOMAIN-SUFFIX,tarvardsusyseinpou.info,REJECT
+DOMAIN-SUFFIX,knowledconsideunden.info,REJECT
+DOMAIN-SUFFIX,unwontcajun.top,REJECT
+DOMAIN-SUFFIX,edibleinvite.com,REJECT
+DOMAIN-SUFFIX,itchhandwritingimpetuous.com,REJECT
+DOMAIN-SUFFIX,highrevenuenetwork.com,REJECT
+DOMAIN-SUFFIX,hottielunn.com,REJECT
+DOMAIN-SUFFIX,wworqxftyexcmb.xyz,REJECT
+DOMAIN-SUFFIX,txxtgnpqi.com,REJECT
+DOMAIN-SUFFIX,obdzhnzqeg.com,REJECT
+DOMAIN-SUFFIX,floorednightclubquoted.com,REJECT
+DOMAIN-SUFFIX,xzfsymopzyls.com,REJECT
+DOMAIN-SUFFIX,wzhivixqjke.com,REJECT
+DOMAIN-SUFFIX,qxmsmlkjwqz.com,REJECT
+DOMAIN-SUFFIX,oralsproxied.com,REJECT
+DOMAIN-SUFFIX,mormonindianajones.com,REJECT
 DOMAIN-SUFFIX,paiglumousty.net,REJECT
 DOMAIN-SUFFIX,xmjnohwneqe.com,REJECT
 DOMAIN-SUFFIX,groapeeque.com,REJECT
@@ -47133,6 +47154,7 @@ DOMAIN-SUFFIX,webtrekk.net,REJECT
 DOMAIN-SUFFIX,wizaly.com,REJECT
 DOMAIN-SUFFIX,d1udjti6mtxz9q.cloudfront.net,REJECT
 DOMAIN-SUFFIX,tagman.britishairways.com,REJECT
+DOMAIN-SUFFIX,px.adfulplatform.com,REJECT
 DOMAIN-SUFFIX,d9jj3mjthpub.cloudfront.net,REJECT
 DOMAIN-SUFFIX,logs.openbank.com,REJECT
 DOMAIN-SUFFIX,plausible.omgapi.org,REJECT
@@ -59530,6 +59552,7 @@ DOMAIN-SUFFIX,spohopenm.org,REJECT
 DOMAIN-SUFFIX,spsinhlychinhhang.com,REJECT
 DOMAIN-SUFFIX,sputrey567rik.cfd,REJECT
 DOMAIN-SUFFIX,squashtalk.com,REJECT
+DOMAIN-SUFFIX,sso-garena.vn,REJECT
 DOMAIN-SUFFIX,sso-hotro-taikhoan.com,REJECT
 DOMAIN-SUFFIX,ssvnshop.com,REJECT
 DOMAIN-SUFFIX,standardresourcebank.com,REJECT
@@ -59555,6 +59578,7 @@ DOMAIN-SUFFIX,sukien-giftcoded-garena.com,REJECT
 DOMAIN-SUFFIX,sukien-latquaff.com,REJECT
 DOMAIN-SUFFIX,sukien-lienminh.com,REJECT
 DOMAIN-SUFFIX,sukien-lienminhtocchien.site,REJECT
+DOMAIN-SUFFIX,sukien-lienquanmobile.com,REJECT
 DOMAIN-SUFFIX,sukien-lmht.com,REJECT
 DOMAIN-SUFFIX,sukien-lq-garena.com,REJECT
 DOMAIN-SUFFIX,sukien-nhanqua-garena.com,REJECT
@@ -60981,6 +61005,11 @@ DOMAIN-SUFFIX,zvc.cc,REJECT
 DOMAIN-SUFFIX,zvietcombank.com,REJECT
 DOMAIN-SUFFIX,zvietnakello.weebly.com,REJECT
 DOMAIN-SUFFIX,dvgjx.cn,REJECT
+DOMAIN-SUFFIX,ytqeavc.icu,REJECT
+DOMAIN-SUFFIX,adzo.cn,REJECT
+DOMAIN-SUFFIX,aeyyck.xyz,REJECT
+DOMAIN-SUFFIX,poxdpj.xyz,REJECT
+DOMAIN-SUFFIX,fujnrh.xyz,REJECT
 DOMAIN-SUFFIX,lnlkmr.xyz,REJECT
 DOMAIN-SUFFIX,0322cfmtl.cc,REJECT
 DOMAIN-SUFFIX,07dy.cc,REJECT
@@ -66175,6 +66204,7 @@ DOMAIN-SUFFIX,z.nowscore.com,REJECT
 DOMAIN-SUFFIX,zt2088.com,REJECT
 DOMAIN-SUFFIX,ztyumn.ifeng.com,REJECT
 DOMAIN-SUFFIX,27gh.cc,REJECT
+DOMAIN-SUFFIX,ds.ruanwengfa.com,REJECT
 DOMAIN-SUFFIX,003store.com,REJECT
 DOMAIN-SUFFIX,0941.org,REJECT
 DOMAIN-SUFFIX,1.07swz.com,REJECT
