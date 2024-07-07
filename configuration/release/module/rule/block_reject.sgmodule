@@ -40562,6 +40562,7 @@ DOMAIN-SUFFIX,9bc639da.xyz,REJECT
 DOMAIN-SUFFIX,a49ebd.xyz,REJECT
 DOMAIN-SUFFIX,a67d12.xyz,REJECT
 DOMAIN-SUFFIX,a8b68645.xyz,REJECT
+DOMAIN-SUFFIX,acf705ad.xyz,REJECT
 DOMAIN-SUFFIX,b0eb63.xyz,REJECT
 DOMAIN-SUFFIX,b211.xyz,REJECT
 DOMAIN-SUFFIX,b2bf222e.xyz,REJECT
@@ -46421,6 +46422,7 @@ DOMAIN-SUFFIX,webtrekk.net,REJECT
 DOMAIN-SUFFIX,wizaly.com,REJECT
 DOMAIN-SUFFIX,d1udjti6mtxz9q.cloudfront.net,REJECT
 DOMAIN-SUFFIX,tagman.britishairways.com,REJECT
+DOMAIN-SUFFIX,anal.doubledouble.top,REJECT
 DOMAIN-SUFFIX,peach-analytics.vercel.app,REJECT
 DOMAIN-SUFFIX,lfmetrics.loyalfans.com,REJECT
 DOMAIN-SUFFIX,track.amebame.com,REJECT
@@ -55718,7 +55720,9 @@ DOMAIN-SUFFIX,ak9.6895588.com,REJECT
 DOMAIN-SUFFIX,alexajstrack.com,REJECT
 DOMAIN-SUFFIX,an.dongphim.net,REJECT
 DOMAIN-SUFFIX,an.xemvtv.net,REJECT
+DOMAIN-SUFFIX,analytic.angiang.gov.vn,REJECT
 DOMAIN-SUFFIX,analytic.baodantoc.vn,REJECT
+DOMAIN-SUFFIX,analytic.proxyme.link,REJECT
 DOMAIN-SUFFIX,analytic.thuanbui.me,REJECT
 DOMAIN-SUFFIX,analytic.vnanet.vn,REJECT
 DOMAIN-SUFFIX,analytics.admon.com.vn,REJECT
@@ -55729,6 +55733,7 @@ DOMAIN-SUFFIX,analytics.bkav.com,REJECT
 DOMAIN-SUFFIX,analytics.bkav.com.vn,REJECT
 DOMAIN-SUFFIX,analytics.digi8.vn,REJECT
 DOMAIN-SUFFIX,analytics.evgcdn.net,REJECT
+DOMAIN-SUFFIX,analytics.evn.com.vn,REJECT
 DOMAIN-SUFFIX,analytics.fsoft.com.vn,REJECT
 DOMAIN-SUFFIX,analytics.gotama.link,REJECT
 DOMAIN-SUFFIX,analytics.hapo.vn,REJECT
@@ -55744,12 +55749,14 @@ DOMAIN-SUFFIX,analytics.sohatv.vn,REJECT
 DOMAIN-SUFFIX,analytics.teko.vn,REJECT
 DOMAIN-SUFFIX,analytics.tiki.vn,REJECT
 DOMAIN-SUFFIX,analytics.tintuc.vn,REJECT
+DOMAIN-SUFFIX,analytics.ungdungtructuyen.vn,REJECT
 DOMAIN-SUFFIX,analytics.viblo.asia,REJECT
 DOMAIN-SUFFIX,analytics.videocloud.top,REJECT
 DOMAIN-SUFFIX,analytics.vietnamfinance.vn,REJECT
 DOMAIN-SUFFIX,analytics.vnpt.vn,REJECT
 DOMAIN-SUFFIX,analytics.vnreview.vn,REJECT
 DOMAIN-SUFFIX,analytics.yts.vn,REJECT
+DOMAIN-SUFFIX,analytics.zatomac.vn,REJECT
 DOMAIN-SUFFIX,analytics.zim.vn,REJECT
 DOMAIN-SUFFIX,api-logdev.sohatv.vn,REJECT
 DOMAIN-SUFFIX,api.boclinkads.com,REJECT
@@ -55802,12 +55809,14 @@ DOMAIN-SUFFIX,cskh-hcm.fpt.edu.vn,REJECT
 DOMAIN-SUFFIX,cskh.onlinecrm.vn,REJECT
 DOMAIN-SUFFIX,csmads.gameclick.vn,REJECT
 DOMAIN-SUFFIX,delecpuzz.com,REJECT
+DOMAIN-SUFFIX,delivery.doisongphapluat.com.vn,REJECT
 DOMAIN-SUFFIX,demopage.me,REJECT
 DOMAIN-SUFFIX,digi.vinut.com.vn,REJECT
 DOMAIN-SUFFIX,dt.vnecdn.com,REJECT
 DOMAIN-SUFFIX,e7z9t4x6a0v5mk3zo1a0xj2z7c6g8sa6js5z7s2c3h9x0s5fh3a6sjwb8q7m.xyz,REJECT
 DOMAIN-SUFFIX,elink.nhanlucnganhluat.vn,REJECT
 DOMAIN-SUFFIX,ema.hostvn.net,REJECT
+DOMAIN-SUFFIX,event-tracking.hellohealthgroup.com,REJECT
 DOMAIN-SUFFIX,event.filum.ai,REJECT
 DOMAIN-SUFFIX,event.headlines.pw,REJECT
 DOMAIN-SUFFIX,fa.fpt.shop,REJECT
@@ -55910,10 +55919,11 @@ DOMAIN-SUFFIX,logscafef.channelvn.net,REJECT
 DOMAIN-SUFFIX,logv3.metric.vn,REJECT
 DOMAIN-SUFFIX,lottery.headlines.pw,REJECT
 DOMAIN-SUFFIX,m6pz5h8qi18jq1s7hjkytxn7sjc0zpxw5gks3vyk8dcxs2cstjgdxkp7t1eb.me,REJECT
+DOMAIN-SUFFIX,ma.tgdd.vn,REJECT
 DOMAIN-SUFFIX,marketing.hub-js.com,REJECT
 DOMAIN-SUFFIX,marketing.itgeek.vn,REJECT
+DOMAIN-SUFFIX,matomo.bantheme.xyz,REJECT
 DOMAIN-SUFFIX,matomo.quan.hoabinh.vn,REJECT
-DOMAIN-SUFFIX,matomo.vietlottsms.vn,REJECT
 DOMAIN-SUFFIX,mautic-learn.teky.edu.vn,REJECT
 DOMAIN-SUFFIX,mautic.200lab.io,REJECT
 DOMAIN-SUFFIX,mautic.teky.edu.vn,REJECT
@@ -55934,6 +55944,7 @@ DOMAIN-SUFFIX,nstat.headlines.pw,REJECT
 DOMAIN-SUFFIX,offerwall.headlines.pw,REJECT
 DOMAIN-SUFFIX,openx.motgame.vn,REJECT
 DOMAIN-SUFFIX,ox1.vietstock.vn,REJECT
+DOMAIN-SUFFIX,pixel.innocom.vn,REJECT
 DOMAIN-SUFFIX,plausible.vucar.vn,REJECT
 DOMAIN-SUFFIX,production-tracking.riviu.co,REJECT
 DOMAIN-SUFFIX,proof.sudo.vn,REJECT
@@ -55969,6 +55980,7 @@ DOMAIN-SUFFIX,s1.zzz.vn,REJECT
 DOMAIN-SUFFIX,s6.textlink.vn,REJECT
 DOMAIN-SUFFIX,sda.tamdiem247.com,REJECT
 DOMAIN-SUFFIX,sentry.mediacdn.vn,REJECT
+DOMAIN-SUFFIX,seo.cloud.edu.vn,REJECT
 DOMAIN-SUFFIX,server.zmedia.vn,REJECT
 DOMAIN-SUFFIX,serving-ad.tv24.vn,REJECT
 DOMAIN-SUFFIX,sharks.vn,REJECT
@@ -55999,6 +56011,7 @@ DOMAIN-SUFFIX,stc.nas.nixcdn.com,REJECT
 DOMAIN-SUFFIX,stockbook-ads.firebaseapp.com,REJECT
 DOMAIN-SUFFIX,stockbook-ads.firebaseio.com,REJECT
 DOMAIN-SUFFIX,su6t2a0v1cbj6fu8o2cjdo1dx0oxdm6kgl6f7zdjxt6aqxjlwrt7cu2r5g2d.me,REJECT
+DOMAIN-SUFFIX,subot.hellobacsi.com,REJECT
 DOMAIN-SUFFIX,support.tenten.vn,REJECT
 DOMAIN-SUFFIX,sv-api-event.headlines.pw,REJECT
 DOMAIN-SUFFIX,sv-api-lottery.headlines.pw,REJECT
@@ -56028,6 +56041,7 @@ DOMAIN-SUFFIX,track.lapa.pub,REJECT
 DOMAIN-SUFFIX,track.lemonnovel.com,REJECT
 DOMAIN-SUFFIX,track.pnj.com.vn,REJECT
 DOMAIN-SUFFIX,track.popsww.com,REJECT
+DOMAIN-SUFFIX,track.saigon.pro,REJECT
 DOMAIN-SUFFIX,track.sendo.vn,REJECT
 DOMAIN-SUFFIX,track.vio.edu.vn,REJECT
 DOMAIN-SUFFIX,track.winigroup.vn,REJECT
@@ -56051,6 +56065,7 @@ DOMAIN-SUFFIX,tracking.meta.vn,REJECT
 DOMAIN-SUFFIX,tracking.phunuadong.vn,REJECT
 DOMAIN-SUFFIX,tracking.tekoapis.com,REJECT
 DOMAIN-SUFFIX,tracking.tinxe.vn,REJECT
+DOMAIN-SUFFIX,tracking.tuyenquang.gov.vn,REJECT
 DOMAIN-SUFFIX,tracking.tvet-vietnam.org,REJECT
 DOMAIN-SUFFIX,tracking.vegaid.vn,REJECT
 DOMAIN-SUFFIX,tracking.vht.com.vn,REJECT
@@ -56058,6 +56073,7 @@ DOMAIN-SUFFIX,tracking.vietbao.vn,REJECT
 DOMAIN-SUFFIX,tracking.viez.vn,REJECT
 DOMAIN-SUFFIX,trackingapi.foody.vn,REJECT
 DOMAIN-SUFFIX,trackity.tiki.vn,REJECT
+DOMAIN-SUFFIX,traffic.nvcms.net,REJECT
 DOMAIN-SUFFIX,traffic.vietnhan.co,REJECT
 DOMAIN-SUFFIX,trenddigital.vn,REJECT
 DOMAIN-SUFFIX,trk.123c.vn,REJECT
@@ -56077,6 +56093,7 @@ DOMAIN-SUFFIX,vietdorje.com,REJECT
 DOMAIN-SUFFIX,vlxx.host,REJECT
 DOMAIN-SUFFIX,vnadssb.com,REJECT
 DOMAIN-SUFFIX,web-analytic.ghtk.vn,REJECT
+DOMAIN-SUFFIX,web-analytics.mona.host,REJECT
 DOMAIN-SUFFIX,webchat.caresoft.vn,REJECT
 DOMAIN-SUFFIX,webpush.bizfly.vn,REJECT
 DOMAIN-SUFFIX,webpush.todo.vn,REJECT
@@ -59125,6 +59142,7 @@ DOMAIN-SUFFIX,tdkt00.com,REJECT
 DOMAIN-SUFFIX,tdkt01.com,REJECT
 DOMAIN-SUFFIX,tdkt06.com,REJECT
 DOMAIN-SUFFIX,tdtc.shop,REJECT
+DOMAIN-SUFFIX,techcombank.hicam.net,REJECT
 DOMAIN-SUFFIX,techcombank.ngan-hang.net,REJECT
 DOMAIN-SUFFIX,techcombank.site,REJECT
 DOMAIN-SUFFIX,techcombank.vn-ol.top,REJECT
@@ -60435,6 +60453,10 @@ DOMAIN-SUFFIX,zvay.online,REJECT
 DOMAIN-SUFFIX,zvc.cc,REJECT
 DOMAIN-SUFFIX,zvietcombank.com,REJECT
 DOMAIN-SUFFIX,zvietnakello.weebly.com,REJECT
+DOMAIN-SUFFIX,tupian9999.com,REJECT
+DOMAIN-SUFFIX,xxxx88xxxx.com,REJECT
+DOMAIN-SUFFIX,xxxx96xxxx.com,REJECT
+DOMAIN-SUFFIX,bdfjw.cn,REJECT
 DOMAIN-SUFFIX,0322cfmtl.cc,REJECT
 DOMAIN-SUFFIX,07dy.cc,REJECT
 DOMAIN-SUFFIX,0940088.com,REJECT
@@ -60472,6 +60494,16 @@ DOMAIN-SUFFIX,lijlrz.xyz,REJECT
 DOMAIN-SUFFIX,lrtlisl.top,REJECT
 DOMAIN-SUFFIX,xn--sssy7vrppusjyv0a.com,REJECT
 DOMAIN-SUFFIX,hknoq.cn,REJECT
+DOMAIN-SUFFIX,syislob.top,REJECT
+DOMAIN-SUFFIX,hjammiz.icu,REJECT
+DOMAIN-SUFFIX,kmruv.cn,REJECT
+DOMAIN-SUFFIX,semhgk.xyz,REJECT
+DOMAIN-SUFFIX,fodrxl.xyz,REJECT
+DOMAIN-SUFFIX,xuxwvh.xyz,REJECT
+DOMAIN-SUFFIX,xxsmad3.com,REJECT
+DOMAIN-SUFFIX,amfhby.cn,REJECT
+DOMAIN-SUFFIX,doujs07.xyz,REJECT
+DOMAIN-SUFFIX,brtlisv.top,REJECT
 DOMAIN-SUFFIX,0uyt5b.cn,REJECT
 DOMAIN-SUFFIX,0v1syj.cn,REJECT
 DOMAIN-SUFFIX,1028images.com,REJECT
