@@ -48956,7 +48956,6 @@ DOMAIN-SUFFIX,apm-log-upload-os.hoyoverse.com,REJECT
 DOMAIN-SUFFIX,devlog-upload-os.hoyoverse.com,REJECT
 DOMAIN-SUFFIX,hkrpg-log-upload-os.hoyoverse.com,REJECT
 DOMAIN-SUFFIX,log-upload-os.hoyoverse.com,REJECT
-DOMAIN-SUFFIX,minor-api-os.hoyoverse.com,REJECT
 DOMAIN-SUFFIX,overseauspider.yuanshen.com,REJECT
 DOMAIN-SUFFIX,sentry.eks.hoyoverse.com,REJECT
 DOMAIN-SUFFIX,sg-public-data-api.hoyoverse.com,REJECT
@@ -60522,6 +60521,14 @@ DOMAIN-SUFFIX,goodvibe1.com,REJECT
 DOMAIN-SUFFIX,vftvbx.xyz,REJECT
 DOMAIN-SUFFIX,baijs07.xyz,REJECT
 DOMAIN-SUFFIX,hfptbb.cn,REJECT
+DOMAIN-SUFFIX,wdipsume.top,REJECT
+DOMAIN-SUFFIX,doujs08.xyz,REJECT
+DOMAIN-SUFFIX,cbgrqi.xyz,REJECT
+DOMAIN-SUFFIX,mtwuxss.icu,REJECT
+DOMAIN-SUFFIX,vsjrnh.xyz,REJECT
+DOMAIN-SUFFIX,sgru.cn,REJECT
+DOMAIN-SUFFIX,irtliso.top,REJECT
+DOMAIN-SUFFIX,hrrjff.xyz,REJECT
 DOMAIN-SUFFIX,0322cfmtl.cc,REJECT
 DOMAIN-SUFFIX,07dy.cc,REJECT
 DOMAIN-SUFFIX,0940088.com,REJECT
