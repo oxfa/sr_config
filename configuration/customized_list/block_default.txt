@@ -1,7 +1,8 @@
 # ADD
 full:waapdg.jd.com
 domain:jddebug.com
-full:httpdns.bilivideo.com
 full:https.0.66.168.192.in-addr.arpa
 # REMOVE
 domain:minor-api-os.hoyoverse.com
+domain:log-upload-os.hoyoverse.com
+domain:hkrpg-log-upload-os.hoyoverse.com
