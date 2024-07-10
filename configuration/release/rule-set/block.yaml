@@ -48953,8 +48953,6 @@ payload:
   - DOMAIN-SUFFIX,ad-log-upload-os.hoyoverse.com
   - DOMAIN-SUFFIX,apm-log-upload-os.hoyoverse.com
   - DOMAIN-SUFFIX,devlog-upload-os.hoyoverse.com
-  - DOMAIN-SUFFIX,hkrpg-log-upload-os.hoyoverse.com
-  - DOMAIN-SUFFIX,log-upload-os.hoyoverse.com
   - DOMAIN-SUFFIX,overseauspider.yuanshen.com
   - DOMAIN-SUFFIX,sentry.eks.hoyoverse.com
   - DOMAIN-SUFFIX,sg-public-data-api.hoyoverse.com
@@ -67297,5 +67295,4 @@ payload:
   - DOMAIN-SUFFIX,novunu.football-plyus.net
   - DOMAIN,waapdg.jd.com
   - DOMAIN-SUFFIX,jddebug.com
-  - DOMAIN,httpdns.bilivideo.com
   - DOMAIN,https.0.66.168.192.in-addr.arpa

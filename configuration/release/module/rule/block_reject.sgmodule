@@ -48954,8 +48954,6 @@ DOMAIN-SUFFIX,event-search.jorte.com,REJECT
 DOMAIN-SUFFIX,ad-log-upload-os.hoyoverse.com,REJECT
 DOMAIN-SUFFIX,apm-log-upload-os.hoyoverse.com,REJECT
 DOMAIN-SUFFIX,devlog-upload-os.hoyoverse.com,REJECT
-DOMAIN-SUFFIX,hkrpg-log-upload-os.hoyoverse.com,REJECT
-DOMAIN-SUFFIX,log-upload-os.hoyoverse.com,REJECT
 DOMAIN-SUFFIX,overseauspider.yuanshen.com,REJECT
 DOMAIN-SUFFIX,sentry.eks.hoyoverse.com,REJECT
 DOMAIN-SUFFIX,sg-public-data-api.hoyoverse.com,REJECT
@@ -67298,5 +67296,4 @@ DOMAIN-SUFFIX,a4.overclockers.ua,REJECT
 DOMAIN-SUFFIX,novunu.football-plyus.net,REJECT
 DOMAIN,waapdg.jd.com,REJECT
 DOMAIN-SUFFIX,jddebug.com,REJECT
-DOMAIN,httpdns.bilivideo.com,REJECT
 DOMAIN,https.0.66.168.192.in-addr.arpa,REJECT
