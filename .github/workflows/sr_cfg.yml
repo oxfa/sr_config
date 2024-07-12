@@ -82,7 +82,7 @@ jobs:
           python3 script/format2list.py ./.tmp/openai_ruleset.txt
           python3 script/format2list.py ./.tmp/reddit_ruleset.txt
           python3 script/format2list.py ./.tmp/paypal_ruleset.txt
-          python3 script/format2list.py ./.tmp/genimi_ruleset.txt
+          python3 script/format2list.py ./.tmp/gemini_ruleset.txt
           python3 script/format2list.py ./.tmp/copilot_ruleset.txt
           cat ./.tmp/reddit_ruleset.txt > ./.tmp/raw_warp_list.txt
           cat ./.tmp/paypal_ruleset.txt >> ./.tmp/raw_warp_list.txt

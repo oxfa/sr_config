@@ -1,19 +1,12 @@
 import re
 import argparse
+from mappings import LIST_RULESET_MAPPING
+from mappings import RULESET_LIST_MAPPING
 
 
 def process_file_in_place(file_path, tag_arg=None):
     domain_pattern = re.compile(
         r'^(?!-)[a-zA-Z0-9-]+(?<!-)(?:\.(?!-)[a-zA-Z0-9-]+(?<!-))*\.[a-zA-Z]{2,63}$')
-
-    replace_dict = {
-        "DOMAIN,": "full:",
-        "DOMAIN-SUFFIX,": "domain:",
-        "URL-REGEX,": "regexp:",
-        "IP-CIDR,": "ip-cidr:",
-        "IP-ASN,": "ip-asn:",
-        "DOMAIN-KEYWORD,": "keyword:"
-    }
 
     with open(file_path, "r") as f_in:
         lines = f_in.readlines()
@@ -23,18 +16,22 @@ def process_file_in_place(file_path, tag_arg=None):
             if line.startswith("#"):
                 continue
 
-            if line.startswith(("domain:", "full:", "regexp:", "keyword:")):
+            if line.startswith(list(LIST_RULESET_MAPPING.keys())):
                 pass
-            elif line.startswith(tuple(tuple(replace_dict.keys()))):
-                for key, value in replace_dict.items():
-                    line = line.replace(key, value)
-                if line.startswith(("ip-cidr:", "ip-asn:")):
-                    line = line.rstrip(",no-resolve")
-            elif domain_pattern.match(line):
-                line = f"domain:{line}"
             else:
-                print(f"Invalid line: {line}")
-                continue
+                for key, value in RULESET_LIST_MAPPING.items():
+                    if line.startswith(f"{key},"):
+                        line = line.replace(f"{key},", f"{value}:")
+                        break
+
+                if line.startswith(("ip-cidr:", "ip-cidr6", "ip-asn:")):
+                    line = line.rstrip(",no-resolve")
+
+                elif domain_pattern.match(line):
+                    line = f"domain:{line}"
+                else:
+                    print(f"Invalid line: {line}")
+                    continue
 
             if tag_arg:
                 line = f"{line}:{tag_arg}"

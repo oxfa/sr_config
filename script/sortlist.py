@@ -1,5 +1,6 @@
 import argparse
 import os
+from mappings import LIST_RULESET_MAPPING
 
 
 def sort_lines_by_key_values(file_path, key_value_pairs):
@@ -46,18 +47,9 @@ def main():
         print(f"Error: Input file {args.input_file} does not exist.")
         return
 
-    key_value_pairs = {
-        "keyword": "DOMAIN-KEYWORD",
-        "domain": "DOMAIN-SUFFIX",
-        "full": "DOMAIN",
-        "regexp": "URL-REGEX",
-        "ip-asn": "IP-ASN",
-        "ip-cidr": "IP-CIDR"
-    }
-
     try:
         sorted_lines = sort_lines_by_key_values(
-            args.input_file, key_value_pairs)
+            args.input_file, LIST_RULESET_MAPPING)
     except Exception as e:
         print(e)
         return
