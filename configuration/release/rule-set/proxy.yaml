@@ -1405,9 +1405,6 @@ payload:
   - DOMAIN-SUFFIX,dolc.de
   - DOMAIN-SUFFIX,dolf.org.hk
   - DOMAIN-SUFFIX,dollf.com
-  - DOMAIN-SUFFIX,domain.club.tw
-  - DOMAIN-SUFFIX,domains.google
-  - DOMAIN-SUFFIX,domaintoday.com.au
   - DOMAIN-SUFFIX,dongtaiwang.com
   - DOMAIN-SUFFIX,dongtaiwang.net
   - DOMAIN-SUFFIX,dongyangjing.com
@@ -1934,7 +1931,6 @@ payload:
   - DOMAIN-SUFFIX,fuckcnnic.net
   - DOMAIN-SUFFIX,fuckgfw.org
   - DOMAIN-SUFFIX,fulione.com
-  - DOMAIN-SUFFIX,fullerconsideration.com
   - DOMAIN-SUFFIX,fulue.com
   - DOMAIN-SUFFIX,funf.tw
   - DOMAIN-SUFFIX,funkyimg.com
@@ -4317,7 +4313,11 @@ payload:
   - DOMAIN-SUFFIX,redbubble.com
   - DOMAIN-SUFFIX,redchinacn.net
   - DOMAIN-SUFFIX,redchinacn.org
+  - DOMAIN-SUFFIX,redd.it
+  - DOMAIN-SUFFIX,reddit.com
   - DOMAIN-SUFFIX,redditlist.com
+  - DOMAIN-SUFFIX,redditmedia.com
+  - DOMAIN-SUFFIX,redditstatic.com
   - DOMAIN-SUFFIX,redhotlabs.com
   - DOMAIN-SUFFIX,redtube.com
   - DOMAIN-SUFFIX,referer.us
@@ -6180,3 +6180,7 @@ payload:
   - DOMAIN-SUFFIX,zlibrary-global.se
   - DOMAIN-SUFFIX,128100.xyz
   - DOMAIN-SUFFIX,openwrt.org
+  - ('domain.club.tw', '', '')
+  - ('domains.google', '', '')
+  - ('domaintoday.com.au', '', '')
+  - ('fullerconsideration.com', '', '')
