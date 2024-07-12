@@ -1,7 +1,10 @@
 # ADD
 domain:168.192.in-addr.arpa
 domain:freebsd.org
+domain:syncthing.net
 domain:calibre-ebook.com
+domain:mirror.ghproxy.com
+domain:documentfoundation.org
 domain:apple.cn:@apple
 full:fpinit.itunes.apple.com:@apple
 full:sandbox.itunes.apple.com:@apple

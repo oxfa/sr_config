@@ -41,6 +41,7 @@ jobs:
       RULESET_OPENAI_URL:     https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/OpenAI/OpenAI.list
       RULESET_REDDIT_URL:     https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Reddit/Reddit.list
       RULESET_PAYPAL_URL:     https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/PayPal/PayPal.list
+      RULESET_GEMINI_URL:     https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Gemini/Gemini.list
       RULESET_COPILOT_URL:    https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Copilot/Copilot.list
     steps:
       - name: Checkout the "master" branch of this repo
@@ -57,6 +58,7 @@ jobs:
           wget ${{ env.RULESET_OPENAI_URL }} -O ./.tmp/openai_ruleset.txt
           wget ${{ env.RULESET_REDDIT_URL }} -O ./.tmp/reddit_ruleset.txt
           wget ${{ env.RULESET_PAYPAL_URL }} -O ./.tmp/paypal_ruleset.txt
+          wget ${{ env.RULESET_GEMINI_URL }} -O ./.tmp/gemini_ruleset.txt
           wget ${{ env.RULESET_COPILOT_URL }} -O ./.tmp/copilot_ruleset.txt
           wget ${{ env.RAW_PROXY_LIST_URL }} -O ./.tmp/raw_proxy_list.txt
           wget ${{ env.ADGUARD_DNS_REJECT_URL }} -O ./.tmp/adguard_dns_list.txt
@@ -80,9 +82,11 @@ jobs:
           python3 script/format2list.py ./.tmp/openai_ruleset.txt
           python3 script/format2list.py ./.tmp/reddit_ruleset.txt
           python3 script/format2list.py ./.tmp/paypal_ruleset.txt
+          python3 script/format2list.py ./.tmp/genimi_ruleset.txt
           python3 script/format2list.py ./.tmp/copilot_ruleset.txt
           cat ./.tmp/reddit_ruleset.txt > ./.tmp/raw_warp_list.txt
           cat ./.tmp/paypal_ruleset.txt >> ./.tmp/raw_warp_list.txt
+          cat ./.tmp/gemini_ruleset.txt >> ./.tmp/raw_warp_list.txt
           cat ./.tmp/copilot_ruleset.txt >> ./.tmp/raw_warp_list.txt
           cat ./.tmp/openai_ruleset.txt >> ./.tmp/raw_warp_list.txt
 
@@ -142,6 +146,7 @@ jobs:
         run: |
           python3 script/list2clash_ruleset.py ./.tmp/raw_warp_list.txt ./configuration/release/rule-set/warp.yaml
           python3 script/list2clash_ruleset.py ./.tmp/raw_proxy_list.txt ./configuration/release/rule-set/proxy.yaml
+          python3 script/list2clash_ruleset.py ./.tmp/raw_direct_list.txt ./configuration/release/rule-set/direct.yaml
           python3 script/list2clash_ruleset.py ./.tmp/raw_block_list_clash.txt ./configuration/release/rule-set/block.yaml
 
       - name: Generate main cfg
