@@ -16,7 +16,7 @@ def process_file_in_place(file_path, tag_arg=None):
             if line.startswith("#"):
                 continue
 
-            if line.startswith(tuple(LIST_RULESET_MAPPING.keys())):
+            if line.startswith(tuple(f"{value}:" for value in LIST_RULESET_MAPPING.keys())):
                 pass
             else:
                 for key, value in RULESET_LIST_MAPPING.items():
