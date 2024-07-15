@@ -1,6 +1,8 @@
 #!name=block_reject
 
 [RULE]
+DOMAIN-SUFFIX,duxlveokumpmd.com,REJECT
+DOMAIN-SUFFIX,stoogouy.net,REJECT
 DOMAIN-SUFFIX,equipmentapes.com,REJECT
 DOMAIN-SUFFIX,vg876yuj.click,REJECT
 DOMAIN-SUFFIX,lmj8i.pro,REJECT
@@ -43107,6 +43109,7 @@ DOMAIN-SUFFIX,log-hl.snssdk.com,REJECT
 DOMAIN-SUFFIX,ib.snssdk.com,REJECT
 DOMAIN-SUFFIX,xlog.snssdk.com,REJECT
 DOMAIN-SUFFIX,log.snssdk.com,REJECT
+DOMAIN-SUFFIX,sec.webeyez.com,REJECT
 DOMAIN-SUFFIX,michiganrobotflower.com,REJECT
 DOMAIN-SUFFIX,uid.mediacorp.sg,REJECT
 DOMAIN-SUFFIX,exacttarget.com,REJECT
@@ -46598,6 +46601,7 @@ DOMAIN-SUFFIX,webtrekk.net,REJECT
 DOMAIN-SUFFIX,wizaly.com,REJECT
 DOMAIN-SUFFIX,d1udjti6mtxz9q.cloudfront.net,REJECT
 DOMAIN-SUFFIX,tagman.britishairways.com,REJECT
+DOMAIN-SUFFIX,akn.analytics.autodesk.com,REJECT
 DOMAIN-SUFFIX,marketing.dropbox.com,REJECT
 DOMAIN-SUFFIX,ok88okg.infinityscans.net,REJECT
 DOMAIN-SUFFIX,evt.24.com,REJECT
@@ -56281,6 +56285,7 @@ DOMAIN-SUFFIX,v9banners.com,REJECT
 DOMAIN-SUFFIX,vieon-tracking.vieon.vn,REJECT
 DOMAIN-SUFFIX,vietbuzzad.com,REJECT
 DOMAIN-SUFFIX,vietdorje.com,REJECT
+DOMAIN-SUFFIX,vietnamdaily-log.trithuccuocsong.vn,REJECT
 DOMAIN-SUFFIX,vlxx.host,REJECT
 DOMAIN-SUFFIX,vnadssb.com,REJECT
 DOMAIN-SUFFIX,web-analytic.ghtk.vn,REJECT
@@ -60548,6 +60553,7 @@ DOMAIN-SUFFIX,w88banh.com,REJECT
 DOMAIN-SUFFIX,walmartshoping.com,REJECT
 DOMAIN-SUFFIX,warrenmoneytrader.com,REJECT
 DOMAIN-SUFFIX,watch-online.49n7wqynho5u.top,REJECT
+DOMAIN-SUFFIX,wbk9sohp.jdpz.link,REJECT
 DOMAIN-SUFFIX,wdxzlv.org,REJECT
 DOMAIN-SUFFIX,web-membbership-freefire-garena.com,REJECT
 DOMAIN-SUFFIX,web-shopee-vn.com,REJECT
@@ -60675,6 +60681,17 @@ DOMAIN-SUFFIX,kwiqcoh.icu,REJECT
 DOMAIN-SUFFIX,lajevt.xyz,REJECT
 DOMAIN-SUFFIX,3ri.cc,REJECT
 DOMAIN-SUFFIX,bvubasnf.com,REJECT
+DOMAIN-SUFFIX,tqtqvb.xyz,REJECT
+DOMAIN-SUFFIX,duyewnf.icu,REJECT
+DOMAIN-SUFFIX,cyretuf.top,REJECT
+DOMAIN-SUFFIX,udipsumt.top,REJECT
+DOMAIN-SUFFIX,swwdke.xyz,REJECT
+DOMAIN-SUFFIX,xmhszb.xyz,REJECT
+DOMAIN-SUFFIX,jasdz1.cn,REJECT
+DOMAIN-SUFFIX,hyretuu.top,REJECT
+DOMAIN-SUFFIX,iteyi.xyz,REJECT
+DOMAIN-SUFFIX,aoiqa.top,REJECT
+DOMAIN-SUFFIX,uaiqp.top,REJECT
 DOMAIN-SUFFIX,57573zubo36833.com,REJECT
 DOMAIN-SUFFIX,imgoss2255.top,REJECT
 DOMAIN-SUFFIX,tupian88888.com,REJECT
