@@ -1,3 +1,4 @@
+import re
 import argparse
 from mappings import CLASH_RULESET_LIST_MAPPING
 
@@ -9,6 +10,8 @@ def replace_mapping(line, mapping):
 
     if line.startswith("#"):
         return line
+
+    line = re.sub(r',no-resolve\s*$', '', line)
 
     parts = line.split(',', 1)
     if len(parts) != 2:

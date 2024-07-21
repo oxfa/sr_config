@@ -31,7 +31,8 @@ def process_line(line, tag_filter=None):
         return None
 
     if A == "ip-cidr" or A == "ip-cidr6" or A == "ip-asn":
-        B += ",no-resolve"
+        if not B.endswith(",no-resolve"):
+            B += ",no-resolve"
 
     return f"{new_A},{B}"
 
