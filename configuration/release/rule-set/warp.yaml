@@ -359,13 +359,13 @@ payload:
   - DOMAIN-SUFFIX,bingapis.com
   - DOMAIN-SUFFIX,bandwagonhost.com
   - DOMAIN-SUFFIX,recaptcha.net
-  - IP-CIDR,24.199.123.28/32,no-resolve,no-resolve
-  - IP-CIDR,64.23.132.171/32,no-resolve,no-resolve
-  - IP-CIDR,24.199.123.28/32,no-resolve,no-resolve
-  - IP-CIDR,64.23.132.171/32,no-resolve,no-resolve
-  - IP-ASN,14061,no-resolve,no-resolve
-  - IP-ASN,20473,no-resolve,no-resolve
-  - IP-ASN,20473,no-resolve,no-resolve
+  - IP-CIDR,24.199.123.28/32,no-resolve
+  - IP-CIDR,64.23.132.171/32,no-resolve
+  - IP-CIDR,24.199.123.28/32,no-resolve
+  - IP-CIDR,64.23.132.171/32,no-resolve
+  - IP-ASN,14061,no-resolve
+  - IP-ASN,20473,no-resolve
+  - IP-ASN,20473,no-resolve
   - IP-ASN,31898,no-resolve
   - DOMAIN-KEYWORD,paypal
   - DOMAIN-KEYWORD,colab
