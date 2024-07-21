@@ -30,12 +30,12 @@ def process_file(input_lines, mapping):
 
 
 def main():
+    # 解析命令行参数
     parser = argparse.ArgumentParser(
         description='Process a file with mapping replacements.')
     parser.add_argument('input_file', type=str, help='Path to the input file')
     parser.add_argument('output_file', type=str, nargs='?',
                         help='Path to the output file (optional)')
-
     args = parser.parse_args()
 
     with open(args.input_file, 'r', encoding='utf-8') as infile:
@@ -43,8 +43,10 @@ def main():
 
     output_lines = process_file(input_lines, CLASH_RULESET_LIST_MAPPING)
 
-    with open(args.output_file, 'w', encoding='utf-8') as outfile:
-        outfile.writelines("\n".join(output_lines) + "\n")
+    output_file = args.output_file if args.output_file else args.input_file
+
+    with open(output_file, 'w', encoding='utf-8') as outfile:
+        outfile.write("\n".join(output_lines) + "\n")
 
 
 if __name__ == "__main__":
