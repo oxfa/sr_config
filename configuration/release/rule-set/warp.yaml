@@ -1,4 +1,11 @@
 payload:
+  - DOMAIN-KEYWORD,paypal
+  - DOMAIN-KEYWORD,colab
+  - DOMAIN-KEYWORD,developerprofiles
+  - DOMAIN-KEYWORD,generativelanguage
+  - DOMAIN-KEYWORD,openaicom-api
+  - DOMAIN-KEYWORD,openai
+  - DOMAIN-KEYWORD,chatgpt
   - DOMAIN,ai.google.dev
   - DOMAIN,alkalimakersuite-pa.clients6.google.com
   - DOMAIN,makersuite.google.com
@@ -367,10 +374,3 @@ payload:
   - IP-ASN,20473,no-resolve
   - IP-ASN,20473,no-resolve
   - IP-ASN,31898,no-resolve
-  - DOMAIN-KEYWORD,paypal
-  - DOMAIN-KEYWORD,colab
-  - DOMAIN-KEYWORD,developerprofiles
-  - DOMAIN-KEYWORD,generativelanguage
-  - DOMAIN-KEYWORD,openaicom-api
-  - DOMAIN-KEYWORD,openai
-  - DOMAIN-KEYWORD,chatgpt
