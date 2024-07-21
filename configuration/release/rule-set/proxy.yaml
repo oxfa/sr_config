@@ -1320,7 +1320,6 @@ payload:
   - DOMAIN-SUFFIX,debug.com
   - DOMAIN-SUFFIX,deck.ly
   - DOMAIN-SUFFIX,decodet.co
-  - DOMAIN-SUFFIX,deepmind.com
   - DOMAIN-SUFFIX,deezer.com
   - DOMAIN-SUFFIX,definebabe.com
   - DOMAIN-SUFFIX,deja.com
@@ -4321,11 +4320,7 @@ payload:
   - DOMAIN-SUFFIX,redbubble.com
   - DOMAIN-SUFFIX,redchinacn.net
   - DOMAIN-SUFFIX,redchinacn.org
-  - DOMAIN-SUFFIX,redd.it
-  - DOMAIN-SUFFIX,reddit.com
   - DOMAIN-SUFFIX,redditlist.com
-  - DOMAIN-SUFFIX,redditmedia.com
-  - DOMAIN-SUFFIX,redditstatic.com
   - DOMAIN-SUFFIX,redhotlabs.com
   - DOMAIN-SUFFIX,redtube.com
   - DOMAIN-SUFFIX,referer.us

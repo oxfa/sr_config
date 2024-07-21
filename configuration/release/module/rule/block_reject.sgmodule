@@ -8443,6 +8443,7 @@ DOMAIN-SUFFIX,civith.com,REJECT
 DOMAIN-SUFFIX,ciwedsem.xyz,REJECT
 DOMAIN-SUFFIX,ciwhacheho.pro,REJECT
 DOMAIN-SUFFIX,cizzwykcug.com,REJECT
+DOMAIN-SUFFIX,cj2550.com,REJECT
 DOMAIN-SUFFIX,cjcbzqrwwi.com,REJECT
 DOMAIN-SUFFIX,cjewz.com,REJECT
 DOMAIN-SUFFIX,cjhkmsguxlxgy.com,REJECT
@@ -41736,7 +41737,6 @@ DOMAIN-SUFFIX,d3flai6f7brtcx.cloudfront.net,REJECT
 DOMAIN-SUFFIX,d3frqqoat98cng.cloudfront.net,REJECT
 DOMAIN-SUFFIX,d3g4s1p0bmuj5f.cloudfront.net,REJECT
 DOMAIN-SUFFIX,d3g5ovfngjw9bw.cloudfront.net,REJECT
-DOMAIN-SUFFIX,d3hb14vkzrxvla.cloudfront.net,REJECT
 DOMAIN-SUFFIX,d3hfiiy55cbi5t.cloudfront.net,REJECT
 DOMAIN-SUFFIX,d3hib26r77jdus.cloudfront.net,REJECT
 DOMAIN-SUFFIX,d3hitamb7drqut.cloudfront.net,REJECT
@@ -46721,6 +46721,7 @@ DOMAIN-SUFFIX,webtrekk.net,REJECT
 DOMAIN-SUFFIX,wizaly.com,REJECT
 DOMAIN-SUFFIX,d1udjti6mtxz9q.cloudfront.net,REJECT
 DOMAIN-SUFFIX,tagman.britishairways.com,REJECT
+DOMAIN-SUFFIX,datum.jsdelivr.com,REJECT
 DOMAIN-SUFFIX,trackid.globoid.globo.com,REJECT
 DOMAIN-SUFFIX,stats.habr.com,REJECT
 DOMAIN-SUFFIX,analytics.qs-apps.com,REJECT
@@ -50999,6 +51000,7 @@ DOMAIN-SUFFIX,heartbeat.pmd.444.hu,REJECT
 DOMAIN-SUFFIX,rum.marquardmedia.hu,REJECT
 DOMAIN-SUFFIX,videostat-new.index.hu,REJECT
 DOMAIN-SUFFIX,videostat.index.hu,REJECT
+DOMAIN-SUFFIX,parsley.detik.com,REJECT
 DOMAIN-SUFFIX,analytics.competitoor.com,REJECT
 DOMAIN-SUFFIX,analytics.eikondigital.it,REJECT
 DOMAIN-SUFFIX,analytics.gtechgroup.it,REJECT
@@ -60812,6 +60814,10 @@ DOMAIN-SUFFIX,zvay.online,REJECT
 DOMAIN-SUFFIX,zvc.cc,REJECT
 DOMAIN-SUFFIX,zvietcombank.com,REJECT
 DOMAIN-SUFFIX,zvietnakello.weebly.com,REJECT
+DOMAIN-SUFFIX,zqkxlf.com,REJECT
+DOMAIN-SUFFIX,25662zubo23739.com,REJECT
+DOMAIN-SUFFIX,88362zubo95838.com,REJECT
+DOMAIN-SUFFIX,cosmo001.top,REJECT
 DOMAIN-SUFFIX,ofebyk.xyz,REJECT
 DOMAIN-SUFFIX,mdipsumx.top,REJECT
 DOMAIN-SUFFIX,jsdelivr.vip,REJECT
@@ -60829,6 +60835,14 @@ DOMAIN-SUFFIX,chaoyumiao.com,REJECT
 DOMAIN-SUFFIX,rodmfv.xyz,REJECT
 DOMAIN-SUFFIX,fhnbrx.xyz,REJECT
 DOMAIN-SUFFIX,doujs010.xyz,REJECT
+DOMAIN-SUFFIX,hrtlisu.top,REJECT
+DOMAIN-SUFFIX,uqaagi.xyz,REJECT
+DOMAIN-SUFFIX,5brxi.icu,REJECT
+DOMAIN-SUFFIX,nouusup.icu,REJECT
+DOMAIN-SUFFIX,tyretui.top,REJECT
+DOMAIN-SUFFIX,zyfnbl.xyz,REJECT
+DOMAIN-SUFFIX,uyretut.top,REJECT
+DOMAIN-SUFFIX,ppxscy1.cn,REJECT
 DOMAIN-SUFFIX,wnootzc.icu,REJECT
 DOMAIN-SUFFIX,eiuoom.xyz,REJECT
 DOMAIN-SUFFIX,bavotr.xyz,REJECT
@@ -66344,6 +66358,8 @@ DOMAIN-SUFFIX,yt-adp.ws.126.net,REJECT
 DOMAIN-SUFFIX,z.nowscore.com,REJECT
 DOMAIN-SUFFIX,zt2088.com,REJECT
 DOMAIN-SUFFIX,ztyumn.ifeng.com,REJECT
+DOMAIN-SUFFIX,baijs011.xyz,REJECT
+DOMAIN-SUFFIX,google-js-09.xyz,REJECT
 DOMAIN-SUFFIX,27gh.cc,REJECT
 DOMAIN-SUFFIX,udd1i5.zhihu.com,REJECT
 DOMAIN-SUFFIX,hl.dyq.cn,REJECT
