@@ -1,6 +1,6 @@
 import sys
 import argparse
-from mappings import LIST_RULESET_MAPPING
+from mappings import LIST_CLASH_RULESET_MAPPING
 
 
 def process_line(line, tag_filter=None):
@@ -22,13 +22,16 @@ def process_line(line, tag_filter=None):
         B = line[first_colon_index+1:]
         C = ""
 
-    if A in LIST_RULESET_MAPPING:
-        new_A = LIST_RULESET_MAPPING[A]
+    if A in LIST_CLASH_RULESET_MAPPING:
+        new_A = LIST_CLASH_RULESET_MAPPING[A]
     else:
         return None
 
     if tag_filter and (C != tag_filter):
         return None
+
+    if A == "ip-cidr" or A == "ip-cidr6" or A == "ip-asn":
+        B += ",no-resolve"
 
     return f"{new_A},{B}"
 

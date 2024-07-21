@@ -1,6 +1,6 @@
 import argparse
 import os
-from mappings import LIST_RULESET_MAPPING
+from mappings import LIST_CLASH_RULESET_MAPPING
 
 
 def sort_lines_by_key_values(file_path, key_value_pairs):
@@ -49,7 +49,7 @@ def main():
 
     try:
         sorted_lines = sort_lines_by_key_values(
-            args.input_file, LIST_RULESET_MAPPING)
+            args.input_file, LIST_CLASH_RULESET_MAPPING)
     except Exception as e:
         print(e)
         return

@@ -1,7 +1,6 @@
 import re
 import argparse
-from mappings import LIST_RULESET_MAPPING
-from mappings import RULESET_LIST_MAPPING
+from mappings import LIST_SR_RULESET_MAPPING
 
 
 def process_file_in_place(file_path, tag_arg=None):
@@ -16,13 +15,13 @@ def process_file_in_place(file_path, tag_arg=None):
             if line.startswith("#"):
                 continue
 
-            if line.startswith(tuple(f"{value}:" for value in LIST_RULESET_MAPPING.keys())):
+            if line.startswith(tuple(f"{value}:" for value in LIST_SR_RULESET_MAPPING.keys())):
                 pass
             else:
-                for key, value in RULESET_LIST_MAPPING.items():
-                    if line.startswith(f"{key},"):
-                        line = line.replace(f"{key},", f"{value}:")
-                        break
+                # for key, value in CLASH_RULESET_LIST_MAPPING.items():
+                #     if line.startswith(f"{key},"):
+                #         line = line.replace(f"{key},", f"{value}:")
+                #         break
 
                 if line.startswith(("ip-cidr:", "ip-cidr6", "ip-asn:")):
                     line = line.rstrip(",no-resolve")

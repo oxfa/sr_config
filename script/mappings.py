@@ -1,4 +1,15 @@
-LIST_RULESET_MAPPING = {
+
+LIST_SR_RULESET_MAPPING = {
+    "full": "DOMAIN",
+    "domain": "DOMAIN-SUFFIX",
+    "regexp": "URL-REGEX",
+    "ip-cidr": "IP-CIDR",
+    "ip-cidr6": "IP-CIDR",
+    "ip-asn": "IP-ASN",
+    "keyword": "DOMAIN-KEYWORD"
+}
+
+LIST_CLASH_RULESET_MAPPING = {
     "full": "DOMAIN",
     "domain": "DOMAIN-SUFFIX",
     "regexp": "DOMAIN-REGEX",
@@ -8,4 +19,7 @@ LIST_RULESET_MAPPING = {
     "keyword": "DOMAIN-KEYWORD"
 }
 
-RULESET_LIST_MAPPING = {v: k for k, v in LIST_RULESET_MAPPING.items()}
+SR_RULESET_LIST_MAPPING = {v: k for k, v in LIST_SR_RULESET_MAPPING.items()}
+
+CLASH_RULESET_LIST_MAPPING = {v: k for k,
+                              v in LIST_CLASH_RULESET_MAPPING.items()}

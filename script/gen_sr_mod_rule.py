@@ -3,7 +3,7 @@
 import re
 import sys
 from pathlib import Path
-from mappings import LIST_RULESET_MAPPING
+from mappings import LIST_SR_RULESET_MAPPING
 
 
 def is_valid_domain(domain):
@@ -53,7 +53,7 @@ def format_rule(fd, op_type):
         if not exp_type:
             continue
 
-        prefix = LIST_RULESET_MAPPING.get(exp_type, None)
+        prefix = LIST_SR_RULESET_MAPPING.get(exp_type, None)
 
         if prefix is None:
             sys.exit(f"Invalid exp_type1: {exp_type}, line text: {line}")
