@@ -33,8 +33,9 @@ def main():
     parser = argparse.ArgumentParser(
         description='Process a file with mapping replacements.')
     parser.add_argument('input_file', type=str, help='Path to the input file')
-    parser.add_argument('output_file', type=str,
-                        help='Path to the output file', default=None)
+    parser.add_argument('output_file', type=str, nargs='?',
+                        help='Path to the output file (optional)')
+
     args = parser.parse_args()
 
     with open(args.input_file, 'r', encoding='utf-8') as infile:
