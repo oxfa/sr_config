@@ -207,8 +207,6 @@ payload:
   - DOMAIN,guzzoni-apple-com.v.aaplimg.com
   - DOMAIN,guzzoni.apple.com
   - DOMAIN,guzzoni.smoot.apple.com
-  - DOMAIN,gvt1-cn.com
-  - DOMAIN,gvt2-cn.com
   - DOMAIN,hellofontpreview.oss-cn-beijing.aliyuncs.com
   - DOMAIN,hellowebfonts.oss-cn-beijing.aliyuncs.com
   - DOMAIN,hospital.pku.edu.cn
@@ -32101,6 +32099,8 @@ payload:
   - DOMAIN-SUFFIX,gvi-tech.com
   - DOMAIN-SUFFIX,gvlocalization.com
   - DOMAIN-SUFFIX,gvoiceplat.com
+  - DOMAIN-SUFFIX,gvt1-cn.com
+  - DOMAIN-SUFFIX,gvt2-cn.com
   - DOMAIN-SUFFIX,gvzen.com
   - DOMAIN-SUFFIX,gw-ec.com
   - DOMAIN-SUFFIX,gw.craft.moe
@@ -47379,6 +47379,7 @@ payload:
   - DOMAIN-SUFFIX,lao.si
   - DOMAIN-SUFFIX,laobaicai.net
   - DOMAIN-SUFFIX,laobaigan-hs.com
+  - DOMAIN-SUFFIX,laoban100.com
   - DOMAIN-SUFFIX,laobandq.com
   - DOMAIN-SUFFIX,laobanfa.com
   - DOMAIN-SUFFIX,laobangban.com
@@ -64355,8 +64356,10 @@ payload:
   - DOMAIN-SUFFIX,shengyan985.com
   - DOMAIN-SUFFIX,shengyasd.com
   - DOMAIN-SUFFIX,shengyeji.com
+  - DOMAIN-SUFFIX,shengyi.ai
   - DOMAIN-SUFFIX,shengyi.biz
   - DOMAIN-SUFFIX,shengyidi.com
+  - DOMAIN-SUFFIX,shengyizhuanjia.com
   - DOMAIN-SUFFIX,shengyuancc.com
   - DOMAIN-SUFFIX,shengzehr.com
   - DOMAIN-SUFFIX,shengzhaoli.com
@@ -83536,6 +83539,7 @@ payload:
   - DOMAIN-SUFFIX,yuanbaohui.com
   - DOMAIN-SUFFIX,yuanbaokc.com
   - DOMAIN-SUFFIX,yuanbaotaoche.com
+  - DOMAIN-SUFFIX,yuanbei.biz
   - DOMAIN-SUFFIX,yuanbin.me
   - DOMAIN-SUFFIX,yuancangipr.com
   - DOMAIN-SUFFIX,yuancdn.com
@@ -88466,6 +88470,7 @@ payload:
   - DOMAIN-SUFFIX,mirror.ghproxy.com
   - DOMAIN-SUFFIX,documentfoundation.org
   - DOMAIN-SUFFIX,apple.cn
+  - DOMAIN-REGEX,.+\.amzndns-cn\.(biz|cn|com|net)$
   - DOMAIN-REGEX,.+\.awsdns-cn-[0-9][0-9]\.(biz|com|net|top)$
   - DOMAIN-REGEX,.+\.awsdns-cn-[0-9][a-e0-9]\.cn$
   - DOMAIN-REGEX,.+\.azchcdn[a-s]\.com$
