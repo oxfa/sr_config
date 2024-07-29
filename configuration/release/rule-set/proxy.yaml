@@ -429,6 +429,7 @@ payload:
   - DOMAIN-SUFFIX,axureformac.com
   - DOMAIN-SUFFIX,azerbaycan.tv
   - DOMAIN-SUFFIX,azerimix.com
+  - DOMAIN-SUFFIX,azirevpn.com
   - DOMAIN-SUFFIX,azubu.tv
   - DOMAIN-SUFFIX,azurewebsites.net
   - DOMAIN-SUFFIX,b-ok.cc
@@ -1097,6 +1098,7 @@ payload:
   - DOMAIN-SUFFIX,clubhouseapi.com
   - DOMAIN-SUFFIX,clyp.it
   - DOMAIN-SUFFIX,cmcn.org
+  - DOMAIN-SUFFIX,cmegroup.com
   - DOMAIN-SUFFIX,cmi.org.tw
   - DOMAIN-SUFFIX,cmp.hku.hk
   - DOMAIN-SUFFIX,cms.gov
@@ -2792,6 +2794,7 @@ payload:
   - DOMAIN-SUFFIX,imageab.com
   - DOMAIN-SUFFIX,imagefap.com
   - DOMAIN-SUFFIX,imageflea.com
+  - DOMAIN-SUFFIX,imageglass.org
   - DOMAIN-SUFFIX,images-gaytube.com
   - DOMAIN-SUFFIX,images.comico.tw
   - DOMAIN-SUFFIX,imageshack.us
