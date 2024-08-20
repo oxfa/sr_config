@@ -37590,6 +37590,7 @@ DOMAIN-SUFFIX,adtegrity.net,REJECT
 DOMAIN-SUFFIX,adteractive.com,REJECT
 DOMAIN-SUFFIX,adthrive.com,REJECT
 DOMAIN-SUFFIX,adtival.network,REJECT
+DOMAIN-SUFFIX,adtrafficquality.google,REJECT
 DOMAIN-SUFFIX,adtrix.com,REJECT
 DOMAIN-SUFFIX,adultadworld.com,REJECT
 DOMAIN-SUFFIX,adultimate.net,REJECT
@@ -40581,7 +40582,6 @@ DOMAIN-SUFFIX,pangolin16.isnssdk.com,REJECT
 DOMAIN-SUFFIX,tnc16-alisg.isnssdk.com,REJECT
 DOMAIN-SUFFIX,tnc16-useast1a.isnssdk.com,REJECT
 DOMAIN-SUFFIX,app.adjust.world,REJECT
-DOMAIN-SUFFIX,app.adjust.net.in,REJECT
 DOMAIN-SUFFIX,ads.feelingtouch.com,REJECT
 DOMAIN-SUFFIX,ad.tencentmusic.com,REJECT
 DOMAIN-SUFFIX,ads.iosappsworld.com,REJECT
@@ -41068,7 +41068,6 @@ DOMAIN-SUFFIX,t.mm-uxrv.com,REJECT
 DOMAIN-SUFFIX,sec.webeyez.com,REJECT
 DOMAIN-SUFFIX,michiganrobotflower.com,REJECT
 DOMAIN-SUFFIX,uid.mediacorp.sg,REJECT
-DOMAIN-SUFFIX,exacttarget.com,REJECT
 DOMAIN-SUFFIX,analytics.launch.bz,REJECT
 DOMAIN-SUFFIX,qobuz.surveysparrow.com,REJECT
 DOMAIN-SUFFIX,srvr.dmvs-apac.com,REJECT
@@ -44547,6 +44546,7 @@ DOMAIN-SUFFIX,webtrekk.net,REJECT
 DOMAIN-SUFFIX,wizaly.com,REJECT
 DOMAIN-SUFFIX,d1udjti6mtxz9q.cloudfront.net,REJECT
 DOMAIN-SUFFIX,tagman.britishairways.com,REJECT
+DOMAIN-SUFFIX,ninja.data.olxcdn.com,REJECT
 DOMAIN-SUFFIX,ocular.mydealz.de,REJECT
 DOMAIN-SUFFIX,tiq.espritshop.pl,REJECT
 DOMAIN-SUFFIX,abc.espritshop.pl,REJECT
@@ -44558,7 +44558,6 @@ DOMAIN-SUFFIX,ipgeolocation.abstractapi.com,REJECT
 DOMAIN-SUFFIX,trace.mjyx.com,REJECT
 DOMAIN-SUFFIX,event-router.chime.com,REJECT
 DOMAIN-SUFFIX,t3.cdnpure.com,REJECT
-DOMAIN-SUFFIX,counter.wikiwiki.jp,REJECT
 DOMAIN-SUFFIX,applytics.nordvpn.com,REJECT
 DOMAIN-SUFFIX,d.analyticsmania.com,REJECT
 DOMAIN-SUFFIX,gtm.lercio.it,REJECT
@@ -45127,7 +45126,6 @@ DOMAIN-SUFFIX,analytics.karakuri.ai,REJECT
 DOMAIN-SUFFIX,cdn-redirector.glopal.com,REJECT
 DOMAIN-SUFFIX,storelog.kode.co.kr,REJECT
 DOMAIN-SUFFIX,ampltd2.medal.tv,REJECT
-DOMAIN-SUFFIX,l.bfmtv.com,REJECT
 DOMAIN-SUFFIX,analytics.dugun.com,REJECT
 DOMAIN-SUFFIX,report2.iciba.com,REJECT
 DOMAIN-SUFFIX,report.iciba.com,REJECT
@@ -51189,7 +51187,6 @@ DOMAIN-SUFFIX,d8c5y8fq3znwi.cloudfront.net,REJECT
 DOMAIN-SUFFIX,medyanative.com,REJECT
 DOMAIN-SUFFIX,61ads.net,REJECT
 DOMAIN-SUFFIX,apptospace.com,REJECT
-DOMAIN-SUFFIX,aybereklam.com,REJECT
 DOMAIN-SUFFIX,publisher-network.com,REJECT
 DOMAIN-SUFFIX,dzypro.xyz,REJECT
 DOMAIN-SUFFIX,storj.cloud,REJECT
@@ -58723,6 +58720,13 @@ DOMAIN-SUFFIX,iaindu.cn,REJECT
 DOMAIN-SUFFIX,dqlrfmwp.icu,REJECT
 DOMAIN-SUFFIX,cewrutf.top,REJECT
 DOMAIN-SUFFIX,grihaith.com,REJECT
+DOMAIN-SUFFIX,dabajd.xyz,REJECT
+DOMAIN-SUFFIX,miycoc.xyz,REJECT
+DOMAIN-SUFFIX,hewrutu.top,REJECT
+DOMAIN-SUFFIX,jyjrbz.xyz,REJECT
+DOMAIN-SUFFIX,kjxhd.cn,REJECT
+DOMAIN-SUFFIX,doujs08.shop,REJECT
+DOMAIN-SUFFIX,baijs08.shop,REJECT
 DOMAIN-SUFFIX,uloscw.xyz,REJECT
 DOMAIN-SUFFIX,gahejiao.com,REJECT
 DOMAIN-SUFFIX,nbfsvreu.icu,REJECT

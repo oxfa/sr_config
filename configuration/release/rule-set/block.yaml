@@ -37588,6 +37588,7 @@ payload:
   - DOMAIN-SUFFIX,adteractive.com
   - DOMAIN-SUFFIX,adthrive.com
   - DOMAIN-SUFFIX,adtival.network
+  - DOMAIN-SUFFIX,adtrafficquality.google
   - DOMAIN-SUFFIX,adtrix.com
   - DOMAIN-SUFFIX,adultadworld.com
   - DOMAIN-SUFFIX,adultimate.net
@@ -40579,7 +40580,6 @@ payload:
   - DOMAIN-SUFFIX,tnc16-alisg.isnssdk.com
   - DOMAIN-SUFFIX,tnc16-useast1a.isnssdk.com
   - DOMAIN-SUFFIX,app.adjust.world
-  - DOMAIN-SUFFIX,app.adjust.net.in
   - DOMAIN-SUFFIX,ads.feelingtouch.com
   - DOMAIN-SUFFIX,ad.tencentmusic.com
   - DOMAIN-SUFFIX,ads.iosappsworld.com
@@ -41066,7 +41066,6 @@ payload:
   - DOMAIN-SUFFIX,sec.webeyez.com
   - DOMAIN-SUFFIX,michiganrobotflower.com
   - DOMAIN-SUFFIX,uid.mediacorp.sg
-  - DOMAIN-SUFFIX,exacttarget.com
   - DOMAIN-SUFFIX,analytics.launch.bz
   - DOMAIN-SUFFIX,qobuz.surveysparrow.com
   - DOMAIN-SUFFIX,srvr.dmvs-apac.com
@@ -44545,6 +44544,7 @@ payload:
   - DOMAIN-SUFFIX,wizaly.com
   - DOMAIN-SUFFIX,d1udjti6mtxz9q.cloudfront.net
   - DOMAIN-SUFFIX,tagman.britishairways.com
+  - DOMAIN-SUFFIX,ninja.data.olxcdn.com
   - DOMAIN-SUFFIX,ocular.mydealz.de
   - DOMAIN-SUFFIX,tiq.espritshop.pl
   - DOMAIN-SUFFIX,abc.espritshop.pl
@@ -44556,7 +44556,6 @@ payload:
   - DOMAIN-SUFFIX,trace.mjyx.com
   - DOMAIN-SUFFIX,event-router.chime.com
   - DOMAIN-SUFFIX,t3.cdnpure.com
-  - DOMAIN-SUFFIX,counter.wikiwiki.jp
   - DOMAIN-SUFFIX,applytics.nordvpn.com
   - DOMAIN-SUFFIX,d.analyticsmania.com
   - DOMAIN-SUFFIX,gtm.lercio.it
@@ -45125,7 +45124,6 @@ payload:
   - DOMAIN-SUFFIX,cdn-redirector.glopal.com
   - DOMAIN-SUFFIX,storelog.kode.co.kr
   - DOMAIN-SUFFIX,ampltd2.medal.tv
-  - DOMAIN-SUFFIX,l.bfmtv.com
   - DOMAIN-SUFFIX,analytics.dugun.com
   - DOMAIN-SUFFIX,report2.iciba.com
   - DOMAIN-SUFFIX,report.iciba.com
@@ -51188,7 +51186,6 @@ payload:
   - DOMAIN-SUFFIX,medyanative.com
   - DOMAIN-SUFFIX,61ads.net
   - DOMAIN-SUFFIX,apptospace.com
-  - DOMAIN-SUFFIX,aybereklam.com
   - DOMAIN-SUFFIX,publisher-network.com
   - DOMAIN-SUFFIX,dzypro.xyz
   - DOMAIN-SUFFIX,storj.cloud
@@ -58722,6 +58719,13 @@ payload:
   - DOMAIN-SUFFIX,dqlrfmwp.icu
   - DOMAIN-SUFFIX,cewrutf.top
   - DOMAIN-SUFFIX,grihaith.com
+  - DOMAIN-SUFFIX,dabajd.xyz
+  - DOMAIN-SUFFIX,miycoc.xyz
+  - DOMAIN-SUFFIX,hewrutu.top
+  - DOMAIN-SUFFIX,jyjrbz.xyz
+  - DOMAIN-SUFFIX,kjxhd.cn
+  - DOMAIN-SUFFIX,doujs08.shop
+  - DOMAIN-SUFFIX,baijs08.shop
   - DOMAIN-SUFFIX,uloscw.xyz
   - DOMAIN-SUFFIX,gahejiao.com
   - DOMAIN-SUFFIX,nbfsvreu.icu
