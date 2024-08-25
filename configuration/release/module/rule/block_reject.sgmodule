@@ -41963,7 +41963,6 @@ DOMAIN-SUFFIX,events.tubecup.org,REJECT
 DOMAIN-SUFFIX,rat.rakuten.co.jp,REJECT
 DOMAIN-SUFFIX,requestmetrics.com,REJECT
 DOMAIN-SUFFIX,alpixtrack.com,REJECT
-DOMAIN-SUFFIX,oracleinfinity.io,REJECT
 DOMAIN-SUFFIX,ar-x.site,REJECT
 DOMAIN-SUFFIX,analytics.chase.com,REJECT
 DOMAIN-SUFFIX,scripttags.jst.ai,REJECT
@@ -46676,7 +46675,6 @@ DOMAIN-SUFFIX,tk.meinprospekt.de,REJECT
 DOMAIN-SUFFIX,tl.tradetracker.net,REJECT
 DOMAIN-SUFFIX,tm.tradetracker.net,REJECT
 DOMAIN-SUFFIX,tms.dmp.wi-fi.ru,REJECT
-DOMAIN-SUFFIX,tms.oracle.com,REJECT
 DOMAIN-SUFFIX,tools.ranker.com,REJECT
 DOMAIN-SUFFIX,top-fwz1.mail.ru,REJECT
 DOMAIN-SUFFIX,top.hsdn.org,REJECT
