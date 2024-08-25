@@ -40,6 +40,7 @@ jobs:
 
       RAW_PROXY_LIST_URL:       https://raw.githubusercontent.com/Loyalsoldier/v2ray-rules-dat/release/gfw.txt
 
+      RAW_ORACLE_RULESET_URL:      https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Oracle/Oracle.list
       RAW_OPENAI_RULESET_URL:      https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/OpenAI/OpenAI.list
       RAW_REDDIT_RULESET_URL:      https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Reddit/Reddit.list
       RAW_PAYPAL_RULESET_URL:      https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/PayPal/PayPal.list
@@ -59,6 +60,7 @@ jobs:
       - name: Download Lists And Copy Lists
         run: |
           mkdir .tmp
+          wget ${{ env.RAW_ORACLE_RULESET_URL }} -O ./.tmp/oracle_ruleset.txt
           wget ${{ env.RAW_OPENAI_RULESET_URL }} -O ./.tmp/openai_ruleset.txt
           wget ${{ env.RAW_REDDIT_RULESET_URL }} -O ./.tmp/reddit_ruleset.txt
           wget ${{ env.RAW_PAYPAL_RULESET_URL }} -O ./.tmp/paypal_ruleset.txt
@@ -83,16 +85,20 @@ jobs:
 
       - name: Pre-Process Warp List
         run: |
+          python3 script/clashRuleset2list.py ./.tmp/oracle_ruleset.txt
           python3 script/clashRuleset2list.py ./.tmp/openai_ruleset.txt
           python3 script/clashRuleset2list.py ./.tmp/reddit_ruleset.txt
           python3 script/clashRuleset2list.py ./.tmp/paypal_ruleset.txt
           python3 script/clashRuleset2list.py ./.tmp/gemini_ruleset.txt
           python3 script/clashRuleset2list.py ./.tmp/copilot_ruleset.txt
-          cat ./.tmp/reddit_ruleset.txt > ./.tmp/raw_warp_list.txt
+
+          cat ./.tmp/oracle_ruleset.txt > ./.tmp/raw_warp_list.txt
+          cat ./.tmp/openai_ruleset.txt >> ./.tmp/raw_warp_list.txt
+          cat ./.tmp/reddit_ruleset.txt >> ./.tmp/raw_warp_list.txt
           cat ./.tmp/paypal_ruleset.txt >> ./.tmp/raw_warp_list.txt
           cat ./.tmp/gemini_ruleset.txt >> ./.tmp/raw_warp_list.txt
           cat ./.tmp/copilot_ruleset.txt >> ./.tmp/raw_warp_list.txt
-          cat ./.tmp/openai_ruleset.txt >> ./.tmp/raw_warp_list.txt
+
 
       - name: Process Warp List
         run: |
