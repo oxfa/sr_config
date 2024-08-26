@@ -1,6 +1,8 @@
 #!name=block_reject
 
 [RULE]
+DOMAIN-SUFFIX,pkazd.xyz,REJECT
+DOMAIN-SUFFIX,papatrol.xyz,REJECT
 DOMAIN-SUFFIX,wwcpyupbrcuhcsn.com,REJECT
 DOMAIN-SUFFIX,peenuteque.net,REJECT
 DOMAIN-SUFFIX,palaesavgs.com,REJECT
@@ -4060,6 +4062,7 @@ DOMAIN-SUFFIX,alternads.info,REJECT
 DOMAIN-SUFFIX,alternatespikeloudly.com,REJECT
 DOMAIN-SUFFIX,alternativecpmgate.com,REJECT
 DOMAIN-SUFFIX,alternativeprofitablegate.com,REJECT
+DOMAIN-SUFFIX,altfafbih.com,REJECT
 DOMAIN-SUFFIX,althov.com,REJECT
 DOMAIN-SUFFIX,altitude-arena.com,REJECT
 DOMAIN-SUFFIX,altitudeweetonsil.com,REJECT
@@ -6204,6 +6207,7 @@ DOMAIN-SUFFIX,bilateralgodmother.com,REJECT
 DOMAIN-SUFFIX,bilgerak.com,REJECT
 DOMAIN-SUFFIX,bilingualwalking.com,REJECT
 DOMAIN-SUFFIX,bilkersteds.com,REJECT
+DOMAIN-SUFFIX,billiardsdripping.com,REJECT
 DOMAIN-SUFFIX,billiardsnotealertness.com,REJECT
 DOMAIN-SUFFIX,billiardssequelsticky.com,REJECT
 DOMAIN-SUFFIX,billionpops.com,REJECT
@@ -8440,6 +8444,7 @@ DOMAIN-SUFFIX,cmbestsrv.com,REJECT
 DOMAIN-SUFFIX,cmclean.club,REJECT
 DOMAIN-SUFFIX,cmfads.com,REJECT
 DOMAIN-SUFFIX,cmhoriu.com,REJECT
+DOMAIN-SUFFIX,cmiccttljbth.com,REJECT
 DOMAIN-SUFFIX,cmlwaup.com,REJECT
 DOMAIN-SUFFIX,cmmcqcvwc.com,REJECT
 DOMAIN-SUFFIX,cmpgfltxv.xyz,REJECT
@@ -25124,6 +25129,7 @@ DOMAIN-SUFFIX,phultems.net,REJECT
 DOMAIN-SUFFIX,phultids.com,REJECT
 DOMAIN-SUFFIX,phumpauk.com,REJECT
 DOMAIN-SUFFIX,phupours.com,REJECT
+DOMAIN-SUFFIX,phursefter.net,REJECT
 DOMAIN-SUFFIX,phuzeeksub.com,REJECT
 DOMAIN-SUFFIX,phvhnxebmrzf.com,REJECT
 DOMAIN-SUFFIX,phymasfacks.com,REJECT
@@ -36412,6 +36418,7 @@ DOMAIN-SUFFIX,xvvclhrrpgiln.com,REJECT
 DOMAIN-SUFFIX,xvvsnnciengskyx.xyz,REJECT
 DOMAIN-SUFFIX,xvwqdrwiyi.com,REJECT
 DOMAIN-SUFFIX,xwagtyhujov.com,REJECT
+DOMAIN-SUFFIX,xwazafkzej.com,REJECT
 DOMAIN-SUFFIX,xwcfvvnegv.com,REJECT
 DOMAIN-SUFFIX,xwcumrmfkdkbv.com,REJECT
 DOMAIN-SUFFIX,xwdplfo.com,REJECT
@@ -48250,6 +48257,7 @@ DOMAIN-SUFFIX,track.us.org,REJECT
 DOMAIN-SUFFIX,track.venatusmedia.com,REJECT
 DOMAIN-SUFFIX,track.vscash.com,REJECT
 DOMAIN-SUFFIX,track.yfret.com,REJECT
+DOMAIN-SUFFIX,tracker.au.zitcha.app,REJECT
 DOMAIN-SUFFIX,tracker.beezup.com,REJECT
 DOMAIN-SUFFIX,tracker.financialcontent.com,REJECT
 DOMAIN-SUFFIX,tracker.gamedock.io,REJECT
@@ -53477,6 +53485,7 @@ DOMAIN-SUFFIX,popunderjs.club,REJECT
 DOMAIN-SUFFIX,presbanise.pw,REJECT
 DOMAIN-SUFFIX,promobagus.com,REJECT
 DOMAIN-SUFFIX,promotioncamp.com,REJECT
+DOMAIN-SUFFIX,propsid.b-cdn.net,REJECT
 DOMAIN-SUFFIX,publish.web.id,REJECT
 DOMAIN-SUFFIX,pusatiklan.com,REJECT
 DOMAIN-SUFFIX,s2pops.club,REJECT
@@ -58887,6 +58896,7 @@ DOMAIN-SUFFIX,zvay.online,REJECT
 DOMAIN-SUFFIX,zvc.cc,REJECT
 DOMAIN-SUFFIX,zvietcombank.com,REJECT
 DOMAIN-SUFFIX,zvietnakello.weebly.com,REJECT
+DOMAIN-SUFFIX,sqszcg.top,REJECT
 DOMAIN-SUFFIX,gg3a.cc,REJECT
 DOMAIN-SUFFIX,ztzdvv.xyz,REJECT
 DOMAIN-SUFFIX,udolgy.xyz,REJECT
@@ -58894,6 +58904,12 @@ DOMAIN-SUFFIX,acdref117.cn,REJECT
 DOMAIN-SUFFIX,bylwtf.xyz,REJECT
 DOMAIN-SUFFIX,eewrutw.top,REJECT
 DOMAIN-SUFFIX,afewe611.cn,REJECT
+DOMAIN-SUFFIX,jinxpn.xyz,REJECT
+DOMAIN-SUFFIX,lfxozd.xyz,REJECT
+DOMAIN-SUFFIX,qacdf511.cn,REJECT
+DOMAIN-SUFFIX,gpmzkg.xyz,REJECT
+DOMAIN-SUFFIX,arewcdf116.cn,REJECT
+DOMAIN-SUFFIX,wewrute.top,REJECT
 DOMAIN-SUFFIX,bvdenx.xyz,REJECT
 DOMAIN-SUFFIX,tehxzz.xyz,REJECT
 DOMAIN-SUFFIX,wfsmya.xyz,REJECT
@@ -63253,6 +63269,7 @@ DOMAIN-SUFFIX,z.nowscore.com,REJECT
 DOMAIN-SUFFIX,zt2088.com,REJECT
 DOMAIN-SUFFIX,ztyumn.ifeng.com,REJECT
 DOMAIN-SUFFIX,gg.7976.top,REJECT
+DOMAIN-SUFFIX,abody.39.net,REJECT
 DOMAIN-SUFFIX,27gh.cc,REJECT
 DOMAIN-SUFFIX,003store.com,REJECT
 DOMAIN-SUFFIX,0941.org,REJECT
