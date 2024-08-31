@@ -46,7 +46,7 @@ jobs:
       RAW_PAYPAL_RULESET_URL:      https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/PayPal/PayPal.list
       RAW_GEMINI_RULESET_URL:      https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Gemini/Gemini.list
       RAW_COPILOT_RULESET_URL:     https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Copilot/Copilot.list
-
+      RAW_CLOUDFLARE_RULESET_URL:  https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Cloudflare/Cloudflare.list
 
     steps:
       - name: Checkout the "master" branch of this repo
@@ -66,6 +66,7 @@ jobs:
           wget ${{ env.RAW_PAYPAL_RULESET_URL }} -O ./.tmp/paypal_ruleset.txt
           wget ${{ env.RAW_GEMINI_RULESET_URL }} -O ./.tmp/gemini_ruleset.txt
           wget ${{ env.RAW_COPILOT_RULESET_URL }} -O ./.tmp/copilot_ruleset.txt
+          wget ${{ env.RAW_CLOUDFLARE_RULESET_URL }} -O ./.tmp/cloudflare_ruleset.txt
           wget ${{ env.RAW_PROXY_LIST_URL }} -O ./.tmp/raw_proxy_list.txt
           wget ${{ env.ADGUARD_DNS_REJECT_URL }} -O ./.tmp/adguard_dns_list.txt
           wget ${{ env.RAW_DIRECT_LIST_URL }} -O ./.tmp/raw_direct_list.txt
@@ -91,6 +92,7 @@ jobs:
           python3 script/clashRuleset2list.py ./.tmp/paypal_ruleset.txt
           python3 script/clashRuleset2list.py ./.tmp/gemini_ruleset.txt
           python3 script/clashRuleset2list.py ./.tmp/copilot_ruleset.txt
+          python3 script/clashRuleset2list.py ./.tmp/cloudflare_ruleset.txt
 
           cat ./.tmp/oracle_ruleset.txt > ./.tmp/raw_warp_list.txt
           cat ./.tmp/openai_ruleset.txt >> ./.tmp/raw_warp_list.txt
@@ -98,6 +100,7 @@ jobs:
           cat ./.tmp/paypal_ruleset.txt >> ./.tmp/raw_warp_list.txt
           cat ./.tmp/gemini_ruleset.txt >> ./.tmp/raw_warp_list.txt
           cat ./.tmp/copilot_ruleset.txt >> ./.tmp/raw_warp_list.txt
+          cat ./.tmp/cloudflare_ruleset.txt >> ./.tmp/raw_warp_list.txt
 
 
       - name: Process Warp List
