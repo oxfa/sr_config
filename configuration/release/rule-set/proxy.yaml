@@ -315,7 +315,6 @@ payload:
   - DOMAIN-SUFFIX,api.ai
   - DOMAIN-SUFFIX,api.dropboxapi.com
   - DOMAIN-SUFFIX,api.linksalpha.com
-  - DOMAIN-SUFFIX,api.proxlet.com
   - DOMAIN-SUFFIX,api.pureapk.com
   - DOMAIN-SUFFIX,api.recaptcha.net
   - DOMAIN-SUFFIX,apiary.io
@@ -618,7 +617,6 @@ payload:
   - DOMAIN-SUFFIX,blog.martinoei.com
   - DOMAIN-SUFFIX,blog.pathtosharepoint.com
   - DOMAIN-SUFFIX,blog.pentalogic.net
-  - DOMAIN-SUFFIX,blog.qooza.hk
   - DOMAIN-SUFFIX,blog.ranxiang.com
   - DOMAIN-SUFFIX,blog.sina.com.tw
   - DOMAIN-SUFFIX,blog.sogoo.org
@@ -806,6 +804,7 @@ payload:
   - DOMAIN-SUFFIX,buzzhand.com
   - DOMAIN-SUFFIX,buzzhand.net
   - DOMAIN-SUFFIX,buzzorange.com
+  - DOMAIN-SUFFIX,buzzsprout.com
   - DOMAIN-SUFFIX,bvpn.com
   - DOMAIN-SUFFIX,bwgyhw.com
   - DOMAIN-SUFFIX,bwh1.net
@@ -2910,6 +2909,7 @@ payload:
   - DOMAIN-SUFFIX,iuksky.com
   - DOMAIN-SUFFIX,ivacy.com
   - DOMAIN-SUFFIX,iverycd.com
+  - DOMAIN-SUFFIX,ivonblog.com
   - DOMAIN-SUFFIX,ivpn.net
   - DOMAIN-SUFFIX,iwara.tv
   - DOMAIN-SUFFIX,ixquick.com
@@ -2925,6 +2925,7 @@ payload:
   - DOMAIN-SUFFIX,jamaat.org
   - DOMAIN-SUFFIX,jamestown.org
   - DOMAIN-SUFFIX,jamyangnorbu.com
+  - DOMAIN-SUFFIX,jan.ai
   - DOMAIN-SUFFIX,jandyx.com
   - DOMAIN-SUFFIX,janwongphoto.com
   - DOMAIN-SUFFIX,japan-whores.com
@@ -4017,8 +4018,6 @@ payload:
   - DOMAIN-SUFFIX,pen.io
   - DOMAIN-SUFFIX,penchinese.com
   - DOMAIN-SUFFIX,penchinese.net
-  - DOMAIN-SUFFIX,pengyulong.com
-  - DOMAIN-SUFFIX,penisbot.com
   - DOMAIN-SUFFIX,penthouse.com
   - DOMAIN-SUFFIX,pentoy.hk
   - DOMAIN-SUFFIX,peoplebookcafe.com
@@ -4034,7 +4033,6 @@ payload:
   - DOMAIN-SUFFIX,phapluan.org
   - DOMAIN-SUFFIX,phayul.com
   - DOMAIN-SUFFIX,philborges.com
-  - DOMAIN-SUFFIX,philly.com
   - DOMAIN-SUFFIX,phmsociety.org
   - DOMAIN-SUFFIX,phncdn.com
   - DOMAIN-SUFFIX,phobos.apple.com
@@ -4280,12 +4278,10 @@ payload:
   - DOMAIN-SUFFIX,raizoji.or.jp
   - DOMAIN-SUFFIX,ramcity.com.au
   - DOMAIN-SUFFIX,rangwang.biz
-  - DOMAIN-SUFFIX,rangzen.com
   - DOMAIN-SUFFIX,rangzen.net
   - DOMAIN-SUFFIX,rangzen.org
   - DOMAIN-SUFFIX,ranyunfei.com
   - DOMAIN-SUFFIX,rapbull.net
-  - DOMAIN-SUFFIX,rapidgator.net
   - DOMAIN-SUFFIX,rapidmoviez.com
   - DOMAIN-SUFFIX,rapidvpn.com
   - DOMAIN-SUFFIX,rarbgprx.org
@@ -5124,6 +5120,7 @@ payload:
   - DOMAIN-SUFFIX,ticket.com.tw
   - DOMAIN-SUFFIX,tigervpn.com
   - DOMAIN-SUFFIX,tiktok.com
+  - DOMAIN-SUFFIX,tiktokv.com
   - DOMAIN-SUFFIX,tiltbrush.com
   - DOMAIN-SUFFIX,timdir.com
   - DOMAIN-SUFFIX,time.com
