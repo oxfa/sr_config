@@ -151,7 +151,7 @@ jobs:
           python3 script/gen_sr_mod_rule.py ./configuration/release/module/rule/block_reject_dict.sgmodule MODULE RULE REJECT-DICT
           python3 script/gen_sr_mod_rule.py ./configuration/release/module/rule/block_reject_array.sgmodule MODULE RULE REJECT-ARRAY
           python3 script/gen_sr_mod_rule.py ./configuration/release/module/rule/proxy_warp.sgmodule MODULE RULE PROXY-WARP force-remote-dns
-          python3 script/gen_sr_mod_rule.py ./configuration/release/module/rule/proxy_remote_dns.sgmodule MODULE RULE PROXY-FALLBACK force-remote-dns
+          python3 script/gen_sr_mod_rule.py ./configuration/release/module/rule/proxy_remote_dns.sgmodule MODULE RULE PROXY-FQ force-remote-dns
           python3 script/gen_sr_mod_rule.py ./configuration/release/module/host/domain_dns_adot.sgmodule MODULE HOST DOMAIN-DNS ${{ env.ADOT_IPV4 }}
           python3 script/gen_sr_mod_rule.py ./configuration/release/module/host/domain_dns_gdot.sgmodule MODULE HOST DOMAIN-DNS ${{ env.GDOT_IPV4 }}
 
