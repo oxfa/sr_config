@@ -1,6 +1,9 @@
 #!name=block_reject
 
 [RULE]
+DOMAIN-SUFFIX,alaudrup.net,REJECT
+DOMAIN-SUFFIX,shamnmalcwob.com,REJECT
+DOMAIN-SUFFIX,adshere.online,REJECT
 DOMAIN-SUFFIX,js.trendmd.com,REJECT
 DOMAIN-SUFFIX,fimrg.ajscdn.com,REJECT
 DOMAIN-SUFFIX,2497may2024.com,REJECT
@@ -14599,6 +14602,7 @@ DOMAIN-SUFFIX,goomaphy.com,REJECT
 DOMAIN-SUFFIX,goonsphiltra.top,REJECT
 DOMAIN-SUFFIX,gooods4you.com,REJECT
 DOMAIN-SUFFIX,goosebomb.com,REJECT
+DOMAIN-SUFFIX,goosierappetit.com,REJECT
 DOMAIN-SUFFIX,goosimes.com,REJECT
 DOMAIN-SUFFIX,goostist.com,REJECT
 DOMAIN-SUFFIX,goourl.me,REJECT
@@ -16956,6 +16960,7 @@ DOMAIN-SUFFIX,inhabityoungenter.com,REJECT
 DOMAIN-SUFFIX,inhalebrinkrush.com,REJECT
 DOMAIN-SUFFIX,inhaleecstatic.com,REJECT
 DOMAIN-SUFFIX,inhaletroubledgentle.com,REJECT
+DOMAIN-SUFFIX,inhanceego.com,REJECT
 DOMAIN-SUFFIX,inheritancepillar.com,REJECT
 DOMAIN-SUFFIX,inheritedgeneralrailroad.com,REJECT
 DOMAIN-SUFFIX,inheritedgravysuspected.com,REJECT
@@ -25470,6 +25475,7 @@ DOMAIN-SUFFIX,poined.com,REJECT
 DOMAIN-SUFFIX,pointed-deal.pro,REJECT
 DOMAIN-SUFFIX,pointeddifference.com,REJECT
 DOMAIN-SUFFIX,pointedmana.info,REJECT
+DOMAIN-SUFFIX,pointespassage.com,REJECT
 DOMAIN-SUFFIX,pointinginexperiencedbodyguard.com,REJECT
 DOMAIN-SUFFIX,pointlesseventuallydesignate.com,REJECT
 DOMAIN-SUFFIX,pointlessmorselgemini.com,REJECT
@@ -28375,6 +28381,7 @@ DOMAIN-SUFFIX,rocketplaintiff.com,REJECT
 DOMAIN-SUFFIX,rocketyield.com,REJECT
 DOMAIN-SUFFIX,rockfellertest.com,REJECT
 DOMAIN-SUFFIX,rockierfought.top,REJECT
+DOMAIN-SUFFIX,rockiertaar.com,REJECT
 DOMAIN-SUFFIX,rockingfolders.com,REJECT
 DOMAIN-SUFFIX,rockmostbet.com,REJECT
 DOMAIN-SUFFIX,rockpicky.com,REJECT
@@ -28717,6 +28724,7 @@ DOMAIN-SUFFIX,runitechaute.top,REJECT
 DOMAIN-SUFFIX,runmixed.com,REJECT
 DOMAIN-SUFFIX,runnethfumier.top,REJECT
 DOMAIN-SUFFIX,runningdestructioncleanliness.com,REJECT
+DOMAIN-SUFFIX,runnionpox.click,REJECT
 DOMAIN-SUFFIX,runnyestablishment.pro,REJECT
 DOMAIN-SUFFIX,runsclothingpig.com,REJECT
 DOMAIN-SUFFIX,runtnc.net,REJECT
@@ -36010,6 +36018,7 @@ DOMAIN-SUFFIX,worlowedonhi.info,REJECT
 DOMAIN-SUFFIX,wormdehydratedaeroplane.com,REJECT
 DOMAIN-SUFFIX,wornie.com,REJECT
 DOMAIN-SUFFIX,wornshoppingenvironment.com,REJECT
+DOMAIN-SUFFIX,worritsmahra.com,REJECT
 DOMAIN-SUFFIX,worryingonto.com,REJECT
 DOMAIN-SUFFIX,worshipstubborn.com,REJECT
 DOMAIN-SUFFIX,worst-zone.pro,REJECT
@@ -59226,6 +59235,14 @@ DOMAIN-SUFFIX,zvay.online,REJECT
 DOMAIN-SUFFIX,zvc.cc,REJECT
 DOMAIN-SUFFIX,zvietcombank.com,REJECT
 DOMAIN-SUFFIX,zvietnakello.weebly.com,REJECT
+DOMAIN-SUFFIX,cgskys.xyz,REJECT
+DOMAIN-SUFFIX,nroeoxk.icu,REJECT
+DOMAIN-SUFFIX,gdd08.com,REJECT
+DOMAIN-SUFFIX,jhlnlt.xyz,REJECT
+DOMAIN-SUFFIX,nhjn788.fun,REJECT
+DOMAIN-SUFFIX,kdicked.top,REJECT
+DOMAIN-SUFFIX,fq05.shop,REJECT
+DOMAIN-SUFFIX,jy07.shop,REJECT
 DOMAIN-SUFFIX,egesdashb8.fun,REJECT
 DOMAIN-SUFFIX,iuuwuk.xyz,REJECT
 DOMAIN-SUFFIX,vdsdsf2.fun,REJECT

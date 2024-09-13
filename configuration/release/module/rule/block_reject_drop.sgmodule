@@ -1,6 +1,9 @@
 #!name=block_reject_drop
 
 [RULE]
+DOMAIN-SUFFIX,alaudrup.net,REJECT-DROP
+DOMAIN-SUFFIX,shamnmalcwob.com,REJECT-DROP
+DOMAIN-SUFFIX,adshere.online,REJECT-DROP
 DOMAIN-SUFFIX,js.trendmd.com,REJECT-DROP
 DOMAIN-SUFFIX,fimrg.ajscdn.com,REJECT-DROP
 DOMAIN-SUFFIX,2497may2024.com,REJECT-DROP
@@ -14599,6 +14602,7 @@ DOMAIN-SUFFIX,goomaphy.com,REJECT-DROP
 DOMAIN-SUFFIX,goonsphiltra.top,REJECT-DROP
 DOMAIN-SUFFIX,gooods4you.com,REJECT-DROP
 DOMAIN-SUFFIX,goosebomb.com,REJECT-DROP
+DOMAIN-SUFFIX,goosierappetit.com,REJECT-DROP
 DOMAIN-SUFFIX,goosimes.com,REJECT-DROP
 DOMAIN-SUFFIX,goostist.com,REJECT-DROP
 DOMAIN-SUFFIX,goourl.me,REJECT-DROP
@@ -16956,6 +16960,7 @@ DOMAIN-SUFFIX,inhabityoungenter.com,REJECT-DROP
 DOMAIN-SUFFIX,inhalebrinkrush.com,REJECT-DROP
 DOMAIN-SUFFIX,inhaleecstatic.com,REJECT-DROP
 DOMAIN-SUFFIX,inhaletroubledgentle.com,REJECT-DROP
+DOMAIN-SUFFIX,inhanceego.com,REJECT-DROP
 DOMAIN-SUFFIX,inheritancepillar.com,REJECT-DROP
 DOMAIN-SUFFIX,inheritedgeneralrailroad.com,REJECT-DROP
 DOMAIN-SUFFIX,inheritedgravysuspected.com,REJECT-DROP
@@ -25470,6 +25475,7 @@ DOMAIN-SUFFIX,poined.com,REJECT-DROP
 DOMAIN-SUFFIX,pointed-deal.pro,REJECT-DROP
 DOMAIN-SUFFIX,pointeddifference.com,REJECT-DROP
 DOMAIN-SUFFIX,pointedmana.info,REJECT-DROP
+DOMAIN-SUFFIX,pointespassage.com,REJECT-DROP
 DOMAIN-SUFFIX,pointinginexperiencedbodyguard.com,REJECT-DROP
 DOMAIN-SUFFIX,pointlesseventuallydesignate.com,REJECT-DROP
 DOMAIN-SUFFIX,pointlessmorselgemini.com,REJECT-DROP
@@ -28375,6 +28381,7 @@ DOMAIN-SUFFIX,rocketplaintiff.com,REJECT-DROP
 DOMAIN-SUFFIX,rocketyield.com,REJECT-DROP
 DOMAIN-SUFFIX,rockfellertest.com,REJECT-DROP
 DOMAIN-SUFFIX,rockierfought.top,REJECT-DROP
+DOMAIN-SUFFIX,rockiertaar.com,REJECT-DROP
 DOMAIN-SUFFIX,rockingfolders.com,REJECT-DROP
 DOMAIN-SUFFIX,rockmostbet.com,REJECT-DROP
 DOMAIN-SUFFIX,rockpicky.com,REJECT-DROP
@@ -28717,6 +28724,7 @@ DOMAIN-SUFFIX,runitechaute.top,REJECT-DROP
 DOMAIN-SUFFIX,runmixed.com,REJECT-DROP
 DOMAIN-SUFFIX,runnethfumier.top,REJECT-DROP
 DOMAIN-SUFFIX,runningdestructioncleanliness.com,REJECT-DROP
+DOMAIN-SUFFIX,runnionpox.click,REJECT-DROP
 DOMAIN-SUFFIX,runnyestablishment.pro,REJECT-DROP
 DOMAIN-SUFFIX,runsclothingpig.com,REJECT-DROP
 DOMAIN-SUFFIX,runtnc.net,REJECT-DROP
@@ -36010,6 +36018,7 @@ DOMAIN-SUFFIX,worlowedonhi.info,REJECT-DROP
 DOMAIN-SUFFIX,wormdehydratedaeroplane.com,REJECT-DROP
 DOMAIN-SUFFIX,wornie.com,REJECT-DROP
 DOMAIN-SUFFIX,wornshoppingenvironment.com,REJECT-DROP
+DOMAIN-SUFFIX,worritsmahra.com,REJECT-DROP
 DOMAIN-SUFFIX,worryingonto.com,REJECT-DROP
 DOMAIN-SUFFIX,worshipstubborn.com,REJECT-DROP
 DOMAIN-SUFFIX,worst-zone.pro,REJECT-DROP
@@ -59226,6 +59235,14 @@ DOMAIN-SUFFIX,zvay.online,REJECT-DROP
 DOMAIN-SUFFIX,zvc.cc,REJECT-DROP
 DOMAIN-SUFFIX,zvietcombank.com,REJECT-DROP
 DOMAIN-SUFFIX,zvietnakello.weebly.com,REJECT-DROP
+DOMAIN-SUFFIX,cgskys.xyz,REJECT-DROP
+DOMAIN-SUFFIX,nroeoxk.icu,REJECT-DROP
+DOMAIN-SUFFIX,gdd08.com,REJECT-DROP
+DOMAIN-SUFFIX,jhlnlt.xyz,REJECT-DROP
+DOMAIN-SUFFIX,nhjn788.fun,REJECT-DROP
+DOMAIN-SUFFIX,kdicked.top,REJECT-DROP
+DOMAIN-SUFFIX,fq05.shop,REJECT-DROP
+DOMAIN-SUFFIX,jy07.shop,REJECT-DROP
 DOMAIN-SUFFIX,egesdashb8.fun,REJECT-DROP
 DOMAIN-SUFFIX,iuuwuk.xyz,REJECT-DROP
 DOMAIN-SUFFIX,vdsdsf2.fun,REJECT-DROP
