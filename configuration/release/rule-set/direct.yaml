@@ -498,7 +498,6 @@ payload:
   - DOMAIN,router.asus.com
   - DOMAIN,www.asusrouter.com
   - DOMAIN,oasisauth.h3c.com
-  - DOMAIN,connect.rom.miui.com
   - DOMAIN,routerlogin.com
   - DOMAIN,www.routerlogin.com
   - DOMAIN,tplogin.cn
@@ -31743,6 +31742,7 @@ payload:
   - DOMAIN-SUFFIX,greenxf.com
   - DOMAIN-SUFFIX,greenxiazai.com
   - DOMAIN-SUFFIX,greepi.com
+  - DOMAIN-SUFFIX,greeyun.com
   - DOMAIN-SUFFIX,grender.com
   - DOMAIN-SUFFIX,grescw.com
   - DOMAIN-SUFFIX,gretf.com
@@ -37005,6 +37005,7 @@ payload:
   - DOMAIN-SUFFIX,hezibuluo.com
   - DOMAIN-SUFFIX,hezijia.com
   - DOMAIN-SUFFIX,hezxs.com
+  - DOMAIN-SUFFIX,hf-aw.com
   - DOMAIN-SUFFIX,hf-cups.com
   - DOMAIN-SUFFIX,hf-iflysse.com
   - DOMAIN-SUFFIX,hf0779.com
@@ -38851,6 +38852,7 @@ payload:
   - DOMAIN-SUFFIX,huaerzi.store
   - DOMAIN-SUFFIX,huafang.com
   - DOMAIN-SUFFIX,huafeng.com
+  - DOMAIN-SUFFIX,huafengaw.com
   - DOMAIN-SUFFIX,huafens.com
   - DOMAIN-SUFFIX,huafer.cc
   - DOMAIN-SUFFIX,huagolf.com
@@ -42169,6 +42171,7 @@ payload:
   - DOMAIN-SUFFIX,irs01.net
   - DOMAIN-SUFFIX,irs03.com
   - DOMAIN-SUFFIX,irskj.com
+  - DOMAIN-SUFFIX,irsnp.com
   - DOMAIN-SUFFIX,iruanmi.com
   - DOMAIN-SUFFIX,iruidian.com
   - DOMAIN-SUFFIX,iruixing.com
@@ -47122,6 +47125,7 @@ payload:
   - DOMAIN-SUFFIX,kingfulai.com
   - DOMAIN-SUFFIX,kinggoo.com
   - DOMAIN-SUFFIX,kinggrid.com
+  - DOMAIN-SUFFIX,kinghomechina.com
   - DOMAIN-SUFFIX,kingidc.net
   - DOMAIN-SUFFIX,kingkaid.com
   - DOMAIN-SUFFIX,kingland119.com
@@ -53525,6 +53529,7 @@ payload:
   - DOMAIN-SUFFIX,midea.com
   - DOMAIN-SUFFIX,midea.com.tr
   - DOMAIN-SUFFIX,mideadc.com
+  - DOMAIN-SUFFIX,mideaepayuat.com
   - DOMAIN-SUFFIX,mideav.com
   - DOMAIN-SUFFIX,mideazy.com
   - DOMAIN-SUFFIX,midian.com
@@ -72623,7 +72628,6 @@ payload:
   - DOMAIN-SUFFIX,trip8080.com
   - DOMAIN-SUFFIX,tripbaba.com
   - DOMAIN-SUFFIX,tripbe.com
-  - DOMAIN-SUFFIX,tripcdn.com
   - DOMAIN-SUFFIX,tripleuuu.com
   - DOMAIN-SUFFIX,triplexservice.com
   - DOMAIN-SUFFIX,tripnearby.com
@@ -87996,6 +88000,7 @@ payload:
   - DOMAIN-SUFFIX,zhliqi.com
   - DOMAIN-SUFFIX,zhljq.com
   - DOMAIN-SUFFIX,zhltech.net
+  - DOMAIN-SUFFIX,zhlyen.com
   - DOMAIN-SUFFIX,zhlzw.com
   - DOMAIN-SUFFIX,zhmeiwen.com
   - DOMAIN-SUFFIX,zhmf.com
@@ -90274,39 +90279,39 @@ payload:
   - DOMAIN-SUFFIX,localhost
   - DOMAIN-SUFFIX,test
   - DOMAIN-SUFFIX,local
-  - DOMAIN-SUFFIX,tplinkwifi.net
-  - DOMAIN-SUFFIX,router.ctc
-  - DOMAIN-SUFFIX,ts.net
-  - DOMAIN-SUFFIX,hiwifi.com
-  - DOMAIN-SUFFIX,zte.home
-  - DOMAIN-SUFFIX,msftncsi.com
-  - DOMAIN-SUFFIX,msftconnecttest.com
-  - DOMAIN-SUFFIX,home.arpa
-  - DOMAIN-SUFFIX,tendawifi.com
-  - DOMAIN-SUFFIX,leike.cc
   - DOMAIN-SUFFIX,plex.direct
-  - DOMAIN-SUFFIX,my.router
   - DOMAIN-SUFFIX,phicomm.me
+  - DOMAIN-SUFFIX,ts.net
+  - DOMAIN-SUFFIX,home.arpa
+  - DOMAIN-SUFFIX,zte.home
+  - DOMAIN-SUFFIX,tplinkwifi.net
+  - DOMAIN-SUFFIX,tendawifi.com
+  - DOMAIN-SUFFIX,hiwifi.com
+  - DOMAIN-SUFFIX,leike.cc
+  - DOMAIN-SUFFIX,router.ctc
+  - DOMAIN-SUFFIX,my.router
   - DOMAIN-SUFFIX,peiluyou.com
   - DOMAIN-SUFFIX,0.in-addr.arpa
+  - DOMAIN-SUFFIX,127.in-addr.arpa
   - DOMAIN-SUFFIX,test.steampowered.com
   - DOMAIN-SUFFIX,10.in-addr.arpa
-  - DOMAIN-SUFFIX,networkcheck.kde.org
-  - DOMAIN-SUFFIX,detectportal.firefox.com
-  - DOMAIN-SUFFIX,cp.cloudflare.com
-  - DOMAIN-SUFFIX,connectivitycheck.gstatic.com
-  - DOMAIN-SUFFIX,captive.apple.com
-  - DOMAIN-SUFFIX,127.in-addr.arpa
-  - DOMAIN-SUFFIX,ping.archlinux.org
-  - DOMAIN-SUFFIX,119.100.in-addr.arpa
-  - DOMAIN-SUFFIX,103.100.in-addr.arpa
+  - DOMAIN-SUFFIX,81.100.in-addr.arpa
+  - DOMAIN-SUFFIX,93.100.in-addr.arpa
+  - DOMAIN-SUFFIX,30.172.in-addr.arpa
+  - DOMAIN-SUFFIX,31.172.in-addr.arpa
   - DOMAIN-SUFFIX,16.172.in-addr.arpa
   - DOMAIN-SUFFIX,17.172.in-addr.arpa
+  - DOMAIN-SUFFIX,28.172.in-addr.arpa
+  - DOMAIN-SUFFIX,168.192.in-addr.arpa
+  - DOMAIN-SUFFIX,254.169.in-addr.arpa
   - DOMAIN-SUFFIX,18.172.in-addr.arpa
   - DOMAIN-SUFFIX,19.172.in-addr.arpa
+  - DOMAIN-SUFFIX,localhost.ptlogin2.qq.com
+  - DOMAIN-SUFFIX,localhost.sec.qq.com
   - DOMAIN-SUFFIX,20.172.in-addr.arpa
   - DOMAIN-SUFFIX,21.172.in-addr.arpa
-  - DOMAIN-SUFFIX,localhost.ptlogin2.qq.com
+  - DOMAIN-SUFFIX,22.172.in-addr.arpa
+  - DOMAIN-SUFFIX,23.172.in-addr.arpa
   - DOMAIN-SUFFIX,d.f.ip6.arpa
   - DOMAIN-SUFFIX,64.100.in-addr.arpa
   - DOMAIN-SUFFIX,65.100.in-addr.arpa
@@ -90325,7 +90330,7 @@ payload:
   - DOMAIN-SUFFIX,78.100.in-addr.arpa
   - DOMAIN-SUFFIX,79.100.in-addr.arpa
   - DOMAIN-SUFFIX,80.100.in-addr.arpa
-  - DOMAIN-SUFFIX,81.100.in-addr.arpa
+  - DOMAIN-SUFFIX,27.172.in-addr.arpa
   - DOMAIN-SUFFIX,82.100.in-addr.arpa
   - DOMAIN-SUFFIX,83.100.in-addr.arpa
   - DOMAIN-SUFFIX,84.100.in-addr.arpa
@@ -90337,7 +90342,7 @@ payload:
   - DOMAIN-SUFFIX,90.100.in-addr.arpa
   - DOMAIN-SUFFIX,91.100.in-addr.arpa
   - DOMAIN-SUFFIX,92.100.in-addr.arpa
-  - DOMAIN-SUFFIX,93.100.in-addr.arpa
+  - DOMAIN-SUFFIX,29.172.in-addr.arpa
   - DOMAIN-SUFFIX,94.100.in-addr.arpa
   - DOMAIN-SUFFIX,95.100.in-addr.arpa
   - DOMAIN-SUFFIX,96.100.in-addr.arpa
@@ -90347,7 +90352,7 @@ payload:
   - DOMAIN-SUFFIX,100.100.in-addr.arpa
   - DOMAIN-SUFFIX,101.100.in-addr.arpa
   - DOMAIN-SUFFIX,102.100.in-addr.arpa
-  - DOMAIN-SUFFIX,localhost.sec.qq.com
+  - DOMAIN-SUFFIX,103.100.in-addr.arpa
   - DOMAIN-SUFFIX,104.100.in-addr.arpa
   - DOMAIN-SUFFIX,105.100.in-addr.arpa
   - DOMAIN-SUFFIX,106.100.in-addr.arpa
@@ -90363,7 +90368,7 @@ payload:
   - DOMAIN-SUFFIX,116.100.in-addr.arpa
   - DOMAIN-SUFFIX,117.100.in-addr.arpa
   - DOMAIN-SUFFIX,118.100.in-addr.arpa
-  - DOMAIN-SUFFIX,254.169.in-addr.arpa
+  - DOMAIN-SUFFIX,119.100.in-addr.arpa
   - DOMAIN-SUFFIX,120.100.in-addr.arpa
   - DOMAIN-SUFFIX,121.100.in-addr.arpa
   - DOMAIN-SUFFIX,122.100.in-addr.arpa
@@ -90372,25 +90377,15 @@ payload:
   - DOMAIN-SUFFIX,125.100.in-addr.arpa
   - DOMAIN-SUFFIX,126.100.in-addr.arpa
   - DOMAIN-SUFFIX,127.100.in-addr.arpa
-  - DOMAIN-SUFFIX,168.192.in-addr.arpa
-  - DOMAIN-SUFFIX,22.172.in-addr.arpa
-  - DOMAIN-SUFFIX,23.172.in-addr.arpa
-  - DOMAIN-SUFFIX,31.172.in-addr.arpa
-  - DOMAIN-SUFFIX,30.172.in-addr.arpa
-  - DOMAIN-SUFFIX,29.172.in-addr.arpa
-  - DOMAIN-SUFFIX,location.services.mozilla.com
-  - DOMAIN-SUFFIX,push.services.mozilla.com
-  - DOMAIN-SUFFIX,28.172.in-addr.arpa
-  - DOMAIN-SUFFIX,27.172.in-addr.arpa
   - DOMAIN-SUFFIX,26.172.in-addr.arpa
   - DOMAIN-SUFFIX,25.172.in-addr.arpa
   - DOMAIN-SUFFIX,24.172.in-addr.arpa
-  - DOMAIN-SUFFIX,100.51.198.in-addr.arpa
-  - DOMAIN-SUFFIX,113.0.203.in-addr.arpa
   - DOMAIN-SUFFIX,b.e.f.ip6.arpa
   - DOMAIN-SUFFIX,a.e.f.ip6.arpa
   - DOMAIN-SUFFIX,9.e.f.ip6.arpa
   - DOMAIN-SUFFIX,8.e.f.ip6.arpa
+  - DOMAIN-SUFFIX,113.0.203.in-addr.arpa
+  - DOMAIN-SUFFIX,100.51.198.in-addr.arpa
   - DOMAIN-SUFFIX,2.0.192.in-addr.arpa
   - DOMAIN-SUFFIX,255.255.255.255.in-addr.arpa
   - DOMAIN-SUFFIX,8.b.d.0.1.0.0.2.ip6.arpa
