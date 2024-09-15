@@ -8,23 +8,24 @@ def sort_lines_by_key_values(file_path, key_value_pairs):
         with open(file_path, 'r') as file:
             lines = file.readlines()
 
-        # 确保每行都以换行符结束
-        lines = [line if line.endswith(
-            '\n') else line + '\n' for line in lines]
+        lines = [line.rstrip('\n') for line in lines]
+
+        unique_lines = list(set(lines))
+
+        default_index = len(key_value_pairs)
+
+        sorted_lines = sorted(
+            unique_lines,
+            key=lambda line: list(key_value_pairs.keys()).index(
+                line.split(':')[0].strip()) if line.split(':')[0].strip() in key_value_pairs else default_index
+        )
+
+        sorted_lines = [line + '\n' for line in sorted_lines]
+
+        return sorted_lines
 
     except IOError as e:
         raise Exception(f"Error reading file: {e}")
-
-    # 为不在列表中的键指定一个默认索引
-    default_index = len(key_value_pairs)
-
-    sorted_lines = sorted(
-        lines,
-        key=lambda line: list(key_value_pairs.keys()).index(
-            line.split(':')[0].strip()) if line.split(':')[0].strip() in key_value_pairs else default_index
-    )
-
-    return sorted_lines
 
 
 def write_to_file(file_path, lines):
@@ -37,7 +38,7 @@ def write_to_file(file_path, lines):
 
 def main():
     parser = argparse.ArgumentParser(
-        description="Sort lines in a file based on key-values.")
+        description="Sort lines in a file based on key-values and remove duplicates.")
     parser.add_argument("input_file", type=str, help="Path to the input file")
     parser.add_argument("-o", "--output_file", type=str,
                         help="Path to the output file (optional)", default=None)

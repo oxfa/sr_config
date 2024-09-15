@@ -44,8 +44,10 @@ jobs:
       RAW_OPENAI_RULESET_URL:      https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/OpenAI/OpenAI.list
       RAW_REDDIT_RULESET_URL:      https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Reddit/Reddit.list
       RAW_PAYPAL_RULESET_URL:      https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/PayPal/PayPal.list
+      RAW_GOOGLE_RULESET_URL:      https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Google/Google.list
       RAW_GEMINI_RULESET_URL:      https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Gemini/Gemini.list
       RAW_COPILOT_RULESET_URL:     https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Copilot/Copilot.list
+      RAW_MICROSOFT_RULESET_URL:   https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Microsoft/Microsoft.list
       RAW_CLOUDFLARE_RULESET_URL:  https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Cloudflare/Cloudflare.list
 
     steps:
@@ -64,8 +66,10 @@ jobs:
           wget ${{ env.RAW_OPENAI_RULESET_URL }} -O ./.tmp/openai_ruleset.txt
           wget ${{ env.RAW_REDDIT_RULESET_URL }} -O ./.tmp/reddit_ruleset.txt
           wget ${{ env.RAW_PAYPAL_RULESET_URL }} -O ./.tmp/paypal_ruleset.txt
+          wget ${{ env.RAW_GOOGLE_RULESET_URL }} -O ./.tmp/google_ruleset.txt
           wget ${{ env.RAW_GEMINI_RULESET_URL }} -O ./.tmp/gemini_ruleset.txt
           wget ${{ env.RAW_COPILOT_RULESET_URL }} -O ./.tmp/copilot_ruleset.txt
+          wget ${{ env.RAW_MICROSOFT_RULESET_URL }} -O ./.tmp/microsoft_ruleset.txt
           wget ${{ env.RAW_CLOUDFLARE_RULESET_URL }} -O ./.tmp/cloudflare_ruleset.txt
           wget ${{ env.RAW_PROXY_LIST_URL }} -O ./.tmp/raw_proxy_list.txt
           wget ${{ env.ADGUARD_DNS_REJECT_URL }} -O ./.tmp/adguard_dns_list.txt
@@ -90,16 +94,20 @@ jobs:
           python3 script/clashRuleset2list.py ./.tmp/openai_ruleset.txt
           python3 script/clashRuleset2list.py ./.tmp/reddit_ruleset.txt
           python3 script/clashRuleset2list.py ./.tmp/paypal_ruleset.txt
+          python3 script/clashRuleset2list.py ./.tmp/google_ruleset.txt
           python3 script/clashRuleset2list.py ./.tmp/gemini_ruleset.txt
           python3 script/clashRuleset2list.py ./.tmp/copilot_ruleset.txt
+          python3 script/clashRuleset2list.py ./.tmp/microsoft_ruleset.txt
           python3 script/clashRuleset2list.py ./.tmp/cloudflare_ruleset.txt
 
           cat ./.tmp/oracle_ruleset.txt > ./.tmp/raw_warp_list.txt
           cat ./.tmp/openai_ruleset.txt >> ./.tmp/raw_warp_list.txt
           cat ./.tmp/reddit_ruleset.txt >> ./.tmp/raw_warp_list.txt
           cat ./.tmp/paypal_ruleset.txt >> ./.tmp/raw_warp_list.txt
+          cat ./.tmp/google_ruleset.txt >> ./.tmp/raw_warp_list.txt
           cat ./.tmp/gemini_ruleset.txt >> ./.tmp/raw_warp_list.txt
           cat ./.tmp/copilot_ruleset.txt >> ./.tmp/raw_warp_list.txt
+          cat ./.tmp/microsoft_ruleset.txt >> ./.tmp/raw_warp_list.txt
           cat ./.tmp/cloudflare_ruleset.txt >> ./.tmp/raw_warp_list.txt
 
 
