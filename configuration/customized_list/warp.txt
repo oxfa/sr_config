@@ -1,4 +1,5 @@
 # ADD
+keyword:porkbun
 keyword:chatgpt:@openai
 domain:revenuecat.com:@openai
 domain:stripe.network:@openai
@@ -7,12 +8,9 @@ domain:bing.com:@copilot
 domain:bingapis.com:@copilot
 domain:bandwagonhost.com
 domain:recaptcha.net
-domain:porkbun.com
 domain:censys.com
 domain:censys.io
 full:oaic.report-url.com:@openai
-full:ocsp.r2m01.amazontrust.com:@openai
-full:ocsp.rootca1.amazontrust.com:@openai
 full:oracle.sc.omtrdc.net:@oracle
 full:sapphire.azureedge.net:@copilot
 full:sapphire.bingviz.com:@copilot
