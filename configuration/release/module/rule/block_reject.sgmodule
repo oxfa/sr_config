@@ -1,6 +1,8 @@
 #!name=block_reject
 
 [RULE]
+DOMAIN-SUFFIX,y.crazyporn.xxx,REJECT
+DOMAIN-SUFFIX,cdn2.sales-frontier.com,REJECT
 DOMAIN-SUFFIX,xxyrgvielmehx.com,REJECT
 DOMAIN-SUFFIX,emaxudrookrora.net,REJECT
 DOMAIN-SUFFIX,aspectreinforce.com,REJECT
@@ -2009,6 +2011,7 @@ DOMAIN-SUFFIX,8c771f7ea1.com,REJECT
 DOMAIN-SUFFIX,8d1dce99ab.com,REJECT
 DOMAIN-SUFFIX,8d96fe2f01.com,REJECT
 DOMAIN-SUFFIX,8db4fde90b.com,REJECT
+DOMAIN-SUFFIX,8de5d7e235.com,REJECT
 DOMAIN-SUFFIX,8ec9b7706a.com,REJECT
 DOMAIN-SUFFIX,8f2b4c98e7.com,REJECT
 DOMAIN-SUFFIX,8f72931b99.com,REJECT
@@ -15680,6 +15683,7 @@ DOMAIN-SUFFIX,hjuswoulvp.xyz,REJECT
 DOMAIN-SUFFIX,hjvvk.com,REJECT
 DOMAIN-SUFFIX,hjxajf.com,REJECT
 DOMAIN-SUFFIX,hjyovlwtevwdjy.com,REJECT
+DOMAIN-SUFFIX,hkaphqknkao.com,REJECT
 DOMAIN-SUFFIX,hkapicwuhvc.com,REJECT
 DOMAIN-SUFFIX,hkeibmpspxn.com,REJECT
 DOMAIN-SUFFIX,hkfgsxpnaga.xyz,REJECT
@@ -16210,6 +16214,7 @@ DOMAIN-SUFFIX,hzcdwgcch.com,REJECT
 DOMAIN-SUFFIX,hzdfziaydqawar.com,REJECT
 DOMAIN-SUFFIX,hzoywchsp.com,REJECT
 DOMAIN-SUFFIX,hzr0dm28m17c.com,REJECT
+DOMAIN-SUFFIX,hzychcvdmjo.com,REJECT
 DOMAIN-SUFFIX,i010b048d3e4a1e4b70aba72b169e70c90971f9.xyz,REJECT
 DOMAIN-SUFFIX,i4nstr1gm.com,REJECT
 DOMAIN-SUFFIX,i4rsrcj6.top,REJECT
@@ -16429,6 +16434,7 @@ DOMAIN-SUFFIX,ikjzwgcg.com,REJECT
 DOMAIN-SUFFIX,ikonatozee.top,REJECT
 DOMAIN-SUFFIX,ikouthaupi.com,REJECT
 DOMAIN-SUFFIX,ikrvvsliwar.com,REJECT
+DOMAIN-SUFFIX,ikssllnhrb.com,REJECT
 DOMAIN-SUFFIX,ikunselt.com,REJECT
 DOMAIN-SUFFIX,ikwiwnnofgpzq.com,REJECT
 DOMAIN-SUFFIX,ikwzrix.com,REJECT
@@ -18121,6 +18127,7 @@ DOMAIN-SUFFIX,jzeapwlruols.com,REJECT
 DOMAIN-SUFFIX,jzokkejmqrbmq.top,REJECT
 DOMAIN-SUFFIX,jzokkejmqrkyw.top,REJECT
 DOMAIN-SUFFIX,jzpdjbpusgcbr.com,REJECT
+DOMAIN-SUFFIX,jzplabcvvy.com,REJECT
 DOMAIN-SUFFIX,jzqbyykbrrbkq.top,REJECT
 DOMAIN-SUFFIX,jzqbyykbrrobw.top,REJECT
 DOMAIN-SUFFIX,jzqbyykbrrykz.top,REJECT
@@ -20007,6 +20014,7 @@ DOMAIN-SUFFIX,lytzmzheum.com,REJECT
 DOMAIN-SUFFIX,lywasnothycanty.info,REJECT
 DOMAIN-SUFFIX,lyzenoti.pro,REJECT
 DOMAIN-SUFFIX,lzjl.com,REJECT
+DOMAIN-SUFFIX,lzoasvofvzw.com,REJECT
 DOMAIN-SUFFIX,lzukrobrykk.com,REJECT
 DOMAIN-SUFFIX,lzxdx24yib.com,REJECT
 DOMAIN-SUFFIX,m-rtb.com,REJECT
@@ -23975,6 +23983,7 @@ DOMAIN-SUFFIX,packmenappui.top,REJECT
 DOMAIN-SUFFIX,pacoaniy.net,REJECT
 DOMAIN-SUFFIX,pacquetpusher.com,REJECT
 DOMAIN-SUFFIX,paddlediscovery.com,REJECT
+DOMAIN-SUFFIX,paddlemenu.com,REJECT
 DOMAIN-SUFFIX,paddleniecehandicraft.com,REJECT
 DOMAIN-SUFFIX,padfungusunless.com,REJECT
 DOMAIN-SUFFIX,padma-fed.com,REJECT
@@ -28397,6 +28406,7 @@ DOMAIN-SUFFIX,rukoval.com,REJECT
 DOMAIN-SUFFIX,ruktllqjvsafr.com,REJECT
 DOMAIN-SUFFIX,rulahglsnzsx.com,REJECT
 DOMAIN-SUFFIX,rulovar.com,REJECT
+DOMAIN-SUFFIX,rulrahed.com,REJECT
 DOMAIN-SUFFIX,rumimorigu.com,REJECT
 DOMAIN-SUFFIX,rummagemason.com,REJECT
 DOMAIN-SUFFIX,rummentaltheme.com,REJECT
@@ -40477,6 +40487,9 @@ DOMAIN-SUFFIX,adballoon.afreecatv.com,REJECT
 DOMAIN-SUFFIX,deapi.afreecatv.com,REJECT
 DOMAIN-SUFFIX,startup.mobile.yandex.net,REJECT
 DOMAIN-SUFFIX,startup-mobile.ap.yandex-net.ru,REJECT
+DOMAIN-SUFFIX,ad.snaptube.app,REJECT
+DOMAIN-SUFFIX,ad.mobiuspace.net,REJECT
+DOMAIN-SUFFIX,api-ad-callback.falconnet.app,REJECT
 DOMAIN-SUFFIX,ads-router-noneu.truecaller.com,REJECT
 DOMAIN-SUFFIX,umphek.com,REJECT
 DOMAIN-SUFFIX,ahoy-internal-ads-hv.b-cdn.net,REJECT
@@ -54185,6 +54198,7 @@ DOMAIN-SUFFIX,log-collector.shopee.vn,REJECT
 DOMAIN-SUFFIX,log-dttc.sggp.org.vn,REJECT
 DOMAIN-SUFFIX,log-en.nhandan.vn,REJECT
 DOMAIN-SUFFIX,log-en.sggp.org.vn,REJECT
+DOMAIN-SUFFIX,log-video.baotintuc.vn,REJECT
 DOMAIN-SUFFIX,log.247post.vn,REJECT
 DOMAIN-SUFFIX,log.anninhthudo.vn,REJECT
 DOMAIN-SUFFIX,log.baobackan.com.vn,REJECT
@@ -58943,9 +58957,25 @@ DOMAIN-SUFFIX,zvay.online,REJECT
 DOMAIN-SUFFIX,zvc.cc,REJECT
 DOMAIN-SUFFIX,zvietcombank.com,REJECT
 DOMAIN-SUFFIX,zvietnakello.weebly.com,REJECT
+DOMAIN-SUFFIX,51tongji.trafficmanager.net,REJECT
+DOMAIN-SUFFIX,cnzz.trafficmanager.net,REJECT
+DOMAIN-SUFFIX,znnfzx.xyz,REJECT
+DOMAIN-SUFFIX,f5zv2.icu,REJECT
+DOMAIN-SUFFIX,swurserb.top,REJECT
+DOMAIN-SUFFIX,veryt111.fun,REJECT
+DOMAIN-SUFFIX,az697jylm.cc,REJECT
+DOMAIN-SUFFIX,kwurserd.top,REJECT
 DOMAIN-SUFFIX,zeryt111.fun,REJECT
 DOMAIN-SUFFIX,tuxpfiok.icu,REJECT
 DOMAIN-SUFFIX,62zd0.icu,REJECT
+DOMAIN-SUFFIX,jwursera.top,REJECT
+DOMAIN-SUFFIX,oiuuuc.xyz,REJECT
+DOMAIN-SUFFIX,oeryt111.fun,REJECT
+DOMAIN-SUFFIX,ayalcid.icu,REJECT
+DOMAIN-SUFFIX,mqwtgq.xyz,REJECT
+DOMAIN-SUFFIX,vrdfxioe.icu,REJECT
+DOMAIN-SUFFIX,ceryt111.fun,REJECT
+DOMAIN-SUFFIX,kloojzn.icu,REJECT
 DOMAIN-SUFFIX,ieryt111.fun,REJECT
 DOMAIN-SUFFIX,cwwgqu.xyz,REJECT
 DOMAIN-SUFFIX,ckyriuf.icu,REJECT
