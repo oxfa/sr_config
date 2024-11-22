@@ -8775,6 +8775,7 @@ DOMAIN-SUFFIX,dmayindallmypi.com,REJECT-DROP
 DOMAIN-SUFFIX,dmetherearlyinhes.info,REJECT-DROP
 DOMAIN-SUFFIX,dmeukeuktyoue.info,REJECT-DROP
 DOMAIN-SUFFIX,dmhbbivu.top,REJECT-DROP
+DOMAIN-SUFFIX,dmhclkohnrpvg.com,REJECT-DROP
 DOMAIN-SUFFIX,dmiredindeed.com,REJECT-DROP
 DOMAIN-SUFFIX,dmiredindeed.info,REJECT-DROP
 DOMAIN-SUFFIX,dmm-video.online,REJECT-DROP
@@ -10896,6 +10897,7 @@ DOMAIN-SUFFIX,fondlescany.top,REJECT-DROP
 DOMAIN-SUFFIX,fondnessverge.com,REJECT-DROP
 DOMAIN-SUFFIX,fontdeterminer.com,REJECT-DROP
 DOMAIN-SUFFIX,foodieblogroll.com,REJECT-DROP
+DOMAIN-SUFFIX,fooguthauque.net,REJECT-DROP
 DOMAIN-SUFFIX,foojeshoops.xyz,REJECT-DROP
 DOMAIN-SUFFIX,foolishcounty.pro,REJECT-DROP
 DOMAIN-SUFFIX,foolishjunction.com,REJECT-DROP
@@ -12331,6 +12333,7 @@ DOMAIN-SUFFIX,guardiandigitalcomparison.co.uk,REJECT-DROP
 DOMAIN-SUFFIX,guardiannostrils.com,REJECT-DROP
 DOMAIN-SUFFIX,guardsslate.com,REJECT-DROP
 DOMAIN-SUFFIX,guchihyfa.pro,REJECT-DROP
+DOMAIN-SUFFIX,guckoash.net,REJECT-DROP
 DOMAIN-SUFFIX,gudohuxy.uno,REJECT-DROP
 DOMAIN-SUFFIX,gueriteiodic.com,REJECT-DROP
 DOMAIN-SUFFIX,guerrilla-links.com,REJECT-DROP
@@ -21705,6 +21708,7 @@ DOMAIN-SUFFIX,rcerrohatfad.com,REJECT-DROP
 DOMAIN-SUFFIX,rcf3occ8.de,REJECT-DROP
 DOMAIN-SUFFIX,rchmupnlifo.xyz,REJECT-DROP
 DOMAIN-SUFFIX,rclsnaips.com,REJECT-DROP
+DOMAIN-SUFFIX,rcqwmwxdvnt.com,REJECT-DROP
 DOMAIN-SUFFIX,rcvlink.com,REJECT-DROP
 DOMAIN-SUFFIX,rcvlinks.com,REJECT-DROP
 DOMAIN-SUFFIX,rd-cdnp.name,REJECT-DROP
@@ -25319,6 +25323,7 @@ DOMAIN-SUFFIX,tcontametrop.info,REJECT-DROP
 DOMAIN-SUFFIX,tcowmrj.com,REJECT-DROP
 DOMAIN-SUFFIX,tcpcharms.com,REJECT-DROP
 DOMAIN-SUFFIX,tcppu.com,REJECT-DROP
+DOMAIN-SUFFIX,tcvjhwizmy.com,REJECT-DROP
 DOMAIN-SUFFIX,tcwhycdinjtgar.xyz,REJECT-DROP
 DOMAIN-SUFFIX,td5xffxsx4.com,REJECT-DROP
 DOMAIN-SUFFIX,tdbcfbivjq.xyz,REJECT-DROP
@@ -33445,6 +33450,8 @@ DOMAIN-SUFFIX,log-hl.snssdk.com,REJECT-DROP
 DOMAIN-SUFFIX,ib.snssdk.com,REJECT-DROP
 DOMAIN-SUFFIX,xlog.snssdk.com,REJECT-DROP
 DOMAIN-SUFFIX,log.snssdk.com,REJECT-DROP
+DOMAIN-SUFFIX,tpi-app.herokuapp.com,REJECT-DROP
+DOMAIN-SUFFIX,api.rvere.com,REJECT-DROP
 DOMAIN-SUFFIX,cts.vresp.com,REJECT-DROP
 DOMAIN-SUFFIX,logs.chatboost-cv.algoage.co.jp,REJECT-DROP
 DOMAIN-SUFFIX,p7cloud.net,REJECT-DROP
@@ -38236,6 +38243,7 @@ DOMAIN-SUFFIX,counter24.luxnet.ua,REJECT-DROP
 DOMAIN-SUFFIX,cpxl.golem.de,REJECT-DROP
 DOMAIN-SUFFIX,crta.dailymail.co.uk,REJECT-DROP
 DOMAIN-SUFFIX,crta.metro.co.uk,REJECT-DROP
+DOMAIN-SUFFIX,csm.cxpublic.com,REJECT-DROP
 DOMAIN-SUFFIX,csr.onet.pl,REJECT-DROP
 DOMAIN-SUFFIX,cstats.sankakucomplex.com,REJECT-DROP
 DOMAIN-SUFFIX,ctl.mobitrack.co.kr,REJECT-DROP
@@ -39581,7 +39589,6 @@ DOMAIN-SUFFIX,sia.internet.apps.samsung.com,REJECT-DROP
 DOMAIN-SUFFIX,config-api.internet.apps.samsung.com,REJECT-DROP
 DOMAIN-SUFFIX,r.apkpure.net,REJECT-DROP
 DOMAIN-SUFFIX,analytics.zg-api.com,REJECT-DROP
-DOMAIN-SUFFIX,creative.bidease.com,REJECT-DROP
 DOMAIN-SUFFIX,track-resource.bidease.com,REJECT-DROP
 DOMAIN-SUFFIX,track-us.bidease.com,REJECT-DROP
 DOMAIN-SUFFIX,mintegral.net,REJECT-DROP
@@ -40152,6 +40159,7 @@ DOMAIN-SUFFIX,api.june.so,REJECT-DROP
 DOMAIN-SUFFIX,api.wipmania.com,REJECT-DROP
 DOMAIN-SUFFIX,app.adjust.com,REJECT-DROP
 DOMAIN-SUFFIX,apple.www.letv.com,REJECT-DROP
+DOMAIN-SUFFIX,apps-pbd.ctraffic.io,REJECT-DROP
 DOMAIN-SUFFIX,argos.citruserve.com,REJECT-DROP
 DOMAIN-SUFFIX,attributiontrackingga.googlecode.com,REJECT-DROP
 DOMAIN-SUFFIX,audience.newscgp.com,REJECT-DROP
@@ -45342,7 +45350,6 @@ DOMAIN-SUFFIX,creative.prf.hn,REJECT-DROP
 DOMAIN-SUFFIX,creatopy-adtag-production.b-cdn.net,REJECT-DROP
 DOMAIN-SUFFIX,ctx.matchads.net,REJECT-DROP
 DOMAIN-SUFFIX,curemedia.se,REJECT-DROP
-DOMAIN-SUFFIX,cxpublic.com,REJECT-DROP
 DOMAIN-SUFFIX,d9v72urx9pbbc.cloudfront.net,REJECT-DROP
 DOMAIN-SUFFIX,d33s3ffr7fotas.cloudfront.net,REJECT-DROP
 DOMAIN-SUFFIX,dackpartner-web.s3.amazonaws.com,REJECT-DROP
@@ -51521,6 +51528,8 @@ DOMAIN-SUFFIX,izuts.com,REJECT-DROP
 DOMAIN-SUFFIX,jweizaa.top,REJECT-DROP
 DOMAIN-SUFFIX,31up.icu,REJECT-DROP
 DOMAIN-SUFFIX,ao1122kas.top,REJECT-DROP
+DOMAIN-SUFFIX,drenqils.com,REJECT-DROP
+DOMAIN-SUFFIX,kweizad.top,REJECT-DROP
 DOMAIN-SUFFIX,aoao11211iis.top,REJECT-DROP
 DOMAIN-SUFFIX,luunels.com,REJECT-DROP
 DOMAIN-SUFFIX,qcixkb1.xyz,REJECT-DROP
