@@ -41302,6 +41302,7 @@ DOMAIN-SUFFIX,webtalking.ru,REJECT
 DOMAIN-SUFFIX,webturn.ru,REJECT
 DOMAIN-SUFFIX,webvisor.com,REJECT
 DOMAIN-SUFFIX,wwgate.ru,REJECT
+DOMAIN-SUFFIX,yandexmetric.com,REJECT
 DOMAIN-SUFFIX,algopine.com,REJECT
 DOMAIN-SUFFIX,24log.es,REJECT
 DOMAIN-SUFFIX,agency360.io,REJECT
@@ -45586,6 +45587,7 @@ DOMAIN-SUFFIX,stats.docu.info,REJECT
 DOMAIN-SUFFIX,stats.ehandel.se,REJECT
 DOMAIN-SUFFIX,stats.helsingborg.se,REJECT
 DOMAIN-SUFFIX,stats.jibber.social,REJECT
+DOMAIN-SUFFIX,stats.med.lu.se,REJECT
 DOMAIN-SUFFIX,stats.playoncenter.com,REJECT
 DOMAIN-SUFFIX,stats.poddtoppen.se,REJECT
 DOMAIN-SUFFIX,stats.proff.se,REJECT
@@ -49434,6 +49436,7 @@ DOMAIN-SUFFIX,s33788.com,REJECT
 DOMAIN-SUFFIX,sacchaeleduk.com,REJECT
 DOMAIN-SUFFIX,sacombank.net.vn,REJECT
 DOMAIN-SUFFIX,sacombank.vn-ne.top,REJECT
+DOMAIN-SUFFIX,sacombankvn.com,REJECT
 DOMAIN-SUFFIX,sadm26.com,REJECT
 DOMAIN-SUFFIX,saifcrack.com,REJECT
 DOMAIN-SUFFIX,salu.gq,REJECT
@@ -51558,6 +51561,13 @@ DOMAIN-SUFFIX,zvietnakello.weebly.com,REJECT
 DOMAIN-SUFFIX,zywjpypco.7hujk.de,REJECT
 DOMAIN-SUFFIX,51tongji.trafficmanager.net,REJECT
 DOMAIN-SUFFIX,cnzz.trafficmanager.net,REJECT
+DOMAIN-SUFFIX,lipheak.com,REJECT
+DOMAIN-SUFFIX,xcwdcynb.icu,REJECT
+DOMAIN-SUFFIX,wweizae.top,REJECT
+DOMAIN-SUFFIX,az5i.icu,REJECT
+DOMAIN-SUFFIX,yoqqiev.top,REJECT
+DOMAIN-SUFFIX,fiezaits.com,REJECT
+DOMAIN-SUFFIX,qweizay.top,REJECT
 DOMAIN-SUFFIX,xevaix.com,REJECT
 DOMAIN-SUFFIX,sweizab.top,REJECT
 DOMAIN-SUFFIX,eweizaw.top,REJECT
