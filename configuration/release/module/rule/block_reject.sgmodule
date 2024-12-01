@@ -30371,6 +30371,7 @@ DOMAIN-SUFFIX,customer.heartinternet.co.uk,REJECT
 DOMAIN-SUFFIX,datacluster.club,REJECT
 DOMAIN-SUFFIX,dtrk.slimcdn.com,REJECT
 DOMAIN-SUFFIX,dunhilltraveldeals.com,REJECT
+DOMAIN-SUFFIX,ebayadservices.com,REJECT
 DOMAIN-SUFFIX,ebayrtm.com,REJECT
 DOMAIN-SUFFIX,eclipse-adblocker.pro,REJECT
 DOMAIN-SUFFIX,epnt.ebay.com,REJECT
@@ -39987,7 +39988,6 @@ DOMAIN-SUFFIX,d1r55yzuc1b1bw.cloudfront.net,REJECT
 DOMAIN-SUFFIX,d1t9uctetvi0tu.cloudfront.net,REJECT
 DOMAIN-SUFFIX,d1tbj6eaenapdy.cloudfront.net,REJECT
 DOMAIN-SUFFIX,d1vg5xiq7qffdj.cloudfront.net,REJECT
-DOMAIN-SUFFIX,d1wix2gc2cgqis.cloudfront.net,REJECT
 DOMAIN-SUFFIX,d1z3r0i09bwium.cloudfront.net,REJECT
 DOMAIN-SUFFIX,d1z9vm58yath60.cloudfront.net,REJECT
 DOMAIN-SUFFIX,d20kffh39acpue.cloudfront.net,REJECT
@@ -44689,7 +44689,6 @@ DOMAIN-SUFFIX,static.ws.apsis.one,REJECT
 DOMAIN-SUFFIX,static.zotabox.com,REJECT
 DOMAIN-SUFFIX,statistics.heltenkelt.se,REJECT
 DOMAIN-SUFFIX,statistik.blogg1.se,REJECT
-DOMAIN-SUFFIX,statistik.mxo.se,REJECT
 DOMAIN-SUFFIX,statistik.svenskaakademien.se,REJECT
 DOMAIN-SUFFIX,stats.agrar.nu,REJECT
 DOMAIN-SUFFIX,stats.docu.info,REJECT
@@ -44850,7 +44849,6 @@ DOMAIN-SUFFIX,tracking.viivilla.se,REJECT
 DOMAIN-SUFFIX,tracking.visitorsvoice.com,REJECT
 DOMAIN-SUFFIX,tracking.vlt.se,REJECT
 DOMAIN-SUFFIX,tracking.vn.se,REJECT
-DOMAIN-SUFFIX,tracking.vxonews.se,REJECT
 DOMAIN-SUFFIX,tracking.ystadsallehanda.se,REJECT
 DOMAIN-SUFFIX,tracking.etidning.fagersta-posten.se,REJECT
 DOMAIN-SUFFIX,tracking.fagersta-posten.se,REJECT
@@ -50679,11 +50677,22 @@ DOMAIN-SUFFIX,zvietnakello.weebly.com,REJECT
 DOMAIN-SUFFIX,zywjpypco.7hujk.de,REJECT
 DOMAIN-SUFFIX,51tongji.trafficmanager.net,REJECT
 DOMAIN-SUFFIX,cnzz.trafficmanager.net,REJECT
+DOMAIN-SUFFIX,jcwlsofn.icu,REJECT
+DOMAIN-SUFFIX,brircel.com,REJECT
+DOMAIN-SUFFIX,af6s.icu,REJECT
+DOMAIN-SUFFIX,edamcsw.top,REJECT
+DOMAIN-SUFFIX,e8d7.icu,REJECT
+DOMAIN-SUFFIX,aoao12011iis.top,REJECT
+DOMAIN-SUFFIX,a2wx.icu,REJECT
+DOMAIN-SUFFIX,caaqot.com,REJECT
+DOMAIN-SUFFIX,zio8.icu,REJECT
+DOMAIN-SUFFIX,wdamcse.top,REJECT
 DOMAIN-SUFFIX,ruqaks.com,REJECT
 DOMAIN-SUFFIX,bmhtwefv.icu,REJECT
 DOMAIN-SUFFIX,olkoins.com,REJECT
 DOMAIN-SUFFIX,w59g.icu,REJECT
 DOMAIN-SUFFIX,sdamcsb.top,REJECT
+DOMAIN-SUFFIX,ao1201kas.top,REJECT
 DOMAIN-SUFFIX,igabcgnh.icu,REJECT
 DOMAIN-SUFFIX,saizih.com,REJECT
 DOMAIN-SUFFIX,1gtp.icu,REJECT

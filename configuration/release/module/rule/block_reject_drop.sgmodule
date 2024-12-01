@@ -30371,6 +30371,7 @@ DOMAIN-SUFFIX,customer.heartinternet.co.uk,REJECT-DROP
 DOMAIN-SUFFIX,datacluster.club,REJECT-DROP
 DOMAIN-SUFFIX,dtrk.slimcdn.com,REJECT-DROP
 DOMAIN-SUFFIX,dunhilltraveldeals.com,REJECT-DROP
+DOMAIN-SUFFIX,ebayadservices.com,REJECT-DROP
 DOMAIN-SUFFIX,ebayrtm.com,REJECT-DROP
 DOMAIN-SUFFIX,eclipse-adblocker.pro,REJECT-DROP
 DOMAIN-SUFFIX,epnt.ebay.com,REJECT-DROP
@@ -39987,7 +39988,6 @@ DOMAIN-SUFFIX,d1r55yzuc1b1bw.cloudfront.net,REJECT-DROP
 DOMAIN-SUFFIX,d1t9uctetvi0tu.cloudfront.net,REJECT-DROP
 DOMAIN-SUFFIX,d1tbj6eaenapdy.cloudfront.net,REJECT-DROP
 DOMAIN-SUFFIX,d1vg5xiq7qffdj.cloudfront.net,REJECT-DROP
-DOMAIN-SUFFIX,d1wix2gc2cgqis.cloudfront.net,REJECT-DROP
 DOMAIN-SUFFIX,d1z3r0i09bwium.cloudfront.net,REJECT-DROP
 DOMAIN-SUFFIX,d1z9vm58yath60.cloudfront.net,REJECT-DROP
 DOMAIN-SUFFIX,d20kffh39acpue.cloudfront.net,REJECT-DROP
@@ -44689,7 +44689,6 @@ DOMAIN-SUFFIX,static.ws.apsis.one,REJECT-DROP
 DOMAIN-SUFFIX,static.zotabox.com,REJECT-DROP
 DOMAIN-SUFFIX,statistics.heltenkelt.se,REJECT-DROP
 DOMAIN-SUFFIX,statistik.blogg1.se,REJECT-DROP
-DOMAIN-SUFFIX,statistik.mxo.se,REJECT-DROP
 DOMAIN-SUFFIX,statistik.svenskaakademien.se,REJECT-DROP
 DOMAIN-SUFFIX,stats.agrar.nu,REJECT-DROP
 DOMAIN-SUFFIX,stats.docu.info,REJECT-DROP
@@ -44850,7 +44849,6 @@ DOMAIN-SUFFIX,tracking.viivilla.se,REJECT-DROP
 DOMAIN-SUFFIX,tracking.visitorsvoice.com,REJECT-DROP
 DOMAIN-SUFFIX,tracking.vlt.se,REJECT-DROP
 DOMAIN-SUFFIX,tracking.vn.se,REJECT-DROP
-DOMAIN-SUFFIX,tracking.vxonews.se,REJECT-DROP
 DOMAIN-SUFFIX,tracking.ystadsallehanda.se,REJECT-DROP
 DOMAIN-SUFFIX,tracking.etidning.fagersta-posten.se,REJECT-DROP
 DOMAIN-SUFFIX,tracking.fagersta-posten.se,REJECT-DROP
@@ -50679,11 +50677,22 @@ DOMAIN-SUFFIX,zvietnakello.weebly.com,REJECT-DROP
 DOMAIN-SUFFIX,zywjpypco.7hujk.de,REJECT-DROP
 DOMAIN-SUFFIX,51tongji.trafficmanager.net,REJECT-DROP
 DOMAIN-SUFFIX,cnzz.trafficmanager.net,REJECT-DROP
+DOMAIN-SUFFIX,jcwlsofn.icu,REJECT-DROP
+DOMAIN-SUFFIX,brircel.com,REJECT-DROP
+DOMAIN-SUFFIX,af6s.icu,REJECT-DROP
+DOMAIN-SUFFIX,edamcsw.top,REJECT-DROP
+DOMAIN-SUFFIX,e8d7.icu,REJECT-DROP
+DOMAIN-SUFFIX,aoao12011iis.top,REJECT-DROP
+DOMAIN-SUFFIX,a2wx.icu,REJECT-DROP
+DOMAIN-SUFFIX,caaqot.com,REJECT-DROP
+DOMAIN-SUFFIX,zio8.icu,REJECT-DROP
+DOMAIN-SUFFIX,wdamcse.top,REJECT-DROP
 DOMAIN-SUFFIX,ruqaks.com,REJECT-DROP
 DOMAIN-SUFFIX,bmhtwefv.icu,REJECT-DROP
 DOMAIN-SUFFIX,olkoins.com,REJECT-DROP
 DOMAIN-SUFFIX,w59g.icu,REJECT-DROP
 DOMAIN-SUFFIX,sdamcsb.top,REJECT-DROP
+DOMAIN-SUFFIX,ao1201kas.top,REJECT-DROP
 DOMAIN-SUFFIX,igabcgnh.icu,REJECT-DROP
 DOMAIN-SUFFIX,saizih.com,REJECT-DROP
 DOMAIN-SUFFIX,1gtp.icu,REJECT-DROP
