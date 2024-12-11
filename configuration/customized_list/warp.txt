@@ -1,6 +1,8 @@
 # ADD
 keyword:porkbun
+keyword:sora:@openai
 keyword:chatgpt:@openai
+domain:sora.com:@openai
 domain:revenuecat.com:@openai
 domain:stripe.network:@openai
 domain:intercomassets.com:@openai
