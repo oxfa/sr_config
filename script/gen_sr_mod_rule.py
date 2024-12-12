@@ -130,7 +130,9 @@ if __name__ == "__main__":
     tgt_type = sys.argv[2]
     sec_type = sys.argv[3]
     op_type = sys.argv[4]
-    optional_val = None if len(sys.argv) <= 4 else sys.argv[5] 
+    optional_val = None
+    if len(sys.argv) > 4:
+        optional_val = sys.argv[5] 
 
     with open(file_name, 'r+') as fd:
         if tgt_type == "TEXT":
