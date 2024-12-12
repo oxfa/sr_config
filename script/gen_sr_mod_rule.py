@@ -38,7 +38,7 @@ def split_line(line):
         return exp_type, expression, line_tag
 
 
-def format_rule(fd, op_type):
+def format_rule(fd, op_type, optional_val):
     formatted_text = ""
     lines = fd.readlines()
 
@@ -61,20 +61,21 @@ def format_rule(fd, op_type):
         op_text_full = op_type
         if exp_type == "ip-cidr" or exp_type == "ip-cidr6" or exp_type == "ip-asn":
             op_text_full += ",no-resolve"
-
+        else:
+            op_text_full = op_text_full + f",{optional_val}" if optional_val else op_text_full
         formatted_text += f"{prefix},{expression},{op_text_full}\n"
 
     return formatted_text
 
 
-def format_host(fd, op_type):
+def format_host(fd, op_type, dns_server):
     formated_text = ""
     if op_type == "DOMAIN-HOST":
         pass
     elif op_type == "DOMAIN-DNS":
-        if len(sys.argv) < 6:
-            sys.exit("Missing DNS server info in sys.argv[5]")
-        dns_server = sys.argv[5]
+        # if len(sys.argv) > 4:
+        #     sys.exit("Missing DNS server info in sys.argv[5]")
+        # dns_server = sys.argv[5]
         dns_info = " = server:" + dns_server
         lines = fd.readlines()
         for line in lines:
@@ -102,24 +103,24 @@ def format_host(fd, op_type):
     return formated_text
 
 
-def format_module(fd, sec_type, op_type):
+def format_module(fd, sec_type, op_type, optional_val):
     preface_info = f"#!name={Path(fd.name).stem}\n\n[{sec_type}]\n"
 
     if sec_type == "RULE":
-        formatted_text = format_rule(fd, op_type)
+        formatted_text = format_rule(fd, op_type, optional_val)
     elif sec_type == "HOST":
-        formatted_text = format_host(fd, op_type)
+        formatted_text = format_host(fd, op_type, optional_val)
     else:
         return ""
 
     return preface_info + formatted_text
 
 
-def format_text(fd, sec_type, op_type):
+def format_text(fd, sec_type, op_type, optional_val):
     if sec_type == "RULE":
-        return format_rule(fd, op_type)
+        return format_rule(fd, op_type, optional_val)
     elif sec_type == "HOST":
-        return format_host(fd, op_type)
+        return format_host(fd, op_type, optional_val)
     else:
         pass
 
@@ -129,12 +130,13 @@ if __name__ == "__main__":
     tgt_type = sys.argv[2]
     sec_type = sys.argv[3]
     op_type = sys.argv[4]
+    optional_val = sys.argv[5] if len(sys.argv) > 4 else None
 
     with open(file_name, 'r+') as fd:
         if tgt_type == "TEXT":
-            final_text = format_text(fd, sec_type, op_type)
+            final_text = format_text(fd, sec_type, op_type, optional_val)
         elif tgt_type == "MODULE":
-            final_text = format_module(fd, sec_type, op_type)
+            final_text = format_module(fd, sec_type, op_type, optional_val)
         else:
             sys.exit("Unknown target type")
 
