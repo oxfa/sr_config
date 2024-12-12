@@ -73,7 +73,7 @@ def format_host(fd, op_type, dns_server):
     if op_type == "DOMAIN-HOST":
         pass
     elif op_type == "DOMAIN-DNS":
-        # if len(sys.argv) > 4:
+        # if len(sys.argv) > 5:
         #     sys.exit("Missing DNS server info in sys.argv[5]")
         # dns_server = sys.argv[5]
         dns_info = " = server:" + dns_server
@@ -130,9 +130,7 @@ if __name__ == "__main__":
     tgt_type = sys.argv[2]
     sec_type = sys.argv[3]
     op_type = sys.argv[4]
-    optional_val = None
-    if len(sys.argv) > 4:
-        optional_val = sys.argv[5] 
+    optional_val = sys.argv[5] if len(sys.argv) > 5 else None
 
     with open(file_name, 'r+') as fd:
         if tgt_type == "TEXT":
