@@ -76,7 +76,7 @@ jobs:
           wget ${{ env.RAW_RULESET_CLOUDFLARE_URL }} -O ./.tmp/cloudflare_ruleset.txt
           # Download raw files
           wget ${{ env.RAW_LIST_PROXY_URL }} -O ./.tmp/proxy_list.txt
-          wget ${{ env.RAW_LIST_DIRECT_URL }} -O ./.tmp/direct_ruleset.txt
+          wget ${{ env.RAW_LIST_DIRECT_URL }} -O ./.tmp/direct_list.txt
           wget ${{ env.RAW_LIST_ICLOUD_URL }} -O ./.tmp/icloud_list.txt
           wget ${{ env.RAW_LIST_PRIVATE_URL }} -O ./.tmp/private_list.txt
           wget ${{ env.ADGUARD_DNS_REJECT_URL }} -O ./.tmp/adguard_dns_list.txt
@@ -85,9 +85,9 @@ jobs:
         run: |
           cat ./.tmp/adguard_dns_list.txt | perl -ne '/^\|\|([-_0-9a-zA-Z]+(\.[-_0-9a-zA-Z]+){1,64})\^$/ && print "$1\n"' | perl -ne 'print if not /^[0-9]{1,3}(\.[0-9]{1,3}){3}$/' | \
               tee ./.tmp/block_list.txt > /dev/null
-          python3 script/list2ruleset.py ./.tmp/block_list.txt -o ./.tmp/block_.txt
+          python3 script/list2ruleset.py ./.tmp/block_list.txt -o ./.tmp/block_ruleset.txt
           python3 script/list2ruleset.py ./.tmp/proxy_list.txt -o ./.tmp/proxy_ruleset.txt
-          python3 script/list2ruleset.py ./.tmp/direct_ruleset.txt -o ./.tmp/direct_ruleset.txt
+          python3 script/list2ruleset.py ./.tmp/direct_list.txt -o ./.tmp/direct_ruleset.txt
           python3 script/list2ruleset.py ./.tmp/icloud_list.txt -o ./.tmp/icloud_ruleset.txt
           python3 script/list2ruleset.py ./.tmp/private_list.txt -o ./.tmp/private_ruleset.txt
           cat ./.tmp/icloud_ruleset.txt ./.tmp/private_ruleset.txt >> ./.tmp/direct_ruleset.txt
