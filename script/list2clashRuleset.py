@@ -1,4 +1,3 @@
-import sys
 import argparse
 from mappings import LIST_CLASH_RULESET_MAPPING
 
