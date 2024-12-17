@@ -61,7 +61,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("inputFile", help="input file")
     parser.add_argument("customFile", help="customization file")
-    parser.add_argument("-m" "--mode", help="mode")
+    parser.add_argument("-m", "--mode", help="mode")
     args = parser.parse_args()
 
     process_file(args.inputFile, args.customFile, args.mode)

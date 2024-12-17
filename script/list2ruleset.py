@@ -15,7 +15,7 @@ def process_line(line):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("inputFile", help="Input file")
-    parser.add_argument("-o" "--outputFile", help="Output file")
+    parser.add_argument("-o", "--outputFile", help="Output file")
     parser.add_argument("-t", "--outputFiletype", help="Output file type")
 
     args = parser.parse_args()

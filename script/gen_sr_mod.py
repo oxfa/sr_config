@@ -81,7 +81,7 @@ if __name__ == "__main__":
     parser.add_argument("sec_type", help="Output file type")
     parser.add_argument("op_type", help="Output file type")
     parser.add_argument("optional_val", default=None, help="optional value")
-    parser.add_argument("-o" "--output_file", help="Output file")
+    parser.add_argument("-o", "--output_file", help="Output file")
 
     args = parser.parse_args()
     optional_val = sys.argv[4] if len(sys.argv) > 4 else None
