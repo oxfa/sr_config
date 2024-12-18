@@ -1,6 +1,6 @@
 import argparse
 import os
-from mappings import LIST_CLASH_RULESET_MAPPING
+from mappings import CLASH_RULESET_SR_RULESET_MAPPING
 
 
 def sort_lines_by_key_values(file_path, key_value_pairs):
@@ -8,19 +8,19 @@ def sort_lines_by_key_values(file_path, key_value_pairs):
         with open(file_path, 'r') as file:
             lines = file.readlines()
 
-        lines = [line.rstrip('\n') for line in lines]
+            lines = [line.rstrip('\n') for line in lines if not line.startswith('#')]
 
-        unique_lines = list(set(lines))
+            unique_lines = list(set(lines))
 
-        default_index = len(key_value_pairs)
+            default_index = len(key_value_pairs)
 
-        sorted_lines = sorted(
-            unique_lines,
-            key=lambda line: list(key_value_pairs.keys()).index(
-                line.split(':')[0].strip()) if line.split(':')[0].strip() in key_value_pairs else default_index
-        )
+            sorted_lines = sorted(
+                unique_lines,
+                key=lambda line: list(key_value_pairs.keys()).index(
+                    line.split(':')[0].strip()) if line.split(':')[0].strip() in key_value_pairs else default_index
+            )
 
-        sorted_lines = [line + '\n' for line in sorted_lines]
+            sorted_lines = [line + '\n' for line in sorted_lines]
 
         return sorted_lines
 
@@ -37,11 +37,9 @@ def write_to_file(file_path, lines):
 
 
 def main():
-    parser = argparse.ArgumentParser(
-        description="Sort lines in a file based on key-values and remove duplicates.")
+    parser = argparse.ArgumentParser(description="Sort lines in a file based on key-values and remove duplicates.")
     parser.add_argument("input_file", type=str, help="Path to the input file")
-    parser.add_argument("-o", "--output_file", type=str,
-                        help="Path to the output file (optional)", default=None)
+    parser.add_argument("-o", "--output_file", type=str,help="Path to the output file (optional)", default=None)
     args = parser.parse_args()
 
     if not os.path.exists(args.input_file):
@@ -49,8 +47,7 @@ def main():
         return
 
     try:
-        sorted_lines = sort_lines_by_key_values(
-            args.input_file, LIST_CLASH_RULESET_MAPPING)
+        sorted_lines = sort_lines_by_key_values(args.input_file, CLASH_RULESET_SR_RULESET_MAPPING)
     except Exception as e:
         print(e)
         return

@@ -89,11 +89,22 @@ jobs:
           python3 script/list2ruleset.py ./.tmp/icloud_list.txt -o ./.tmp/icloud_ruleset.txt
           python3 script/list2ruleset.py ./.tmp/private_list.txt -o ./.tmp/private_ruleset.txt
           cat ./.tmp/icloud_ruleset.txt ./.tmp/private_ruleset.txt >> ./.tmp/direct_ruleset.txt
+          cat ./.tmp/oracle_ruleset.txt \
+              ./.tmp/openai_ruleset.txt \
+              ./.tmp/reddit_ruleset.txt \
+              ./.tmp/paypal_ruleset.txt \
+              ./.tmp/google_ruleset.txt \
+              ./.tmp/gemini_ruleset.txt \
+              ./.tmp/youtube_ruleset.txt \
+              ./.tmp/copilot_ruleset.txt \
+              ./.tmp/microsoft_ruleset.txt \
+              ./.tmp/cloudflare_ruleset.txt \
+              > ./.tmp/warp_ruleset.txt 
 
       - name: Process Warp Rules
         run: |
-          cat ./.tmp/oracle_ruleset.txt > ./.tmp/warp_ruleset.txt
           python3 script/customize_ruleset.py ./.tmp/warp_ruleset.txt ./configuration/customized_list/warp.txt
+          python3 script/sort_ruleset.py ./.tmp/warp_ruleset.txt
           cat ./.tmp/warp_ruleset.txt | tee ./configuration/release/sgmodule/rule/proxy_warp.sgmodule \
                                             ./configuration/release/ruleset/txt/warp.txt \
                                             > /dev/null
@@ -102,6 +113,7 @@ jobs:
       - name: Process Direct Rules
         run: |
           python3 script/customize_ruleset.py ./.tmp/direct_ruleset.txt ./configuration/customized_list/direct.txt
+          python3 script/sort_ruleset.py ./.tmp/direct_ruleset.txt
           cat ./.tmp/warp_ruleset.txt | tee ./configuration/release/sgmodule/rule/direct.sgmodule \
                                             ./configuration/release/ruleset/txt/direct.txt \
                                             > /dev/null
@@ -110,21 +122,23 @@ jobs:
 
       - name: Process Proxy Rules
         run: |
-          python3 script/customize_ruleset.py -m remove_domains ./.tmp/proxy_list.txt ./.tmp/warp_ruleset.txt
-          python3 script/customize_ruleset.py -m remove_domains ./.tmp/proxy_list.txt ./.tmp/direct_ruleset.txt
-          python3 script/customize_ruleset.py ./.tmp/proxy_list.txt ./configuration/customized_list/proxy.txt
-          cat ./.tmp/proxy_list.txt | tee ./configuration/release/sgmodule/rule/proxy_remote_dns.sgmodule \
+          python3 script/customize_ruleset.py -m remove_domains ./.tmp/proxy_ruleset.txt ./.tmp/warp_ruleset.txt
+          python3 script/customize_ruleset.py -m remove_domains ./.tmp/proxy_ruleset.txt ./.tmp/direct_ruleset.txt
+          python3 script/customize_ruleset.py ./.tmp/proxy_ruleset.txt ./configuration/customized_list/proxy.txt
+          python3 script/sort_ruleset.py ./.tmp/proxy_ruleset.txt
+          cat ./.tmp/proxy_ruleset.txt | tee ./configuration/release/sgmodule/rule/proxy_remote_dns.sgmodule \
                                           ./configuration/release/ruleset/txt/proxy.txt \
                                           > /dev/null
 
       - name: Process Block Rules
         run: |
-          python3 script/customize_ruleset.py ./.tmp/block_list.txt ./configuration/customized_list/block_default.txt
+          python3 script/customize_ruleset.py ./.tmp/block_ruleset.txt ./configuration/customized_list/block_default.txt
           python3 script/customize_ruleset.py ./configuration/release/sgmodule/rule/block_reject_dict.sgmodule ./configuration/customized_list/block_reject_dict.txt
           python3 script/customize_ruleset.py ./configuration/release/sgmodule/rule/block_reject_array.sgmodule ./configuration/customized_list/block_reject_array.txt
+          python3 script/sort_ruleset.py ./.tmp/block_ruleset.txt
           cat ./.tmp/block_list.txt | tee ./configuration/release/sgmodule/rule/block_reject.sgmodule \
                                           ./configuration/release/sgmodule/rule/block_reject_drop.sgmodule \
-                                          ./configuration/release/ruleset/txt/block.txt
+                                          ./configuration/release/ruleset/txt/block.txt \
                                           > /dev/null
           python3 script/gen_sr_mod.py ./configuration/release/sgmodule/rule/block_reject.sgmodule RULE REJECT
           python3 script/gen_sr_mod.py ./configuration/release/sgmodule/rule/block_reject_drop.sgmodule RULE REJECT-DROP
