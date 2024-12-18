@@ -57,13 +57,11 @@ jobs:
 
       - name: Set variables
         run: |
-          pwd
           echo "RELEASE_NAME=Updated on $(date +%Y%m%d%H%M)" >> $GITHUB_ENV
           echo "TAG_NAME=$(date +%Y%m%d%H%M)" >> $GITHUB_ENV
 
       - name: Download Files
         run: |
-          pwd
           rm -rf $GITHUB_WORKSPACE/tmp && mkdir -p $GITHUB_WORKSPACE/tmp
           wget ${{ env.RAW_RULESET_ORACLE_URL }} -O $GITHUB_WORKSPACE/tmp/oracle_ruleset.txt
           wget ${{ env.RAW_RULESET_OPENAI_URL }} -O $GITHUB_WORKSPACE/tmp/openai_ruleset.txt
@@ -83,7 +81,6 @@ jobs:
 
       - name: Pre-process Files
         run: |
-          pwd
           cat $GITHUB_WORKSPACE/tmp/adguard_dns_list.txt | perl -ne '/^\|\|([-_0-9a-zA-Z]+(\.[-_0-9a-zA-Z]+){1,64})\^$/ && print "$1\n"' | perl -ne 'print if not /^[0-9]{1,3}(\.[0-9]{1,3}){3}$/' | \
               tee $GITHUB_WORKSPACE/tmp/block_list.txt > /dev/null
           python3 $GITHUB_WORKSPACE/script/list2ruleset.py $GITHUB_WORKSPACE/tmp/block_list.txt -o $GITHUB_WORKSPACE/tmp/block_ruleset.txt
@@ -95,10 +92,6 @@ jobs:
 
       - name: Process Warp Rules
         run: |
-          pwd
-          whoami
-          ls -b ./
-          ls -b ./$GITHUB_WORKSPACE/tmp
           cat $GITHUB_WORKSPACE/tmp/oracle_ruleset.txt \
               $GITHUB_WORKSPACE/tmp/openai_ruleset.txt \
               $GITHUB_WORKSPACE/tmp/reddit_ruleset.txt \
