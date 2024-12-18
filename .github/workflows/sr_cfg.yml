@@ -64,7 +64,7 @@ jobs:
       - name: Download Files
         run: |
           pwd
-          rm -rf tmp && mkdir tmp
+          rm -rf tmp && mkdir -p tmp
           wget ${{ env.RAW_RULESET_ORACLE_URL }} -O tmp/oracle_ruleset.txt
           wget ${{ env.RAW_RULESET_OPENAI_URL }} -O tmp/openai_ruleset.txt
           wget ${{ env.RAW_RULESET_REDDIT_URL }} -O tmp/reddit_ruleset.txt
@@ -96,6 +96,7 @@ jobs:
       - name: Process Warp Rules
         run: |
           pwd
+          ls -b ./tmp/
           cat tmp/oracle_ruleset.txt \
               tmp/openai_ruleset.txt \
               tmp/reddit_ruleset.txt \
