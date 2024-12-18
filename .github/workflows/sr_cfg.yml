@@ -93,17 +93,6 @@ jobs:
       - name: Process Warp Rules
         run: |
           test -f $GITHUB_WORKSPACE/tmp/oracle_ruleset.txt && echo "File exists" || echo "File missing"
-          cat $GITHUB_WORKSPACE/tmp/oracle_ruleset.txt \
-              $GITHUB_WORKSPACE/tmp/openai_ruleset.txt \
-              $GITHUB_WORKSPACE/tmp/reddit_ruleset.txt \
-              $GITHUB_WORKSPACE/tmp/paypal_ruleset.txt \
-              $GITHUB_WORKSPACE/tmp/google_ruleset.txt \
-              $GITHUB_WORKSPACE/tmp/gemini_ruleset.txt \
-              $GITHUB_WORKSPACE/tmp/youtube_ruleset.txt \
-              $GITHUB_WORKSPACE/tmp/copilot_ruleset.txt \
-              $GITHUB_WORKSPACE/tmp/microsoft_ruleset.txt \
-              $GITHUB_WORKSPACE/tmp/cloudflare_ruleset.txt \
-              | tee $GITHUB_WORKSPACE/tmp/warp_ruleset.txt
           cat $GITHUB_WORKSPACE/tmp/oracle_ruleset.txt | tee $GITHUB_WORKSPACE/tmp/warp_ruleset.txt
           python3 $GITHUB_WORKSPACE/script/customize_ruleset.py $GITHUB_WORKSPACE/tmp/warp_ruleset.txt $GITHUB_WORKSPACE/configuration/customized_list/warp.txt
           python3 $GITHUB_WORKSPACE/script/sort_ruleset.py $GITHUB_WORKSPACE/tmp/warp_ruleset.txt
