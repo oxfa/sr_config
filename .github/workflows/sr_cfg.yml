@@ -62,7 +62,7 @@ jobs:
 
       - name: Download Files
         run: |
-          rm -rf .tmp && mkdir .tmp
+          mkdir ./.tmp
           wget ${{ env.RAW_RULESET_ORACLE_URL }} -O ./.tmp/oracle_ruleset.txt
           wget ${{ env.RAW_RULESET_OPENAI_URL }} -O ./.tmp/openai_ruleset.txt
           wget ${{ env.RAW_RULESET_REDDIT_URL }} -O ./.tmp/reddit_ruleset.txt
