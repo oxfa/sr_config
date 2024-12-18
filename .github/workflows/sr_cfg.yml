@@ -96,7 +96,7 @@ jobs:
       - name: Process Warp Rules
         run: |
           pwd
-          ls -b ./tmp/
+          ls -b ./
           cat tmp/oracle_ruleset.txt \
               tmp/openai_ruleset.txt \
               tmp/reddit_ruleset.txt \
