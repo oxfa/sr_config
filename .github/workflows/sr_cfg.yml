@@ -89,6 +89,9 @@ jobs:
           python3 script/list2ruleset.py ./.tmp/icloud_list.txt -o ./.tmp/icloud_ruleset.txt
           python3 script/list2ruleset.py ./.tmp/private_list.txt -o ./.tmp/private_ruleset.txt
           cat ./.tmp/icloud_ruleset.txt ./.tmp/private_ruleset.txt >> ./.tmp/direct_ruleset.txt
+
+      - name: Process Warp Rules
+        run: |
           cat ./.tmp/oracle_ruleset.txt \
               ./.tmp/openai_ruleset.txt \
               ./.tmp/reddit_ruleset.txt \
@@ -100,9 +103,6 @@ jobs:
               ./.tmp/microsoft_ruleset.txt \
               ./.tmp/cloudflare_ruleset.txt \
               > ./.tmp/warp_ruleset.txt 
-
-      - name: Process Warp Rules
-        run: |
           python3 script/customize_ruleset.py ./.tmp/warp_ruleset.txt ./configuration/customized_list/warp.txt
           python3 script/sort_ruleset.py ./.tmp/warp_ruleset.txt
           cat ./.tmp/warp_ruleset.txt | tee ./configuration/release/sgmodule/rule/proxy_warp.sgmodule \
