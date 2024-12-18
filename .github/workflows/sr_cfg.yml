@@ -87,7 +87,6 @@ jobs:
         run: |
           cat $GITHUB_WORKSPACE/tmp/adguard_dns_list.txt | perl -ne '/^\|\|([-_0-9a-zA-Z]+(\.[-_0-9a-zA-Z]+){1,64})\^$/ && print "$1\n"' | perl -ne 'print if not /^[0-9]{1,3}(\.[0-9]{1,3}){3}$/' | \
               tee $GITHUB_WORKSPACE/tmp/block_list.txt > /dev/null
-          tee $GITHUB_WORKSPACE/tmp/warp_ruleset.txt < $GITHUB_WORKSPACE/tmp/icloud_list.txt
           python3 $GITHUB_WORKSPACE/script/list2ruleset.py $GITHUB_WORKSPACE/tmp/block_list.txt -o $GITHUB_WORKSPACE/tmp/block_ruleset.txt
           python3 $GITHUB_WORKSPACE/script/list2ruleset.py $GITHUB_WORKSPACE/tmp/proxy_list.txt -o $GITHUB_WORKSPACE/tmp/proxy_ruleset.txt
           python3 $GITHUB_WORKSPACE/script/list2ruleset.py $GITHUB_WORKSPACE/tmp/direct_list.txt -o $GITHUB_WORKSPACE/tmp/direct_ruleset.txt
@@ -104,7 +103,7 @@ jobs:
           cat $GITHUB_WORKSPACE/tmp/warp_ruleset.txt | tee $GITHUB_WORKSPACE/configuration/release/sgmodule/rule/proxy_warp.sgmodule \
                                             $GITHUB_WORKSPACE/configuration/release/ruleset/txt/warp.txt \
                                             > /dev/null
-          python3 $GITHUB_WORKSPACE/script/gen_sr_mod.py $GITHUB_WORKSPACE/configuration/release/sgmodule/rule/proxy_warp.sgmodule RULE PROXY-WARP force-remote-dns
+          python3 $GITHUB_WORKSPACE/script/gen_sr_mod.py $GITHUB_WORKSPACE/configuration/release/sgmodule/rule/proxy_warp.sgmodule RULE PROXY-WARP --optional_val force-remote-dns
 
       - name: Process Direct Rules
         shell: bash
@@ -127,6 +126,7 @@ jobs:
           cat $GITHUB_WORKSPACE/tmp/proxy_ruleset.txt | tee $GITHUB_WORKSPACE/configuration/release/sgmodule/rule/proxy_remote_dns.sgmodule \
                                           $GITHUB_WORKSPACE/configuration/release/ruleset/txt/proxy.txt \
                                           > /dev/null
+          python3 $GITHUB_WORKSPACE/script/gen_sr_mod.py $GITHUB_WORKSPACE/configuration/release/sgmodule/rule/direct.sgmodule RULE PROXY-FQ --optional_val force-remote-dns
 
       - name: Process Block Rules
         shell: bash
@@ -149,8 +149,8 @@ jobs:
         run: |
           python3 $GITHUB_WORKSPACE/script/customize_ruleset.py $GITHUB_WORKSPACE/configuration/release/sgmodule/host/domain_dns_adot.sgmodule $GITHUB_WORKSPACE/configuration/customized_list/domain_dns.txt
           python3 $GITHUB_WORKSPACE/script/customize_ruleset.py $GITHUB_WORKSPACE/configuration/release/sgmodule/host/domain_dns_gdot.sgmodule $GITHUB_WORKSPACE/configuration/customized_list/domain_dns.txt
-          python3 $GITHUB_WORKSPACE/script/gen_sr_mod.py $GITHUB_WORKSPACE/configuration/release/sgmodule/host/domain_dns_adot.sgmodule HOST DOMAIN-DNS ${{ env.ADOT_IPV4 }}
-          python3 $GITHUB_WORKSPACE/script/gen_sr_mod.py $GITHUB_WORKSPACE/configuration/release/sgmodule/host/domain_dns_gdot.sgmodule HOST DOMAIN-DNS ${{ env.GDOT_IPV4 }}
+          python3 $GITHUB_WORKSPACE/script/gen_sr_mod.py $GITHUB_WORKSPACE/configuration/release/sgmodule/host/domain_dns_adot.sgmodule HOST DOMAIN-DNS --optional_val ${{ env.ADOT_IPV4 }}
+          python3 $GITHUB_WORKSPACE/script/gen_sr_mod.py $GITHUB_WORKSPACE/configuration/release/sgmodule/host/domain_dns_gdot.sgmodule HOST DOMAIN-DNS --optional_val ${{ env.GDOT_IPV4 }}
 
       # - name: Generate Clash RuleSet
       #   run: |
