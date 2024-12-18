@@ -136,7 +136,7 @@ jobs:
           cat $GITHUB_WORKSPACE/tmp/proxy_ruleset.txt | tee $GITHUB_WORKSPACE/configuration/release/sgmodule/rule/proxy_remote_dns.sgmodule \
                                           $GITHUB_WORKSPACE/configuration/release/ruleset/txt/proxy.txt \
                                           > /dev/null
-          python3 $GITHUB_WORKSPACE/script/gen_sr_mod.py $GITHUB_WORKSPACE/configuration/release/sgmodule/rule/direct.sgmodule RULE PROXY-FQ --optional_val force-remote-dns
+          python3 $GITHUB_WORKSPACE/script/gen_sr_mod.py $GITHUB_WORKSPACE/configuration/release/sgmodule/rule/proxy_remote_dns.sgmodule RULE PROXY-FQ --optional_val force-remote-dns
 
       - name: Process Block Rules
         shell: bash
