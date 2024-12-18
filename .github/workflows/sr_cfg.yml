@@ -92,17 +92,7 @@ jobs:
 
       - name: Process Warp Rules
         run: |
-          cat ./.tmp/oracle_ruleset.txt \
-              ./.tmp/openai_ruleset.txt \
-              ./.tmp/reddit_ruleset.txt \
-              ./.tmp/paypal_ruleset.txt \
-              ./.tmp/google_ruleset.txt \
-              ./.tmp/gemini_ruleset.txt \
-              ./.tmp/youtube_ruleset.txt \
-              ./.tmp/copilot_ruleset.txt \
-              ./.tmp/microsoft_ruleset.txt \
-              ./.tmp/cloudflare_ruleset.txt \
-              > ./.tmp/warp_ruleset.txt 
+          cat ./.tmp/oracle_ruleset.txt > ./.tmp/warp_ruleset.txt 
           python3 script/customize_ruleset.py ./.tmp/warp_ruleset.txt ./configuration/customized_list/warp.txt
           python3 script/sort_ruleset.py ./.tmp/warp_ruleset.txt
           cat ./.tmp/warp_ruleset.txt | tee ./configuration/release/sgmodule/rule/proxy_warp.sgmodule \
