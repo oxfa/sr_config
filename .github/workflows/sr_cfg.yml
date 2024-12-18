@@ -92,6 +92,8 @@ jobs:
 
       - name: Process Warp Rules
         run: |
+          test -f ./.tmp && echo "folder existed" || echo "folder missing"
+          test -f ./.tmp/ruleset.txt && echo "File downloaded" || echo "File missing"
           cat ./.tmp/oracle_ruleset.txt | tee ./.tmp/warp_ruleset.txt
           python3 script/customize_ruleset.py ./.tmp/warp_ruleset.txt ./configuration/customized_list/warp.txt
           python3 script/sort_ruleset.py ./.tmp/warp_ruleset.txt
