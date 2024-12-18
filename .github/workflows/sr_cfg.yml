@@ -93,16 +93,26 @@ jobs:
           python3 $GITHUB_WORKSPACE/script/list2ruleset.py $GITHUB_WORKSPACE/tmp/icloud_list.txt -o $GITHUB_WORKSPACE/tmp/icloud_ruleset.txt
           python3 $GITHUB_WORKSPACE/script/list2ruleset.py $GITHUB_WORKSPACE/tmp/private_list.txt -o $GITHUB_WORKSPACE/tmp/private_ruleset.txt
           cat $GITHUB_WORKSPACE/tmp/icloud_ruleset.txt $GITHUB_WORKSPACE/tmp/private_ruleset.txt >> $GITHUB_WORKSPACE/tmp/direct_ruleset.txt
+          cat $GITHUB_WORKSPACE/tmp/oracle_ruleset.txt \
+              $GITHUB_WORKSPACE/tmp/openai_ruleset.txt \
+              $GITHUB_WORKSPACE/tmp/reddit_ruleset.txt \
+              $GITHUB_WORKSPACE/tmp/paypal_ruleset.txt \
+              $GITHUB_WORKSPACE/tmp/google_ruleset.txt \
+              $GITHUB_WORKSPACE/tmp/gemini_ruleset.txt \
+              $GITHUB_WORKSPACE/tmp/youtube_ruleset.txt \
+              $GITHUB_WORKSPACE/tmp/copilot_ruleset.txt \
+              $GITHUB_WORKSPACE/tmp/microsoft_ruleset.txt \
+              $GITHUB_WORKSPACE/tmp/cloudflare_ruleset.txt \
+              > $GITHUB_WORKSPACE/tmp/warp_ruleset.txt
 
       - name: Process Warp Rules
         shell: bash
         run: |
-          cat $GITHUB_WORKSPACE/tmp/oracle_ruleset.txt > $GITHUB_WORKSPACE/tmp/warp_ruleset.txt
           python3 $GITHUB_WORKSPACE/script/customize_ruleset.py $GITHUB_WORKSPACE/tmp/warp_ruleset.txt $GITHUB_WORKSPACE/configuration/customized_list/warp.txt
           python3 $GITHUB_WORKSPACE/script/sort_ruleset.py $GITHUB_WORKSPACE/tmp/warp_ruleset.txt
           cat $GITHUB_WORKSPACE/tmp/warp_ruleset.txt | tee $GITHUB_WORKSPACE/configuration/release/sgmodule/rule/proxy_warp.sgmodule \
-                                            $GITHUB_WORKSPACE/configuration/release/ruleset/txt/warp.txt \
-                                            > /dev/null
+                                                           $GITHUB_WORKSPACE/configuration/release/ruleset/txt/warp.txt \
+                                                           > /dev/null
           python3 $GITHUB_WORKSPACE/script/gen_sr_mod.py $GITHUB_WORKSPACE/configuration/release/sgmodule/rule/proxy_warp.sgmodule RULE PROXY-WARP --optional_val force-remote-dns
 
       - name: Process Direct Rules

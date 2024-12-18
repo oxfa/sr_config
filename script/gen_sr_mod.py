@@ -20,8 +20,14 @@ def format_rule(file_in, op_type, optional_val):
         line = line.strip()
         if not line or line.startswith("#"):
             continue
-
-        exp_type, expression = line.split(",", 1)
+        try:
+            # 尝试分割字符串
+            exp_type, expression = line.split(",", 1)
+        except ValueError:
+            # 捕获分割不足两部分时的异常
+            print(f"Skipping invalid line: {line}")
+            sys.exit(1)
+        # exp_type, expression = line.split(",", 1)
         if not exp_type:
             continue
 
@@ -48,7 +54,13 @@ def format_host(file_in, op_type, dns_server):
             if not line or line.startswith("#"):
                 continue
 
-            exp_type, expression = line.split(",", 1)
+            try:
+                # 尝试分割字符串
+                exp_type, expression = line.split(",", 1)
+            except ValueError:
+                # 捕获分割不足两部分时的异常
+                print(f"Skipping invalid line: {line}")
+                sys.exit(1)
             if exp_type == "DOMAIN":
                 if is_valid_domain(expression):
                     formated_text += f"{expression}{dns_info}\n"
