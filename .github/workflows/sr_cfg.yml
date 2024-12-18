@@ -129,17 +129,9 @@ jobs:
       - name: Process Proxy Rules
         shell: bash
         run: |
-          echo "before first remove"
-          cat $GITHUB_WORKSPACE/tmp/proxy_ruleset.txt
           python3 $GITHUB_WORKSPACE/script/customize_ruleset.py -m remove_domains $GITHUB_WORKSPACE/tmp/proxy_ruleset.txt $GITHUB_WORKSPACE/tmp/warp_ruleset.txt
-          echo "before second remove"
-          $GITHUB_WORKSPACE/tmp/proxy_ruleset.txt
           python3 $GITHUB_WORKSPACE/script/customize_ruleset.py -m remove_domains $GITHUB_WORKSPACE/tmp/proxy_ruleset.txt $GITHUB_WORKSPACE/tmp/direct_ruleset.txt
-          echo "before first custo"
-          $GITHUB_WORKSPACE/tmp/proxy_ruleset.txt
           python3 $GITHUB_WORKSPACE/script/customize_ruleset.py $GITHUB_WORKSPACE/tmp/proxy_ruleset.txt $GITHUB_WORKSPACE/configuration/customized_list/proxy.txt
-          echo "before first sort"
-          $GITHUB_WORKSPACE/tmp/proxy_ruleset.txt
           python3 $GITHUB_WORKSPACE/script/sort_ruleset.py $GITHUB_WORKSPACE/tmp/proxy_ruleset.txt
           cat $GITHUB_WORKSPACE/tmp/proxy_ruleset.txt | tee $GITHUB_WORKSPACE/configuration/release/sgmodule/rule/proxy_remote_dns.sgmodule \
                                           $GITHUB_WORKSPACE/configuration/release/ruleset/txt/proxy.txt \
