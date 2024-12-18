@@ -90,30 +90,27 @@ jobs:
           python3 script/list2ruleset.py ./.tmp/private_list.txt -o ./.tmp/private_ruleset.txt
           cat ./.tmp/icloud_ruleset.txt ./.tmp/private_ruleset.txt >> ./.tmp/direct_ruleset.txt
 
-      # - name: Process Warp Rules
-      #   run: |
-      #     cat ./.tmp/oracle_ruleset.txt > ./.tmp/warp_ruleset.txt
-      #     cat ./.tmp/openai_ruleset.txt >> ./.tmp/warp_ruleset.txt
-      #     cat ./.tmp/reddit_ruleset.txt >> ./.tmp/warp_ruleset.txt
-      #     cat ./.tmp/paypal_ruleset.txt >> ./.tmp/warp_ruleset.txt
-      #     cat ./.tmp/google_ruleset.txt >> ./.tmp/warp_ruleset.txt
-      #     cat ./.tmp/gemini_ruleset.txt >> ./.tmp/warp_ruleset.txt
-      #     cat ./.tmp/youtube_ruleset.txt >> ./.tmp/warp_ruleset.txt
-      #     cat ./.tmp/copilot_ruleset.txt >> ./.tmp/warp_ruleset.txt
-      #     cat ./.tmp/microsoft_ruleset.txt >> ./.tmp/warp_ruleset.txt
-      #     cat ./.tmp/cloudflare_ruleset.txt >> ./.tmp/warp_ruleset.txt
-      #     python3 script/customize_ruleset.py ./.tmp/warp_ruleset.txt ./configuration/customized_list/warp.txt
-      #     python3 script/sortlist.py ./.tmp/warp_ruleset.txt
-      #     cat ./.tmp/warp_ruleset.txt | tee ./configuration/release/sgmodule/rule/proxy_warp.sgmodule
-      #                                       ./configuration/release/ruleset/txt/warp.txt
-      #                                       > /dev/null
-      #     python3 script/gen_sr_mod.py ./configuration/release/sgmodule/rule/proxy_warp.sgmodule RULE PROXY-WARP force-remote-dns
+      - name: Process Warp Rules
+        run: |
+          cat ./.tmp/oracle_ruleset.txt > ./.tmp/warp_ruleset.txt
+          cat ./.tmp/openai_ruleset.txt >> ./.tmp/warp_ruleset.txt
+          cat ./.tmp/reddit_ruleset.txt >> ./.tmp/warp_ruleset.txt
+          cat ./.tmp/paypal_ruleset.txt >> ./.tmp/warp_ruleset.txt
+          cat ./.tmp/google_ruleset.txt >> ./.tmp/warp_ruleset.txt
+          cat ./.tmp/gemini_ruleset.txt >> ./.tmp/warp_ruleset.txt
+          cat ./.tmp/youtube_ruleset.txt >> ./.tmp/warp_ruleset.txt
+          cat ./.tmp/copilot_ruleset.txt >> ./.tmp/warp_ruleset.txt
+          cat ./.tmp/microsoft_ruleset.txt >> ./.tmp/warp_ruleset.txt
+          cat ./.tmp/cloudflare_ruleset.txt >> ./.tmp/warp_ruleset.txt
+          python3 script/customize_ruleset.py ./.tmp/warp_ruleset.txt ./configuration/customized_list/warp.txt
+          cat ./.tmp/warp_ruleset.txt | tee ./configuration/release/sgmodule/rule/proxy_warp.sgmodule
+                                            ./configuration/release/ruleset/txt/warp.txt
+                                            > /dev/null
+          python3 script/gen_sr_mod.py ./configuration/release/sgmodule/rule/proxy_warp.sgmodule RULE PROXY-WARP force-remote-dns
 
       - name: Process Direct Rules
         run: |
-          python3 script/format_list.py ./.tmp/direct_ruleset.txt
           python3 script/customize_ruleset.py ./.tmp/direct_ruleset.txt ./configuration/customized_list/direct.txt
-          python3 script/sortlist.py ./.tmp/direct_ruleset.txt
           cat ./.tmp/warp_ruleset.txt | tee ./configuration/release/sgmodule/rule/direct.sgmodule
                                             ./configuration/release/ruleset/txt/direct.txt
                                             > /dev/null
@@ -122,18 +119,15 @@ jobs:
 
       - name: Process Proxy Rules
         run: |
-          python3 script/format_list.py ./.tmp/proxy_list.txt
           python3 script/customize_ruleset.py -m remove_domains ./.tmp/proxy_list.txt ./.tmp/warp_ruleset.txt
           python3 script/customize_ruleset.py -m remove_domains ./.tmp/proxy_list.txt ./.tmp/direct_ruleset.txt
           python3 script/customize_ruleset.py ./.tmp/proxy_list.txt ./configuration/customized_list/proxy.txt
-          python3 script/sortlist.py ./.tmp/proxy_list.txt
           cat ./.tmp/proxy_list.txt | tee ./configuration/release/sgmodule/rule/proxy_remote_dns.sgmodule
                                           ./configuration/release/ruleset/txt/proxy.txt
                                           > /dev/null
 
       - name: Process Block Rules
         run: |
-          python3 script/format_list.py ./.tmp/block_list.txt
           python3 script/customize_ruleset.py ./.tmp/block_list.txt ./configuration/customized_list/block_default.txt
           python3 script/customize_ruleset.py ./configuration/release/sgmodule/rule/block_reject_dict.sgmodule ./configuration/customized_list/block_reject_dict.txt
           python3 script/customize_ruleset.py ./configuration/release/sgmodule/rule/block_reject_array.sgmodule ./configuration/customized_list/block_reject_array.txt
@@ -153,22 +147,12 @@ jobs:
           python3 script/gen_sr_mod.py ./configuration/release/sgmodule/host/domain_dns_adot.sgmodule HOST DOMAIN-DNS ${{ env.ADOT_IPV4 }}
           python3 script/gen_sr_mod.py ./configuration/release/sgmodule/host/domain_dns_gdot.sgmodule HOST DOMAIN-DNS ${{ env.GDOT_IPV4 }}
 
-      - name: Generate Modules
-        run: |
-
-      - name: Generate Clash RuleSet
-        run: |
-          python3 script/list2clashRuleset.py ./.tmp/warp_ruleset.txt ./configuration/release/rule-set/warp.yaml
-          python3 script/list2clashRuleset.py ./.tmp/proxy_list.txt ./configuration/release/rule-set/proxy.yaml
-          python3 script/list2clashRuleset.py ./.tmp/direct_ruleset.txt ./configuration/release/rule-set/direct.yaml
-          python3 script/list2clashRuleset.py ./.tmp/block_list_clash.txt ./configuration/release/rule-set/block.yaml
-
-      # - name: Generate main cfg
+      # - name: Generate Clash RuleSet
       #   run: |
-      #     python3 script/gen_sr_mod.py ./.tmp/direct_ruleset.txt TEXT RULE DIRECT
-      #     cat ./configuration/customized_list/sr_base.conf > ./configuration/release/sr_ark.conf
-      #     cat ./.tmp/direct_ruleset.txt >> ./configuration/release/sr_ark.conf
-      #     cat ./configuration/customized_list/geoip_rule.txt >> ./configuration/release/sr_ark.conf
+      #     python3 script/list2clashRuleset.py ./.tmp/warp_ruleset.txt ./configuration/release/rule-set/warp.yaml
+      #     python3 script/list2clashRuleset.py ./.tmp/proxy_list.txt ./configuration/release/rule-set/proxy.yaml
+      #     python3 script/list2clashRuleset.py ./.tmp/direct_ruleset.txt ./configuration/release/rule-set/direct.yaml
+      #     python3 script/list2clashRuleset.py ./.tmp/block_list_clash.txt ./configuration/release/rule-set/block.yaml
 
       - name: Clean temp directory
         run: rm -rf .tmp
