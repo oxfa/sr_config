@@ -94,16 +94,16 @@ jobs:
         run: |
           cat ./.tmp/oracle_ruleset.txt > ./.tmp/warp_ruleset.txt
           python3 script/customize_ruleset.py ./.tmp/warp_ruleset.txt ./configuration/customized_list/warp.txt
-          cat ./.tmp/warp_ruleset.txt | tee ./configuration/release/sgmodule/rule/proxy_warp.sgmodule
-                                            ./configuration/release/ruleset/txt/warp.txt
+          cat ./.tmp/warp_ruleset.txt | tee ./configuration/release/sgmodule/rule/proxy_warp.sgmodule \
+                                            ./configuration/release/ruleset/txt/warp.txt \
                                             > /dev/null
           python3 script/gen_sr_mod.py ./configuration/release/sgmodule/rule/proxy_warp.sgmodule RULE PROXY-WARP force-remote-dns
 
       - name: Process Direct Rules
         run: |
           python3 script/customize_ruleset.py ./.tmp/direct_ruleset.txt ./configuration/customized_list/direct.txt
-          cat ./.tmp/warp_ruleset.txt | tee ./configuration/release/sgmodule/rule/direct.sgmodule
-                                            ./configuration/release/ruleset/txt/direct.txt
+          cat ./.tmp/warp_ruleset.txt | tee ./configuration/release/sgmodule/rule/direct.sgmodule \
+                                            ./configuration/release/ruleset/txt/direct.txt \
                                             > /dev/null
           python3 script/gen_sr_mod.py ./configuration/release/sgmodule/rule/direct.sgmodule RULE DIRECT
 
@@ -113,8 +113,8 @@ jobs:
           python3 script/customize_ruleset.py -m remove_domains ./.tmp/proxy_list.txt ./.tmp/warp_ruleset.txt
           python3 script/customize_ruleset.py -m remove_domains ./.tmp/proxy_list.txt ./.tmp/direct_ruleset.txt
           python3 script/customize_ruleset.py ./.tmp/proxy_list.txt ./configuration/customized_list/proxy.txt
-          cat ./.tmp/proxy_list.txt | tee ./configuration/release/sgmodule/rule/proxy_remote_dns.sgmodule
-                                          ./configuration/release/ruleset/txt/proxy.txt
+          cat ./.tmp/proxy_list.txt | tee ./configuration/release/sgmodule/rule/proxy_remote_dns.sgmodule \
+                                          ./configuration/release/ruleset/txt/proxy.txt \
                                           > /dev/null
 
       - name: Process Block Rules
