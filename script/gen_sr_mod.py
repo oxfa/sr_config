@@ -33,11 +33,9 @@ def format_rule(file_in, op_type, optional_val):
 
         prefix = CLASH_RULESET_SR_RULESET_MAPPING.get(exp_type, None)
 
-        if prefix is None:
-            sys.exit(f"Invalid exp_type1: {exp_type}, line text: {line}")
-
-        op_text_full = op_type + f",{optional_val}" if optional_val else op_type
-        formatted_text += f"{prefix},{expression},{op_text_full}\n"
+        if prefix:
+            op_text_full = op_type + f",{optional_val}" if optional_val else op_type
+            formatted_text += f"{prefix},{expression},{op_text_full}\n"
 
     return formatted_text
 
