@@ -78,7 +78,7 @@ jobs:
           wget ${{ env.RAW_LIST_ICLOUD_URL }} -O $GITHUB_WORKSPACE/tmp/icloud_list.txt
           wget ${{ env.RAW_LIST_PRIVATE_URL }} -O $GITHUB_WORKSPACE/tmp/private_list.txt
           wget ${{ env.ADGUARD_DNS_REJECT_URL }} -O $GITHUB_WORKSPACE/tmp/adguard_dns_list.txt
-          cat $GITHUB_WORKSPACE/tmp/oracle_ruleset.txt  | tee $GITHUB_WORKSPACE/tmp/warp_ruleset.txt
+          cp -f $GITHUB_WORKSPACE/tmp/oracle_ruleset.txt  $GITHUB_WORKSPACE/tmp/warp_ruleset.txt
 
       - name: Pre-process Files
         run: |
