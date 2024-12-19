@@ -19,11 +19,12 @@ def join_line(exp_type, expression):
     return ",".join([exp_type, expression])
 
 def process_file(inputFile, customFile, mode):
-    with open(inputFile, 'r') as file_a:
-        content_a = file_a.read().splitlines()
     add_lines = []
     remove_lines = set()
     current_section = None
+
+    with open(inputFile, 'r') as file_a:
+        content_a = file_a.read().splitlines()
 
     with open(customFile, 'r') as file_b:
         if mode == "remove_domains":
@@ -31,6 +32,8 @@ def process_file(inputFile, customFile, mode):
                 line = line.strip()
                 if line and not line.startswith('#'):
                     remove_lines.add(line)
+        elif mode == "add_domains":
+            content_a = [line.strip() for line in file_b if not line.strip().startswith('#')]
         else:
             for line in file_b:
                 line = line.strip()
