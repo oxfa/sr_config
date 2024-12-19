@@ -142,7 +142,7 @@ jobs:
         shell: bash
         run: |
           python3 $GITHUB_WORKSPACE/script/customize_ruleset.py $GITHUB_WORKSPACE/tmp/block_ruleset.txt $GITHUB_WORKSPACE/configuration/customized_list/block_default.txt
-          python3 $GITHUB_WORKSPACE/script/customize_ruleset.py -m add_domains $GITHUB_WORKSPACE/configuration/release/sgmodule/rule/block_reject_dict.sgmodul $GITHUB_WORKSPACE/configuration/customized_list/block_reject_dict.txt
+          python3 $GITHUB_WORKSPACE/script/customize_ruleset.py -m add_domains $GITHUB_WORKSPACE/configuration/release/sgmodule/rule/block_reject_dict.sgmodule $GITHUB_WORKSPACE/configuration/customized_list/block_reject_dict.txt
           python3 $GITHUB_WORKSPACE/script/customize_ruleset.py -m add_domains $GITHUB_WORKSPACE/configuration/release/sgmodule/rule/block_reject_array.sgmodule $GITHUB_WORKSPACE/configuration/customized_list/block_reject_array.txt
           python3 $GITHUB_WORKSPACE/script/sort_ruleset.py $GITHUB_WORKSPACE/tmp/block_ruleset.txt
           cat $GITHUB_WORKSPACE/tmp/block_list.txt | tee $GITHUB_WORKSPACE/configuration/release/sgmodule/rule/block_reject.sgmodule \
