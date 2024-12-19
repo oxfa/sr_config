@@ -157,8 +157,8 @@ jobs:
       - name: Process Domain-DNS Rules
         shell: bash
         run: |
-          python3 $GITHUB_WORKSPACE/script/customize_ruleset.py -m add_domains $GITHUB_WORKSPACE/configuration/release/sgmodule/host/domain_dns_adot.sgmodule $GITHUB_WORKSPACE/configuration/customized_list/domain_dns.txt
-          python3 $GITHUB_WORKSPACE/script/customize_ruleset.py -m add_domains $GITHUB_WORKSPACE/configuration/release/sgmodule/host/domain_dns_gdot.sgmodule $GITHUB_WORKSPACE/configuration/customized_list/domain_dns.txt
+          python3 $GITHUB_WORKSPACE/script/customize_ruleset.py -m add_domains $GITHUB_WORKSPACE/configuration/release/sgmodule/host/domain_dns_adot.sgmodule $GITHUB_WORKSPACE/configuration/customized_list/domain_dns_adot.txt
+          python3 $GITHUB_WORKSPACE/script/customize_ruleset.py -m add_domains $GITHUB_WORKSPACE/configuration/release/sgmodule/host/domain_dns_gdot.sgmodule $GITHUB_WORKSPACE/configuration/customized_list/domain_dns_gdot.txt
           python3 $GITHUB_WORKSPACE/script/gen_sr_mod.py $GITHUB_WORKSPACE/configuration/release/sgmodule/host/domain_dns_adot.sgmodule HOST DOMAIN-DNS --optional_val ${{ env.ADOT_IPV4 }}
           python3 $GITHUB_WORKSPACE/script/gen_sr_mod.py $GITHUB_WORKSPACE/configuration/release/sgmodule/host/domain_dns_gdot.sgmodule HOST DOMAIN-DNS --optional_val ${{ env.GDOT_IPV4 }}
 
