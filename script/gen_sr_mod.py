@@ -25,7 +25,7 @@ def format_rule(file_in, op_type, optional_val):
             exp_type, expression = line.split(",", 1)
         except ValueError:
             # 捕获分割不足两部分时的异常
-            print(f"Skipping invalid line: {line}")
+            print(f"Skipping invalid line: {line}, {" ".join(args.args)}")
             sys.exit(1)
         # exp_type, expression = line.split(",", 1)
         if not exp_type:
@@ -57,7 +57,7 @@ def format_host(file_in, op_type, dns_server):
                 exp_type, expression = line.split(",", 1)
             except ValueError:
                 # 捕获分割不足两部分时的异常
-                print(f"Skipping invalid line: {line}")
+                print(f"Skipping invalid line: {line}, {" ".join(args.args)}")
                 sys.exit(1)
             if exp_type == "DOMAIN":
                 if is_valid_domain(expression):
@@ -94,7 +94,6 @@ if __name__ == "__main__":
     parser.add_argument("-o", "--output_file", help="Output file")
 
     args = parser.parse_args()
-    optional_val = sys.argv[4] if len(sys.argv) > 4 else None
 
     with open(args.input_file, 'r') as file_in:
         final_text = format_module(file_in, args.sec_type, args.op_type, args.optional_val)
