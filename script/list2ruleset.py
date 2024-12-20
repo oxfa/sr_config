@@ -25,20 +25,18 @@ if __name__ == "__main__":
 
     with open(args.inputFile, 'r') as file:
         lines = [line.strip() for line in file if not line.strip().startswith('#')]
-
-
-    if outputFileType == "yaml":
-        output_data = "payload:\n"
-        for line in lines:
-            processed_line = process_line(line)
-            if processed_line:
-                output_data += f"  - {processed_line}\n"
-    elif outputFileType == "txt":
-        output_data = ""
-        for line in lines:
-            output_data += process_line(line) + "\n"
-    else:
-        pass
+        if outputFileType == "yaml":
+            output_data = "payload:\n"
+            for line in lines:
+                processed_line = process_line(line)
+                if processed_line:
+                    output_data += f"  - {processed_line}\n"
+        elif outputFileType == "txt":
+            output_data = ""
+            for line in lines:
+                output_data += process_line(line) + "\n"
+        else:
+            pass
 
     with open(outputFile, 'w') as file:
         file.write(output_data)
