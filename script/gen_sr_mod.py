@@ -43,7 +43,7 @@ def format_rule(file_in, op_type, optional_val):
                     print(f"Skipping invalid line: {line}, {' '.join(sys.argv)}")
                     sys.exit(1)
 
-                op_text_full = op_type + suffix
+                op_text_full = op_type + "," + suffix
             else:
                 op_text_full = op_type + f",{optional_val}" if optional_val else op_type
             formatted_text += f"{prefix},{expression},{op_text_full}\n"
