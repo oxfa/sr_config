@@ -1,6 +1,6 @@
 #!name=domain_dns_gdot
 
-[HOST]
+[Host]
 eu.org = server:tls://8.8.4.4
 *.eu.org = server:tls://8.8.4.4
 ghproxy.com = server:tls://8.8.4.4
