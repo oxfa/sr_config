@@ -114,7 +114,7 @@ jobs:
                                                            $GITHUB_WORKSPACE/release/ruleset/txt/warp.txt \
                                                            > /dev/null
           sed -i -e 's/^/  - /' -e '1i\payload:' $GITHUB_WORKSPACE/release/ruleset/yaml/warp.yaml
-          python3 $GITHUB_WORKSPACE/script/gen_sr_mod.py $GITHUB_WORKSPACE/release/sgmodule/rule/proxy_warp.sgmodule RULE PROXY-WARP --optional_val force-remote-dns
+          python3 $GITHUB_WORKSPACE/script/gen_sr_mod.py $GITHUB_WORKSPACE/release/sgmodule/rule/proxy_warp.sgmodule RULE PROXY-WARP
 
       - name: Process Direct Rules
         shell: bash
@@ -140,7 +140,7 @@ jobs:
                                                             $GITHUB_WORKSPACE/release/ruleset/txt/proxy.txt \
                                                             > /dev/null
           sed -i -e 's/^/  - /' -e '1i\payload:' $GITHUB_WORKSPACE/release/ruleset/yaml/proxy.yaml
-          python3 $GITHUB_WORKSPACE/script/gen_sr_mod.py $GITHUB_WORKSPACE/release/sgmodule/rule/proxy_remote_dns.sgmodule RULE PROXY-FQ --optional_val force-remote-dns
+          python3 $GITHUB_WORKSPACE/script/gen_sr_mod.py $GITHUB_WORKSPACE/release/sgmodule/rule/proxy_remote_dns.sgmodule RULE PROXY-FQ
 
       - name: Process Block Rules
         run: |
