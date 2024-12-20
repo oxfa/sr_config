@@ -1,12 +1,7 @@
 # ADD
-DOMAIN-SUFFIX,github.dev
-DOMAIN-SUFFIX,vscode-cdn.net
-DOMAIN-SUFFIX,vscode-unpkg.net
-DOMAIN-SUFFIX,visualstudio.com
 DOMAIN-SUFFIX,heygen.com
 DOMAIN-SUFFIX,metacubex.one
 DOMAIN-SUFFIX,zlibrary-global.se
-DOMAIN-SUFFIX,128100.xyz
 DOMAIN-SUFFIX,openwrt.org
 # REMOVE
 DOMAIN-SUFFIX,eu.org

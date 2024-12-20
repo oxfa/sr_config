@@ -43,6 +43,7 @@ jobs:
       RAW_RULESET_ORACLE_URL:      https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Oracle/Oracle.list
       RAW_RULESET_OPENAI_URL:      https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/OpenAI/OpenAI.list
       RAW_RULESET_REDDIT_URL:      https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Reddit/Reddit.list
+      RAW_RULESET_GITHUB_URL:      https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GitHub/GitHub.list
       RAW_RULESET_PAYPAL_URL:      https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/PayPal/PayPal.list
       RAW_RULESET_GOOGLE_URL:      https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Google/Google.list
       RAW_RULESET_GEMINI_URL:      https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Gemini/Gemini.list
@@ -66,6 +67,7 @@ jobs:
           wget ${{ env.RAW_RULESET_ORACLE_URL }} -O $GITHUB_WORKSPACE/tmp/oracle_ruleset.txt || exit 1
           wget ${{ env.RAW_RULESET_OPENAI_URL }} -O $GITHUB_WORKSPACE/tmp/openai_ruleset.txt || exit 1
           wget ${{ env.RAW_RULESET_REDDIT_URL }} -O $GITHUB_WORKSPACE/tmp/reddit_ruleset.txt || exit 1
+          wget ${{ env.RAW_RULESET_GITHUB_URL }} -O $GITHUB_WORKSPACE/tmp/github_ruleset.txt || exit 1
           wget ${{ env.RAW_RULESET_PAYPAL_URL }} -O $GITHUB_WORKSPACE/tmp/paypal_ruleset.txt || exit 1
           wget ${{ env.RAW_RULESET_GOOGLE_URL }} -O $GITHUB_WORKSPACE/tmp/google_ruleset.txt || exit 1
           wget ${{ env.RAW_RULESET_GEMINI_URL }} -O $GITHUB_WORKSPACE/tmp/gemini_ruleset.txt || exit 1
@@ -78,7 +80,6 @@ jobs:
           wget ${{ env.RAW_LIST_ICLOUD_URL }} -O $GITHUB_WORKSPACE/tmp/icloud_list.txt || exit 1
           wget ${{ env.RAW_LIST_PRIVATE_URL }} -O $GITHUB_WORKSPACE/tmp/private_list.txt || exit 1
           wget ${{ env.ADGUARD_DNS_REJECT_URL }} -O $GITHUB_WORKSPACE/tmp/adguard_dns_list.txt || exit 1
-          ls -l $GITHUB_WORKSPACE/tmp/
 
       - name: Pre-process Files
         shell: bash
@@ -94,6 +95,7 @@ jobs:
           cat $GITHUB_WORKSPACE/tmp/oracle_ruleset.txt \
               $GITHUB_WORKSPACE/tmp/openai_ruleset.txt \
               $GITHUB_WORKSPACE/tmp/reddit_ruleset.txt \
+              $GITHUB_WORKSPACE/tmp/github_ruleset.txt \
               $GITHUB_WORKSPACE/tmp/paypal_ruleset.txt \
               $GITHUB_WORKSPACE/tmp/google_ruleset.txt \
               $GITHUB_WORKSPACE/tmp/gemini_ruleset.txt \
