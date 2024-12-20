@@ -27,14 +27,18 @@ def format_rule(file_in, op_type, optional_val):
             # 捕获分割不足两部分时的异常
             print(f"Skipping invalid line: {line}, {' '.join(sys.argv)}")
             sys.exit(1)
-        # exp_type, expression = line.split(",", 1)
+
         if not exp_type:
             continue
 
         prefix = CLASH_RULESET_SR_RULESET_MAPPING.get(exp_type, None)
 
         if prefix:
-            op_text_full = op_type + f",{optional_val}" if optional_val else op_type
+            if prefix == "IP-ASN" or prefix == "IP-CIDR":
+                exp_type, expression, suffix = line.split(",", 2)
+                op_text_full = op_type + suffix
+            else:
+                op_text_full = op_type + f",{optional_val}" if optional_val else op_type
             formatted_text += f"{prefix},{expression},{op_text_full}\n"
 
     return formatted_text
@@ -74,7 +78,8 @@ def format_host(file_in, op_type, dns_server):
 
 
 def format_module(file_in, sec_type, op_type, optional_val):
-    preface_info = f"#!name={Path(file_in.name).stem}\n\n[{sec_type}]\n"
+    sec_name = "Host" if sec_type == "HOST" else "Rule"
+    preface_info = f"#!name={Path(file_in.name).stem}\n\n[{sec_name}]\n"
 
     if sec_type == "RULE":
         formatted_text = format_rule(file_in, op_type, optional_val)
