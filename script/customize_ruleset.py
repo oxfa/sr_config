@@ -37,20 +37,19 @@ def process_file(inputFile, customFile, mode):
         else:
             for line in file_b:
                 line = line.strip()
-                if not line:
-                    continue
                 if line == "# ADD":
                     current_section = 'add'
                 elif line == "# REMOVE":
                     current_section = 'remove'
                 else:
-                    exp_type, expression = split_line(line)
-                    if current_section == 'add':
-                        # 确保 expression 不重复
-                        if all(split_line(x.strip())[1] != expression for x in content_a):
-                            add_lines.append(join_line(exp_type, expression))
-                    elif current_section == 'remove':
-                        remove_lines.add(expression)
+                    if line and not line.startswith('#'):
+                        exp_type, expression = split_line(line)
+                        if current_section == 'add':
+                            # 确保 expression 不重复
+                            if all(split_line(x.strip())[1] != expression for x in content_a):
+                                add_lines.append(join_line(exp_type, expression))
+                        elif current_section == 'remove':
+                            remove_lines.add(expression)
 
     # 移除和添加内容
     content_a = [line for line in content_a if split_line(line.strip())[1] not in remove_lines]

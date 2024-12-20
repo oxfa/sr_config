@@ -17,7 +17,7 @@ def sort_lines_by_key_values(file_path, key_value_pairs):
             sorted_lines = sorted(
                 unique_lines,
                 key=lambda line: list(key_value_pairs.keys()).index(
-                    line.split(':')[0].strip()) if line.split(':')[0].strip() in key_value_pairs else default_index
+                    line.split(',')[0].strip()) if line.split(',')[0].strip() in key_value_pairs else default_index
             )
 
             sorted_lines = [line + '\n' for line in sorted_lines]
