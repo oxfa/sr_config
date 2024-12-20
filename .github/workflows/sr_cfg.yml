@@ -120,9 +120,9 @@ jobs:
         run: |
           python3 $GITHUB_WORKSPACE/script/customize_ruleset.py $GITHUB_WORKSPACE/tmp/direct_ruleset.txt $GITHUB_WORKSPACE/configuration/customized_list/direct.txt
           python3 $GITHUB_WORKSPACE/script/sort_ruleset.py $GITHUB_WORKSPACE/tmp/direct_ruleset.txt
-          cat $GITHUB_WORKSPACE/tmp/warp_ruleset.txt | tee $GITHUB_WORKSPACE/configuration/release/sgmodule/rule/direct.sgmodule \
-                                            $GITHUB_WORKSPACE/configuration/release/ruleset/txt/direct.txt \
-                                            > /dev/null
+          cat $GITHUB_WORKSPACE/tmp/direct_ruleset.txt | tee $GITHUB_WORKSPACE/configuration/release/sgmodule/rule/direct.sgmodule \
+                                                             $GITHUB_WORKSPACE/configuration/release/ruleset/txt/direct.txt \
+                                                             > /dev/null
           python3 $GITHUB_WORKSPACE/script/gen_sr_mod.py $GITHUB_WORKSPACE/configuration/release/sgmodule/rule/direct.sgmodule RULE DIRECT
 
 
@@ -134,8 +134,8 @@ jobs:
           python3 $GITHUB_WORKSPACE/script/customize_ruleset.py $GITHUB_WORKSPACE/tmp/proxy_ruleset.txt $GITHUB_WORKSPACE/configuration/customized_list/proxy.txt
           python3 $GITHUB_WORKSPACE/script/sort_ruleset.py $GITHUB_WORKSPACE/tmp/proxy_ruleset.txt
           cat $GITHUB_WORKSPACE/tmp/proxy_ruleset.txt | tee $GITHUB_WORKSPACE/configuration/release/sgmodule/rule/proxy_remote_dns.sgmodule \
-                                          $GITHUB_WORKSPACE/configuration/release/ruleset/txt/proxy.txt \
-                                          > /dev/null
+                                                            $GITHUB_WORKSPACE/configuration/release/ruleset/txt/proxy.txt \
+                                                            > /dev/null
           python3 $GITHUB_WORKSPACE/script/gen_sr_mod.py $GITHUB_WORKSPACE/configuration/release/sgmodule/rule/proxy_remote_dns.sgmodule RULE PROXY-FQ --optional_val force-remote-dns
 
       - name: Process Block Rules
@@ -146,9 +146,9 @@ jobs:
           python3 $GITHUB_WORKSPACE/script/customize_ruleset.py -m add_domains $GITHUB_WORKSPACE/configuration/release/sgmodule/rule/block_reject_array.sgmodule $GITHUB_WORKSPACE/configuration/customized_list/block_reject_array.txt
           python3 $GITHUB_WORKSPACE/script/sort_ruleset.py $GITHUB_WORKSPACE/tmp/block_ruleset.txt
           cat $GITHUB_WORKSPACE/tmp/block_ruleset.txt | tee $GITHUB_WORKSPACE/configuration/release/sgmodule/rule/block_reject.sgmodule \
-                                                         $GITHUB_WORKSPACE/configuration/release/sgmodule/rule/block_reject_drop.sgmodule \
-                                                         $GITHUB_WORKSPACE/configuration/release/ruleset/txt/block.txt \
-                                                         > /dev/null
+                                                            $GITHUB_WORKSPACE/configuration/release/sgmodule/rule/block_reject_drop.sgmodule \
+                                                            $GITHUB_WORKSPACE/configuration/release/ruleset/txt/block.txt \
+                                                            > /dev/null
           python3 $GITHUB_WORKSPACE/script/gen_sr_mod.py $GITHUB_WORKSPACE/configuration/release/sgmodule/rule/block_reject.sgmodule RULE REJECT
           python3 $GITHUB_WORKSPACE/script/gen_sr_mod.py $GITHUB_WORKSPACE/configuration/release/sgmodule/rule/block_reject_drop.sgmodule RULE REJECT-DROP
           python3 $GITHUB_WORKSPACE/script/gen_sr_mod.py $GITHUB_WORKSPACE/configuration/release/sgmodule/rule/block_reject_dict.sgmodule RULE REJECT-DICT
