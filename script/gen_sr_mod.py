@@ -35,7 +35,14 @@ def format_rule(file_in, op_type, optional_val):
 
         if prefix:
             if prefix == "IP-ASN" or prefix == "IP-CIDR":
-                exp_type, expression, suffix = line.split(",", 2)
+                try:
+                    # 尝试分割字符串
+                    exp_type, expression, suffix = line.split(",", 2)
+                except ValueError:
+                    # 捕获分割不足两部分时的异常
+                    print(f"Skipping invalid line: {line}, {' '.join(sys.argv)}")
+                    sys.exit(1)
+
                 op_text_full = op_type + suffix
             else:
                 op_text_full = op_type + f",{optional_val}" if optional_val else op_type
