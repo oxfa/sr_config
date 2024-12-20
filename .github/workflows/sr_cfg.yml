@@ -107,71 +107,71 @@ jobs:
 
       - name: Process Warp Rules
         run: |
-          python3 $GITHUB_WORKSPACE/script/customize_ruleset.py $GITHUB_WORKSPACE/tmp/warp_ruleset.txt $GITHUB_WORKSPACE/configuration/customized_list/warp.txt
+          python3 $GITHUB_WORKSPACE/script/customize_ruleset.py $GITHUB_WORKSPACE/tmp/warp_ruleset.txt $GITHUB_WORKSPACE/customization_list/warp.txt
           python3 $GITHUB_WORKSPACE/script/sort_ruleset.py $GITHUB_WORKSPACE/tmp/warp_ruleset.txt
-          cat $GITHUB_WORKSPACE/tmp/warp_ruleset.txt | tee $GITHUB_WORKSPACE/configuration/release/sgmodule/rule/proxy_warp.sgmodule \
-                                                           $GITHUB_WORKSPACE/configuration/release/ruleset/yaml/warp.yaml \
-                                                           $GITHUB_WORKSPACE/configuration/release/ruleset/txt/warp.txt \
+          cat $GITHUB_WORKSPACE/tmp/warp_ruleset.txt | tee $GITHUB_WORKSPACE/release/sgmodule/rule/proxy_warp.sgmodule \
+                                                           $GITHUB_WORKSPACE/release/ruleset/yaml/warp.yaml \
+                                                           $GITHUB_WORKSPACE/release/ruleset/txt/warp.txt \
                                                            > /dev/null
-          sed -i -e 's/^/  - /' -e '1i\payload:' $GITHUB_WORKSPACE/configuration/release/ruleset/yaml/warp.yaml
-          python3 $GITHUB_WORKSPACE/script/gen_sr_mod.py $GITHUB_WORKSPACE/configuration/release/sgmodule/rule/proxy_warp.sgmodule RULE PROXY-WARP --optional_val force-remote-dns
+          sed -i -e 's/^/  - /' -e '1i\payload:' $GITHUB_WORKSPACE/release/ruleset/yaml/warp.yaml
+          python3 $GITHUB_WORKSPACE/script/gen_sr_mod.py $GITHUB_WORKSPACE/release/sgmodule/rule/proxy_warp.sgmodule RULE PROXY-WARP --optional_val force-remote-dns
 
       - name: Process Direct Rules
         shell: bash
         run: |
-          python3 $GITHUB_WORKSPACE/script/customize_ruleset.py $GITHUB_WORKSPACE/tmp/direct_ruleset.txt $GITHUB_WORKSPACE/configuration/customized_list/direct.txt
+          python3 $GITHUB_WORKSPACE/script/customize_ruleset.py $GITHUB_WORKSPACE/tmp/direct_ruleset.txt $GITHUB_WORKSPACE/customization_list/direct.txt
           python3 $GITHUB_WORKSPACE/script/sort_ruleset.py $GITHUB_WORKSPACE/tmp/direct_ruleset.txt
-          cat $GITHUB_WORKSPACE/tmp/direct_ruleset.txt | tee $GITHUB_WORKSPACE/configuration/release/sgmodule/rule/direct.sgmodule \
-                                                             $GITHUB_WORKSPACE/configuration/release/ruleset/yaml/direct.yaml \
-                                                             $GITHUB_WORKSPACE/configuration/release/ruleset/txt/direct.txt \
+          cat $GITHUB_WORKSPACE/tmp/direct_ruleset.txt | tee $GITHUB_WORKSPACE/release/sgmodule/rule/direct.sgmodule \
+                                                             $GITHUB_WORKSPACE/release/ruleset/yaml/direct.yaml \
+                                                             $GITHUB_WORKSPACE/release/ruleset/txt/direct.txt \
                                                              > /dev/null
-          sed -i -e 's/^/  - /' -e '1i\payload:' $GITHUB_WORKSPACE/configuration/release/ruleset/yaml/direct.yaml
-          python3 $GITHUB_WORKSPACE/script/gen_sr_mod.py $GITHUB_WORKSPACE/configuration/release/sgmodule/rule/direct.sgmodule RULE DIRECT
+          sed -i -e 's/^/  - /' -e '1i\payload:' $GITHUB_WORKSPACE/release/ruleset/yaml/direct.yaml
+          python3 $GITHUB_WORKSPACE/script/gen_sr_mod.py $GITHUB_WORKSPACE/release/sgmodule/rule/direct.sgmodule RULE DIRECT
 
 
       - name: Process Proxy Rules
         run: |
           python3 $GITHUB_WORKSPACE/script/customize_ruleset.py -m remove_domains $GITHUB_WORKSPACE/tmp/proxy_ruleset.txt $GITHUB_WORKSPACE/tmp/warp_ruleset.txt
           python3 $GITHUB_WORKSPACE/script/customize_ruleset.py -m remove_domains $GITHUB_WORKSPACE/tmp/proxy_ruleset.txt $GITHUB_WORKSPACE/tmp/direct_ruleset.txt
-          python3 $GITHUB_WORKSPACE/script/customize_ruleset.py $GITHUB_WORKSPACE/tmp/proxy_ruleset.txt $GITHUB_WORKSPACE/configuration/customized_list/proxy.txt
+          python3 $GITHUB_WORKSPACE/script/customize_ruleset.py $GITHUB_WORKSPACE/tmp/proxy_ruleset.txt $GITHUB_WORKSPACE/customization_list/proxy.txt
           python3 $GITHUB_WORKSPACE/script/sort_ruleset.py $GITHUB_WORKSPACE/tmp/proxy_ruleset.txt
-          cat $GITHUB_WORKSPACE/tmp/proxy_ruleset.txt | tee $GITHUB_WORKSPACE/configuration/release/sgmodule/rule/proxy_remote_dns.sgmodule \
-                                                            $GITHUB_WORKSPACE/configuration/release/ruleset/yaml/proxy.yaml \
-                                                            $GITHUB_WORKSPACE/configuration/release/ruleset/txt/proxy.txt \
+          cat $GITHUB_WORKSPACE/tmp/proxy_ruleset.txt | tee $GITHUB_WORKSPACE/release/sgmodule/rule/proxy_remote_dns.sgmodule \
+                                                            $GITHUB_WORKSPACE/release/ruleset/yaml/proxy.yaml \
+                                                            $GITHUB_WORKSPACE/release/ruleset/txt/proxy.txt \
                                                             > /dev/null
-          sed -i -e 's/^/  - /' -e '1i\payload:' $GITHUB_WORKSPACE/configuration/release/ruleset/yaml/proxy.yaml
-          python3 $GITHUB_WORKSPACE/script/gen_sr_mod.py $GITHUB_WORKSPACE/configuration/release/sgmodule/rule/proxy_remote_dns.sgmodule RULE PROXY-FQ --optional_val force-remote-dns
+          sed -i -e 's/^/  - /' -e '1i\payload:' $GITHUB_WORKSPACE/release/ruleset/yaml/proxy.yaml
+          python3 $GITHUB_WORKSPACE/script/gen_sr_mod.py $GITHUB_WORKSPACE/release/sgmodule/rule/proxy_remote_dns.sgmodule RULE PROXY-FQ --optional_val force-remote-dns
 
       - name: Process Block Rules
         run: |
-          python3 $GITHUB_WORKSPACE/script/customize_ruleset.py $GITHUB_WORKSPACE/tmp/block_ruleset.txt $GITHUB_WORKSPACE/configuration/customized_list/block_default.txt
-          python3 $GITHUB_WORKSPACE/script/customize_ruleset.py -m add_domains $GITHUB_WORKSPACE/configuration/release/sgmodule/rule/block_reject_dict.sgmodule $GITHUB_WORKSPACE/configuration/customized_list/block_reject_dict.txt
-          python3 $GITHUB_WORKSPACE/script/customize_ruleset.py -m add_domains $GITHUB_WORKSPACE/configuration/release/sgmodule/rule/block_reject_array.sgmodule $GITHUB_WORKSPACE/configuration/customized_list/block_reject_array.txt
+          python3 $GITHUB_WORKSPACE/script/customize_ruleset.py $GITHUB_WORKSPACE/tmp/block_ruleset.txt $GITHUB_WORKSPACE/customization_list/block_default.txt
+          python3 $GITHUB_WORKSPACE/script/customize_ruleset.py -m add_domains $GITHUB_WORKSPACE/release/sgmodule/rule/block_reject_dict.sgmodule $GITHUB_WORKSPACE/customization_list/block_reject_dict.txt
+          python3 $GITHUB_WORKSPACE/script/customize_ruleset.py -m add_domains $GITHUB_WORKSPACE/release/sgmodule/rule/block_reject_array.sgmodule $GITHUB_WORKSPACE/customization_list/block_reject_array.txt
           python3 $GITHUB_WORKSPACE/script/sort_ruleset.py $GITHUB_WORKSPACE/tmp/block_ruleset.txt
-          cat $GITHUB_WORKSPACE/tmp/block_ruleset.txt | tee $GITHUB_WORKSPACE/configuration/release/sgmodule/rule/block_reject_drop.sgmodule \
-                                                            $GITHUB_WORKSPACE/configuration/release/sgmodule/rule/block_reject.sgmodule \
-                                                            $GITHUB_WORKSPACE/configuration/release/ruleset/yaml/block.yaml \
-                                                            $GITHUB_WORKSPACE/configuration/release/ruleset/txt/block.txt \
+          cat $GITHUB_WORKSPACE/tmp/block_ruleset.txt | tee $GITHUB_WORKSPACE/release/sgmodule/rule/block_reject_drop.sgmodule \
+                                                            $GITHUB_WORKSPACE/release/sgmodule/rule/block_reject.sgmodule \
+                                                            $GITHUB_WORKSPACE/release/ruleset/yaml/block.yaml \
+                                                            $GITHUB_WORKSPACE/release/ruleset/txt/block.txt \
                                                             > /dev/null
-          sed -i -e 's/^/  - /' -e '1i\payload:' $GITHUB_WORKSPACE/configuration/release/ruleset/yaml/block.yaml
-          python3 $GITHUB_WORKSPACE/script/gen_sr_mod.py $GITHUB_WORKSPACE/configuration/release/sgmodule/rule/block_reject.sgmodule RULE REJECT
-          python3 $GITHUB_WORKSPACE/script/gen_sr_mod.py $GITHUB_WORKSPACE/configuration/release/sgmodule/rule/block_reject_drop.sgmodule RULE REJECT-DROP
-          python3 $GITHUB_WORKSPACE/script/gen_sr_mod.py $GITHUB_WORKSPACE/configuration/release/sgmodule/rule/block_reject_dict.sgmodule RULE REJECT-DICT
-          python3 $GITHUB_WORKSPACE/script/gen_sr_mod.py $GITHUB_WORKSPACE/configuration/release/sgmodule/rule/block_reject_array.sgmodule RULE REJECT-ARRAY
+          sed -i -e 's/^/  - /' -e '1i\payload:' $GITHUB_WORKSPACE/release/ruleset/yaml/block.yaml
+          python3 $GITHUB_WORKSPACE/script/gen_sr_mod.py $GITHUB_WORKSPACE/release/sgmodule/rule/block_reject.sgmodule RULE REJECT
+          python3 $GITHUB_WORKSPACE/script/gen_sr_mod.py $GITHUB_WORKSPACE/release/sgmodule/rule/block_reject_drop.sgmodule RULE REJECT-DROP
+          python3 $GITHUB_WORKSPACE/script/gen_sr_mod.py $GITHUB_WORKSPACE/release/sgmodule/rule/block_reject_dict.sgmodule RULE REJECT-DICT
+          python3 $GITHUB_WORKSPACE/script/gen_sr_mod.py $GITHUB_WORKSPACE/release/sgmodule/rule/block_reject_array.sgmodule RULE REJECT-ARRAY
 
       - name: Process Domain-DNS Rules
         run: |
-          python3 $GITHUB_WORKSPACE/script/customize_ruleset.py -m add_domains $GITHUB_WORKSPACE/configuration/release/sgmodule/host/domain_dns_adot.sgmodule $GITHUB_WORKSPACE/configuration/customized_list/domain_dns_adot.txt
-          python3 $GITHUB_WORKSPACE/script/customize_ruleset.py -m add_domains $GITHUB_WORKSPACE/configuration/release/sgmodule/host/domain_dns_gdot.sgmodule $GITHUB_WORKSPACE/configuration/customized_list/domain_dns_gdot.txt
-          python3 $GITHUB_WORKSPACE/script/gen_sr_mod.py $GITHUB_WORKSPACE/configuration/release/sgmodule/host/domain_dns_adot.sgmodule HOST DOMAIN-DNS --optional_val ${{ env.ADOT_IPV4 }}
-          python3 $GITHUB_WORKSPACE/script/gen_sr_mod.py $GITHUB_WORKSPACE/configuration/release/sgmodule/host/domain_dns_gdot.sgmodule HOST DOMAIN-DNS --optional_val ${{ env.GDOT_IPV4 }}
+          python3 $GITHUB_WORKSPACE/script/customize_ruleset.py -m add_domains $GITHUB_WORKSPACE/release/sgmodule/host/domain_dns_adot.sgmodule $GITHUB_WORKSPACE/customization_list/domain_dns_adot.txt
+          python3 $GITHUB_WORKSPACE/script/customize_ruleset.py -m add_domains $GITHUB_WORKSPACE/release/sgmodule/host/domain_dns_gdot.sgmodule $GITHUB_WORKSPACE/customization_list/domain_dns_gdot.txt
+          python3 $GITHUB_WORKSPACE/script/gen_sr_mod.py $GITHUB_WORKSPACE/release/sgmodule/host/domain_dns_adot.sgmodule HOST DOMAIN-DNS --optional_val ${{ env.ADOT_IPV4 }}
+          python3 $GITHUB_WORKSPACE/script/gen_sr_mod.py $GITHUB_WORKSPACE/release/sgmodule/host/domain_dns_gdot.sgmodule HOST DOMAIN-DNS --optional_val ${{ env.GDOT_IPV4 }}
 
       # - name: Generate Clash RuleSet
       #   run: |
-      #     python3 $GITHUB_WORKSPACE/script/list2clashRuleset.py $GITHUB_WORKSPACE/tmp/warp_ruleset.txt $GITHUB_WORKSPACE/configuration/release/rule-set/warp.yaml
-      #     python3 $GITHUB_WORKSPACE/script/list2clashRuleset.py $GITHUB_WORKSPACE/tmp/proxy_list.txt $GITHUB_WORKSPACE/configuration/release/rule-set/proxy.yaml
-      #     python3 $GITHUB_WORKSPACE/script/list2clashRuleset.py $GITHUB_WORKSPACE/tmp/direct_ruleset.txt $GITHUB_WORKSPACE/configuration/release/rule-set/direct.yaml
-      #     python3 $GITHUB_WORKSPACE/script/list2clashRuleset.py $GITHUB_WORKSPACE/tmp/block_list_clash.txt $GITHUB_WORKSPACE/configuration/release/rule-set/block.yaml
+      #     python3 $GITHUB_WORKSPACE/script/list2clashRuleset.py $GITHUB_WORKSPACE/tmp/warp_ruleset.txt $GITHUB_WORKSPACE/release/rule-set/warp.yaml
+      #     python3 $GITHUB_WORKSPACE/script/list2clashRuleset.py $GITHUB_WORKSPACE/tmp/proxy_list.txt $GITHUB_WORKSPACE/release/rule-set/proxy.yaml
+      #     python3 $GITHUB_WORKSPACE/script/list2clashRuleset.py $GITHUB_WORKSPACE/tmp/direct_ruleset.txt $GITHUB_WORKSPACE/release/rule-set/direct.yaml
+      #     python3 $GITHUB_WORKSPACE/script/list2clashRuleset.py $GITHUB_WORKSPACE/tmp/block_list_clash.txt $GITHUB_WORKSPACE/release/rule-set/block.yaml
 
       - name: Clean temp directory
         shell: bash
@@ -184,7 +184,7 @@ jobs:
       #     draft: false
       #     prerelease: false
       #     files: |
-      #       $GITHUB_WORKSPACE/configuration/release/sr_ark.conf
+      #       $GITHUB_WORKSPACE/release/sr_ark.conf
       #   env:
       #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
