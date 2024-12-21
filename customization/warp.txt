@@ -6,19 +6,14 @@ DOMAIN-SUFFIX,censys.com
 DOMAIN-SUFFIX,censys.io
 ## Oracle Services
 DOMAIN,oracle.sc.omtrdc.net
-## Copilot Services
-DOMAIN-SUFFIX,bing.com
-DOMAIN-SUFFIX,bingapis.com
-DOMAIN,sapphire.azureedge.net
-DOMAIN,sapphire.bingviz.com
-DOMAIN,login.microsoftonline.com
-DOMAIN,substrate.office.com
 ## Openai Services
 DOMAIN-KEYWORD,sora
 DOMAIN-KEYWORD,chatgpt
 DOMAIN-SUFFIX,sora.com
+DOMAIN-SUFFIX,ctfassets.net
 DOMAIN-SUFFIX,revenuecat.com
 DOMAIN-SUFFIX,stripe.network
+DOMAIN-SUFFIX,featureassets.org
 DOMAIN-SUFFIX,intercomassets.com
 DOMAIN,oaic.report-url.com
 IP-ASN,31898,no-resolve
