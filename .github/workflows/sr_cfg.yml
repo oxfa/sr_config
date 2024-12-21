@@ -110,10 +110,10 @@ jobs:
           python3 $GITHUB_WORKSPACE/script/customize_ruleset.py $GITHUB_WORKSPACE/tmp/warp_ruleset.txt $GITHUB_WORKSPACE/customization/warp.txt
           python3 $GITHUB_WORKSPACE/script/sort_ruleset.py $GITHUB_WORKSPACE/tmp/warp_ruleset.txt
           cat $GITHUB_WORKSPACE/tmp/warp_ruleset.txt | tee $GITHUB_WORKSPACE/release/sgmodule/rule/proxy_warp.sgmodule \
-                                                           $GITHUB_WORKSPACE/release/ruleset/yaml/warp.yaml \
-                                                           $GITHUB_WORKSPACE/release/ruleset/txt/warp.txt \
+                                                           $GITHUB_WORKSPACE/release/ruleset/classical/yaml/warp.yaml \
+                                                           $GITHUB_WORKSPACE/release/ruleset/classical/txt/warp.txt \
                                                            > /dev/null
-          sed -i -e 's/^/  - /' -e '1i\payload:' $GITHUB_WORKSPACE/release/ruleset/yaml/warp.yaml
+          sed -i -e 's/^/  - /' -e '1i\payload:' $GITHUB_WORKSPACE/release/ruleset/classical/yaml/warp.yaml
           python3 $GITHUB_WORKSPACE/script/gen_sr_mod.py $GITHUB_WORKSPACE/release/sgmodule/rule/proxy_warp.sgmodule RULE PROXY-WARP --optional_val force-remote-dns
 
       - name: Process Direct Rules
@@ -122,10 +122,10 @@ jobs:
           python3 $GITHUB_WORKSPACE/script/customize_ruleset.py $GITHUB_WORKSPACE/tmp/direct_ruleset.txt $GITHUB_WORKSPACE/customization/direct.txt
           python3 $GITHUB_WORKSPACE/script/sort_ruleset.py $GITHUB_WORKSPACE/tmp/direct_ruleset.txt
           cat $GITHUB_WORKSPACE/tmp/direct_ruleset.txt | tee $GITHUB_WORKSPACE/release/sgmodule/rule/direct.sgmodule \
-                                                             $GITHUB_WORKSPACE/release/ruleset/yaml/direct.yaml \
-                                                             $GITHUB_WORKSPACE/release/ruleset/txt/direct.txt \
+                                                             $GITHUB_WORKSPACE/release/ruleset/classical/yaml/direct.yaml \
+                                                             $GITHUB_WORKSPACE/release/ruleset/classical/txt/direct.txt \
                                                              > /dev/null
-          sed -i -e 's/^/  - /' -e '1i\payload:' $GITHUB_WORKSPACE/release/ruleset/yaml/direct.yaml
+          sed -i -e 's/^/  - /' -e '1i\payload:' $GITHUB_WORKSPACE/release/ruleset/classical/yaml/direct.yaml
           python3 $GITHUB_WORKSPACE/script/gen_sr_mod.py $GITHUB_WORKSPACE/release/sgmodule/rule/direct.sgmodule RULE DIRECT
 
 
@@ -136,10 +136,10 @@ jobs:
           python3 $GITHUB_WORKSPACE/script/customize_ruleset.py $GITHUB_WORKSPACE/tmp/proxy_ruleset.txt $GITHUB_WORKSPACE/customization/proxy.txt
           python3 $GITHUB_WORKSPACE/script/sort_ruleset.py $GITHUB_WORKSPACE/tmp/proxy_ruleset.txt
           cat $GITHUB_WORKSPACE/tmp/proxy_ruleset.txt | tee $GITHUB_WORKSPACE/release/sgmodule/rule/proxy_remote_dns.sgmodule \
-                                                            $GITHUB_WORKSPACE/release/ruleset/yaml/proxy.yaml \
-                                                            $GITHUB_WORKSPACE/release/ruleset/txt/proxy.txt \
+                                                            $GITHUB_WORKSPACE/release/ruleset/classical/yaml/proxy.yaml \
+                                                            $GITHUB_WORKSPACE/release/ruleset/classical/txt/proxy.txt \
                                                             > /dev/null
-          sed -i -e 's/^/  - /' -e '1i\payload:' $GITHUB_WORKSPACE/release/ruleset/yaml/proxy.yaml
+          sed -i -e 's/^/  - /' -e '1i\payload:' $GITHUB_WORKSPACE/release/ruleset/classical/yaml/proxy.yaml
           python3 $GITHUB_WORKSPACE/script/gen_sr_mod.py $GITHUB_WORKSPACE/release/sgmodule/rule/proxy_remote_dns.sgmodule RULE PROXY-FQ --optional_val force-remote-dns
 
       - name: Process Block Rules
@@ -150,10 +150,10 @@ jobs:
           python3 $GITHUB_WORKSPACE/script/sort_ruleset.py $GITHUB_WORKSPACE/tmp/block_ruleset.txt
           cat $GITHUB_WORKSPACE/tmp/block_ruleset.txt | tee $GITHUB_WORKSPACE/release/sgmodule/rule/block_reject_drop.sgmodule \
                                                             $GITHUB_WORKSPACE/release/sgmodule/rule/block_reject.sgmodule \
-                                                            $GITHUB_WORKSPACE/release/ruleset/yaml/block.yaml \
-                                                            $GITHUB_WORKSPACE/release/ruleset/txt/block.txt \
+                                                            $GITHUB_WORKSPACE/release/ruleset/classical/yaml/block.yaml \
+                                                            $GITHUB_WORKSPACE/release/ruleset/classical/txt/block.txt \
                                                             > /dev/null
-          sed -i -e 's/^/  - /' -e '1i\payload:' $GITHUB_WORKSPACE/release/ruleset/yaml/block.yaml
+          sed -i -e 's/^/  - /' -e '1i\payload:' $GITHUB_WORKSPACE/release/ruleset/classical/yaml/block.yaml
           python3 $GITHUB_WORKSPACE/script/gen_sr_mod.py $GITHUB_WORKSPACE/release/sgmodule/rule/block_reject.sgmodule RULE REJECT
           python3 $GITHUB_WORKSPACE/script/gen_sr_mod.py $GITHUB_WORKSPACE/release/sgmodule/rule/block_reject_drop.sgmodule RULE REJECT-DROP
           python3 $GITHUB_WORKSPACE/script/gen_sr_mod.py $GITHUB_WORKSPACE/release/sgmodule/rule/block_reject_dict.sgmodule RULE REJECT-DICT
