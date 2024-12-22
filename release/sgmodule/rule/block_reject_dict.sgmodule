@@ -1,4 +1,3 @@
 #!name=block_reject_dict
 
 [Rule]
-DOMAIN,analytics-api.smzdm.com,REJECT-DICT
