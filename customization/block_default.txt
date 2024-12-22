@@ -8,4 +8,4 @@ DOMAIN-SUFFIX,log-upload-os.hoyoverse.com
 DOMAIN-SUFFIX,hkrpg-log-upload-os.hoyoverse.com
 DOMAIN-SUFFIX,tms.oracle.com
 DOMAIN-SUFFIX,oracleinfinity.io
-DOMAIN,analytics-api.smzdm.com
+DOMAIN-SUFFIX,grpc.biliapi.net
