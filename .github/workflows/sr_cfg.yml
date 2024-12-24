@@ -40,6 +40,7 @@ jobs:
 
       RAW_LIST_PROXY_URL:       https://raw.githubusercontent.com/Loyalsoldier/v2ray-rules-dat/release/gfw.txt
 
+
       RAW_RULESET_ORACLE_URL:      https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Oracle/Oracle.list
       RAW_RULESET_OPENAI_URL:      https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/OpenAI/OpenAI.list
       RAW_RULESET_REDDIT_URL:      https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Reddit/Reddit.list
@@ -49,6 +50,7 @@ jobs:
       RAW_RULESET_GEMINI_URL:      https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Gemini/Gemini.list
       RAW_RULESET_YOUTUBE_URL:     https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/YouTube/YouTube.list
       RAW_RULESET_COPILOT_URL:     https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Copilot/Copilot.list
+      RAW_RULESET_FACEBOOK_URL:    https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Facebook/Facebook.list
       RAW_RULESET_MICROSOFT_URL:   https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Microsoft/Microsoft.list
       RAW_RULESET_CLOUDFLARE_URL:  https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Cloudflare/Cloudflare.list
 
@@ -73,6 +75,7 @@ jobs:
           wget ${{ env.RAW_RULESET_GEMINI_URL }} -O $GITHUB_WORKSPACE/tmp/gemini_ruleset.txt || exit 1
           wget ${{ env.RAW_RULESET_YOUTUBE_URL }} -O $GITHUB_WORKSPACE/tmp/youtube_ruleset.txt || exit 1
           wget ${{ env.RAW_RULESET_COPILOT_URL }} -O $GITHUB_WORKSPACE/tmp/copilot_ruleset.txt || exit 1
+          wget ${{ env.RAW_RULESET_FACEBOOK_URL }} -O $GITHUB_WORKSPACE/tmp/facebook_ruleset.txt || exit 1
           wget ${{ env.RAW_RULESET_MICROSOFT_URL }} -O $GITHUB_WORKSPACE/tmp/microsoft_ruleset.txt || exit 1
           wget ${{ env.RAW_RULESET_CLOUDFLARE_URL }} -O $GITHUB_WORKSPACE/tmp/cloudflare_ruleset.txt || exit 1
           wget ${{ env.RAW_LIST_PROXY_URL }} -O $GITHUB_WORKSPACE/tmp/proxy_list.txt || exit 1
@@ -101,6 +104,7 @@ jobs:
               $GITHUB_WORKSPACE/tmp/gemini_ruleset.txt \
               $GITHUB_WORKSPACE/tmp/youtube_ruleset.txt \
               $GITHUB_WORKSPACE/tmp/copilot_ruleset.txt \
+              $GITHUB_WORKSPACE/tmp/facebook_ruleset.txt \
               $GITHUB_WORKSPACE/tmp/microsoft_ruleset.txt \
               $GITHUB_WORKSPACE/tmp/cloudflare_ruleset.txt \
               > $GITHUB_WORKSPACE/tmp/warp_ruleset.txt
