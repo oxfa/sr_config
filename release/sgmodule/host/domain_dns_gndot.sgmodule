@@ -1,4 +1,4 @@
-#!name=domain_dns_adot
+#!name=domain_dns_gndot
 
 [Host]
 apple.cn = server:tls://223.5.5.5

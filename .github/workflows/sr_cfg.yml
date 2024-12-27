@@ -85,7 +85,6 @@ jobs:
           wget ${{ env.ADGUARD_DNS_REJECT_URL }} -O $GITHUB_WORKSPACE/tmp/adguard_dns_list.txt || exit 1
 
       - name: Pre-process Files
-        shell: bash
         run: |
           cat $GITHUB_WORKSPACE/tmp/adguard_dns_list.txt | perl -ne '/^\|\|([-_0-9a-zA-Z]+(\.[-_0-9a-zA-Z]+){1,64})\^$/ && print "$1\n"' | perl -ne 'print if not /^[0-9]{1,3}(\.[0-9]{1,3}){3}$/' | \
               tee $GITHUB_WORKSPACE/tmp/block_list.txt > /dev/null
@@ -109,6 +108,26 @@ jobs:
               $GITHUB_WORKSPACE/tmp/cloudflare_ruleset.txt \
               > $GITHUB_WORKSPACE/tmp/warp_ruleset.txt
 
+      - name: Process High Priority Rules
+        run: |
+          python3 $GITHUB_WORKSPACE/script/customize_ruleset.py -m add_domains $GITHUB_WORKSPACE/release/sgmodule/rule/high_priority_direct.sgmodule $GITHUB_WORKSPACE/customization/high_priority_direct.txt
+          python3 $GITHUB_WORKSPACE/script/customize_ruleset.py -m add_domains $GITHUB_WORKSPACE/release/ruleset/classical/txt/high_priority_direct.txt $GITHUB_WORKSPACE/customization/high_priority_direct.txt
+          python3 $GITHUB_WORKSPACE/script/customize_ruleset.py -m add_domains $GITHUB_WORKSPACE/release/ruleset/classical/yaml/high_priority_direct.yaml $GITHUB_WORKSPACE/customization/high_priority_direct.txt
+          python3 $GITHUB_WORKSPACE/script/gen_sr_mod.py $GITHUB_WORKSPACE/release/sgmodule/rule/high_priority_direct.sgmodule RULE DIRECT
+          sed -i -e 's/^/  - /' -e '1i\payload:' $GITHUB_WORKSPACE/release/ruleset/classical/yaml/high_priority_direct.yaml
+
+          python3 $GITHUB_WORKSPACE/script/customize_ruleset.py -m add_domains $GITHUB_WORKSPACE/release/sgmodule/rule/high_priority_proxy.sgmodule $GITHUB_WORKSPACE/customization/high_priority_proxy.txt
+          python3 $GITHUB_WORKSPACE/script/customize_ruleset.py -m add_domains $GITHUB_WORKSPACE/release/ruleset/classical/txt/high_priority_proxy.txt $GITHUB_WORKSPACE/customization/high_priority_proxy.txt
+          python3 $GITHUB_WORKSPACE/script/customize_ruleset.py -m add_domains $GITHUB_WORKSPACE/release/ruleset/classical/yaml/high_priority_proxy.yaml $GITHUB_WORKSPACE/customization/high_priority_proxy.txt
+          python3 $GITHUB_WORKSPACE/script/gen_sr_mod.py $GITHUB_WORKSPACE/release/sgmodule/rule/high_priority_proxy.sgmodule RULE PROXY-FQ --optional_val force-remote-dns
+          sed -i -e 's/^/  - /' -e '1i\payload:' $GITHUB_WORKSPACE/release/ruleset/classical/yaml/high_priority_proxy.yaml
+          
+          python3 $GITHUB_WORKSPACE/script/customize_ruleset.py -m add_domains $GITHUB_WORKSPACE/release/sgmodule/rule/high_priority_warp.sgmodule $GITHUB_WORKSPACE/customization/high_priority_warp.txt
+          python3 $GITHUB_WORKSPACE/script/customize_ruleset.py -m add_domains $GITHUB_WORKSPACE/release/ruleset/classical/txt/high_priority_warp.txt $GITHUB_WORKSPACE/customization/high_priority_warp.txt
+          python3 $GITHUB_WORKSPACE/script/customize_ruleset.py -m add_domains $GITHUB_WORKSPACE/release/ruleset/classical/yaml/high_priority_warp.yaml $GITHUB_WORKSPACE/customization/high_priority_warp.txt
+          python3 $GITHUB_WORKSPACE/script/gen_sr_mod.py $GITHUB_WORKSPACE/release/sgmodule/rule/high_priority_warp.sgmodule RULE PROXY-WARP --optional_val force-remote-dns
+          sed -i -e 's/^/  - /' -e '1i\payload:' $GITHUB_WORKSPACE/release/ruleset/classical/yaml/high_priority_warp.yaml
+
       - name: Process Warp Rules
         run: |
           python3 $GITHUB_WORKSPACE/script/customize_ruleset.py $GITHUB_WORKSPACE/tmp/warp_ruleset.txt $GITHUB_WORKSPACE/customization/warp.txt
@@ -121,7 +140,6 @@ jobs:
           python3 $GITHUB_WORKSPACE/script/gen_sr_mod.py $GITHUB_WORKSPACE/release/sgmodule/rule/proxy_warp.sgmodule RULE PROXY-WARP --optional_val force-remote-dns
 
       - name: Process Direct Rules
-        shell: bash
         run: |
           python3 $GITHUB_WORKSPACE/script/customize_ruleset.py $GITHUB_WORKSPACE/tmp/direct_ruleset.txt $GITHUB_WORKSPACE/customization/direct.txt
           python3 $GITHUB_WORKSPACE/script/sort_ruleset.py $GITHUB_WORKSPACE/tmp/direct_ruleset.txt
@@ -165,21 +183,14 @@ jobs:
 
       - name: Process Domain-DNS Rules
         run: |
-          python3 $GITHUB_WORKSPACE/script/customize_ruleset.py -m add_domains $GITHUB_WORKSPACE/release/sgmodule/host/domain_dns_adot.sgmodule $GITHUB_WORKSPACE/customization/domain_dns_adot.txt
-          python3 $GITHUB_WORKSPACE/script/customize_ruleset.py -m add_domains $GITHUB_WORKSPACE/release/sgmodule/host/domain_dns_gdot.sgmodule $GITHUB_WORKSPACE/customization/domain_dns_gdot.txt
-          python3 $GITHUB_WORKSPACE/script/gen_sr_mod.py $GITHUB_WORKSPACE/release/sgmodule/host/domain_dns_adot.sgmodule HOST DOMAIN-DNS --optional_val ${{ env.ADOT_IPV4 }}
-          python3 $GITHUB_WORKSPACE/script/gen_sr_mod.py $GITHUB_WORKSPACE/release/sgmodule/host/domain_dns_gdot.sgmodule HOST DOMAIN-DNS --optional_val ${{ env.GDOT_IPV4 }}
-
-      # - name: Generate Clash RuleSet
-      #   run: |
-      #     python3 $GITHUB_WORKSPACE/script/list2clashRuleset.py $GITHUB_WORKSPACE/tmp/warp_ruleset.txt $GITHUB_WORKSPACE/release/rule-set/warp.yaml
-      #     python3 $GITHUB_WORKSPACE/script/list2clashRuleset.py $GITHUB_WORKSPACE/tmp/proxy_list.txt $GITHUB_WORKSPACE/release/rule-set/proxy.yaml
-      #     python3 $GITHUB_WORKSPACE/script/list2clashRuleset.py $GITHUB_WORKSPACE/tmp/direct_ruleset.txt $GITHUB_WORKSPACE/release/rule-set/direct.yaml
-      #     python3 $GITHUB_WORKSPACE/script/list2clashRuleset.py $GITHUB_WORKSPACE/tmp/block_list_clash.txt $GITHUB_WORKSPACE/release/rule-set/block.yaml
+          python3 $GITHUB_WORKSPACE/script/customize_ruleset.py -m add_domains $GITHUB_WORKSPACE/release/sgmodule/host/domain_dns_gndot.sgmodule $GITHUB_WORKSPACE/customization/domain_dns_gndot.txt
+          python3 $GITHUB_WORKSPACE/script/customize_ruleset.py -m add_domains $GITHUB_WORKSPACE/release/sgmodule/host/domain_dns_gwdot.sgmodule $GITHUB_WORKSPACE/customization/domain_dns_gwdot.txt
+          python3 $GITHUB_WORKSPACE/script/gen_sr_mod.py $GITHUB_WORKSPACE/release/sgmodule/host/domain_dns_gndot.sgmodule HOST DOMAIN-DNS --optional_val ${{ env.ADOT_IPV4 }}
+          python3 $GITHUB_WORKSPACE/script/gen_sr_mod.py $GITHUB_WORKSPACE/release/sgmodule/host/domain_dns_gwdot.sgmodule HOST DOMAIN-DNS --optional_val ${{ env.CDOT_IPV4 }}
 
       - name: Clean temp directory
-        shell: bash
         run: rm -rf $GITHUB_WORKSPACE/tmp
+
       # - name: Release and upload assets
       #   uses: softprops/action-gh-release@v1
       #   with:
@@ -193,7 +204,6 @@ jobs:
       #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Commit files
-        shell: bash
         run: |
           git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
