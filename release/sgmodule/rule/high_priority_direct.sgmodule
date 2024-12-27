@@ -1,0 +1,4 @@
+#!name=high_priority_direct
+
+[Rule]
+DOMAIN-SUFFIX,log.mmstat.com,DIRECT

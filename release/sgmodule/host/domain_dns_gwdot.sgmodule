@@ -1,7 +1,7 @@
 #!name=domain_dns_gwdot
 
 [Host]
-eu.org = server:tls://8.8.4.4
-*.eu.org = server:tls://8.8.4.4
-ghproxy.com = server:tls://8.8.4.4
-*.ghproxy.com = server:tls://8.8.4.4
+eu.org = server:tls://1.0.0.1
+*.eu.org = server:tls://1.0.0.1
+ghproxy.com = server:tls://1.0.0.1
+*.ghproxy.com = server:tls://1.0.0.1
