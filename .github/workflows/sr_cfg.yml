@@ -3,7 +3,7 @@ name: Generate Configuraion File
 # Controls when the workflow will run
 on:
   schedule:
-    - cron: '0 23 * * *'
+    - cron: '0 23 */3 * *'
   push:
     branches:
       - master
