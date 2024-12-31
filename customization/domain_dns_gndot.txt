@@ -3,6 +3,8 @@ DOMAIN,apple.cn
 DOMAIN-SUFFIX,apple.cn
 DOMAIN,apple.com
 DOMAIN-SUFFIX,apple.com
+DOMAIN,apple.com.cn
+DOMAIN-SUFFIX,apple.com.cn
 DOMAIN,icloud.com.cn
 DOMAIN-SUFFIX,icloud.com.cn
 DOMAIN,icloud.com
@@ -11,4 +13,6 @@ DOMAIN,akadns.net
 DOMAIN-SUFFIX,akadns.net
 DOMAIN,icloud-content.com
 DOMAIN-SUFFIX,icloud-content.com
+DOMAIN,akamaiedge.net
+DOMAIN-SUFFIX,akamaiedge.net
 # REMOVE
