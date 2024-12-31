@@ -17,3 +17,7 @@ icloud-content.com = server:tls://223.5.5.5
 *.icloud-content.com = server:tls://223.5.5.5
 akamaiedge.net = server:tls://223.5.5.5
 *.akamaiedge.net = server:tls://223.5.5.5
+aaplimg.com = server:tls://223.5.5.5
+*.aaplimg.com = server:tls://223.5.5.5
+apple-mapkit.com = server:tls://223.5.5.5
+*.apple-mapkit.com = server:tls://223.5.5.5
