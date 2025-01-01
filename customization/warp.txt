@@ -9,12 +9,13 @@ DOMAIN,oracle.sc.omtrdc.net
 ## Openai Services
 DOMAIN-KEYWORD,sora
 DOMAIN-KEYWORD,chatgpt
+DOMAIN,oaic.report-url.com
 DOMAIN-SUFFIX,sora.com
 DOMAIN-SUFFIX,ctfassets.net
-DOMAIN-SUFFIX,revenuecat.com
 DOMAIN-SUFFIX,stripe.network
+DOMAIN-SUFFIX,revenuecat.com
+DOMAIN-SUFFIX,fastly-edge.com
 DOMAIN-SUFFIX,featureassets.org
 DOMAIN-SUFFIX,intercomassets.com
-DOMAIN,oaic.report-url.com
 IP-ASN,31898,no-resolve
 # REMOVE
