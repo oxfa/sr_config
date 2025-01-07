@@ -6,13 +6,6 @@ DOMAIN-SUFFIX,calibre-ebook.com
 DOMAIN-SUFFIX,mirror.ghproxy.com
 DOMAIN-SUFFIX,documentfoundation.org
 ## Apple Services
-DOMAIN,fpinit.itunes.apple.com
-DOMAIN,sandbox.itunes.apple.com
-DOMAIN,entitlements.itunes.apple.com
-DOMAIN,buy.itunes.apple.com
-DOMAIN,speedysub.itunes.apple.com
-DOMAIN,p36-buy.itunes.apple.com
-DOMAIN-SUFFIX,apple.cn
 IP-CIDR,47.74.0.0/19,no-resolve
 IP-CIDR,47.91.0.0/20,no-resolve
 IP-CIDR,47.74.32.0/19,no-resolve
