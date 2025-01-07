@@ -36,7 +36,7 @@ jobs:
       # PETERLOWE_REJECT_URL:       https://pgl.yoyo.org/adservers/serverlist.php?hostformat=hosts&showintro=1&mimetype=plaintext
 
       RAW_LIST_PRIVATE_URL:           https://raw.githubusercontent.com/Loyalsoldier/domain-list-custom/release/private.txt
-      RAW_LIST_ICLOUD_URL:            https://raw.githubusercontent.com/Loyalsoldier/domain-list-custom/release/icloud.txt
+      # RAW_LIST_ICLOUD_URL:            https://raw.githubusercontent.com/Loyalsoldier/domain-list-custom/release/icloud.txt
 
       RAW_LIST_PROXY_URL:             https://raw.githubusercontent.com/Loyalsoldier/v2ray-rules-dat/release/gfw.txt
 
@@ -81,8 +81,6 @@ jobs:
           wget ${{ env.RAW_RULESET_CLOUDFLARE_URL }} -O $GITHUB_WORKSPACE/tmp/cloudflare_ruleset.txt || exit 1
           wget ${{ env.RAW_RULESET_BLOCKHTTPDNS_URL }} -O $GITHUB_WORKSPACE/tmp/blockhttpdns_ruleset.txt || exit 1
           wget ${{ env.RAW_LIST_PROXY_URL }} -O $GITHUB_WORKSPACE/tmp/proxy_list.txt || exit 1
-          wget ${{ env.RAW_RULESET_DIRECT_URL }} -O $GITHUB_WORKSPACE/tmp/direct_list.txt || exit 1
-          wget ${{ env.RAW_LIST_ICLOUD_URL }} -O $GITHUB_WORKSPACE/tmp/icloud_list.txt || exit 1
           wget ${{ env.RAW_LIST_PRIVATE_URL }} -O $GITHUB_WORKSPACE/tmp/private_list.txt || exit 1
           wget ${{ env.ADGUARD_DNS_REJECT_URL }} -O $GITHUB_WORKSPACE/tmp/adguard_dns_list.txt || exit 1
 
@@ -92,8 +90,6 @@ jobs:
               tee $GITHUB_WORKSPACE/tmp/block_list.txt > /dev/null
           python3 $GITHUB_WORKSPACE/script/list2ruleset.py $GITHUB_WORKSPACE/tmp/block_list.txt -o $GITHUB_WORKSPACE/tmp/block_ruleset.txt
           python3 $GITHUB_WORKSPACE/script/list2ruleset.py $GITHUB_WORKSPACE/tmp/proxy_list.txt -o $GITHUB_WORKSPACE/tmp/proxy_ruleset.txt
-          python3 $GITHUB_WORKSPACE/script/list2ruleset.py $GITHUB_WORKSPACE/tmp/direct_list.txt -o $GITHUB_WORKSPACE/tmp/direct_ruleset.txt
-          python3 $GITHUB_WORKSPACE/script/list2ruleset.py $GITHUB_WORKSPACE/tmp/icloud_list.txt -o $GITHUB_WORKSPACE/tmp/icloud_ruleset.txt
           python3 $GITHUB_WORKSPACE/script/list2ruleset.py $GITHUB_WORKSPACE/tmp/private_list.txt -o $GITHUB_WORKSPACE/tmp/private_ruleset.txt
           cat $GITHUB_WORKSPACE/tmp/icloud_ruleset.txt $GITHUB_WORKSPACE/tmp/private_ruleset.txt >> $GITHUB_WORKSPACE/tmp/direct_ruleset.txt
           cat $GITHUB_WORKSPACE/tmp/blockhttpdns_ruleset.txt >> $GITHUB_WORKSPACE/tmp/block_ruleset.txt
