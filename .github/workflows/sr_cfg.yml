@@ -82,7 +82,6 @@ jobs:
           wget ${{ env.RAW_RULESET_CLOUDFLARE_URL }} -O $GITHUB_WORKSPACE/tmp/cloudflare_ruleset.txt || exit 1
           wget ${{ env.RAW_RULESET_BLOCKHTTPDNS_URL }} -O $GITHUB_WORKSPACE/tmp/blockhttpdns_ruleset.txt || exit 1
           wget ${{ env.RAW_LIST_PROXY_URL }} -O $GITHUB_WORKSPACE/tmp/proxy_list.txt || exit 1
-          wget ${{ env.RAW_LIST_ICLOUD_URL }} -O $GITHUB_WORKSPACE/tmp/icloud_list.txt || exit 1
           wget ${{ env.RAW_LIST_PRIVATE_URL }} -O $GITHUB_WORKSPACE/tmp/private_list.txt || exit 1
           wget ${{ env.ADGUARD_DNS_REJECT_URL }} -O $GITHUB_WORKSPACE/tmp/adguard_dns_list.txt || exit 1
 
