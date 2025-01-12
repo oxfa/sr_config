@@ -96,7 +96,7 @@ jobs:
           curl ${{ env.RAW_RULESET_BLOCKHTTPDNS_URL }} >> $GITHUB_WORKSPACE/tmp/block_ruleset.txt || exit 1
           # wget ${{ env.ADGUARD_DNS_REJECT_URL }} -O $GITHUB_WORKSPACE/tmp/adguard_dns_list.txt || exit 1
           # Download Warp Rules
-          curl ${{ env.RAW_RULESET_ORACLE_URL }} >> $GITHUB_WORKSPACE/tmp/warp_ruleset.txt || exit 1
+          curl ${{ env.RAW_RULESET_ORACLE_URL }} > $GITHUB_WORKSPACE/tmp/warp_ruleset.txt || exit 1
           curl ${{ env.RAW_RULESET_OPENAI_URL }} >> $GITHUB_WORKSPACE/tmp/warp_ruleset.txt || exit 1
           curl ${{ env.RAW_RULESET_REDDIT_URL }} >> $GITHUB_WORKSPACE/tmp/warp_ruleset.txt || exit 1
           curl ${{ env.RAW_RULESET_GITHUB_URL }} >> $GITHUB_WORKSPACE/tmp/warp_ruleset.txt || exit 1
