@@ -36,7 +36,7 @@ jobs:
       # PETERLOWE_REJECT_URL:           https://pgl.yoyo.org/adservers/serverlist.php?hostformat=hosts&showintro=1&mimetype=plaintext
       # RAW_RULESET_ADVERTISING_URL:        https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Advertising/Advertising.list
       RAW_RULESET_ADVERTISINGLITE_URL:    https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/AdvertisingLite/AdvertisingLite.list
-      RAW_RULESET_BLOCKHTTPDNS_URL:       https://raw.githubusercontent.com/blackmatrix7/izos_rule_script/master/rule/Clash/BlockHttpDNS/BlockHttpDNS.list
+      RAW_RULESET_BLOCKHTTPDNS_URL:       https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/BlockHttpDNS/BlockHttpDNS.list
 
       # PROXY RULES
       RAW_RULESET_PROXY_URL:              https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/ProxyLite/ProxyLite.list
@@ -192,7 +192,7 @@ jobs:
           sed -i -e 's/^/  - /' -e '1i\payload:' $GITHUB_WORKSPACE/release/ruleset/classical/yaml/proxy.yaml
           python3 $GITHUB_WORKSPACE/script/gen_sr_mod.py $GITHUB_WORKSPACE/release/sgmodule/rule/proxy_remote_dns.sgmodule RULE PROXY-FQ --optional_val force-remote-dns
 
-      - name: Process Block Rules 1
+      - name: Process Block Rules
         run: |
           # cat $GITHUB_WORKSPACE/tmp/adguard_dns_list.txt | perl -ne '/^\|\|([-_0-9a-zA-Z]+(\.[-_0-9a-zA-Z]+){1,64})\^$/ && print "$1\n"' | perl -ne 'print if not /^[0-9]{1,3}(\.[0-9]{1,3}){3}$/' | \
           #     tee $GITHUB_WORKSPACE/tmp/block_list.txt > /dev/null
@@ -207,8 +207,6 @@ jobs:
                                                             $GITHUB_WORKSPACE/release/ruleset/classical/txt/block.txt \
                                                             > /dev/null
           sed -i -e 's/^/  - /' -e '1i\payload:' $GITHUB_WORKSPACE/release/ruleset/classical/yaml/block.yaml
-      - name: Process Block Rules 2
-        run: |
           python3 $GITHUB_WORKSPACE/script/gen_sr_mod.py $GITHUB_WORKSPACE/release/sgmodule/rule/block_reject.sgmodule RULE REJECT
           python3 $GITHUB_WORKSPACE/script/gen_sr_mod.py $GITHUB_WORKSPACE/release/sgmodule/rule/block_reject_drop.sgmodule RULE REJECT-DROP
           python3 $GITHUB_WORKSPACE/script/gen_sr_mod.py $GITHUB_WORKSPACE/release/sgmodule/rule/block_reject_dict.sgmodule RULE REJECT-DICT

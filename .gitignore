@@ -1,4 +1,5 @@
 .vscode
+test
 script/test
 script/__pycache__
 **/.DS_Store
