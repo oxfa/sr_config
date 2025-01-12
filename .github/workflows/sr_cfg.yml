@@ -100,7 +100,7 @@ jobs:
         run: |
           # Download Block Rules
           curl ${{ env.RAW_RULESET_ADVERTISINGLITE_URL }} > $GITHUB_WORKSPACE/tmp/block_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_ADVERTISINGLITE_URL }} Failed!" && exit 1)
-          curl ${{ env.RAW_RULESET_BLOCKHTTPDNS_URL }} >> $GITHUB_WORKSPACE/tmp/block_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_BLOCKHTTPDNS_URL }} Failed!" && exit 1)
+          # curl ${{ env.RAW_RULESET_BLOCKHTTPDNS_URL }} >> $GITHUB_WORKSPACE/tmp/block_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_BLOCKHTTPDNS_URL }} Failed!" && exit 1)
           # wget ${{ env.ADGUARD_DNS_REJECT_URL }} -O $GITHUB_WORKSPACE/tmp/adguard_dns_list.txt || (echo "Download ${{ env.ADGUARD_DNS_REJECT_URL }} Failed!" && exit 1)
       - name: Download Files 3
         run: |
