@@ -29,31 +29,50 @@ jobs:
       ADOT_IPV4: tls://223.5.5.5
       ADNS_IPV4: 223.5.5.5
 
-      ADGUARD_DNS_REJECT_URL:         https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt
-      RAW_RULESET_BLOCKHTTPDNS_URL:   https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/BlockHttpDNS/BlockHttpDNS.list
-      # DANPOLLOCK_REJECT_URL:      https://someonewhocares.org/hosts/hosts
-      # RAW_LIST_BLOCK_LIST_URL:    https://raw.githubusercontent.com/Loyalsoldier/v2ray-rules-dat/release/reject-list.txt
-      # PETERLOWE_REJECT_URL:       https://pgl.yoyo.org/adservers/serverlist.php?hostformat=hosts&showintro=1&mimetype=plaintext
+      # BLOCK RULES
+      # ADGUARD_DNS_REJECT_URL:         https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt
+      # RAW_RULESET_BLOCKHTTPDNS_URL:   https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/BlockHttpDNS/BlockHttpDNS.list
+      # DANPOLLOCK_REJECT_URL:          https://someonewhocares.org/hosts/hosts
+      # RAW_LIST_BLOCK_LIST_URL:        https://raw.githubusercontent.com/Loyalsoldier/v2ray-rules-dat/release/reject-list.txt
+      # PETERLOWE_REJECT_URL:           https://pgl.yoyo.org/adservers/serverlist.php?hostformat=hosts&showintro=1&mimetype=plaintext
+      # RAW_RULESET_ADVERTISING_URL:        https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Advertising/Advertising.list
+      RAW_RULESET_ADVERTISINGLITE_URL:    https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/AdvertisingLite/AdvertisingLite.list
 
-      RAW_LIST_PRIVATE_URL:           https://raw.githubusercontent.com/Loyalsoldier/domain-list-custom/release/private.txt
-      # RAW_LIST_ICLOUD_URL:            https://raw.githubusercontent.com/Loyalsoldier/domain-list-custom/release/icloud.txt
+      # PROXY RULES
+      RAW_RULESET_PROXY_URL:              https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/ProxyLite/ProxyLite.list
 
-      RAW_LIST_PROXY_URL:             https://raw.githubusercontent.com/Loyalsoldier/v2ray-rules-dat/release/gfw.txt
+      # DIRECT RULES
+      RAW_RULESET_DIRECT_URL:             https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/ChinaMax/ChinaMax.list
 
+      # APPLE RULES
+      RAW_RULESET_APPLE_URL:              https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Apple/Apple.list
+      RAW_RULESET_APPLEDAILY_URL:         https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/AppleDaily/AppleDaily.list
+      RAW_RULESET_APPLEDEV_URL:           https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/AppleDev/AppleDev.list
+      RAW_RULESET_APPLEFIRMWARE_URL:      https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/AppleFirmware/AppleFirmware.list
+      RAW_RULESET_APPLEHARDWARE_URL:      https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/AppleHardware/AppleHardware.list
+      RAW_RULESET_APPLEID_URL:            https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/AppleID/AppleID.list
+      RAW_RULESET_APPLEMAIL_URL:          https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/AppleMail/AppleMail.list
+      RAW_RULESET_APPLEMEDIA_URL:         https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/AppleMedia/AppleMedia.list
+      RAW_RULESET_APPLENEWS_URL:          https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/AppleNews/AppleNews.list
+      RAW_RULESET_APPLEPROXY_URL:         https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/AppleProxy/AppleProxy.list
+      RAW_RULESET_APPLETV_URL:            https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/AppleTV/AppleTV.list
+      RAW_RULESET_ICLOUD_URL:             https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/iCloud/iCloud.list
+      RAW_RULESET_ICLOUDPRIVATERELAY_URL: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/iCloudPrivateRelay/iCloudPrivateRelay.list
+      RAW_RULESET_SIRI_URL:               https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Siri/Siri.list
 
-      RAW_RULESET_DIRECT_URL:         https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/ChinaMax/ChinaMax.list
-      RAW_RULESET_ORACLE_URL:         https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Oracle/Oracle.list
-      RAW_RULESET_OPENAI_URL:         https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/OpenAI/OpenAI.list
-      RAW_RULESET_REDDIT_URL:         https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Reddit/Reddit.list
-      RAW_RULESET_GITHUB_URL:         https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GitHub/GitHub.list
-      RAW_RULESET_PAYPAL_URL:         https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/PayPal/PayPal.list
-      RAW_RULESET_GOOGLE_URL:         https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Google/Google.list
-      RAW_RULESET_GEMINI_URL:         https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Gemini/Gemini.list
-      RAW_RULESET_YOUTUBE_URL:        https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/YouTube/YouTube.list
-      RAW_RULESET_COPILOT_URL:        https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Copilot/Copilot.list
-      RAW_RULESET_FACEBOOK_URL:       https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Facebook/Facebook.list
-      RAW_RULESET_MICROSOFT_URL:      https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Microsoft/Microsoft.list
-      RAW_RULESET_CLOUDFLARE_URL:     https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Cloudflare/Cloudflare.list
+      # WARP RULES
+      RAW_RULESET_ORACLE_URL:             https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Oracle/Oracle.list
+      RAW_RULESET_OPENAI_URL:             https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/OpenAI/OpenAI.list
+      RAW_RULESET_REDDIT_URL:             https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Reddit/Reddit.list
+      RAW_RULESET_GITHUB_URL:             https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GitHub/GitHub.list
+      RAW_RULESET_PAYPAL_URL:             https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/PayPal/PayPal.list
+      RAW_RULESET_GOOGLE_URL:             https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Google/Google.list
+      RAW_RULESET_GEMINI_URL:             https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Gemini/Gemini.list
+      RAW_RULESET_YOUTUBE_URL:            https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/YouTube/YouTube.list
+      RAW_RULESET_COPILOT_URL:            https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Copilot/Copilot.list
+      RAW_RULESET_FACEBOOK_URL:           https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Facebook/Facebook.list
+      RAW_RULESET_MICROSOFT_URL:          https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Microsoft/Microsoft.list
+      RAW_RULESET_CLOUDFLARE_URL:         https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Cloudflare/Cloudflare.list
 
     steps:
       - name: Checkout the "master" branch of this repo
@@ -66,47 +85,56 @@ jobs:
 
       - name: Download Files
         run: |
+          # Create temp folder
           rm -rf $GITHUB_WORKSPACE/tmp && mkdir -p $GITHUB_WORKSPACE/tmp
-          wget ${{ env.RAW_RULESET_DIRECT_URL }} -O $GITHUB_WORKSPACE/tmp/direct_ruleset.txt || exit 1
-          wget ${{ env.RAW_RULESET_ORACLE_URL }} -O $GITHUB_WORKSPACE/tmp/oracle_ruleset.txt || exit 1
-          wget ${{ env.RAW_RULESET_OPENAI_URL }} -O $GITHUB_WORKSPACE/tmp/openai_ruleset.txt || exit 1
-          wget ${{ env.RAW_RULESET_REDDIT_URL }} -O $GITHUB_WORKSPACE/tmp/reddit_ruleset.txt || exit 1
-          wget ${{ env.RAW_RULESET_GITHUB_URL }} -O $GITHUB_WORKSPACE/tmp/github_ruleset.txt || exit 1
-          wget ${{ env.RAW_RULESET_PAYPAL_URL }} -O $GITHUB_WORKSPACE/tmp/paypal_ruleset.txt || exit 1
-          wget ${{ env.RAW_RULESET_GOOGLE_URL }} -O $GITHUB_WORKSPACE/tmp/google_ruleset.txt || exit 1
-          wget ${{ env.RAW_RULESET_GEMINI_URL }} -O $GITHUB_WORKSPACE/tmp/gemini_ruleset.txt || exit 1
-          wget ${{ env.RAW_RULESET_YOUTUBE_URL }} -O $GITHUB_WORKSPACE/tmp/youtube_ruleset.txt || exit 1
-          wget ${{ env.RAW_RULESET_COPILOT_URL }} -O $GITHUB_WORKSPACE/tmp/copilot_ruleset.txt || exit 1
-          wget ${{ env.RAW_RULESET_FACEBOOK_URL }} -O $GITHUB_WORKSPACE/tmp/facebook_ruleset.txt || exit 1
-          wget ${{ env.RAW_RULESET_MICROSOFT_URL }} -O $GITHUB_WORKSPACE/tmp/microsoft_ruleset.txt || exit 1
-          wget ${{ env.RAW_RULESET_CLOUDFLARE_URL }} -O $GITHUB_WORKSPACE/tmp/cloudflare_ruleset.txt || exit 1
-          wget ${{ env.RAW_RULESET_BLOCKHTTPDNS_URL }} -O $GITHUB_WORKSPACE/tmp/blockhttpdns_ruleset.txt || exit 1
-          wget ${{ env.RAW_LIST_PROXY_URL }} -O $GITHUB_WORKSPACE/tmp/proxy_list.txt || exit 1
-          wget ${{ env.RAW_LIST_PRIVATE_URL }} -O $GITHUB_WORKSPACE/tmp/private_list.txt || exit 1
-          wget ${{ env.ADGUARD_DNS_REJECT_URL }} -O $GITHUB_WORKSPACE/tmp/adguard_dns_list.txt || exit 1
+          # Download Direct Rules
+          curl ${{ env.RAW_RULESET_DIRECT_URL }} > $GITHUB_WORKSPACE/tmp/warp_ruleset.txt || exit 1
+          # Download Proxy Rules
+          curl ${{ env.RAW_RULESET_PROXY_URL }} > $GITHUB_WORKSPACE/tmp/proxy_ruleset.txt || exit 1
+          # Download Block Rules
+          curl ${{ env.RAW_RULESET_ADVERTISINGLITE_URL }} > $GITHUB_WORKSPACE/tmp/block_ruleset.txt || exit 1
+          curl ${{ env.RAW_RULESET_BLOCKHTTPDNS_URL }} >> $GITHUB_WORKSPACE/tmp/block_ruleset.txt || exit 1
+          # wget ${{ env.ADGUARD_DNS_REJECT_URL }} -O $GITHUB_WORKSPACE/tmp/adguard_dns_list.txt || exit 1
+          # Download Warp Rules
+          curl ${{ env.RAW_RULESET_ORACLE_URL }} >> $GITHUB_WORKSPACE/tmp/warp_ruleset.txt || exit 1
+          curl ${{ env.RAW_RULESET_OPENAI_URL }} >> $GITHUB_WORKSPACE/tmp/warp_ruleset.txt || exit 1
+          curl ${{ env.RAW_RULESET_REDDIT_URL }} >> $GITHUB_WORKSPACE/tmp/warp_ruleset.txt || exit 1
+          curl ${{ env.RAW_RULESET_GITHUB_URL }} >> $GITHUB_WORKSPACE/tmp/warp_ruleset.txt || exit 1
+          curl ${{ env.RAW_RULESET_PAYPAL_URL }} >> $GITHUB_WORKSPACE/tmp/warp_ruleset.txt || exit 1
+          curl ${{ env.RAW_RULESET_GOOGLE_URL }} >> $GITHUB_WORKSPACE/tmp/warp_ruleset.txt || exit 1
+          curl ${{ env.RAW_RULESET_GEMINI_URL }} >> $GITHUB_WORKSPACE/tmp/warp_ruleset.txt || exit 1
+          curl ${{ env.RAW_RULESET_YOUTUBE_URL }} >> $GITHUB_WORKSPACE/tmp/warp_ruleset.txt || exit 1
+          curl ${{ env.RAW_RULESET_COPILOT_URL }} >> $GITHUB_WORKSPACE/tmp/warp_ruleset.txt || exit 1
+          curl ${{ env.RAW_RULESET_FACEBOOK_URL }} >> $GITHUB_WORKSPACE/tmp/warp_ruleset.txt || exit 1
+          curl ${{ env.RAW_RULESET_MICROSOFT_URL }} >> $GITHUB_WORKSPACE/tmp/warp_ruleset.txt || exit 1
+          curl ${{ env.RAW_RULESET_CLOUDFLARE_URL }} >> $GITHUB_WORKSPACE/tmp/warp_ruleset.txt || exit 1
+          # Download Apple Rules
+          curl ${{ env.RAW_RULESET_APPLE_URL }} > $GITHUB_WORKSPACE/tmp/apple_ruleset.txt || exit 1
+          curl ${{ env.RAW_RULESET_APPLEDAILY_URL }} >> $GITHUB_WORKSPACE/tmp/apple_ruleset.txt || exit 1
+          curl ${{ env.RAW_RULESET_APPLEDEV_URL }} >> $GITHUB_WORKSPACE/tmp/apple_ruleset.txt || exit 1
+          curl ${{ env.RAW_RULESET_APPLEFIRMWARE_URL }} >> $GITHUB_WORKSPACE/tmp/apple_ruleset.txt || exit 1
+          curl ${{ env.RAW_RULESET_APPLEHARDWARE_URL }} >> $GITHUB_WORKSPACE/tmp/apple_ruleset.txt || exit 1
+          curl ${{ env.RAW_RULESET_APPLEID_URL }} >> $GITHUB_WORKSPACE/tmp/apple_ruleset.txt || exit 1
+          curl ${{ env.RAW_RULESET_APPLEMAIL_URL }} >> $GITHUB_WORKSPACE/tmp/apple_ruleset.txt || exit 1
+          curl ${{ env.RAW_RULESET_APPLEMEDIA_URL }} >> $GITHUB_WORKSPACE/tmp/apple_ruleset.txt || exit 1
+          curl ${{ env.RAW_RULESET_APPLENEWS_URL }} >> $GITHUB_WORKSPACE/tmp/apple_ruleset.txt || exit 1
+          curl ${{ env.RAW_RULESET_APPLEPROXY_URL }} >> $GITHUB_WORKSPACE/tmp/apple_ruleset.txt || exit 1
+          curl ${{ env.RAW_RULESET_APPLETV_URL }} >> $GITHUB_WORKSPACE/tmp/apple_ruleset.txt || exit 1
+          curl ${{ env.RAW_RULESET_ICLOUD_URL }} >> $GITHUB_WORKSPACE/tmp/apple_ruleset.txt || exit 1
+          curl ${{ env.RAW_RULESET_ICLOUDPRIVATERELAY_URL }} >> $GITHUB_WORKSPACE/tmp/apple_ruleset.txt || exit 1
+          curl ${{ env.RAW_RULESET_SIRI_URL }} >> $GITHUB_WORKSPACE/tmp/apple_ruleset.txt || exit 1
 
-      - name: Pre-process Files
+
+      - name: Process Apple Rules
         run: |
-          cat $GITHUB_WORKSPACE/tmp/adguard_dns_list.txt | perl -ne '/^\|\|([-_0-9a-zA-Z]+(\.[-_0-9a-zA-Z]+){1,64})\^$/ && print "$1\n"' | perl -ne 'print if not /^[0-9]{1,3}(\.[0-9]{1,3}){3}$/' | \
-              tee $GITHUB_WORKSPACE/tmp/block_list.txt > /dev/null
-          python3 $GITHUB_WORKSPACE/script/list2ruleset.py $GITHUB_WORKSPACE/tmp/block_list.txt -o $GITHUB_WORKSPACE/tmp/block_ruleset.txt
-          python3 $GITHUB_WORKSPACE/script/list2ruleset.py $GITHUB_WORKSPACE/tmp/proxy_list.txt -o $GITHUB_WORKSPACE/tmp/proxy_ruleset.txt
-          python3 $GITHUB_WORKSPACE/script/list2ruleset.py $GITHUB_WORKSPACE/tmp/private_list.txt -o $GITHUB_WORKSPACE/tmp/private_ruleset.txt
-          cat $GITHUB_WORKSPACE/tmp/private_ruleset.txt >> $GITHUB_WORKSPACE/tmp/direct_ruleset.txt
-          cat $GITHUB_WORKSPACE/tmp/blockhttpdns_ruleset.txt >> $GITHUB_WORKSPACE/tmp/block_ruleset.txt
-          cat $GITHUB_WORKSPACE/tmp/oracle_ruleset.txt \
-              $GITHUB_WORKSPACE/tmp/openai_ruleset.txt \
-              $GITHUB_WORKSPACE/tmp/reddit_ruleset.txt \
-              $GITHUB_WORKSPACE/tmp/github_ruleset.txt \
-              $GITHUB_WORKSPACE/tmp/paypal_ruleset.txt \
-              $GITHUB_WORKSPACE/tmp/google_ruleset.txt \
-              $GITHUB_WORKSPACE/tmp/gemini_ruleset.txt \
-              $GITHUB_WORKSPACE/tmp/youtube_ruleset.txt \
-              $GITHUB_WORKSPACE/tmp/copilot_ruleset.txt \
-              $GITHUB_WORKSPACE/tmp/facebook_ruleset.txt \
-              $GITHUB_WORKSPACE/tmp/microsoft_ruleset.txt \
-              $GITHUB_WORKSPACE/tmp/cloudflare_ruleset.txt \
-              > $GITHUB_WORKSPACE/tmp/warp_ruleset.txt
+          python3 $GITHUB_WORKSPACE/script/customize_ruleset.py $GITHUB_WORKSPACE/tmp/apple_ruleset.txt $GITHUB_WORKSPACE/customization/apple.txt
+          python3 $GITHUB_WORKSPACE/script/sort_ruleset.py $GITHUB_WORKSPACE/tmp/apple_ruleset.txt
+          cat $GITHUB_WORKSPACE/tmp/apple_ruleset.txt | tee $GITHUB_WORKSPACE/release/sgmodule/rule/apple.sgmodule \
+                                                            $GITHUB_WORKSPACE/release/ruleset/classical/yaml/apple.yaml \
+                                                            $GITHUB_WORKSPACE/release/ruleset/classical/txt/apple.txt \
+                                                            > /dev/null
+          sed -i -e 's/^/  - /' -e '1i\payload:' $GITHUB_WORKSPACE/release/ruleset/classical/yaml/apple.yaml
+          # python3 $GITHUB_WORKSPACE/script/gen_sr_mod.py $GITHUB_WORKSPACE/release/sgmodule/rule/apple.sgmodule RULE DIRECT
 
       - name: Process High Priority Rules
         run: |
@@ -166,6 +194,9 @@ jobs:
 
       - name: Process Block Rules
         run: |
+          # cat $GITHUB_WORKSPACE/tmp/adguard_dns_list.txt | perl -ne '/^\|\|([-_0-9a-zA-Z]+(\.[-_0-9a-zA-Z]+){1,64})\^$/ && print "$1\n"' | perl -ne 'print if not /^[0-9]{1,3}(\.[0-9]{1,3}){3}$/' | \
+          #     tee $GITHUB_WORKSPACE/tmp/block_list.txt > /dev/null
+          # python3 $GITHUB_WORKSPACE/script/list2ruleset.py $GITHUB_WORKSPACE/tmp/block_list.txt -o $GITHUB_WORKSPACE/tmp/block_ruleset.txt
           python3 $GITHUB_WORKSPACE/script/customize_ruleset.py $GITHUB_WORKSPACE/tmp/block_ruleset.txt $GITHUB_WORKSPACE/customization/block_default.txt
           python3 $GITHUB_WORKSPACE/script/customize_ruleset.py -m add_domains $GITHUB_WORKSPACE/release/sgmodule/rule/block_reject_dict.sgmodule $GITHUB_WORKSPACE/customization/block_reject_dict.txt
           python3 $GITHUB_WORKSPACE/script/customize_ruleset.py -m add_domains $GITHUB_WORKSPACE/release/sgmodule/rule/block_reject_array.sgmodule $GITHUB_WORKSPACE/customization/block_reject_array.txt
