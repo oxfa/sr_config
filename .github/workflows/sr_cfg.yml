@@ -85,17 +85,11 @@ jobs:
 
       - name: Download Files
         run: |
-          # Create temp folder
           rm -rf $GITHUB_WORKSPACE/tmp && mkdir -p $GITHUB_WORKSPACE/tmp
-          # Download Direct Rules
           curl ${{ env.RAW_RULESET_DIRECT_URL }} > $GITHUB_WORKSPACE/tmp/warp_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_DIRECT_URL }} Failed!" && exit 1)
-          # Download Proxy Rules
           curl ${{ env.RAW_RULESET_PROXY_URL }} > $GITHUB_WORKSPACE/tmp/proxy_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_PROXY_URL }} Failed!" && exit 1)
-          # Download Block Rules
           curl ${{ env.RAW_RULESET_ADVERTISINGLITE_URL }} > $GITHUB_WORKSPACE/tmp/block_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_ADVERTISINGLITE_URL }} Failed!" && exit 1)
           curl ${{ env.RAW_RULESET_BLOCKHTTPDNS_URL }} >> $GITHUB_WORKSPACE/tmp/block_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_BLOCKHTTPDNS_URL }} Failed!" && exit 1)
-          # wget ${{ env.ADGUARD_DNS_REJECT_URL }} -O $GITHUB_WORKSPACE/tmp/adguard_dns_list.txt || (echo "Download ${{ env.ADGUARD_DNS_REJECT_URL }} Failed!" && exit 1)
-          # Download Warp Rules
           curl ${{ env.RAW_RULESET_ORACLE_URL }} > $GITHUB_WORKSPACE/tmp/warp_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_ORACLE_URL }} Failed!" && exit 1)
           curl ${{ env.RAW_RULESET_OPENAI_URL }} >> $GITHUB_WORKSPACE/tmp/warp_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_OPENAI_URL }} Failed!" && exit 1)
           curl ${{ env.RAW_RULESET_REDDIT_URL }} >> $GITHUB_WORKSPACE/tmp/warp_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_REDDIT_URL }} Failed!" && exit 1)
@@ -108,7 +102,6 @@ jobs:
           curl ${{ env.RAW_RULESET_FACEBOOK_URL }} >> $GITHUB_WORKSPACE/tmp/warp_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_FACEBOOK_URL }} Failed!" && exit 1)
           curl ${{ env.RAW_RULESET_MICROSOFT_URL }} >> $GITHUB_WORKSPACE/tmp/warp_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_MICROSOFT_URL }} Failed!" && exit 1)
           curl ${{ env.RAW_RULESET_CLOUDFLARE_URL }} >> $GITHUB_WORKSPACE/tmp/warp_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_CLOUDFLARE_URL }} Failed!" && exit 1)
-          # Download Apple Rules
           curl ${{ env.RAW_RULESET_APPLE_URL }} > $GITHUB_WORKSPACE/tmp/apple_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_APPLE_URL }} Failed!" && exit 1)
           curl ${{ env.RAW_RULESET_APPLEDAILY_URL }} >> $GITHUB_WORKSPACE/tmp/apple_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_APPLEDAILY_URL }} Failed!" && exit 1)
           curl ${{ env.RAW_RULESET_APPLEDEV_URL }} >> $GITHUB_WORKSPACE/tmp/apple_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_APPLEDEV_URL }} Failed!" && exit 1)
