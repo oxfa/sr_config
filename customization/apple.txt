@@ -1,2 +1,21 @@
 # ADD
+## Apple Services
+DOMAIN,cp4.cloudflare.com
+DOMAIN,apple-relay.apple.com
+DOMAIN,apple-relay.cloudflare.com
+DOMAIN,apple-relay.fastly-edge.com
+DOMAIN,ohttp-relay1.fastly-edge.com
+IP-CIDR,47.74.0.0/19,no-resolve
+IP-CIDR,47.91.0.0/20,no-resolve
+IP-CIDR,47.74.32.0/19,no-resolve
+IP-CIDR,47.245.0.0/19,no-resolve
+IP-CIDR,47.91.16.0/20,no-resolve
+IP-CIDR,101.32.104.0/21,no-resolve
+IP-CIDR,43.156.192.0/18,no-resolve
+IP-CIDR,101.32.118.0/23,no-resolve
+IP-CIDR,17.0.0.0/8,no-resolve
+IP-CIDR6,2620:149:a44::/48,no-resolve
+IP-CIDR6,2403:300:a42::/48,no-resolve
+IP-CIDR6,2403:300:a51::/48,no-resolve
+IP-CIDR6,2a01:b740:a42::/48,no-resolve
 # REMOVE
