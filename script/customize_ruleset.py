@@ -1,21 +1,12 @@
 import argparse
 
 def split_line(line):
-    """
-    解析一行，支持以逗号分隔的格式：
-    - DOMAIN-SUFFIX,deviantart.com
-    返回两部分：类型（type）、内容（expression）。
-    """
     if ',' not in line:
         return "", line.strip()
     exp_type, expression = line.split(",", 1)
     return exp_type.strip(), expression.strip()
 
 def join_line(exp_type, expression):
-    """
-    拼接一行，按照逗号分隔的格式：
-    - DOMAIN-SUFFIX,deviantart.com
-    """
     return ",".join([exp_type, expression])
 
 def process_file(inputFile, customFile, mode):
@@ -33,7 +24,7 @@ def process_file(inputFile, customFile, mode):
                 if line and not line.startswith('#'):
                     remove_lines.add(line)
         elif mode == "add_domains":
-            content_a = [line.strip() for line in file_b if not line.strip().startswith('#')]
+            content_a = [line.strip() for line in file_b if not line.strip().startswith('#')] + ['']
         else:
             for line in file_b:
                 line = line.strip()
@@ -51,11 +42,9 @@ def process_file(inputFile, customFile, mode):
                         elif current_section == 'remove':
                             remove_lines.add(expression)
 
-    # 移除和添加内容
     content_a = [line for line in content_a if split_line(line.strip())[1] not in remove_lines]
     content_a.extend(add_lines)
 
-    # 写回文件
     with open(inputFile, 'w') as file_a:
         file_a.write("\n".join(content_a))
 
