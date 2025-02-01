@@ -142,34 +142,34 @@ jobs:
           python3 $GITHUB_WORKSPACE/script/customize_ruleset.py -m add_domains $GITHUB_WORKSPACE/release/ruleset/classical/txt/high_priority_direct.txt $GITHUB_WORKSPACE/customization/high_priority_direct.txt
           python3 $GITHUB_WORKSPACE/script/customize_ruleset.py -m add_domains $GITHUB_WORKSPACE/release/ruleset/classical/yaml/high_priority_direct.yaml $GITHUB_WORKSPACE/customization/high_priority_direct.txt
           python3 $GITHUB_WORKSPACE/script/gen_sr_mod.py $GITHUB_WORKSPACE/release/sgmodule/rule/high_priority_direct.sgmodule RULE DIRECT
-          if [ -s $GITHUB_WORKSPACE/release/ruleset/classical/yaml/high_priority_direct.yaml ]; then \
-            sed -i -e 's/^/  - /' -e '1i\\payload:' $GITHUB_WORKSPACE/release/ruleset/classical/yaml/high_priority_direct.yaml;
-          else \
-            echo "payload:" > $GITHUB_WORKSPACE/release/ruleset/classical/yaml/high_priority_direct.yaml;
-          fi
-          # sed -i -e 's/^/  - /' -e '1i\payload:' $GITHUB_WORKSPACE/release/ruleset/classical/yaml/high_priority_direct.yaml
+          # if [ -s $GITHUB_WORKSPACE/release/ruleset/classical/yaml/high_priority_direct.yaml ]; then \
+          #   sed -i -e 's/^/  - /' -e '1i\\payload:' $GITHUB_WORKSPACE/release/ruleset/classical/yaml/high_priority_direct.yaml;
+          # else \
+          #   echo "payload:" > $GITHUB_WORKSPACE/release/ruleset/classical/yaml/high_priority_direct.yaml;
+          # fi
+          sed -i -e 's/^/  - /' -e '1i\payload:' $GITHUB_WORKSPACE/release/ruleset/classical/yaml/high_priority_direct.yaml
 
           python3 $GITHUB_WORKSPACE/script/customize_ruleset.py -m add_domains $GITHUB_WORKSPACE/release/sgmodule/rule/high_priority_proxy.sgmodule $GITHUB_WORKSPACE/customization/high_priority_proxy.txt
           python3 $GITHUB_WORKSPACE/script/customize_ruleset.py -m add_domains $GITHUB_WORKSPACE/release/ruleset/classical/txt/high_priority_proxy.txt $GITHUB_WORKSPACE/customization/high_priority_proxy.txt
           python3 $GITHUB_WORKSPACE/script/customize_ruleset.py -m add_domains $GITHUB_WORKSPACE/release/ruleset/classical/yaml/high_priority_proxy.yaml $GITHUB_WORKSPACE/customization/high_priority_proxy.txt
           python3 $GITHUB_WORKSPACE/script/gen_sr_mod.py $GITHUB_WORKSPACE/release/sgmodule/rule/high_priority_proxy.sgmodule RULE PROXY-FQ --optional_val force-remote-dns
-          if [ -s $GITHUB_WORKSPACE/release/ruleset/classical/yaml/high_priority_proxy.yaml ]; then \
-            sed -i -e 's/^/  - /' -e '1i\\payload:' $GITHUB_WORKSPACE/release/ruleset/classical/yaml/high_priority_proxy.yaml;
-          else \
-            echo "payload:" > $GITHUB_WORKSPACE/release/ruleset/classical/yaml/high_priority_proxy.yaml;
-          fi
-          # sed -i -e 's/^/  - /' -e '1i\payload:' $GITHUB_WORKSPACE/release/ruleset/classical/yaml/high_priority_proxy.yaml
+          # if [ -s $GITHUB_WORKSPACE/release/ruleset/classical/yaml/high_priority_proxy.yaml ]; then \
+          #   sed -i -e 's/^/  - /' -e '1i\\payload:' $GITHUB_WORKSPACE/release/ruleset/classical/yaml/high_priority_proxy.yaml;
+          # else \
+          #   echo "payload:" > $GITHUB_WORKSPACE/release/ruleset/classical/yaml/high_priority_proxy.yaml;
+          # fi
+          sed -i -e 's/^/  - /' -e '1i\payload:' $GITHUB_WORKSPACE/release/ruleset/classical/yaml/high_priority_proxy.yaml
           
           python3 $GITHUB_WORKSPACE/script/customize_ruleset.py -m add_domains $GITHUB_WORKSPACE/release/sgmodule/rule/high_priority_warp.sgmodule $GITHUB_WORKSPACE/customization/high_priority_warp.txt
           python3 $GITHUB_WORKSPACE/script/customize_ruleset.py -m add_domains $GITHUB_WORKSPACE/release/ruleset/classical/txt/high_priority_warp.txt $GITHUB_WORKSPACE/customization/high_priority_warp.txt
           python3 $GITHUB_WORKSPACE/script/customize_ruleset.py -m add_domains $GITHUB_WORKSPACE/release/ruleset/classical/yaml/high_priority_warp.yaml $GITHUB_WORKSPACE/customization/high_priority_warp.txt
           python3 $GITHUB_WORKSPACE/script/gen_sr_mod.py $GITHUB_WORKSPACE/release/sgmodule/rule/high_priority_warp.sgmodule RULE PROXY-WARP --optional_val force-remote-dns
-          if [ -s $GITHUB_WORKSPACE/release/ruleset/classical/yaml/high_priority_warp.yaml ]; then \
-            sed -i -e 's/^/  - /' -e '1i\\payload:' $GITHUB_WORKSPACE/release/ruleset/classical/yaml/high_priority_warp.yaml;
-          else \
-            echo "payload:" > $GITHUB_WORKSPACE/release/ruleset/classical/yaml/high_priority_warp.yaml;
-          fi
-          # sed -i -e 's/^/  - /' -e '1i\payload:' $GITHUB_WORKSPACE/release/ruleset/classical/yaml/high_priority_warp.yaml
+          # if [ -s $GITHUB_WORKSPACE/release/ruleset/classical/yaml/high_priority_warp.yaml ]; then \
+          #   sed -i -e 's/^/  - /' -e '1i\\payload:' $GITHUB_WORKSPACE/release/ruleset/classical/yaml/high_priority_warp.yaml;
+          # else \
+          #   echo "payload:" > $GITHUB_WORKSPACE/release/ruleset/classical/yaml/high_priority_warp.yaml;
+          # fi
+          sed -i -e 's/^/  - /' -e '1i\payload:' $GITHUB_WORKSPACE/release/ruleset/classical/yaml/high_priority_warp.yaml
 
       - name: Process Warp Rules
         run: |
