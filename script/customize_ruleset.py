@@ -36,7 +36,6 @@ def process_file(inputFile, customFile, mode):
                     if line and not line.startswith('#'):
                         exp_type, expression = split_line(line)
                         if current_section == 'add':
-                            # 确保 expression 不重复
                             if all(split_line(x.strip())[1] != expression for x in content_a):
                                 add_lines.append(join_line(exp_type, expression))
                         elif current_section == 'remove':

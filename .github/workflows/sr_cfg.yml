@@ -57,8 +57,8 @@ jobs:
       RAW_RULESET_APPLEPROXY_URL:         https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/AppleProxy/AppleProxy.list
       RAW_RULESET_APPLETV_URL:            https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/AppleTV/AppleTV.list
       RAW_RULESET_ICLOUD_URL:             https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/iCloud/iCloud.list
-      RAW_RULESET_ICLOUDPRIVATERELAY_URL: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/iCloudPrivateRelay/iCloudPrivateRelay.list
       RAW_RULESET_SIRI_URL:               https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Siri/Siri.list
+      RAW_RULESET_ICLOUDPRIVATERELAY_URL: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/iCloudPrivateRelay/iCloudPrivateRelay.list
 
       # WARP RULES
       RAW_RULESET_ORACLE_URL:             https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Oracle/Oracle.list
@@ -130,56 +130,47 @@ jobs:
           python3 $GITHUB_WORKSPACE/script/customize_ruleset.py $GITHUB_WORKSPACE/tmp/apple_ruleset.txt $GITHUB_WORKSPACE/customization/apple.txt
           python3 $GITHUB_WORKSPACE/script/sort_ruleset.py $GITHUB_WORKSPACE/tmp/apple_ruleset.txt
           cat $GITHUB_WORKSPACE/tmp/apple_ruleset.txt | tee $GITHUB_WORKSPACE/release/sgmodule/rule/apple.sgmodule \
-                                                            $GITHUB_WORKSPACE/release/ruleset/classical/yaml/apple.yaml \
-                                                            $GITHUB_WORKSPACE/release/ruleset/classical/txt/apple.txt \
+                                                            $GITHUB_WORKSPACE/release/ruleset/mhm/yaml/apple.yaml \
+                                                            $GITHUB_WORKSPACE/release/ruleset/mhm/txt/apple.txt \
                                                             > /dev/null
-          sed -i -e 's/^/  - /' -e '1i\payload:' $GITHUB_WORKSPACE/release/ruleset/classical/yaml/apple.yaml
+          sed -i -e 's/^/  - /' -e '1i\payload:' $GITHUB_WORKSPACE/release/ruleset/mhm/yaml/apple.yaml
+          sed -e 's/DOMAIN-REGEX/URL-REGEX/' -e 's/IP-CIDR6/IP-CIDR/' $GITHUB_WORKSPACE/release/ruleset/mhm/txt/apple.txt > $GITHUB_WORKSPACE/release/ruleset/sr/apple.txt
           # python3 $GITHUB_WORKSPACE/script/gen_sr_mod.py $GITHUB_WORKSPACE/release/sgmodule/rule/apple.sgmodule RULE DIRECT
 
       - name: Process High Priority Rules
         run: |
           python3 $GITHUB_WORKSPACE/script/customize_ruleset.py -m add_domains $GITHUB_WORKSPACE/release/sgmodule/rule/high_priority_direct.sgmodule $GITHUB_WORKSPACE/customization/high_priority_direct.txt
-          python3 $GITHUB_WORKSPACE/script/customize_ruleset.py -m add_domains $GITHUB_WORKSPACE/release/ruleset/classical/txt/high_priority_direct.txt $GITHUB_WORKSPACE/customization/high_priority_direct.txt
-          python3 $GITHUB_WORKSPACE/script/customize_ruleset.py -m add_domains $GITHUB_WORKSPACE/release/ruleset/classical/yaml/high_priority_direct.yaml $GITHUB_WORKSPACE/customization/high_priority_direct.txt
+          python3 $GITHUB_WORKSPACE/script/customize_ruleset.py -m add_domains $GITHUB_WORKSPACE/release/ruleset/mhm/txt/high_priority_direct.txt $GITHUB_WORKSPACE/customization/high_priority_direct.txt
+          python3 $GITHUB_WORKSPACE/script/customize_ruleset.py -m add_domains $GITHUB_WORKSPACE/release/ruleset/mhm/yaml/high_priority_direct.yaml $GITHUB_WORKSPACE/customization/high_priority_direct.txt
           python3 $GITHUB_WORKSPACE/script/gen_sr_mod.py $GITHUB_WORKSPACE/release/sgmodule/rule/high_priority_direct.sgmodule RULE DIRECT
-          # if [ -s $GITHUB_WORKSPACE/release/ruleset/classical/yaml/high_priority_direct.yaml ]; then \
-          #   sed -i -e 's/^/  - /' -e '1i\\payload:' $GITHUB_WORKSPACE/release/ruleset/classical/yaml/high_priority_direct.yaml;
-          # else \
-          #   echo "payload:" > $GITHUB_WORKSPACE/release/ruleset/classical/yaml/high_priority_direct.yaml;
-          # fi
-          sed -i -e 's/^/  - /' -e '1i\payload:' $GITHUB_WORKSPACE/release/ruleset/classical/yaml/high_priority_direct.yaml
+          sed -i -e 's/^/  - /' -e '1i\payload:' $GITHUB_WORKSPACE/release/ruleset/mhm/yaml/high_priority_direct.yaml
+          sed -e 's/DOMAIN-REGEX/URL-REGEX/' -e 's/IP-CIDR6/IP-CIDR/' $GITHUB_WORKSPACE/release/ruleset/mhm/txt/high_priority_direct.txt > $GITHUB_WORKSPACE/release/ruleset/sr/high_priority_direct.txt
 
           python3 $GITHUB_WORKSPACE/script/customize_ruleset.py -m add_domains $GITHUB_WORKSPACE/release/sgmodule/rule/high_priority_proxy.sgmodule $GITHUB_WORKSPACE/customization/high_priority_proxy.txt
-          python3 $GITHUB_WORKSPACE/script/customize_ruleset.py -m add_domains $GITHUB_WORKSPACE/release/ruleset/classical/txt/high_priority_proxy.txt $GITHUB_WORKSPACE/customization/high_priority_proxy.txt
-          python3 $GITHUB_WORKSPACE/script/customize_ruleset.py -m add_domains $GITHUB_WORKSPACE/release/ruleset/classical/yaml/high_priority_proxy.yaml $GITHUB_WORKSPACE/customization/high_priority_proxy.txt
+          python3 $GITHUB_WORKSPACE/script/customize_ruleset.py -m add_domains $GITHUB_WORKSPACE/release/ruleset/mhm/txt/high_priority_proxy.txt $GITHUB_WORKSPACE/customization/high_priority_proxy.txt
+          python3 $GITHUB_WORKSPACE/script/customize_ruleset.py -m add_domains $GITHUB_WORKSPACE/release/ruleset/mhm/yaml/high_priority_proxy.yaml $GITHUB_WORKSPACE/customization/high_priority_proxy.txt
           python3 $GITHUB_WORKSPACE/script/gen_sr_mod.py $GITHUB_WORKSPACE/release/sgmodule/rule/high_priority_proxy.sgmodule RULE PROXY-FQ --optional_val force-remote-dns
-          # if [ -s $GITHUB_WORKSPACE/release/ruleset/classical/yaml/high_priority_proxy.yaml ]; then \
-          #   sed -i -e 's/^/  - /' -e '1i\\payload:' $GITHUB_WORKSPACE/release/ruleset/classical/yaml/high_priority_proxy.yaml;
-          # else \
-          #   echo "payload:" > $GITHUB_WORKSPACE/release/ruleset/classical/yaml/high_priority_proxy.yaml;
-          # fi
-          sed -i -e 's/^/  - /' -e '1i\payload:' $GITHUB_WORKSPACE/release/ruleset/classical/yaml/high_priority_proxy.yaml
-          
+          sed -i -e 's/^/  - /' -e '1i\payload:' $GITHUB_WORKSPACE/release/ruleset/mhm/yaml/high_priority_proxy.yaml
+          sed -e 's/DOMAIN-REGEX/URL-REGEX/' -e 's/IP-CIDR6/IP-CIDR/' $GITHUB_WORKSPACE/release/ruleset/mhm/txt/high_priority_proxy.txt > $GITHUB_WORKSPACE/release/ruleset/sr/high_priority_proxy.txt
+
           python3 $GITHUB_WORKSPACE/script/customize_ruleset.py -m add_domains $GITHUB_WORKSPACE/release/sgmodule/rule/high_priority_warp.sgmodule $GITHUB_WORKSPACE/customization/high_priority_warp.txt
-          python3 $GITHUB_WORKSPACE/script/customize_ruleset.py -m add_domains $GITHUB_WORKSPACE/release/ruleset/classical/txt/high_priority_warp.txt $GITHUB_WORKSPACE/customization/high_priority_warp.txt
-          python3 $GITHUB_WORKSPACE/script/customize_ruleset.py -m add_domains $GITHUB_WORKSPACE/release/ruleset/classical/yaml/high_priority_warp.yaml $GITHUB_WORKSPACE/customization/high_priority_warp.txt
+          python3 $GITHUB_WORKSPACE/script/customize_ruleset.py -m add_domains $GITHUB_WORKSPACE/release/ruleset/mhm/txt/high_priority_warp.txt $GITHUB_WORKSPACE/customization/high_priority_warp.txt
+          python3 $GITHUB_WORKSPACE/script/customize_ruleset.py -m add_domains $GITHUB_WORKSPACE/release/ruleset/mhm/yaml/high_priority_warp.yaml $GITHUB_WORKSPACE/customization/high_priority_warp.txt
           python3 $GITHUB_WORKSPACE/script/gen_sr_mod.py $GITHUB_WORKSPACE/release/sgmodule/rule/high_priority_warp.sgmodule RULE PROXY-WARP --optional_val force-remote-dns
-          # if [ -s $GITHUB_WORKSPACE/release/ruleset/classical/yaml/high_priority_warp.yaml ]; then \
-          #   sed -i -e 's/^/  - /' -e '1i\\payload:' $GITHUB_WORKSPACE/release/ruleset/classical/yaml/high_priority_warp.yaml;
-          # else \
-          #   echo "payload:" > $GITHUB_WORKSPACE/release/ruleset/classical/yaml/high_priority_warp.yaml;
-          # fi
-          sed -i -e 's/^/  - /' -e '1i\payload:' $GITHUB_WORKSPACE/release/ruleset/classical/yaml/high_priority_warp.yaml
+          sed -i -e 's/^/  - /' -e '1i\payload:' $GITHUB_WORKSPACE/release/ruleset/mhm/yaml/high_priority_warp.yaml
+          sed -e 's/DOMAIN-REGEX/URL-REGEX/' -e 's/IP-CIDR6/IP-CIDR/' $GITHUB_WORKSPACE/release/ruleset/mhm/txt/high_priority_warp.txt > $GITHUB_WORKSPACE/release/ruleset/sr/high_priority_warp.txt
+
 
       - name: Process Warp Rules
         run: |
           python3 $GITHUB_WORKSPACE/script/customize_ruleset.py $GITHUB_WORKSPACE/tmp/warp_ruleset.txt $GITHUB_WORKSPACE/customization/warp.txt
           python3 $GITHUB_WORKSPACE/script/sort_ruleset.py $GITHUB_WORKSPACE/tmp/warp_ruleset.txt
           cat $GITHUB_WORKSPACE/tmp/warp_ruleset.txt | tee $GITHUB_WORKSPACE/release/sgmodule/rule/proxy_warp.sgmodule \
-                                                           $GITHUB_WORKSPACE/release/ruleset/classical/yaml/warp.yaml \
-                                                           $GITHUB_WORKSPACE/release/ruleset/classical/txt/warp.txt \
+                                                           $GITHUB_WORKSPACE/release/ruleset/mhm/yaml/warp.yaml \
+                                                           $GITHUB_WORKSPACE/release/ruleset/mhm/txt/warp.txt \
                                                            > /dev/null
-          sed -i -e 's/^/  - /' -e '1i\payload:' $GITHUB_WORKSPACE/release/ruleset/classical/yaml/warp.yaml
+          sed -i -e 's/^/  - /' -e '1i\payload:' $GITHUB_WORKSPACE/release/ruleset/mhm/yaml/warp.yaml
+          sed -e 's/DOMAIN-REGEX/URL-REGEX/' -e 's/IP-CIDR6/IP-CIDR/' $GITHUB_WORKSPACE/release/ruleset/mhm/txt/warp.txt > $GITHUB_WORKSPACE/release/ruleset/sr/warp.txt
           python3 $GITHUB_WORKSPACE/script/gen_sr_mod.py $GITHUB_WORKSPACE/release/sgmodule/rule/proxy_warp.sgmodule RULE PROXY-WARP --optional_val force-remote-dns
 
       - name: Process Direct Rules
@@ -187,10 +178,11 @@ jobs:
           python3 $GITHUB_WORKSPACE/script/customize_ruleset.py $GITHUB_WORKSPACE/tmp/direct_ruleset.txt $GITHUB_WORKSPACE/customization/direct.txt
           python3 $GITHUB_WORKSPACE/script/sort_ruleset.py $GITHUB_WORKSPACE/tmp/direct_ruleset.txt
           cat $GITHUB_WORKSPACE/tmp/direct_ruleset.txt | tee $GITHUB_WORKSPACE/release/sgmodule/rule/direct.sgmodule \
-                                                             $GITHUB_WORKSPACE/release/ruleset/classical/yaml/direct.yaml \
-                                                             $GITHUB_WORKSPACE/release/ruleset/classical/txt/direct.txt \
+                                                             $GITHUB_WORKSPACE/release/ruleset/mhm/yaml/direct.yaml \
+                                                             $GITHUB_WORKSPACE/release/ruleset/mhm/txt/direct.txt \
                                                              > /dev/null
-          sed -i -e 's/^/  - /' -e '1i\payload:' $GITHUB_WORKSPACE/release/ruleset/classical/yaml/direct.yaml
+          sed -i -e 's/^/  - /' -e '1i\payload:' $GITHUB_WORKSPACE/release/ruleset/mhm/yaml/direct.yaml
+          sed -e 's/DOMAIN-REGEX/URL-REGEX/' -e 's/IP-CIDR6/IP-CIDR/' $GITHUB_WORKSPACE/release/ruleset/mhm/txt/direct.txt > $GITHUB_WORKSPACE/release/ruleset/sr/direct.txt
           python3 $GITHUB_WORKSPACE/script/gen_sr_mod.py $GITHUB_WORKSPACE/release/sgmodule/rule/direct.sgmodule RULE DIRECT
 
 
@@ -201,10 +193,11 @@ jobs:
           python3 $GITHUB_WORKSPACE/script/customize_ruleset.py $GITHUB_WORKSPACE/tmp/proxy_ruleset.txt $GITHUB_WORKSPACE/customization/proxy.txt
           python3 $GITHUB_WORKSPACE/script/sort_ruleset.py $GITHUB_WORKSPACE/tmp/proxy_ruleset.txt
           cat $GITHUB_WORKSPACE/tmp/proxy_ruleset.txt | tee $GITHUB_WORKSPACE/release/sgmodule/rule/proxy_remote_dns.sgmodule \
-                                                            $GITHUB_WORKSPACE/release/ruleset/classical/yaml/proxy.yaml \
-                                                            $GITHUB_WORKSPACE/release/ruleset/classical/txt/proxy.txt \
+                                                            $GITHUB_WORKSPACE/release/ruleset/mhm/yaml/proxy.yaml \
+                                                            $GITHUB_WORKSPACE/release/ruleset/mhm/txt/proxy.txt \
                                                             > /dev/null
-          sed -i -e 's/^/  - /' -e '1i\payload:' $GITHUB_WORKSPACE/release/ruleset/classical/yaml/proxy.yaml
+          sed -i -e 's/^/  - /' -e '1i\payload:' $GITHUB_WORKSPACE/release/ruleset/mhm/yaml/proxy.yaml
+          sed -e 's/DOMAIN-REGEX/URL-REGEX/' -e 's/IP-CIDR6/IP-CIDR/' $GITHUB_WORKSPACE/release/ruleset/mhm/txt/proxy.txt > $GITHUB_WORKSPACE/release/ruleset/sr/proxy.txt
           python3 $GITHUB_WORKSPACE/script/gen_sr_mod.py $GITHUB_WORKSPACE/release/sgmodule/rule/proxy_remote_dns.sgmodule RULE PROXY-FQ --optional_val force-remote-dns
 
       - name: Process Block Rules
@@ -218,10 +211,11 @@ jobs:
           python3 $GITHUB_WORKSPACE/script/sort_ruleset.py $GITHUB_WORKSPACE/tmp/block_ruleset.txt
           cat $GITHUB_WORKSPACE/tmp/block_ruleset.txt | tee $GITHUB_WORKSPACE/release/sgmodule/rule/block_reject_drop.sgmodule \
                                                             $GITHUB_WORKSPACE/release/sgmodule/rule/block_reject.sgmodule \
-                                                            $GITHUB_WORKSPACE/release/ruleset/classical/yaml/block.yaml \
-                                                            $GITHUB_WORKSPACE/release/ruleset/classical/txt/block.txt \
+                                                            $GITHUB_WORKSPACE/release/ruleset/mhm/yaml/block.yaml \
+                                                            $GITHUB_WORKSPACE/release/ruleset/mhm/txt/block.txt \
                                                             > /dev/null
-          sed -i -e 's/^/  - /' -e '1i\payload:' $GITHUB_WORKSPACE/release/ruleset/classical/yaml/block.yaml
+          sed -i -e 's/^/  - /' -e '1i\payload:' $GITHUB_WORKSPACE/release/ruleset/mhm/yaml/block.yaml
+          sed -e 's/DOMAIN-REGEX/URL-REGEX/' -e 's/IP-CIDR6/IP-CIDR/' $GITHUB_WORKSPACE/release/ruleset/mhm/txt/block.txt > $GITHUB_WORKSPACE/release/ruleset/sr/block.txt
           python3 $GITHUB_WORKSPACE/script/gen_sr_mod.py $GITHUB_WORKSPACE/release/sgmodule/rule/block_reject.sgmodule RULE REJECT
           python3 $GITHUB_WORKSPACE/script/gen_sr_mod.py $GITHUB_WORKSPACE/release/sgmodule/rule/block_reject_drop.sgmodule RULE REJECT-DROP
           python3 $GITHUB_WORKSPACE/script/gen_sr_mod.py $GITHUB_WORKSPACE/release/sgmodule/rule/block_reject_dict.sgmodule RULE REJECT-DICT

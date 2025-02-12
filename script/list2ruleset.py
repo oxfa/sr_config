@@ -1,5 +1,5 @@
 import argparse
-from mappings import LIST_CLASH_RULESET_MAPPING
+from mappings import LIST_MHM_RULESET_MAPPING
 
 
 def process_line(line):
@@ -8,7 +8,7 @@ def process_line(line):
         if type == "ip-cidr" or type == "ip-cidr6" or type == "ip-asn":
             if not content.endswith(",no-resolve"):
                 content += ",no-resolve"
-        return f"{LIST_CLASH_RULESET_MAPPING[type]},{content}"
+        return f"{LIST_MHM_RULESET_MAPPING[type]},{content}"
     except ValueError:
         return f"DOMAIN-SUFFIX,{line}"
 

@@ -1,6 +1,6 @@
 import argparse
 import os
-from mappings import CLASH_RULESET_SR_RULESET_MAPPING
+from mappings import MHM_RULESET_SR_RULESET_MAPPING
 
 
 def sort_lines_by_key_values(file_path, key_value_pairs):
@@ -8,7 +8,7 @@ def sort_lines_by_key_values(file_path, key_value_pairs):
         with open(file_path, 'r') as file:
             lines = file.readlines()
 
-            lines = [line.rstrip('\n') for line in lines if not line.startswith('#')]
+            lines = [line.rstrip('\n') for line in lines if (not line.startswith('#')) and (not line.startswith('PROCESS-NAME,')) ]
 
             unique_lines = list(set(lines))
 
@@ -47,7 +47,7 @@ def main():
         return
 
     try:
-        sorted_lines = sort_lines_by_key_values(args.input_file, CLASH_RULESET_SR_RULESET_MAPPING)
+        sorted_lines = sort_lines_by_key_values(args.input_file, MHM_RULESET_SR_RULESET_MAPPING)
     except Exception as e:
         print(e)
         return

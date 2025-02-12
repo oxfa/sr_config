@@ -4,7 +4,7 @@ import re
 import sys
 import argparse
 from pathlib import Path
-from mappings import CLASH_RULESET_SR_RULESET_MAPPING
+from mappings import MHM_RULESET_SR_RULESET_MAPPING
 
 
 def is_valid_domain(domain):
@@ -21,25 +21,21 @@ def format_rule(file_in, op_type, optional_val):
         if not line or line.startswith("#"):
             continue
         try:
-            # 尝试分割字符串
             exp_type, expression = line.split(",", 1)
         except ValueError:
-            # 捕获分割不足两部分时的异常
             print(f"Skipping invalid line: {line}, {' '.join(sys.argv)}")
             sys.exit(1)
 
         if not exp_type:
             continue
 
-        prefix = CLASH_RULESET_SR_RULESET_MAPPING.get(exp_type, None)
+        prefix = MHM_RULESET_SR_RULESET_MAPPING.get(exp_type, None)
 
         if prefix:
             if prefix == "IP-ASN" or prefix == "IP-CIDR":
                 try:
-                    # 尝试分割字符串
                     exp_type, expression, suffix = line.split(",", 2)
                 except ValueError:
-                    # 捕获分割不足两部分时的异常
                     print(f"Skipping invalid line: {line}, {' '.join(sys.argv)}")
                     sys.exit(1)
 
@@ -64,10 +60,8 @@ def format_host(file_in, op_type, dns_server):
                 continue
 
             try:
-                # 尝试分割字符串
                 exp_type, expression = line.split(",", 1)
             except ValueError:
-                # 捕获分割不足两部分时的异常
                 print(f"Skipping invalid line: {line}, {' '.join(sys.argv)}")
                 sys.exit(1)
             if exp_type == "DOMAIN":
