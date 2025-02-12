@@ -156,7 +156,7 @@ jobs:
           python3 $GITHUB_WORKSPACE/script/customize_ruleset.py -m add_domains $GITHUB_WORKSPACE/release/sgmodule/rule/high_priority_warp.sgmodule $GITHUB_WORKSPACE/customization/high_priority_warp.txt
           python3 $GITHUB_WORKSPACE/script/customize_ruleset.py -m add_domains $GITHUB_WORKSPACE/release/ruleset/mhm/txt/high_priority_warp.txt $GITHUB_WORKSPACE/customization/high_priority_warp.txt
           python3 $GITHUB_WORKSPACE/script/customize_ruleset.py -m add_domains $GITHUB_WORKSPACE/release/ruleset/mhm/yaml/high_priority_warp.yaml $GITHUB_WORKSPACE/customization/high_priority_warp.txt
-          python3 $GITHUB_WORKSPACE/script/gen_sr_mod.py $GITHUB_WORKSPACE/release/sgmodule/rule/high_priority_warp.sgmodule RULE PROXY-WARP --optional_val force-remote-dns
+          python3 $GITHUB_WORKSPACE/script/gen_sr_mod.py $GITHUB_WORKSPACE/release/sgmodule/rule/high_priority_warp.sgmodule RULE PROXY-WARP1 --optional_val force-remote-dns
           sed -i -e 's/^/  - /' -e '1i\payload:' $GITHUB_WORKSPACE/release/ruleset/mhm/yaml/high_priority_warp.yaml
           sed -e 's/DOMAIN-REGEX/URL-REGEX/' -e 's/IP-CIDR6/IP-CIDR/' $GITHUB_WORKSPACE/release/ruleset/mhm/txt/high_priority_warp.txt > $GITHUB_WORKSPACE/release/ruleset/sr/high_priority_warp.txt
 
@@ -171,7 +171,7 @@ jobs:
                                                            > /dev/null
           sed -i -e 's/^/  - /' -e '1i\payload:' $GITHUB_WORKSPACE/release/ruleset/mhm/yaml/warp.yaml
           sed -e 's/DOMAIN-REGEX/URL-REGEX/' -e 's/IP-CIDR6/IP-CIDR/' $GITHUB_WORKSPACE/release/ruleset/mhm/txt/warp.txt > $GITHUB_WORKSPACE/release/ruleset/sr/warp.txt
-          python3 $GITHUB_WORKSPACE/script/gen_sr_mod.py $GITHUB_WORKSPACE/release/sgmodule/rule/proxy_warp.sgmodule RULE PROXY-WARP --optional_val force-remote-dns
+          python3 $GITHUB_WORKSPACE/script/gen_sr_mod.py $GITHUB_WORKSPACE/release/sgmodule/rule/proxy_warp.sgmodule RULE PROXY-WARP1 --optional_val force-remote-dns
 
       - name: Process Direct Rules
         run: |
