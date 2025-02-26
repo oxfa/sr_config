@@ -228,9 +228,10 @@ jobs:
           python3 $GITHUB_WORKSPACE/script/gen_sr_mod.py $GITHUB_WORKSPACE/release/sgmodule/host/domain_dns_gndot.sgmodule HOST DOMAIN-DNS --optional_val ${{ env.ADOT_IPV4 }}
           python3 $GITHUB_WORKSPACE/script/gen_sr_mod.py $GITHUB_WORKSPACE/release/sgmodule/host/domain_dns_gwdot.sgmodule HOST DOMAIN-DNS --optional_val ${{ env.CDOT_IPV4 }}
 
-          sed -e '1e cat $GITHUB_WORKSPACE/customization/sr_override_dns.txt' \
+          sed -e '1i\#!name=domain_dns_direct' \
+              -e '1e cat $GITHUB_WORKSPACE/customization/sr_override_dns.txt' \
               -e '1i\[Host]' \
-              -e '/^#\|^IP-\|^DOMAIN-KEYWORD\|^PROCESS-NAME/d' \
+              -e '/^IP-\|^DOMAIN-KEYWORD\|^PROCESS-NAME/d' \
               -e 's/DOMAIN,\([^,]*\)/\1 = server:${{ env.ADNS_IPV4 }}/' \
               -e 's/DOMAIN-SUFFIX,\([^,]*\)/\*\1 = server:${{ env.ADNS_IPV4 }}/' \
               $GITHUB_WORKSPACE/tmp/direct_ruleset.txt > $GITHUB_WORKSPACE/release/sgmodule/host/domain_dns_direct.sgmodule
