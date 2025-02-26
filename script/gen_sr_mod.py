@@ -69,7 +69,7 @@ def format_host(file_in, op_type, dns_server):
                     formated_text += f"{expression}{dns_info}\n"
             elif exp_type == "DOMAIN-SUFFIX":
                 if is_valid_domain(expression):
-                    formated_text += f"*.{expression}{dns_info}\n"
+                    formated_text += f"*{expression}{dns_info}\n"
             else:
                 sys.exit(
                     f"Invalid exp_type2: '{exp_type}', exp: {expression}, line: {line}, dns: {dns_server}")

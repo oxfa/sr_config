@@ -1,9 +1,7 @@
 # ADD
-DOMAIN-SUFFIX,168.192.in-addr.arpa
 DOMAIN-SUFFIX,freebsd.org
 DOMAIN-SUFFIX,syncthing.net
 DOMAIN-SUFFIX,calibre-ebook.com
-DOMAIN-SUFFIX,mirror.ghproxy.com
 DOMAIN-SUFFIX,documentfoundation.org
 # REMOVE
 DOMAIN-SUFFIX,mzstatic.com

@@ -1,24 +1,12 @@
 # ADD
-DOMAIN,apple.cn
-DOMAIN-SUFFIX,apple.cn
-DOMAIN,apple.com
 DOMAIN-SUFFIX,apple.com
-DOMAIN,apple.com.cn
 DOMAIN-SUFFIX,apple.com.cn
-DOMAIN,icloud.com.cn
-DOMAIN-SUFFIX,icloud.com.cn
-DOMAIN,icloud.com
 DOMAIN-SUFFIX,icloud.com
-DOMAIN,akadns.net
+DOMAIN-SUFFIX,icloud.com.cn
 DOMAIN-SUFFIX,akadns.net
-DOMAIN,icloud-content.com
 DOMAIN-SUFFIX,icloud-content.com
-DOMAIN,akamaiedge.net
 DOMAIN-SUFFIX,akamaiedge.net
-DOMAIN,aaplimg.com
 DOMAIN-SUFFIX,aaplimg.com
-DOMAIN,apple-mapkit.com
 DOMAIN-SUFFIX,apple-mapkit.com
-DOMAIN,apple-dns.net
 DOMAIN-SUFFIX,apple-dns.net
 # REMOVE
