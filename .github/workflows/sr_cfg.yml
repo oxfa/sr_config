@@ -240,8 +240,8 @@ jobs:
               -e '1e cat $GITHUB_WORKSPACE/customization/sr_override_dns.txt' \
               -e '1i\[Host]' \
               -e '/^IP-\|^DOMAIN-KEYWORD\|^PROCESS-NAME/d' \
-              -e 's/DOMAIN,\([^,]*\)/\1 = server:${{ env.ADOT_IPV4 }}/' \
-              -e 's/DOMAIN-SUFFIX,\([^,]*\)/*.\1 = server:${{ env.ADOT_IPV4 }}/' \
+              -e "s/DOMAIN,\([^,]*\)/\1 = server:${{ env.ADOT_IPV4 }}/" \
+              -e "s/DOMAIN-SUFFIX,\([^,]*\)/*.\1 = server:${{ env.ADOT_IPV4 }}/" \
               $GITHUB_WORKSPACE/tmp/direct_ruleset.txt > $GITHUB_WORKSPACE/release/sgmodule/host/domain_dns_direct_system.sgmodule
 
       - name: Clean temp directory
