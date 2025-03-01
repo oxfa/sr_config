@@ -1,4 +1,4 @@
-#!name=domain_dns_gwdot
+#!name=domain_dns_special_gwdot
 
 [Host]
 *eu.org = server:tls://1.0.0.1

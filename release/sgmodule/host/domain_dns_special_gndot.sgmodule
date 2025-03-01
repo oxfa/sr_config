@@ -1,4 +1,4 @@
-#!name=domain_dns_gndot
+#!name=domain_dns_special_gndot
 
 [Host]
 *apple.com = server:tls://223.5.5.5
