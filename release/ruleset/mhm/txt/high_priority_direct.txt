@@ -1,5 +1,5 @@
 DOMAIN-SUFFIX,log.mmstat.com
-DOMAIN-REGEX,.+\.weixin\.qq\.com\.cn/mmtls/.+
-DOMAIN-REGEX,.+\.weixin\.qq\.com\.cn:80/mmtls/.+
-DOMAIN-REGEX,.+\.weixin\.qq\.com\.cn:443/mmtls/.+
-DOMAIN-REGEX,.+\.weixin\.qq\.com\.cn:8080/mmtls/.+
+DOMAIN-REGEX,^https?:\/\/.+\.weixin\.qq\.com\.cn\/mmtls\/.+
+DOMAIN-REGEX,^https?:\/\/.+\.weixin\.qq\.com\.cn:80\/mmtls\/.+
+DOMAIN-REGEX,^https?:\/\/.+\.weixin\.qq\.com\.cn:443\/mmtls\/.+
+DOMAIN-REGEX,^https?:\/\/.+\.weixin\.qq\.com\.cn:8080\/mmtls\/.+
