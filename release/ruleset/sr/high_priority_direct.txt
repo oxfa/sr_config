@@ -1,1 +1,5 @@
 DOMAIN-SUFFIX,log.mmstat.com
+URL-REGEX,.+\.weixin\.qq\.com\.cn/mmtls/.+
+URL-REGEX,.+\.weixin\.qq\.com\.cn:80/mmtls/.+
+URL-REGEX,.+\.weixin\.qq\.com\.cn:443/mmtls/.+
+URL-REGEX,.+\.weixin\.qq\.com\.cn:8080/mmtls/.+
