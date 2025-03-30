@@ -1,5 +1,9 @@
 # ADD
 DOMAIN-SUFFIX,log.mmstat.com
+DOMAIN-REGEX,^https?:\/\/[^/]+\.weixin\.qq\.com\/mmtls\/
+DOMAIN-REGEX,^https?:\/\/[^/]+\.weixin\.qq\.com:80\/mmtls\/
+DOMAIN-REGEX,^https?:\/\/[^/]+\.weixin\.qq\.com:443\/mmtls\/
+DOMAIN-REGEX,^https?:\/\/[^/]+\.weixin\.qq\.com:8080\/mmtls\/
 DOMAIN-REGEX,^https?:\/\/[^/]+\.weixin\.qq\.com\.cn\/mmtls\/
 DOMAIN-REGEX,^https?:\/\/[^/]+\.weixin\.qq\.com\.cn:80\/mmtls\/
 DOMAIN-REGEX,^https?:\/\/[^/]+\.weixin\.qq\.com\.cn:443\/mmtls\/
