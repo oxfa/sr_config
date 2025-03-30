@@ -2,6 +2,10 @@
 
 [Rule]
 DOMAIN-SUFFIX,log.mmstat.com,DIRECT
+URL-REGEX,^https?:\/\/[^/]+\.weixin\.qq\.com\/mmtls\/,DIRECT
+URL-REGEX,^https?:\/\/[^/]+\.weixin\.qq\.com:80\/mmtls\/,DIRECT
+URL-REGEX,^https?:\/\/[^/]+\.weixin\.qq\.com:443\/mmtls\/,DIRECT
+URL-REGEX,^https?:\/\/[^/]+\.weixin\.qq\.com:8080\/mmtls\/,DIRECT
 URL-REGEX,^https?:\/\/[^/]+\.weixin\.qq\.com\.cn\/mmtls\/,DIRECT
 URL-REGEX,^https?:\/\/[^/]+\.weixin\.qq\.com\.cn:80\/mmtls\/,DIRECT
 URL-REGEX,^https?:\/\/[^/]+\.weixin\.qq\.com\.cn:443\/mmtls\/,DIRECT
